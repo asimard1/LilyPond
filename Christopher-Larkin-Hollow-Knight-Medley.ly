@@ -1415,6 +1415,7 @@ scoreADrumsPart = \new DrumStaff \with {
 }
 
 %{
+%}
 \book {
   \bookOutputName "Part 01 - Piccolo"
   \score {
