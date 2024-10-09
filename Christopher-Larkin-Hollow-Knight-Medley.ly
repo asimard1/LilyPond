@@ -21,6 +21,9 @@
 global = {
   \override Score.BarNumber.break-visibility = #end-of-line-invisible
   \set Score.barNumberVisibility = #(every-nth-bar-number-visible 2)
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
+  \set countPercentRepeats = ##t
+  \set repeatCountVisibility = #(every-nth-repeat-count-visible 4)
   \key e \minor
   \overrideTimeSignatureSettings
   3/4
@@ -43,7 +46,7 @@ greenPathRightHandB = \fixed c'' {fs8( b,16 e fs8 b,16 e fs8 b,16 e fs8 e16 fs, 
 greenPathPatternA = {e8-.\f e16-. e-. r e8-. e16-. r fs-. fs8-. fs-. fs16-. fs-. r g8-. g16-. r a-. a8-.}
 greenPathPatternB = {
   \override TextSpanner.bound-details.left.text = "poco rit."
-  b8-. b16-. b-. r b8-. b16-. r b-. b8-. b-. b16-. b-. r b8-. b16-. r b-. b8-.
+  \mark\default b8-. b16-. b-. r b8-. b16-. r b-. b8-. b-. b16-. b-. r b8-. b16-. r b-. b8-.
   b8-. b16-. b-. r b8-. b16-. r b-. b8-. b-. b16-. b-. r b8-. b16-. r b-. b8-.
   b8-. b16-. b-. r b8-. b16-. r b-. b8-. b-. b16-. b-. r b8-. b16-. r b-. b8-.
   b8-.\startTextSpan b16-. b-. r b8-. b16-. r b-. b8-. b-. b16-. b-. r b8-. b16-. r b-. b-. b-.\stopTextSpan
@@ -64,7 +67,7 @@ greenPathBassB = {
   {c,8-. c16-. c-. r c-. c8-. c-. c-.} {a'8-. a16-. a-. r a-. a8-. a16-. a-. a8-.}
   {b8-. b16-. b-. r b-. b8-. b-. b-.} {g8-. g16-. g-. r g-. g8-. g-. g-.}
   {a8-. a16-. a-. r a-. a8-. a-. a-.} {c8-. c16-. c-. r c-. c8-. c-. c-.}
-  {e8-. e16-. e-. r e-. e8-. e-. e-.} {b8-. b16-. b-. r b-. b8-. b16-. b-. b8-.}
+  \mark\default {e8-. e16-. e-. r e-. e8-. e-. e-.} {b8-. b16-. b-. r b-. b8-. b16-. b-. b8-.}
   {c,8-. c16-. c-. r c-. c8-. c-. c-.} {a'8-. a16-. a-. r a-. a8-. a16-. a-. a8-.}
   {b8-. b16-. b-. r b-. b8-. b-. b-.} {g8-. g16-. g-. r g-. g8-. g16-. g-. g8-.}
   {a8-.\startTextSpan a16-. a-. r a-. a8-. a-. a-.} {c8-. c16-. c-. r c-. c8.-. c16-. c-. c-.\stopTextSpan}
@@ -75,7 +78,7 @@ greenPathBassC = {
   {g,8-. g16-. g-. r g-. g8-. g-. g-.} {e'8-. e16-. e-. r e-. e8-. e16-. e-. e8-.}
   {fs8-. fs16-. fs-. r fs-. fs8-. fs-. fs-.} {d8-. d16-. d-. r d-. d8-. d-. d-.}
   {e8-. e16-. e-. r e-. e8-. e-. e-.} {e8-. e16-. e-. r f-. f8-. f-. f-.}
-  {fs8-. fs16-. fs-. r fs-. fs8-. fs-. fs-.} {fs8-. fs16-. fs-. r fs-. fs8-. fs16-. fs-. fs8-.}
+  {\mark\default fs8-. fs16-. fs-. r fs-. fs8-. fs-. fs-.} {fs8-. fs16-. fs-. r fs-. fs8-. fs16-. fs-. fs8-.}
   {fs,8-. fs16-. fs-. r fs-. fs8-. fs-. fs-.} {fs'8-. fs16-. fs-. r fs-. fs8-. fs16-. fs-. fs8-.}
   {fs8-. fs16-. fs-. r fs-. fs8-. fs-. fs-.} {fs8-. fs16-. fs-. r fs-. fs8-. fs16-. fs-. fs8-.}
   {fs8-.\startTextSpan fs16-. fs-. r fs-. fs8-. fs-. fs-.} {fs8-. fs16-. fs-. r fs-. fs8.-. fs16-. fs-. fs-.\stopTextSpan}
@@ -85,21 +88,22 @@ scoreAPiccolo = \relative c'' {
   \global
   \transposition c''
   % Music goes here
-  \sectionLabel "Dirtmouth" \tempo "Empty and gloomy" 4 = 88 \time 4/4
-  R1*39 e1\mp\>~
-  \sectionLabel "Greenpath" \tempo "Alive and mossy" 4 = 83 \time 3/4
-  e2.~2.~2.~2. R2.*16\!
+  \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
+  R1*9 \mark \default R1*16 \mark\default R1*14 e1\mp\>~
+  \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
+  e2.~2.~2.~2. \mark\default R2.*16\!
 
-  \time 6/8
-  R2.*18 {b'16->\mf ( e, fs d e8-.) b'16->( e, fs d e8-.)}
+  \time 6/8 \mark\default
+  R2.*16 \mark\default R2.*2 {b'16->\mf ( e, fs d e8-.) b'16->( e, fs d e8-.)}
   R2. {fs16->\mp ( b, cs a b8-.) fs'16->( b, cs a b8-.)}
   R2. {b'16->\mf ( e, fs d e8-.) b'16->( e, fs d e8-.)} R2.
+  \mark\default
   b'2.\p^\markup {\italic "expressivo"}\< \startTrillSpan~2.\> r4\!\stopTrillSpan b8\mp\>~4.~2. r4\!
-  b8\mp\>~4.~2. r4\! b8\mp\>~4.~2. R2.*14\!
+  b8\mp\>~4.~2. r4\! b8\mp\>~4.~2. \mark\default R2.*14\!
 
   \relative c'' {\greenPathPatternA \greenPathPatternB}
 
-  \sectionLabel "Hornet" \tempo "Light and jumpy" 4 = 145
+  \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145
   \time 2, 2, 2 3/4
   \set Timing.beamExceptions = #'()
   \key a \minor
@@ -108,7 +112,8 @@ scoreAPiccolo = \relative c'' {
     e-.->\< e-. e-. f-.-> f-. f-. g-.-> g-. g-. a-.-> a-. a-.
     \time 4/4 b-.-> b-. b-. b-. c-.-> c-. c-. c-. \time 3/4
     d\mf\<(-> c b) c(-> b a) d(-> c b) c(-> b a) g(-> f e) f(-> e d)
-    \tuplet 3/2 {d\f-.-> c-. bf-.} \tuplet 3/2 {bf-.-> a-. g-.} \tuplet 3/2 {f'-.-> e-. d-.} a'4-.-> r r
+    \tuplet 3/2 {d\f-.-> c-. bf-.} \tuplet 3/2 {bf-.-> a-. g-.} \tuplet 3/2 {f'-.-> e-. d-.}
+    \mark\default a'4-.-> r r
     R2.*5
     \alternative {
       \volta 1 {
@@ -131,29 +136,30 @@ scoreAPiccolo = \relative c'' {
 scoreAFluteI = \relative c'' {
   \global
   % Music goes here
-  \sectionLabel "Dirtmouth" \tempo "Empty and gloomy" 4 = 88 \time 4/4
-  R1*40
-  \sectionLabel "Greenpath" \tempo "Alive and mossy" 4 = 83 \time 3/4
-  R2.*20
+  \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
+  R1*9 \mark \default R1*16 \mark\default R1*15
+  \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
+  R2.*4 \mark\default R2.*16
 
-  \time 6/8
+  \time 6/8 \mark\default
   R2. {fs'16->\mp^\markup {\italic "solo"} ( b, cs a b8-.) fs'16->( b, cs a b8-.)}
-  R2.*14 {fs'16->\mp ( b, cs a b8-.) fs'16->( b, cs a b8-.)}
+  R2.*14 {\mark\default fs'16->\mp ( b, cs a b8-.) fs'16->( b, cs a b8-.)}
   R2.*3 {fs16-> ( b, cs a b8-.) fs'16->( b, cs a b8-.)}
-  R2. {b'16->\mf ( e, fs d e8-.) b'16->( e, fs d e8-.)} R2.*2
+  R2. {b'16->\mf ( e, fs d e8-.) b'16->( e, fs d e8-.)} R2. \mark\default R2.
   {cs16 (b cs fs e fs cs' b cs fs e fs)} R2.*3 {cs,16 (b cs fs e fs cs' b cs fs e fs)} R2.
-  {fs8-.\mp\< e-. d-. b-. b-. a-. e-.\! r r r4.}
+  {fs8-.\mp\< e-. d-. b-. b-. a-. \mark\default e-.\! r r r4.}
   R2.*13
   \relative c'' {\greenPathPatternA \greenPathPatternB}
 
-  \sectionLabel "Hornet" \tempo "Light and jumpy" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     a'8\fp-.-> e-. e-. e-.-> e-. e-. g->( f) d( e) c->( b)
     e-.-> e-. e-. e-.-> e-. e-. d->( c) a( c) b->( g)
     e'-.-> e-. e-. e-.-> e-. e-. g->( f) d( e) c-> (b) e,->-. r r4 r R2.
     \time 4/4 R1 \time 3/4
     d'8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g'->( f e) f->( e d)
-    \tuplet 3/2 {d-.->\f c-. bf-.} \tuplet 3/2 {bf-.-> a-. g-.} \tuplet 3/2 {f-.-> e-. d-.} a'4-.-> r r R2.*5
+    \tuplet 3/2 {d-.->\f c-. bf-.} \tuplet 3/2 {bf-.-> a-. g-.} \tuplet 3/2 {f-.-> e-. d-.}
+    \mark\default a'4-.-> r r R2.*5
 
     \alternative {
       \volta 1 {
@@ -181,29 +187,34 @@ scoreAFluteI = \relative c'' {
 scoreAFluteII = \relative c'' {
   \global
   % Music goes here
-  \sectionLabel "Dirtmouth" \tempo "Empty and gloomy" 4 = 88 \time 4/4
-  R1*40
-  \sectionLabel "Greenpath" \tempo "Alive and mossy" 4 = 83 \time 3/4
-  R2.*20
+  \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
+  R1*9 \mark \default R1*16 \mark\default R1*15
+  \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
+  R2.*4 \mark\default R2.*16
 
-  \time 6/8
-  R2.*16 {fs16->\mp ( b cs a b8-.) fs16->( b cs a b8-.)}
+  \time 6/8 \mark\default
+  R2.*16 {\mark\default fs16->\mp ( b cs a b8-.) fs16->( b cs a b8-.)}
   R2.*3 {fs,16-> ( b cs a b8-.) fs16->( b cs a b8-.)}
   R2. {b16->\mf ( e fs d e8-.) b16->( e fs d e8-.)} R2.
 
-  {fs16-> ( b, cs a b8-.) fs'16->( b, cs a b8-.)} R2. {b'16-> ( e, fs d e8-.) b'16->( e, fs d e8-.)} R2.
-  {fs16-> ( b, cs a b8-.) fs'16->( b, cs a b8-.)} R2. {b'16-> ( e, fs d e8-.) b'16->( e, fs d e8-.)}
-  R2.*15
+  {
+    \mark\default
+    fs16-> ( b, cs a b8-.) fs'16->( b, cs a b8-.)
+  }
+  R2. {b'16-> ( e, fs d e8-.) b'16->( e, fs d e8-.)} R2.
+  {fs16-> ( b, cs a b8-.) fs'16->( b, cs a b8-.) R2. b'16-> ( e, fs d e8-.) b'16->( e, fs d e8-.)}
+  R2. \mark\default R2.*14
   \relative c'' {\greenPathPatternA \greenPathPatternB}
 
-  \sectionLabel "Hornet" \tempo "Light and jumpy" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     a8\fp-.-> e-. e-. e-.-> e-. e-. g->( f) d( e) c->( b)
     e-.-> e-. e-. e-.-> e-. e-. d->( c) a( c) b->( g)
     e'-.-> e-. e-. e-.-> e-. e-. g->( f) d( e) c-> (b) e->-. r r4 r R2.
     \time 4/4 R1 \time 3/4
     d'8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g->( f e) f->( e d)
-    \tuplet 3/2 {d'-.->\f c-. bf-.} \tuplet 3/2 {bf-.-> a-. g-.} \tuplet 3/2 {f-.-> e-. d-.} a4-.-> r r R2.*5
+    \tuplet 3/2 {d'-.->\f c-. bf-.} \tuplet 3/2 {bf-.-> a-. g-.} \tuplet 3/2 {f-.-> e-. d-.}
+    \mark\default a4-.-> r r R2.*5
 
     \alternative {
       \volta 1 {
@@ -231,27 +242,31 @@ scoreAFluteII = \relative c'' {
 scoreAOboe = \relative c'' {
   \global
   % Music goes here
-  \sectionLabel "Dirtmouth" \tempo "Empty and gloomy" 4 = 88 \time 4/4
-  R1*33
+  \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
+  R1*9 \mark \default R1*16 \mark\default R1*8
   e1\p~2\< e, a \tuplet 3/2 {a4( b c )} bf1\f\> c R1*2\!
-  \sectionLabel "Greenpath" \tempo "Alive and mossy" 4 = 83 \time 3/4
-  R2.*10 {r2 g4\mf a4.(c b2.~2 e4) b2. e d4.( cs d b) a2. a4. c(}
+  \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
+  R2.*4 \mark\default R2.*6 {r2 g4\mf a4.(c b2.~2 e4) b2. e d4.( cs d b) a2. a4. c(}
 
-  \time 6/8
-  b2.)\> R2.*19\!
-  {fs'16\mp-> ( b, cs a b8-.) fs'16->( b, cs a b8-.)} R2. {b'16->\mf ( e, fs d e8-.) b'16->( e, fs d e8-.)} R2.
-  {fs16-> ( b, cs a b8-.) fs'16->( b, cs a b8-.)} R2. {b'16-> ( e, fs d e8-.) b'16->( e, fs d e8-.)} R2.
+  \time 6/8 \mark\default
+  b2.)\> R2.*15\! \mark\default R2.*4
+  {fs'16\mp-> ( b, cs a b8-.) fs'16->( b, cs a b8-.)}
+  R2. {b'16->\mf ( e, fs d e8-.) b'16->( e, fs d e8-.)} R2.
+  {
+    \mark\default
+    fs16-> ( b, cs a b8-.) fs'16->( b, cs a b8-.)
+  } R2. {b'16-> ( e, fs d e8-.) b'16->( e, fs d e8-.)} R2.
   {fs16-> ( b, cs a b8-.) fs'16->( b, cs a b8-.)} R2. {b'16-> ( e, fs d e8-.) b'16->( e, fs d e8-.)}
-  {fs-.\mp\< e-. d-. b-. b-. a-. e-.\! r r r4.} R2.*13
+  {fs-.\mp\< e-. d-. b-. b-. a-. \mark\default e-.\! r r r4.} R2.*13
   \relative c' {\greenPathPatternA \greenPathPatternB}
 
-  \sectionLabel "Hornet" \tempo "Light and jumpy" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     a8\fp r r e r4 g8 r r4 c8->( b) e, r r e r4 d8 r r4 b'8 r a r r e r4 g8 r r4 c8->( b)
     e-.->\< e-. e-. f-.-> f-. f-. g-.-> g-. g-. a->-. a-. a-.
     \time 4/4 b-.-> b-. b-. b-. c->-. c-. c-. c-. \time 3/4
     d8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g->( f e) f->( e d) d-.->\f r r4 r
-    a4.\mf e'->~2. g4-> f d e-> c b a4.-> d c b
+    \mark\default a4.\mf e'->~2. g4-> f d e-> c b a4.-> d c b
 
     \alternative {
       \volta 1 {
@@ -273,37 +288,40 @@ scoreAOboe = \relative c'' {
 scoreABassoon = \relative c' {
   \global
   % Music goes here
-  \sectionLabel "Dirtmouth" \tempo "Empty and gloomy" 4 = 88 \time 4/4
+  \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
   R1*9 {
+    \mark \default
     fs1^\markup{ \italic "solo" }\f~ 2 \tuplet 3/2 {fs4( g a)} fs2. b,4( cs1) e\<(fs2) g4(a) b2..\! c8( b2\> g)
     fs1\f~ 2 \tuplet 3/2 {fs4( g a)} fs1(cs'2.) a4(g1) fs2. d4\<(cs2) \grace {d16( cs} b2\>)
     \override TextSpanner.bound-details.left.text = "poco rit." cs2.\startTextSpan (e4\stopTextSpan)
-    e1^\markup {\bold {a tempo}}\!->~1\> R1*13\!
+    \mark \default e1^\markup {\bold {a tempo}}\!->~1\> R1*13\!
   }
-  \sectionLabel "Greenpath" \tempo "Alive and mossy" 4 = 83 \time 3/4
+  \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
   \clef bass
   R2.*4
   \transpose c c' {
     \fixed c {
-      e,8-.^\markup{\italic "quasi pizz."} b,-. e4-. r4 b,,8-. fs,-. cs4-. r4 c,8-. g,-. d4-. r4 a,,8-. e,-. b,4-. r4
+      \mark\default e,8-.^\markup{\italic "quasi pizz."} b,-. e4-. r4 b,,8-. fs,-. cs4-. r4
+      c,8-. g,-. d4-. r4 a,,8-. e,-. b,4-. r4
       b,,8-. fs,-. cs4-. r4 g,,8-. d,-. a,4-. r4 a,,8-. e,-. b,4-. r4 c,8-. g,-. e4-. r4
     } \greenPathLeftHand
   }
 
-  \time 6/8
+  \time 6/8 \mark\default
   \repeat unfold 2 \transpose c c' {\greenPathLeftHandB}
 
-  e,2.\f^\markup{\italic "solo"} fs g c, a~4.~8 b4 c2. {e,16\f-. fs-. b-. fs-. b-. cs-. cs-. cs-. e-. cs-. e-. fs-.}
-  \greenPathBassA R2.*8
+  \mark\default e,2.\f^\markup{\italic "solo"}
+  fs g c, a~4.~8 b4 c2. {e,16\f-. fs-. b-. fs-. b-. cs-. cs-. cs-. e-. cs-. e-. fs-.}
+  \mark\default \greenPathBassA \mark\default R2.*8
   \greenPathBassB
 
-  \sectionLabel "Hornet" \tempo "Light and jumpy" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     a8\fp-.-> a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-.-> a-. a-.-> a-. a-. a-.-> a-. a-. f-.-> f-. f-. f-. g-.-> r
     a-.-> a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-.-> a-. a-.->\< a-. a-. a-.-> a-. a-. g-.-> g-. g-. g-.-> g-. g-.
     \time 4/4 f-.-> f-. f-. f-. f-.-> f-. f-. f-. \time 3/4
-    d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. bf-.-> bf-. bf-. bf-.-> bf-. bf-. bf2.\f\>a4-.->\p r r
-    g'8->\mf f d e c-> b e-> r r4 r R2.*2 e8-> d b c a-> b
+    d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. bf-.-> bf-. bf-. bf-.-> bf-. bf-. bf2.\f\>
+    \mark\default a4-.->\p r r g'8->\mf f d e c-> b e-> r r4 r R2.*2 e8-> d b c a-> b
 
     \alternative {
       \volta 1 {
@@ -338,27 +356,27 @@ scoreABassoon = \relative c' {
 scoreAEflatClarinet = \relative c'' {
   \global
   % Music goes here
-  \sectionLabel "Dirtmouth" \tempo "Empty and gloomy" 4 = 88 \time 4/4
-  R1*40
-  \sectionLabel "Greenpath" \tempo "Alive and mossy" 4 = 83 \time 3/4
-  R2.*20
+  \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
+  R1*9 \mark \default R1*16 \mark\default R1*15
+  \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
+  R2.*4 \mark\default R2.*16
 
-  \time 6/8
-  R2.*7 fs'16\p\<(b, cs a b g a e fs b, cs ds e4.\mf) r4. R2.*8
+  \time 6/8 \mark\default
+  R2.*7 fs'16\p\<(b, cs a b g a e fs b, cs ds e4.\mf) r4. R2.*7 \mark\default R2.
   fs,16\mf( b cs fs e fs cs' b cs fs e fs) R2.*2 {fs,16\mp-> ( b, cs a b8-.) fs'16->( b, cs a b8-.)}
-  R2. {b'16->\mf ( e, fs d e8-.) b'16->( e, fs d e8-.)} R2.*2
+  R2. {b'16->\mf ( e, fs d e8-.) b'16->( e, fs d e8-.)} R2. \mark\default R2.
   {cs16 (b cs fs e fs cs' b cs fs e fs)} R2.*3 {cs,16 (b cs fs e fs cs' b cs fs e fs)} R2.
-  {fs,8-.\mp\< e-. d-. b-. b-. a-. e-.\! r r r4.}
+  {fs,8-.\mp\< e-. d-. b-. b-. a-. \mark\default e-.\! r r r4.}
   R2.*13
   \relative c'' {\greenPathPatternA \greenPathPatternB}
 
-  \sectionLabel "Hornet" \tempo "Light and jumpy" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     a'8\fp-.-> e-. e-. e-.-> e-. e-. g->( f) d( e) c->( b)
     e-.-> e-. e-. e-.-> e-. e-. d->( c) a( c) b->( g)
     e'-.-> e-. e-. e-.-> e-. e-. g->( f) d( c) c->( b) e-.-> r r4 r R2.
     \time 4/4 R1 \time 3/4 d8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g'->( f e) f->( e d) d-.->\f r r4 r
-    a4.\mf e'->~2. g4-> f d e-> c b a4.-> d c b
+    \mark\default a4.\mf e'->~2. g4-> f d e-> c b a4.-> d c b
 
     \alternative {
       \volta 1 {
@@ -383,29 +401,30 @@ scoreAEflatClarinet = \relative c'' {
 scoreAClarinetI = \relative c'' {
   \global
   % Music goes here
-  \sectionLabel "Dirtmouth" \tempo "Empty and gloomy" 4 = 88 \time 4/4
-  R1*19 r2 r4 r8 b\mp cs2\< e e1\! R1 fs,2\> d e2.\! r4
-  R1*15
-  \sectionLabel "Greenpath" \tempo "Alive and mossy" 4 = 83 \time 3/4
-  R2.*20
+  \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
+  R1*9 \mark \default R1*10 r2 r4 r8 b\mp cs2\< e e1\! R1 fs,2\> d e2.\! r4
+  \mark \default R1*15
+  \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
+  R2.*4 \mark\default R2.*16
 
-  \time 6/8
+  \time 6/8 \mark\default
   R2.*7 r4. a'16\p\<(e fs b, cs ds e4.\mf~8 fs8 g fs2.) e4.~8 b4( cs2.) d4.~8 b4(a4.~8 b8 c b4.)~8 g4(a2.)
-  b8-.\pp r r b-. r r fs'-. r r fs-. r r e-. r r e-. r r c-. r r c-. r r
+  \mark\default b8-.\pp r r b-. r r fs'-. r r fs-. r r e-. r r e-. r r c-. r r c-. r r
   b-. r r b-. r r cs-. r r cs-. r r e-. r r b-. r r cs-. r b-. fs'-. r r
-  c-. r r c-. r r b-. r r b-. r r e-. r r e-. r r c-. r r c-. r r
-  b-. r r b-. r r fs'-. r r fs-. r r e-. r r e-. r r b-. r r b-. r r R2.*14
+  \mark\default c-. r r c-. r r b-. r r b-. r r e-. r r e-. r r c-. r r c-. r r
+  b-. r r b-. r r fs'-. r r fs-. r r e-. r r e-. r r b-. r r b-. r r \mark\default R2.*14
 
   \greenPathPatternA \greenPathPatternB
 
-  \sectionLabel "Hornet" \tempo "Light and jumpy" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     a8\fp-.-> e-. e-. e-.-> e-. e-. g->( f) d( e) c->( b)
     e-.-> e-. e-. e-.-> e-. e-. d->( c) a( c) b->( g)
     e'-.-> e-. e-. e-.-> e-. e-. g->( f) d( e) c-> (b) e->-. r r4 r R2.
     \time 4/4 R1 \time 3/4
     d8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g->( f e) f->( e d)
-    \tuplet 3/2 {d'-.->\f c-. bf-.} \tuplet 3/2 {bf-.-> a-. g-.} \tuplet 3/2 {f-.-> e-. d-.} a'4-.-> r r R2.*5
+    \tuplet 3/2 {d'-.->\f c-. bf-.} \tuplet 3/2 {bf-.-> a-. g-.} \tuplet 3/2 {f-.-> e-. d-.}
+    \mark\default a'4-.-> r r R2.*5
 
     \alternative {
       \volta 1 {
@@ -435,25 +454,27 @@ scoreAClarinetI = \relative c'' {
 scoreAClarinetII = \relative c'' {
   \global
   % Music goes here
-  \sectionLabel "Dirtmouth" \tempo "Empty and gloomy" 4 = 88 \time 4/4
-  R1*40
-  \sectionLabel "Greenpath" \tempo "Alive and mossy" 4 = 83 \time 3/4
-  R2.*20
+  \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
+  R1*9 \mark \default R1*16 \mark\default R1*15
+  \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
+  R2.*4 \mark\default R2.*16
 
-  \time 6/8
-  R2.*16 b8-.\pp r b-. g-. b-. r b-. r b-. r b-. e,-. b'-. r b-. e-. b-. r b-. r b-. g-. b-. e-.
+  \time 6/8 \mark\default
+  R2.*16 \mark\default
+  b8-.\pp r b-. g-. b-. r b-. r b-. r b-. e,-. b'-. r b-. e-. b-. r b-. r b-. g-. b-. e-.
   b-. r b-. g-. b-. r b-. r b-. r b-. g'-. b,-. r b-. e,-. b'-. r b-. r b-. b-. r r
-  b-. r b-. g-. b-. r b-. r a-. r b-. r b-. r b-. e-. b-. r a-. r a-. g-. b-. e-.
-  b-. r b-. g-. b-. r b-. r a-. r b-. r b-. r b-. e,-. b'-. r b-.\< r b-. g-. b-. e-. e-.\! r r r4. R2.*13
+  \mark\default b-. r b-. g-. b-. r b-. r a-. r b-. r b-. r b-. e-. b-. r a-. r a-. g-. b-. e-.
+  b-. r b-. g-. b-. r b-. r a-. r b-. r b-. r b-. e,-. b'-. r b-.\< r b-. g-. b-. e-.
+  \mark\default e-.\! r r r4. R2.*13
 
   \relative c' {\greenPathPatternA  \greenPathPatternB}
 
-  \sectionLabel "Hornet" \tempo "Light and jumpy" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     a8\fp r r e r4 g8 r r4 c,8 r e r r e r4 d8 r r4 b8 r b r r e r4 g8 r r4 c,8 r
     e r r4 r R2. \time 4/4 R1 \time 3/4
     d8\mf\<(-> c b) c(-> b a) d(-> c b) c(-> b a) g(-> f e) f(-> e d)
-    d'4-.\f bf-. f-. e8-.\p e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-.
+    d'4-.\f bf-. f-. \mark\default e8-.\p e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-.
     e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-.
     c-. c-. c-. c-. c-. c-. c-. c-. c-. c-. c-. c-.
     \alternative {
@@ -485,29 +506,33 @@ scoreAClarinetII = \relative c'' {
 scoreAClarinetIII = \relative c'' {
   \global
   % Music goes here
-  \sectionLabel "Dirtmouth" \tempo "Empty and gloomy" 4 = 88 \time 4/4
-  R1*40
-  \sectionLabel "Greenpath" \tempo "Alive and mossy" 4 = 83 \time 3/4
-  R2.*20
+  \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
+  R1*9 \mark \default R1*16 \mark\default R1*15
+  \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
+  R2.*4 \mark\default R2.*16
 
-  \time 6/8
-  R2.*16 e,8-.\pp r e-. g-. e-. r fs-. r fs-. r fs-. e-.
+  \time 6/8 \mark\default
+  R2.*16 \mark\default
+  e,8-.\pp r e-. g-. e-. r fs-. r fs-. r fs-. e-.
   e-. r e-. e-. e-. r fs-. r fs-. g-. b-. e-.
   e,-. r e-. g-. e-. r fs-. r fs-. r fs-. g-.
   e-. r e-. e-. e-. r fs-. r fs-. b-. r r
+  \mark\default
   e,-. r e-. g-. e-. r fs-. r fs-. r fs-. r
   e-. r e-. e-. e-. r fs-. r fs-. g-. b-. e-.
   e,-. r e-. g-. e-. r fs-. r fs-. r fs-. r
-  e-. r e-. e-. e-. r e-.\< r fs-. g-. b-. e-. e-.\! r r r4. R2.*13
+  e-. r e-. e-. e-. r e-.\< r fs-. g-. b-. e-. \mark\default e-.\! r r r4. R2.*13
 
   \relative c {\greenPathPatternA  \greenPathPatternB}
 
-  \sectionLabel "Hornet" \tempo "Light and jumpy" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     a,8\fp r r e r4 g8 r r4 c8->( b) e, r r e r4 d8 r r4 b'8 r a r r e r4 g8 r r4 c8->( b)
     e r r4 r R2. \time 4/4 R1 \time 3/4
     d8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g->( f e) f->( e d)
-    d'4-.\f bf-. f-. e8-.\p e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-.
+    d'4-.\f bf-. f-.
+    \mark\default e8-.\p e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-.
+    e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-.
     c-. c-. c-. c-. c-. c-. c-. c-. c-. c-. c-. c-.
 
     \alternative {
@@ -540,20 +565,20 @@ scoreABassClarinet = \relative c'' {
   \global
   \transposition c,
   % Music goes here
-  \sectionLabel "Dirtmouth" \tempo "Empty and gloomy" 4 = 88 \time 4/4
-  R1*40
-  \sectionLabel "Greenpath" \tempo "Alive and mossy" 4 = 83 \time 3/4
-  R2.*20
+  \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
+  R1*9 \mark \default R1*16 \mark\default R1*15
+  \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
+  R2.*4 \mark\default R2.*16
 
-  \time 6/8
-  R2.*16 b,8-.\pp r r b-. r r fs'-. r r fs-. r r
+  \time 6/8 \mark\default
+  R2.*16 \mark\default b,8-.\pp r r b-. r r fs'-. r r fs-. r r
   e-. r r e-. r r c-. r r c-. r r
   b-. r r b-. r r cs-. r r cs-. r r
   e-. r r b-. r r cs-. r r fs-. r r
 
-  \greenPathBassA \greenPathBassPreB \greenPathBassB
+  \mark\default \greenPathBassA \mark\default \greenPathBassPreB \greenPathBassB
 
-  \sectionLabel "Hornet" \tempo "Light and jumpy" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     a8\fp-.-> a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-.-> a-.
     a-.-> a-. a-. a-.-> a-. a-. f-.-> f-. f-. f-. g-.-> r
@@ -561,7 +586,8 @@ scoreABassClarinet = \relative c'' {
     a-.->\< a-. a-. a-.-> a-. a-. g-.-> g-. g-. g-. g-.-> g-.
     \time 4/4 f-.-> f-. f-. f-. f-.-> f-. f-. f-. \time 3/4
     d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. bf-.-> bf-. bf-. bf-.-> bf-. bf-. bf2.\f\>
-    e8-.\p e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-.
+    \mark\default e8-.\p e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-.
+    e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-.
     c-. c-. c-. c-. c-. c-. c-. c-. c-. c-. c-. c-.
 
     \alternative {
@@ -600,40 +626,42 @@ scoreABassClarinet = \relative c'' {
 scoreAAltoSaxI = \relative c'' {
   \global
   % Music goes here
-  \sectionLabel "Dirtmouth" \tempo "Empty and gloomy" 4 = 88 \time 4/4
-  R1*17
-  { a,1\pp~ 2 \tuplet 3/2 {a4( b cs)} a1~ 1 c d a~1 R1*15}
-  \sectionLabel "Greenpath" \tempo "Alive and mossy" 4 = 83 \time 3/4
+  \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
+  R1*9 \mark \default R1*8
+  { a,1\pp~ 2 \tuplet 3/2 {a4( b cs)} a1~ 1 c d a~1 \mark\default R1*15}
+  \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
   R2.*4
-  fs'2.\mf^\markup{ \italic "solo" }~4. \tuplet 2/3 {g8(a)} fs2 b,4 cs2. e~4. \tuplet 2/3 {fs8(g)} e2.~2.
+  \mark\default fs'2.\mf^\markup{ \italic "solo" }~4.
+  \tuplet 2/3 {g8(a)} fs2 b,4 cs2. e~4. \tuplet 2/3 {fs8(g)} e2.~2.
   fs2.~4. \tuplet 2/3 {g8(a)} fs2 b,4( cs2.) e~4. \tuplet 2/3 {fs8(g)} e2. c4. a(
 
-  \time 6/8
+  \time 6/8 \mark\default
   b2.\>) R2.*15\!
   {
-    b'8-.\pp r b-. b-. b-. r b-. r b-. b-. b (e-.)
+    \mark\default b'8-.\pp r b-. b-. b-. r b-. r b-. b-. b (e-.)
     b-. r b-. e,-. b'-. r b-. r b-. c-. b-. e-.
     b-. r b-. g-. b-. r cs-. r cs-. cs,-. fs-. g-.
     b-. r b-. e,-. b'-. r cs-. r b-. fs-. r r
   }
   {
-    b-. r b-. g-. b-. r b-. r a-. r b-. r
+    \mark\default b-. r b-. g-. b-. r b-. r a-. r b-. r
     b-. r b-. e,-. b'-. r a-. r a-. g-. b-. e-.
     b-. r b-. g-. b-. r a-. r a-. r b-. r
-    b-. r b-. e,-. b'-. r b-.\< r b-. g-. b-. e-. e-.\! r r r4.
+    b-. r b-. e,-. b'-. r b-.\< r b-. g-. b-. e-. \mark\default e-.\! r r r4.
   }
   R2.*13
   {
-    r4. r8 g,4\ff a4. c b2.~4.~8 e4 b2. e d4. cs d b
+    r4. r8 g,4\ff a4. c \mark\default b2.~4.~8 e4 b2. e d4. cs d b
     \override TextSpanner.bound-details.left.text = "poco rit." a2.\startTextSpan a4. c\stopTextSpan
   }
 
-  \sectionLabel "Hornet" \tempo "Light and jumpy" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     e,8\fp-.-> e-. e-. e-.-> e-. e-. g-.-> r r4 r e8-.-> e-. e-. e-.-> e-. e-. d-.-> r r4 r
     e8-.-> e-. e-. e-.-> e-. e-. g-.-> r r4 r e8 r r4 r R2. \time 4/4 R1 \time 3/4
     d8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g->( f e) f->( e d)
-    \tuplet 3/2 {d'-.->\f c-. bf-.} \tuplet 3/2 {bf-.-> a-. g-.} \tuplet 3/2 {f'-.-> e-. d-.} a4-.-> r r R2.*5
+    \tuplet 3/2 {d'-.->\f c-. bf-.} \tuplet 3/2 {bf-.-> a-. g-.} \tuplet 3/2 {f'-.-> e-. d-.}
+    \mark\default a4-.-> r r R2.*5
 
     \alternative {
       \volta 1 {
@@ -666,33 +694,33 @@ scoreAAltoSaxI = \relative c'' {
 scoreAAltoSaxII = \relative c'' {
   \global
   % Music goes here
-  \sectionLabel "Dirtmouth" \tempo "Empty and gloomy" 4 = 88 \time 4/4
-  R1*40
-  \sectionLabel "Greenpath" \tempo "Alive and mossy" 4 = 83 \time 3/4
-  R2.*20
+  \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
+  R1*9 \mark \default R1*16 \mark\default R1*15
+  \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
+  R2.*4 \mark\default R2.*16
 
-  \time 6/8
+  \time 6/8 \mark\default
   {
-    R2.*16 e,8-.\pp r e-. r e-. r fs-. r fs-. fs-. b (e-.)
+    R2.*16 \mark\default e,8-.\pp r e-. r e-. r fs-. r fs-. fs-. b (e-.)
     e,-. r e-. e-. b'-. r c,-. r c-. c-. b-. e-.
     e-. r e-. g-. e-. r fs-. r fs-. cs-. fs-. g-.
     e-. r e-. e-. b'-. r fs-. r fs-. fs-. r r
   }
   {
-    e-. r e-. g-. e-. r fs-. r fs-. r fs-. r
+    \mark\default e-. r e-. g-. e-. r fs-. r fs-. r fs-. r
     e-. r e-. e-. e-. r fs-. r fs-. g-. b-. e-.
     e,-. r e-. g-. e-. r fs-. r fs-. r fs-. r
-    e-. r e-. e-. e-. r e-.\< r fs-. g-. b-. e-. e-.\! r r r4. R2.*15
+    e-. r e-. e-. e-. r e-.\< r fs-. g-. b-. e-. \mark\default e-.\! r r r4. R2.*15
   }
-  fs,2.\ff~4. \tuplet 2/3 {g8 a} fs4.~8 b,4 cs2. e2.~4. \tuplet 2/3 {fs8 g}
+  \mark\default fs,2.\ff~4. \tuplet 2/3 {g8 a} fs4.~8 b,4 cs2. e2.~4. \tuplet 2/3 {fs8 g}
   \override TextSpanner.bound-details.left.text = "poco rit." e2.\startTextSpan\< c4. a\stopTextSpan
 
-  \sectionLabel "Hornet" \tempo "Light and jumpy" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     e'8\fp-.-> e-. e-. e-.-> e-. e-. g-.-> r r4 r e8-.-> e-. e-. e-.-> e-. e-. d-.-> r r4 r
     e8-.-> e-. e-. e-.-> e-. e-. g-.-> r r4 r e8 r r4 r R2. \time 4/4 R1 \time 3/4
     d8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g->( f e) f->( e d)
-    bf'2.\> a4\p-.-> r r R2.*5
+    bf'2.\> \mark\default a4\p-.-> r r R2.*5
 
     \alternative {
       \volta 1 {
@@ -726,22 +754,22 @@ scoreATenorSax = \relative c'' {
   \global
   \transposition c,
   % Music goes here
-  \sectionLabel "Dirtmouth" \tempo "Empty and gloomy" 4 = 88 \time 4/4
-  R1*40
-  \sectionLabel "Greenpath" \tempo "Alive and mossy" 4 = 83 \time 3/4
-  R2.*20
+  \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
+  R1*9 \mark \default R1*16 \mark\default R1*15
+  \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
+  R2.*4 \mark\default R2.*16
 
-  \time 6/8
-  R2.*16 e,4.\mp e e e e e fs g e e e e e e fs\< g
-  \relative c' \greenPathBassA \relative c'' {\greenPathBassPreB \greenPathBassB}
+  \time 6/8 \mark\default
+  R2.*16 \mark\default e,4.\mp e e e e e fs g e e e e e e fs\< g \mark\default
+  \relative c' \greenPathBassA \mark\default \relative c'' {\greenPathBassPreB \greenPathBassB}
 
-  \sectionLabel "Hornet" \tempo "Light and jumpy" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     a8\fp r r e r4 g8 r r4 c8->( b) e, r r e r4 d8 r r4 b'8 r a r r e r4 g8 r r4 c8->( b)
     a-.->\< a-. a-. a-.-> a-. a-. g-.-> g-. g-. g-. g-.-> g-.
     \time 4/4 f-.-> f-. f-. f-. f-.-> f-. f-. f-. \time 3/4
     d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-.
-    g->( f e) f->( e d) bf'2.\> e4\p-.-> r r
+    g->( f e) f->( e d) bf'2.\> \mark\default e4\p-.-> r r
     g8->\mf f d e c-> b c-> r r4 r R2.*2 e8->\mf d b c a-> b
 
     \alternative {
@@ -767,33 +795,34 @@ scoreABaritoneSax = \relative c'' {
   \global
   \transposition c,
   % Music goes here
-  \sectionLabel "Dirtmouth" \tempo "Empty and gloomy" 4 = 88 \time 4/4
-  R1*40
-  \sectionLabel "Greenpath" \tempo "Alive and mossy" 4 = 83 \time 3/4
-  R2.*20
+  \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
+  R1*9 \mark \default R1*16 \mark\default R1*15
+  \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
+  R2.*4 \mark\default R2.*16
 
-  \time 6/8
+  \time 6/8 \mark\default
   R2.*8 e,2.\p b'4 cs8~4. c4. e~2. d4. fs, a b4 c8 e4. b a2.
-  R2.*7
+  \mark\default R2.*7
 
-  fs4.\p\< g \relative c' \greenPathBassA \relative c'' {\greenPathBassPreB \greenPathBassB}
+  fs4.\p\< g \mark\default \relative c' \greenPathBassA
+  \mark\default \relative c'' {\greenPathBassPreB \greenPathBassB}
 
-  \sectionLabel "Hornet" \tempo "Light and jumpy" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   {a'8\fp-.->}
 }
 
 scoreATrumpetBbI = \relative c'' {
   \global
   % Music goes here
-  \sectionLabel "Dirtmouth" \tempo "Empty and gloomy" 4 = 88 \time 4/4
-  R1*40
-  \sectionLabel "Greenpath" \tempo "Alive and mossy" 4 = 83 \time 3/4
-  R2.*20
+  \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
+  R1*9 \mark \default R1*16 \mark\default R1*15
+  \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
+  R2.*4 \mark\default R2.*16
 
-  \time 6/8
-  R2.*32
+  \time 6/8 \mark\default
+  R2.*16 \mark\default R2.*8 \mark\default R2.*8
   {
-    e16\f-. b-. a-. e'-. r e8-. e16-. r e8.-. e16-. b-. a-. e'-. r fs8-. fs16-. r fs8.-.
+    \mark\default e16\f-. b-. a-. e'-. r e8-. e16-. r e8.-. e16-. b-. a-. e'-. r fs8-. fs16-. r fs8.-.
     e16-. b-. a-. e'-. r e8-. e16-. r e8.-. e16-. b-. a-. e'-. r e8-. e16-. r d8.-.
   }
   {
@@ -802,26 +831,26 @@ scoreATrumpetBbI = \relative c'' {
   }
   {
     fs2.\ff~4. \tuplet 2/3 {g8 a} fs4.~8 b,4 cs2. e~4. \tuplet 2/3 {fs8 g} e4.~8 g4 a4. c
-    b2.~4.~8 e,4 b2. e d4. cs d b \override TextSpanner.bound-details.left.text = "poco rit."
+    \mark\default b2.~4.~8 e,4 b2. e d4. cs d b \override TextSpanner.bound-details.left.text = "poco rit."
     a2.\startTextSpan \< a4. c\stopTextSpan
   }
 
-  \sectionLabel "Hornet" \tempo "Light and jumpy" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   {a'8\fp-.->}
 }
 
 scoreATrumpetBbII = \relative c'' {
   \global
   % Music goes here
-  \sectionLabel "Dirtmouth" \tempo "Empty and gloomy" 4 = 88 \time 4/4
-  R1*40
-  \sectionLabel "Greenpath" \tempo "Alive and mossy" 4 = 83 \time 3/4
-  R2.*20
+  \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
+  R1*9 \mark \default R1*16 \mark\default R1*15
+  \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
+  R2.*4 \mark\default R2.*16
 
-  \time 6/8
-  R2.*32
+  \time 6/8 \mark\default
+  R2.*16 \mark\default  R2.*8 \mark\default R2.*8
   {
-    e16\f-. b-. a-. e'-. r e8-. e16-. r e8.-. e16-. b-. a-. e'-. r fs8-. fs16-. r fs8.-.
+    \mark\default e16\f-. b-. a-. e'-. r e8-. e16-. r e8.-. e16-. b-. a-. e'-. r fs8-. fs16-. r fs8.-.
     e16-. b-. a-. e'-. r e8-. e16-. r e8.-. e16-. b-. a-. e'-. r e8-. e16-. r d8.-.
   }
   {
@@ -840,114 +869,116 @@ scoreATrumpetBbII = \relative c'' {
   }
   \relative c' {\greenPathPatternA \greenPathPatternB}
 
-  \sectionLabel "Hornet" \tempo "Light and jumpy" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   {a8\fp-.->}
 }
 
 scoreAHornFI = \relative c' {
   \global
   % Music goes here
-  \sectionLabel "Dirtmouth" \tempo "Empty and gloomy" 4 = 88 \time 4/4
-  R1*40
-  \sectionLabel "Greenpath" \tempo "Alive and mossy" 4 = 83 \time 3/4
-  R2.*20
+  \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
+  R1*9 \mark \default R1*16 \mark\default R1*15
+  \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
+  R2.*4 \mark\default R2.*16
 
-  \time 6/8
-  R2.*39
+  \time 6/8 \mark\default
+  R2.*16 \mark\default  R2.*8 \mark\default R2.*8 \mark\default R2.*7
   e,8.\f\< fs g a fs2.\ff~4. \tuplet 2/3 {g8 a} fs4.~8 b,4 cs2. e~4. \tuplet 2/3 {fs8 g} e4.~8 g4 a4. c
-  b2.~4.~8 e4 b2. e d4. cs d b \override TextSpanner.bound-details.left.text = "poco rit."
+  \mark\default b2.~4.~8 e4 b2. e d4. cs d b \override TextSpanner.bound-details.left.text = "poco rit."
   a2.\startTextSpan \< a4. c\stopTextSpan
 
-  \sectionLabel "Hornet" \tempo "Light and jumpy" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   {a8\fp-.->}
 }
 
 scoreAHornFII = \relative c' {
   \global
   % Music goes here
-  \sectionLabel "Dirtmouth" \tempo "Empty and gloomy" 4 = 88 \time 4/4
-  R1*40
-  \sectionLabel "Greenpath" \tempo "Alive and mossy" 4 = 83 \time 3/4
-  R2.*20
+  \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
+  R1*9 \mark \default R1*16 \mark\default R1*15
+  \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
+  R2.*4 \mark\default R2.*16
 
-  \time 6/8
-  R2.*39
+  \time 6/8 \mark\default
+  R2.*16 \mark\default R2.*8 \mark\default R2.*8 \mark\default R2.*7
   e,8.\f\< fs g a fs2.\ff~4. \tuplet 2/3 {g8 a} fs4.~8 b,4 cs2. e~4. \tuplet 2/3 {fs8 g} e4.~8 g4 a4. c
   \relative c' {
     \override TextSpanner.bound-details.left.text = "poco rit."
-    {fs8-. fs16-. fs-. r fs-. fs8-. fs-. fs-.} {fs8-. fs16-. fs-. r fs-. fs8-. fs16-. fs-. fs8-.}
+    {\mark\default fs8-. fs16-. fs-. r fs-. fs8-. fs-. fs-.} {fs8-. fs16-. fs-. r fs-. fs8-. fs16-. fs-. fs8-.}
     {fs8-. fs16-. fs-. r fs-. fs8-. fs-. fs-.} {fs8-. fs16-. fs-. r fs-. fs8-. fs16-. fs-. fs8-.}
     {fs8-. fs16-. fs-. r fs-. fs8-. fs-. fs-.} {fs8-. fs16-. fs-. r fs-. fs8-. fs16-. fs-. fs8-.}
     {fs8-.\startTextSpan fs16-. fs-. r fs-. fs8-. fs-. fs-.} {fs8-. fs16-. fs-. r fs-. fs8.-. fs16-. fs-. fs-.\stopTextSpan}
   }
 
-  \sectionLabel "Hornet" \tempo "Light and jumpy" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   {a8\fp-.->}
 }
 
 scoreATromboneI = \relative c {
   \global
   % Music goes here
-  \sectionLabel "Dirtmouth" \tempo "Empty and gloomy" 4 = 88 \time 4/4
-  R1*40
-  \sectionLabel "Greenpath" \tempo "Alive and mossy" 4 = 83 \time 3/4
-  R2.*20
+  \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
+  R1*9 \mark \default R1*16 \mark\default R1*15
+  \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
+  R2.*4 \mark\default R2.*16
 
-  \time 6/8
-  R2.*23 {e,16\f-. fs-. b-. fs-. b-. cs-. cs-. cs-. e-. cs-. e-. fs-.} g8-. r8 r2
-  R2.*7
+  \time 6/8 \mark\default
+  R2.*16 \mark\default R2.*7
+  {e,16\f-. fs-. b-. fs-. b-. cs-. cs-. cs-. e-. cs-. e-. fs-.} \mark\default g8-. r8 r2
+  R2.*7 \mark\default
   \relative c' {\greenPathBassPreB \greenPathBassB}
 
-  \sectionLabel "Hornet" \tempo "Light and jumpy" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   {a8\fp-.->}
 }
 
 scoreATromboneII = \relative c {
   \global
   % Music goes here
-  \sectionLabel "Dirtmouth" \tempo "Empty and gloomy" 4 = 88 \time 4/4
-  R1*40
-  \sectionLabel "Greenpath" \tempo "Alive and mossy" 4 = 83 \time 3/4
-  R2.*20
+  \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
+  R1*9 \mark \default R1*16 \mark\default R1*15
+  \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
+  R2.*4 \mark\default R2.*16
 
-  \time 6/8
-  R2.*40 \relative c' {\greenPathBassC}
+  \time 6/8 \mark\default
+  R2.*16 \mark\default  R2.*8 \mark\default R2.*8 \mark\default R2.*8 \relative c' {\greenPathBassC}
 
-  \sectionLabel "Hornet" \tempo "Light and jumpy" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   {a'8\fp-.->}
 }
 
 scoreAEuphonium = \relative c {
   \global
   % Music goes here
-  \sectionLabel "Dirtmouth" \tempo "Empty and gloomy" 4 = 88 \time 4/4
+  \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
   R1*9 {
+    \mark \default
     d'1\pp~ 2 \tuplet 3/2 {d4( e fs)} d2. b4( g1~) 1\< a2. cs4\!( f1) g\>
-    d\!~2 \tuplet 3/2 {d4( e fs)} d2. b4( fs1) g d g2 b cs1 R1*8
+    d\!~2 \tuplet 3/2 {d4( e fs)} d2. b4( fs1) g d g2 b cs1 \mark\default R1*8
     a2\mf\< \tuplet 3/2 {a4( b c} b1) c2 \tuplet 3/2 {c4( d e} d1) e\f\> R1*2\!
   }
-  \sectionLabel "Greenpath" \tempo "Alive and mossy" 4 = 83 \time 3/4
-  R2.*20
+  \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
+  R2.*4 \mark\default R2.*16
 
-  \time 6/8
+  \time 6/8 \mark\default
   \transpose c c' {
     \fixed c {
       e,8-.^\markup{\italic "quasi pizz."} b,-. e-. r4. b,,8-. fs,-. cs-. r4. c,8-. g,-. d-. r4. a,,8-. e,-. b,-. r4.
       b,,8-. fs,-. cs-. r4. g,,8-. d,-. a,-. r4. a,,8-. e,-. b,-. r4. c,8-. g,-. e-. r4.
     } \greenPathLeftHandB
   }
-  R2.*7
+  \mark\default R2.*7
   {e,,16\f-. fs-. b-. fs-. b-. cs-. cs-. cs-. e-. cs-. e-. fs-.}
-  \greenPathBassA
+  \mark\default \greenPathBassA \mark\default
   {e,8-.\f e16-. e-. r e-. e8-. e-. e-.} {b8-. b16-. b-. r b-. b8-. b16-. b-. b8-.}
   {c8-. c16-. c-. r c-. c8-. c-. c-.} {a8-. a16-. a-. r a-. a8-. a16-. a-. a8-.}
   {b8-. b16-. b-. r b-. b8-. b-. b-.} {g8-. g16-. g-. r g-. g8-. g-. g-.}
   {a8-. a16-. a-. r a-. a8-. a-. a-.} e'8.\f\< fs g a
   fs2.\ff~4. \tuplet 2/3 {g8 a} fs4.~8 b,4 cs2. e~4. \tuplet 2/3 {fs8 g} e4.~8 g4 a4. c
-  b2.~4.~8 e4 b2. e d4. cs d b \override TextSpanner.bound-details.left.text = "poco rit."
+  \mark\default b2.~4.~8 e4 b2. e d4. cs d b \override TextSpanner.bound-details.left.text = "poco rit."
   a2.\startTextSpan \< a4. c\stopTextSpan
 
-  \sectionLabel "Hornet" \tempo "Light and jumpy" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   {a8\fp-.->}
 }
 
@@ -955,106 +986,120 @@ scoreATuba = \relative c {
   \global
   \transposition c,
   % Music goes here
-  \sectionLabel "Dirtmouth" \tempo "Empty and gloomy" 4 = 88 \time 4/4
-  R1*40
-  \sectionLabel "Greenpath" \tempo "Alive and mossy" 4 = 83 \time 3/4
-  R2.*20
+  \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
+  R1*9 \mark \default R1*16 \mark\default R1*15
+  \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
+  R2.*4 \mark\default R2.*16
 
-  \time 6/8
+  \time 6/8 \mark\default
   e,8-.^\markup{ \italic "quasi pizz."} r r e-. r r b-. r r b-. r r c-. r r c-. r r a-. r r a-. r r b-.
   r r b-. r r g-. r r g-. r r a-. r r a-. r r c-. r r c-. r r R2.*8
 
-  e4.\mp e e e e e fs g e e e e e e fs\< g \relative c {\greenPathBassA} \relative c {\greenPathBassPreB \greenPathBassB}
+  \mark\default e4.\mp e e e e e fs g
+  e e e e e e fs\< g \mark\default
+  \relative c {\greenPathBassA} \mark\default
+  \relative c {\greenPathBassPreB \greenPathBassB}
 
-  \sectionLabel "Hornet" \tempo "Light and jumpy" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   {a'8\fp-.->}
 }
 
 scoreATimpani = \relative c {
   \global
   % Music goes here
-  \sectionLabel "Dirtmouth" \tempo "Empty and gloomy" 4 = 88 \time 4/4
-  \repeat percent 8 {e1:32} e1 \repeat percent 28 {e1:32} e1 R1*2
+  \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
+  \repeat percent 8 {e1:32(} e1) \mark \default \repeat percent 15 {e1:32(} e1)
+  \mark \default \repeat percent 12 {e1:32(} e1)R1*2
 
-  \sectionLabel "Greenpath" \tempo "Alive and mossy" 4 = 83 \time 3/4
-  R2.*20
+  \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
+  R2.*4 \mark\default R2.*16
 
-  \time 6/8
-  R2.*16\mp e4. e e e e e b b e e e e e e b\< b
-  c\! c a a e' e a, a a a e' e c c c\< e
-  e8.\f e e8 e e b8. b b8 b b c8. c c8 c c a8. a a8 a a
+  \time 6/8 \mark\default
+  R2.*16 \mark\default
+  e4.\mp e e e e e b b e e e e e e b\< b
+  \mark\default c\! c a a e' e a, a a a e' e c c c\< e
+  \mark\default e8.\f e e8 e e b8. b b8 b b c8. c c8 c c a8. a a8 a a
   b8. b b8 b b b8. b b8 b b a8.\< a a8 a16 a a8 c8. c c8 c16 c c8
   e8.\ff e e8 e e b8. b b8 b b c8. c c8 c c a8. a a8 a a
   b8. b b8 b b b8. b b8 b b a8. a a8 a a c8. c c8 c c
-  e8. e e8 e e b8. b b8 b b c8. c c8 c c a8. a a8 a a
+  \mark\default e8. e e8 e e b8. b b8 b b c8. c c8 c c a8. a a8 a a
   b8. b b8 b b b8. b b8 b b \override TextSpanner.bound-details.left.text = "poco rit."
   a8.\startTextSpan a a8 a a c8. c c c16 c c\stopTextSpan
 
-  \sectionLabel "Hornet" \tempo "Light and jumpy" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   {a8\fp-.->}
 }
 
 scoreAGlockenspiel = \relative c'' {
   \global
   % Music goes here
-  \sectionLabel "Dirtmouth" \tempo "Empty and gloomy" 4 = 88 \time 4/4
-  R1*40
-  \sectionLabel "Greenpath" \tempo "Alive and mossy" 4 = 83 \time 3/4
-  R2.*4
+  \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
+  R1*9 \mark \default R1*16 \mark\default R1*15
+  \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
+  R2.*4 \mark\default
   {e8\mp b e2 b8 fs cs'2 c8 g d'2 a8 e b'2 b8 fs cs'2 g8 d a'2 a8 e b'2 c8 g e'2}
   {e8 b e2 b8 fs cs'2 c8 g d'2 a8 e b'2 b8 fs cs'2 g8 d a'2 a8 e b'2 c8 g e'2}
 
-  \time 6/8
+  \time 6/8 \mark\default
   R2. {fs16->\p^\markup {\italic "solo" } (b, cs a b8-.) fs'16->(b, cs a b8-.)}
   R2. {b'16->(e, fs d e8-.) b'16->(e, fs d e8-.)}
   R2.*3 {fs16\<->( b, cs a b g a e fs b, cs ds e2.\mf)} R2.*7
-  {fs'16->\mp ( b, cs a b8-.) fs'16->( b, cs a b8-.)} R2.
+  {\mark\default fs'16->\mp ( b, cs a b8-.) fs'16->( b, cs a b8-.)} R2.
   {b'16->(e, fs d e8-.) b'16->(e, fs d e8-.)} R2.
-  {fs16->\mp ( b, cs a b8-.) fs'16->( b, cs a b8-.)} R2.
+  {fs16-> ( b, cs a b8-.) fs'16->( b, cs a b8-.)} R2.
   {b'16->(e, fs d e8-.) b'16->(e, fs d e8-.)} R2.
-  {fs16->\mp ( b, cs a b8-.) fs'16->( b, cs a b8-.)} R2.
+  \mark\default
+  {fs16->\mf ( b, cs a b8-.) fs'16->( b, cs a b8-.)} R2.
   {b'16->(e, fs d e8-.) b'16->(e, fs d e8-.)} R2.
-  {fs16->\mp ( b, cs a b8-.) fs'16->( b, cs a b8-.)} R2.
-  {b'16->(e, fs d e8-.) b'16->(e, fs d e8-.)} R2.*25
+  {fs16-> ( b, cs a b8-.) fs'16->( b, cs a b8-.)} R2.
+  {b'16->(e, fs d e8-.) b'16->(e, fs d e8-.)} R2. \mark\default R2.*16 \mark\default R2.*8
 
-  \sectionLabel "Hornet" \tempo "Light and jumpy" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   {e8\fp-.->}
 }
 
 scoreAXylo = \relative c' {
   \global
   % Music goes here
-  \sectionLabel "Dirtmouth" \tempo "Empty and gloomy" 4 = 88 \time 4/4
-  R1*40
-  \sectionLabel "Greenpath" \tempo "Alive and mossy" 4 = 83 \time 3/4
-  R2.*4
+  \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
+  R1*9 \mark \default R1*16 \mark\default R1*15
+  \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
+  R2.*4 \mark\default
   { e'2.^"Tub. Bells"\mp b c a b g a c } { e2. b c a b g a c }
 
-  \time 6/8
-  { e2. b c a b g a c } { e2. b c a b g a c^"To Xyl." } R2.
+  \time 6/8 \mark\default
+  { e2. b c a b g a c } { e2. b c a b g a c^"To Xyl." } \mark\default R2.
   fs,16^"Xylophone"\mf (b cs fs e fs cs' b cs fs e fs) R2. a,,8 e' b' fs' b, e, a, r r r4.
-  fs16 (b cs fs e fs cs' b cs fs e fs) R2. e,16 (fs b fs b cs fs, b cs b cs fs) R2.
-  fs,,16 (b cs fs e fs cs' b cs fs e fs) R2.*3 fs,,16 (b cs fs e fs cs' b cs fs e fs) R2.*26
+  fs16 (b cs fs e fs cs' b cs fs e fs) R2. e,16 (fs b fs b cs fs, b cs b cs fs) \mark\default R2.
+  fs,,16 (b cs fs e fs cs' b cs fs e fs) R2.*3 fs,,16 (b cs fs e fs cs' b cs fs e fs)
+  R2.*2 \mark\default R2.*16 \mark\default R2.*8
 
-  \sectionLabel "Hornet" \tempo "Light and jumpy" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   {a,8\fp-.->}
 }
 
 scoreADrum = \drummode {
   \global
   % Drums follow here.
-  \sectionLabel "Dirtmouth" \tempo "Empty and gloomy" 4 = 88 \time 4/4
-  R1*35 cymc1:32^"Susp. cymbal"\p\<\laissezVibrer R1*3\! bd1^"Bass drum"\p\laissezVibrer
+  \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
+  R1*9 \mark \default R1*16 \mark\default R1*10
+  cymc1:32^"Susp. cymbal"\p\<\laissezVibrer R1*3\! bd1^"Bass drum"\p\laissezVibrer
 
-  \sectionLabel "Greenpath" \tempo "Alive and mossy" 4 = 83 \time 3/4
-  R2.*20
+  \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
+  R2.*4 \mark\default R2.*16
 
-  \time 6/8
-  R2.*32
+  \time 6/8 \mark\default
+  R2.*16 \mark\default R2.*8 \mark\default R2.*8
+  \mark\default
   << {tamb8->^"Tambourine" tamb16 tamb-> r tamb tamb8-> tamb tamb} \\ {tomfh4_"Toms" tomfh tomfh 8 tomfl} >>
   <<
-    {\repeat unfold 21 {tamb8-> tamb16 tamb-> r tamb tamb8-> tamb tamb}} \\
-    {\repeat unfold 21 {tomfh4 tomfh tomfh 8 tomfl}}
+    {\repeat unfold 15 {tamb8-> tamb16 tamb-> r tamb tamb8-> tamb tamb}} \\
+    {\repeat unfold 15 {tomfh4 tomfh tomfh 8 tomfl}}
+  >>
+  \mark\default
+  <<
+    {\repeat unfold 6 {tamb8-> tamb16 tamb-> r tamb tamb8-> tamb tamb}} \\
+    {\repeat unfold 6 {tomfh4 tomfh tomfh 8 tomfl}}
   >>
   <<
     {
@@ -1064,46 +1109,49 @@ scoreADrum = \drummode {
     } \\ {tomfh4 tomfh tomfh 8 tomfl tomfh4 tomfh tomfh 8 tomfl}
   >>
 
-  \sectionLabel "Hornet" \tempo "Light and jumpy" 4 = 145 \time 3/4
+  \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4
   {sn8\fp-.->}
 }
 
 scoreARight = \relative c' {
   \global
   % Music goes here
-  \sectionLabel "Dirtmouth" \tempo "Empty and gloomy" 4 = 88 \time 4/4
+  \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
   R1 {fs1\mp\(~ 2 \tuplet 3/2 {fs4 g a} fs2.. b,8 cs1\) fs\(~ 2 \tuplet 3/2 {fs4 g a} e2.. g16 fs g1\)}
-  {fs'1\(~ 2 \tuplet 3/2 {fs4 g a} fs2. b,4 cs1\) e\(fs2 g4 a b2.. c8 b2 g\)}
+  {\mark \default fs'1\(~ 2 \tuplet 3/2 {fs4 g a} fs2. b,4 cs1\) e\(fs2 g4 a b2.. c8 b2 g\)}
   {fs,16( fs'8 fs16 fs'4) r8. fs16( fs,8 fs,~) 2 \tuplet 3/2 {fs4( g a} fs16 fs'8 fs16 fs'4~) fs4.	 b,8( cs2 e e1)}
   {fs,,2( \tuplet 3/2 {fs4 g a} fs2 d e1)}
-  {R1 r2 \tuplet 3/2 {fs4( g a} fs1 g2.) a4->( b1~ 2 \tuplet 3/2 {b4 c d} b2 cs d1)}
+  {\mark\default R1 r2 \tuplet 3/2 {fs4( g a} fs1 g2.) a4->( b1~ 2 \tuplet 3/2 {b4 c d} b2 cs d1)}
   {e~ 2 e,(<a c,> \tuplet 3/2 {<a c,>4 <b d,> <c e,>} <bf d,>1 <e e,>) fs,8\>( g a b e fs g b e1\p)}
 
-  \sectionLabel "Greenpath" \tempo "Alive and mossy" 4 = 83 \time 3/4
-  \repeat unfold 5 {\greenPathRightHand} \greenPathRightHandB
+  \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
+  \repeat unfold 2 {\greenPathRightHand} \mark\default
+  \repeat unfold 3 {\greenPathRightHand} \greenPathRightHandB
   \repeat unfold 3 {\greenPathRightHand} \greenPathRightHandB
 
-  \time 6/8
+  \time 6/8 \mark\default
   \repeat unfold 3 {\greenPathRightHand} \greenPathRightHandB
   \repeat unfold 3 {\greenPathRightHand} {
     fs,8( b,16 e fs8 b,16 e fs8 b,16 e fs8)
     r r a,,32^\markup {\italic "legato quasi gliss."}\mf
-    (b cs d e fs g a b cs d e fs4.) r
+    (b cs d e fs g a b cs d e \mark\default
+    fs4.) r
   }
   R2.*2 {a,,32(b cs d e fs g a b cs d e fs e d cs b a g fs e d cs b a8) r r r4.}
   R2.*2 {
     \clef bass fs,32 (g a b c d e fs e fs g a
-    \clef treble b c d e d e fs g a b c d fs4.) r
+    \clef treble b c d e d e fs g a b c d \mark\default fs4.) r
   }
   d,8 r a' r b r {b'16->(e, fs d e8-.) b'16->(e, fs d e8-.)}
   {a,,32(b cs d e fs g a b cs d e fs e d cs b a g fs e d cs b a8) r r r4.} R2.
   {b''16->(e, fs d e8-.) b'16->(e, fs d e8-.)} {fs-.( e-. d-.) e-.( b-. a-.)}
+  \mark\default
   \repeat unfold 3 {\greenPathRightHand} \greenPathRightHandB
   \repeat unfold 3 {\greenPathRightHand} \greenPathRightHandB
 
   \greenPathPatternB
 
-  \sectionLabel "Hornet" \tempo "Light and jumpy" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   {<a' e a,>8\fp-.->}
 }
 
@@ -1189,7 +1237,7 @@ scoreABassoonPart = \new Staff \with {
 
 scoreAEflatClarinetPart = \new Staff \with {
   instrumentName = "E-flat clarinet "
-  shortInstrumentName = "Cl. in Eb"
+  shortInstrumentName = "Cl.Eb."
   midiInstrument = "clarinet"
 } \scoreAEflatClarinet
 
@@ -1703,18 +1751,42 @@ scoreADrumsPart = \new DrumStaff \with {
   }
 }
 \book {
-  \bookOutputName "Part 23-26 - Percs"
+  \bookOutputName "Part 23 - Timpani"
+  \score {
+    \compressMMRests {\scoreATimpaniPart}
+    \layout {
+      \override MultiMeasureRest.expand-limit = 1
+      #(layout-set-staff-size 14)
+    }
+  }
+  \paper {
+    #(set-paper-size "letter")
+  }
+}
+\book {
+  \bookOutputName "Part 24-25 - Claviers"
   \score {
     \compressMMRests {
       <<
         \new StaffGroup <<
-          \scoreATimpaniPart
           \scoreAGlockenspielPart
           \scoreAXyloPart
-          \scoreADrumsPart
         >>
       >>
     }
+    \layout {
+      \override MultiMeasureRest.expand-limit = 1
+      #(layout-set-staff-size 14)
+    }
+  }
+  \paper {
+    #(set-paper-size "letter")
+  }
+}
+\book {
+  \bookOutputName "Part 26 - Drums"
+  \score {
+    \compressMMRests {\scoreADrumsPart}
     \layout {
       \override MultiMeasureRest.expand-limit = 1
       #(layout-set-staff-size 14)
