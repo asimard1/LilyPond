@@ -12,6 +12,10 @@
 
 \layout {
   \context {
+    \StaffGroup
+    \RemoveAllEmptyStaves
+  }
+  \context {
     \Voice
     \consists "Melody_engraver"
     \override Stem.neutral-direction = #'()
@@ -139,10 +143,10 @@ scoreAFluteI = \relative c'' {
   \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
   R1*9 \mark \default R1*16 \mark\default R1*15
   \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
-  R2.*4 \mark\default R2.*16
+  R2.*4 \mark\default e2.\pp~2. R2.*2 \repeat unfold 3 {e2.~2. R2.*2}
 
   \time 6/8 \mark\default
-  R2. {fs'16->\mp^\markup {\italic "solo"} ( b, cs a b8-.) fs'16->( b, cs a b8-.)}
+  R2. {fs'16->\pp ( b, cs a b8-.) fs'16->( b, cs a b8-.)}
   R2.*14 {\mark\default fs'16->\mp ( b, cs a b8-.) fs'16->( b, cs a b8-.)}
   R2.*3 {fs16-> ( b, cs a b8-.) fs'16->( b, cs a b8-.)}
   R2. {b'16->\mf ( e, fs d e8-.) b'16->( e, fs d e8-.)} R2. \mark\default R2.
@@ -190,7 +194,7 @@ scoreAFluteII = \relative c'' {
   \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
   R1*9 \mark \default R1*16 \mark\default R1*15
   \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
-  R2.*4 \mark\default R2.*16
+  R2.*4 \mark\default R2.*2 e2.\pp~2. \repeat unfold 3 {R2.*2 e2.~2.}
 
   \time 6/8 \mark\default
   R2.*16 {\mark\default fs16->\mp ( b cs a b8-.) fs16->( b cs a b8-.)}
@@ -291,20 +295,22 @@ scoreABassoon = \relative c' {
   \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
   R1*9 {
     \mark \default
-    fs1^\markup{ \italic "solo" }\f~ 2 \tuplet 3/2 {fs4( g a)} fs2. b,4( cs1) e\<(fs2) g4(a) b2..\! c8( b2\> g)
-    fs1\f~ 2 \tuplet 3/2 {fs4( g a)} fs1(cs'2.) a4(g1) fs2. d4\<(cs2) \grace {d16( cs} b2\>)
-    \override TextSpanner.bound-details.left.text = "poco rit." cs2.\startTextSpan (e4\stopTextSpan)
-    \mark \default e1^\markup {\bold {a tempo}}\!->~1\> R1*13\!
+    fs1^\markup{ \italic "solo" }\mf~ 2 \tuplet 3/2 {fs4( g a)} fs2. b,4( cs1) e\<(fs2) g4(a) b2..\! c8( b2\> g)
+    fs1\mf~ 2 \tuplet 3/2 {fs4( g a)} fs1(cs'2.) a4(g1) fs2. d4\<(cs2) \grace {d16( cs} b2\f)
+    \override TextSpanner.bound-details.left.text = "poco rit." cs2.\>\startTextSpan (e4\stopTextSpan)
+    \mark \default e1\mf^\markup {\bold {a tempo}}\!->~1\> R1*13\!
   }
   \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
-  \clef bass
+  
   R2.*4
   \transpose c c' {
     \fixed c {
-      \mark\default e,8-.^\markup{\italic "quasi pizz."} b,-. e4-. r4 b,,8-. fs,-. cs4-. r4
+      \mark\default
+      R2.*8
+      \clef bass e,8-.^\markup{\italic "quasi pizz."} b,-. e4-. r4 b,,8-. fs,-. cs4-. r4
       c,8-. g,-. d4-. r4 a,,8-. e,-. b,4-. r4
       b,,8-. fs,-. cs4-. r4 g,,8-. d,-. a,4-. r4 a,,8-. e,-. b,4-. r4 c,8-. g,-. e4-. r4
-    } \greenPathLeftHand
+    }
   }
 
   \time 6/8 \mark\default
@@ -402,8 +408,8 @@ scoreAClarinetI = \relative c'' {
   \global
   % Music goes here
   \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
-  R1*9 \mark \default R1*10 r2 r4 r8 b\mp cs2\< e e1\! R1 fs,2\> d e2.\! r4
-  \mark \default R1*15
+  R1*9 \mark \default R1*10 r2 r4 r8 b\mp cs2\< e e1\! R1 fs,2\> d e1
+  \mark \default R1*15\!
   \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
   R2.*4 \mark\default R2.*16
 
@@ -801,7 +807,7 @@ scoreABaritoneSax = \relative c'' {
   R2.*4 \mark\default R2.*16
 
   \time 6/8 \mark\default
-  R2.*8 e,2.\p b'4 cs8~4. c4. e~2. d4. fs, a b4 c8 e4. b a2.
+  R2.*8 e,2.\p b'4 cs8~4. c?4. e~2. d4. fs, a b4 c8 e4. b a2.
   \mark\default R2.*7
 
   fs4.\p\< g \mark\default \relative c' \greenPathBassA
@@ -877,13 +883,15 @@ scoreAHornFI = \relative c' {
   \global
   % Music goes here
   \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
-  R1*9 \mark \default R1*16 \mark\default R1*15
+  e1\pp \> \laissezVibrer R1*8\! \mark \default R1*16 \mark\default R1*8
+  e1\p\<~1 f1~1 e1\f\> R1*2\!
   \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
-  R2.*4 \mark\default R2.*16
+  R2.*4 \mark\default R2.*8 b2.~2. e2.~2. b g e~2.
 
   \time 6/8 \mark\default
-  R2.*16 \mark\default  R2.*8 \mark\default R2.*8 \mark\default R2.*7
-  e,8.\f\< fs g a fs2.\ff~4. \tuplet 2/3 {g8 a} fs4.~8 b,4 cs2. e~4. \tuplet 2/3 {fs8 g} e4.~8 g4 a4. c
+  R2.*16
+  \mark\default  R2.*8 \mark\default \relative c'{\greenPathBassA} \mark\default R2.*7
+  e'8.\< fs g a fs2.\ff~4. \tuplet 2/3 {g8 a} fs4.~8 b,4 cs2. e~4. \tuplet 2/3 {fs8 g} e4.~8 g4 a4. c
   \mark\default b2.~4.~8 e4 b2. e d4. cs d b \override TextSpanner.bound-details.left.text = "poco rit."
   a2.\startTextSpan \< a4. c\stopTextSpan
 
@@ -895,13 +903,20 @@ scoreAHornFII = \relative c' {
   \global
   % Music goes here
   \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
-  R1*9 \mark \default R1*16 \mark\default R1*15
+  e,1\pp \> \laissezVibrer R1*8\! \mark \default R1*16 \mark\default R1*8
+  e1\p\<~1 f1~1 e1\f\> R1*2\!
   \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
   R2.*4 \mark\default R2.*16
 
   \time 6/8 \mark\default
-  R2.*16 \mark\default R2.*8 \mark\default R2.*8 \mark\default R2.*7
-  e,8.\f\< fs g a fs2.\ff~4. \tuplet 2/3 {g8 a} fs4.~8 b,4 cs2. e~4. \tuplet 2/3 {fs8 g} e4.~8 g4 a4. c
+  \transpose c c' {
+    \fixed c {
+      e,8\p-.^\markup{\italic "quasi pizz."} b,-. e-. r4. b,,8-. fs,-. cs-. r4. c,8-. g,-. d-. r4. a,,8-. e,-. b,-. r4.
+      b,,8-. fs,-. cs-. r4. g,,8-. d,-. a,-. r4. a,,8-. e,-. b,-. r4. c,8-. g,-. e-. r4.
+    } \greenPathLeftHandB
+  }
+  \mark\default R2.*8 \mark\default R2.*8\! \mark\default R2.*7
+  e8.\f\< fs g a fs2.\ff~4. \tuplet 2/3 {g8 a} fs4.~8 b,4 cs2. e~4. \tuplet 2/3 {fs8 g} e4.~8 g4 a4. c
   \relative c' {
     \override TextSpanner.bound-details.left.text = "poco rit."
     {\mark\default fs8-. fs16-. fs-. r fs-. fs8-. fs-. fs-.} {fs8-. fs16-. fs-. r fs-. fs8-. fs16-. fs-. fs8-.}
@@ -918,7 +933,8 @@ scoreATromboneI = \relative c {
   \global
   % Music goes here
   \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
-  R1*9 \mark \default R1*16 \mark\default R1*15
+  R1*9 \mark \default R1*16 \mark\default R1*8
+  f1\p\< g f bf g\f\> R1*2\!
   \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
   R2.*4 \mark\default R2.*16
 
@@ -936,7 +952,7 @@ scoreATromboneII = \relative c {
   \global
   % Music goes here
   \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
-  R1*9 \mark \default R1*16 \mark\default R1*15
+  R1*9 \mark \default R1*16 \mark\default R1*8 e1\p\<~1 f1~1 e1\f\> R1*2\!
   \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
   R2.*4 \mark\default R2.*16
 
@@ -963,7 +979,7 @@ scoreAEuphonium = \relative c {
   \time 6/8 \mark\default
   \transpose c c' {
     \fixed c {
-      e,8-.^\markup{\italic "quasi pizz."} b,-. e-. r4. b,,8-. fs,-. cs-. r4. c,8-. g,-. d-. r4. a,,8-. e,-. b,-. r4.
+      e,8\p-.^\markup{\italic "quasi pizz."} b,-. e-. r4. b,,8-. fs,-. cs-. r4. c,8-. g,-. d-. r4. a,,8-. e,-. b,-. r4.
       b,,8-. fs,-. cs-. r4. g,,8-. d,-. a,-. r4. a,,8-. e,-. b,-. r4. c,8-. g,-. e-. r4.
     } \greenPathLeftHandB
   }
@@ -1037,7 +1053,7 @@ scoreAGlockenspiel = \relative c'' {
   R1*9 \mark \default R1*16 \mark\default R1*15
   \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
   R2.*4 \mark\default
-  {e8\mp b e2 b8 fs cs'2 c8 g d'2 a8 e b'2 b8 fs cs'2 g8 d a'2 a8 e b'2 c8 g e'2}
+  {e8\pp b e2 b8 fs cs'2 c8 g d'2 a8 e b'2 b8 fs cs'2 g8 d a'2 a8 e b'2 c8 g e'2}
   {e8 b e2 b8 fs cs'2 c8 g d'2 a8 e b'2 b8 fs cs'2 g8 d a'2 a8 e b'2 c8 g e'2}
 
   \time 6/8 \mark\default
@@ -1065,12 +1081,17 @@ scoreAXylo = \relative c' {
   R1*9 \mark \default R1*16 \mark\default R1*15
   \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
   R2.*4 \mark\default
-  { e'2.^"Tub. Bells"\mp b c a b g a c } { e2. b c a b g a c }
+  \fixed c'' {e,8^"Vibraphone"\mf b, e4 r4 b,,8 fs, cs4 r4
+      c,8 g, d4 r4 a,,8 e, b,4 r4
+      b,,8 fs, cs4 r4 g,,8 d, a,4 r4 a,,8 e, b,4 r4 c,8 g, e4 r4
+      e,8 b, e4 r4 b,,8 fs, cs4 r4
+      c,8 g, d4 r4 a,,8 e, b,4 r4
+      b,,8 fs, cs4 r4 g,,8 d, a,4 r4 a,,8 e, b,4 r4 c,8 g, e4 r4}
 
   \time 6/8 \mark\default
-  { e2. b c a b g a c } { e2. b c a b g a c^"To Xyl." } \mark\default R2.
-  fs,16^"Xylophone"\mf (b cs fs e fs cs' b cs fs e fs) R2. a,,8 e' b' fs' b, e, a, r r r4.
-  fs16 (b cs fs e fs cs' b cs fs e fs) R2. e,16 (fs b fs b cs fs, b cs b cs fs) \mark\default R2.
+  { e2.^"Tub. Bells"\mp b c a b g a c } { e2. b c a b g a c^"To Xyl." } \mark\default R2.
+  fs,16^"Xylophone"\mf (b cs fs e fs cs' b cs fs e fs) R2.*3 %a,,8 e' b' fs' b, e, a, r r r4.
+  fs,,16 (b cs fs e fs cs' b cs fs e fs) R2. e,16 (fs b fs b cs fs, b cs b cs fs) \mark\default R2.
   fs,,16 (b cs fs e fs cs' b cs fs e fs) R2.*3 fs,,16 (b cs fs e fs cs' b cs fs e fs)
   R2.*2 \mark\default R2.*16 \mark\default R2.*8
 
@@ -1121,7 +1142,7 @@ scoreARight = \relative c' {
   {\mark \default fs'1\(~ 2 \tuplet 3/2 {fs4 g a} fs2. b,4 cs1\) e\(fs2 g4 a b2.. c8 b2 g\)}
   {fs,16( fs'8 fs16 fs'4) r8. fs16( fs,8 fs,~) 2 \tuplet 3/2 {fs4( g a} fs16 fs'8 fs16 fs'4~) fs4.	 b,8( cs2 e e1)}
   {fs,,2( \tuplet 3/2 {fs4 g a} fs2 d e1)}
-  {\mark\default R1 r2 \tuplet 3/2 {fs4( g a} fs1 g2.) a4->( b1~ 2 \tuplet 3/2 {b4 c d} b2 cs d1)}
+  {\mark\default R1 r2 \tuplet 3/2 {fs4( g a} fs1 g2.) a4( b1-^\sfz~ 2 \tuplet 3/2 {b4 c d} b2 cs d1)}
   {e~ 2 e,(<a c,> \tuplet 3/2 {<a c,>4 <b d,> <c e,>} <bf d,>1 <e e,>) fs,8\>( g a b e fs g b e1\p)}
 
   \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
@@ -1463,7 +1484,6 @@ scoreADrumsPart = \new DrumStaff \with {
 }
 
 %{
-%}
 \book {
   \bookOutputName "Part 01 - Piccolo"
   \score {
@@ -1689,6 +1709,25 @@ scoreADrumsPart = \new DrumStaff \with {
   \bookOutputName "Part 18 - HornFII"
   \score {
     \compressMMRests {\transpose f c' \scoreAHornFIIPart}
+    \layout {
+      \override MultiMeasureRest.expand-limit = 1
+      #(layout-set-staff-size 14)
+    }
+  }
+  \paper {
+    #(set-paper-size "letter")
+  }
+}
+\book {
+  \bookOutputName "Part 17-18 - HornFI-II"
+  \score {
+    \compressMMRests {
+          <<
+        \new StaffGroup <<
+          \transpose f c' \scoreAHornFIPart
+          \transpose f c' \scoreAHornFIIPart
+        >>
+      >>}
     \layout {
       \override MultiMeasureRest.expand-limit = 1
       #(layout-set-staff-size 14)
