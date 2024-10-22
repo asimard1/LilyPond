@@ -417,12 +417,12 @@ scoreAEflatClarinet = \relative c'' {
   \global
   % Music goes here
   \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
-  e1\p\>^"Keep as long as possible"~1~1~1~1~1~1~1~1 \mark \default R1*16\! \mark\default R1*15
+  e,1\p\>^"Keep as long as possible"~1~1~1~1~1~1~1~1 \mark \default R1*16\! \mark\default R1*15
   \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
   R2.*4 \mark\default R2.*16
 
   \time 6/8 \mark\default
-  R2.*7 fs'16\p\<(b, cs a b g a e fs b, cs ds e4.\mf) r4. R2.*7 \mark\default R2.
+  R2.*7 fs''16\p\<(b, cs a b g a e fs b, cs ds e4.\mf) r4. R2.*7 \mark\default R2.
   fs,16\mf( b cs fs e fs cs' b cs fs e fs) R2.*2 {fs,16\mp-> ( b, cs a b8-.) fs'16->( b, cs a b8-.)}
   R2. {b'16->\mf ( e, fs d e8-.) b'16->( e, fs d e8-.)} R2. \mark\default R2.
   {cs16 (b cs fs e fs cs' b cs fs e fs)} R2.*3 {cs,16 (b cs fs e fs cs' b cs fs e fs)} R2.
@@ -2071,6 +2071,7 @@ scoreADrumsPart = \new DrumStaff \with {
 } \scoreADrum
 
 \book {
+  \bookOutputName "Part 00 - Score"
   \score {
     <<
       \new StaffGroup <<
@@ -2160,7 +2161,7 @@ scoreADrumsPart = \new DrumStaff \with {
 }
 
 %{
-%
+%}
 \book {
   \bookOutputName "Part 01 - Piccolo"
   \score {
@@ -2396,26 +2397,6 @@ scoreADrumsPart = \new DrumStaff \with {
   }
 }
 \book {
-  \bookOutputName "Part 17-18 - HornFI-II"
-  \score {
-    \compressMMRests {
-      <<
-        \new StaffGroup <<
-          \transpose f c' \scoreAHornFIPart
-          \transpose f c' \scoreAHornFIIPart
-        >>
-      >>
-    }
-    \layout {
-      \override MultiMeasureRest.expand-limit = 1
-      #(layout-set-staff-size 14)
-    }
-  }
-  \paper {
-    #(set-paper-size "letter")
-  }
-}
-\book {
   \bookOutputName "Part 19 - TromboneI"
   \score {
     \compressMMRests {\scoreATromboneIPart}
@@ -2497,26 +2478,6 @@ scoreADrumsPart = \new DrumStaff \with {
   \bookOutputName "Part 25 - Xylo"
   \score {
     \compressMMRests {\scoreAXyloPart}
-    \layout {
-      \override MultiMeasureRest.expand-limit = 1
-      #(layout-set-staff-size 14)
-    }
-  }
-  \paper {
-    #(set-paper-size "letter")
-  }
-}
-\book {
-  \bookOutputName "Part 24-25 - Claviers"
-  \score {
-    \compressMMRests {
-      <<
-        \new StaffGroup <<
-          \scoreAGlockenspielPart
-          \scoreAXyloPart
-        >>
-      >>
-    }
     \layout {
       \override MultiMeasureRest.expand-limit = 1
       #(layout-set-staff-size 14)
