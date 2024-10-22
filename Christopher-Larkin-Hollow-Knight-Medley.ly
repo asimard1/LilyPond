@@ -108,9 +108,7 @@ scoreAPiccolo = \relative c'' {
 
   \relative c'' {\greenPathPatternA \greenPathPatternB}
 
-  \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145
-  \time 2, 2, 2 3/4
-  \set Timing.beamExceptions = #'()
+  \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4
   \key a \minor
   \repeat volta 2 {
     a8\fp r r e r4 g8 r r4 c,8 r e r r e r4 d8 r r4 b8 r e r r e r4 g8 r r4 c,8 r
@@ -124,21 +122,30 @@ scoreAPiccolo = \relative c'' {
       \volta 1 {
         R2.*2 \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a,8\p r a r a r a r a r a r a\< r b r c r d r e r g r
-        a4.\f d c b a8 r r4 r R2. a4. d c b a8 r r4 r R2.*5
+        \mark\default a4.\f d c b a8 r r4 r R2. a4. d c b a8 r r4 r R2.*5
         cs,4.\mf\< fs e ds a'8\fp\<-.-> a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-.
-        a\fp r r e r4 g8 r r4 c,8 r
+        \mark\default a\fp r r e r4 g8 r r4 c,8 r
         bf'\< r r bf r4 bf8 r r bf r4 a8\fp r r e r4 g8 r r4 r
-        bf8\< r r bf r4 bf8 r r bf r4 a8\!\fp r r4 r R2.*5
+        bf8\< r r bf r4 bf8 r r bf r4 \mark\default a8\!\fp r r4 r R2.*5
         d8 c->( b) c->( b a) c->( b a) g->( f e) e r r a r4 a-.\< b-. a-.
         a16\f( b c8--) r a\p r4 a-. a-. a-. a8 r r a r4 a-.\< b-. a-.
         a16\f( c d8--) r a\p r4 a16\f ( d e8--) r4 r
       }
       \volta 2 {
         R2.*2 \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        a,4.\mf e'->~2. g4-> f d e-> c b a4. d c b a8->
+        a,4.\mf e'->~2. g4-> f d e-> c b a4. d c b
+        \mark\default a8-> r r4 r R2.*9
+        \override TextSpanner.bound-details.left.text = "rall."
+        es4.\ff fs e gs a8 \startTextSpan
+        r r4 r R2.*2 g8^\markup{\italic "8va ad lib"} \ff->-. g-. g-. gs-.-^ gs-.-^ gs-.-^ R2.\fermata\stopTextSpan
       }
     }
   }
+
+  \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
+  \key e \minor
+
+  R1*4 \mark\default
 }
 
 scoreAFluteI = \relative c'' {
@@ -174,11 +181,11 @@ scoreAFluteI = \relative c'' {
         R2.*2  \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a,16\p( e f gs a8-.) r a16( e f gs a8-.) r a16( e f gs a8-.) r
         a16\<( f gs a b8-.) r c16( a b c d8-.) r e16( d e f g8-.) r
-        a4.\f d c b a8-> r r4 r R2. a4. d c b a8-> r r4 r R2.
+        \mark\default a4.\f d c b a8-> r r4 r R2. a4. d c b a8-> r r4 r R2.
         a4.\p\< d c b R2.*2\! cs4.\mf\< fs e ds a8->-.\fp\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-.
-        a'-.->\fp e-. e-. e-.-> e-. e-. g->( f) d( e) c->( b) e->\< e e e-> e e e-> e e e-> e e
+        \mark\default a'-.->\fp e-. e-. e-.-> e-. e-. g->( f) d( e) c->( b) e->\< e e e-> e e e-> e e e-> e e
         a-.->\fp e-. e-. e-.-> e-. e-. g->( f) d( e) c->( b) e->\< e e e-> e e e-> e e e-> e e
-        a,\fp^"Ossia, tremolo 2x"
+        \mark\default a,\fp^"Ossia, tremolo 2x"
         c->( b a b c) a c->( b a b c) d c->( b) c->( b a) c->( b a) b->( a gs)
         a c->( b a b c) a c->( b a b c) f e->( d) e->( d c) e->( d c) b->( a gs)
         a c->( b a b c) a c->( b a b c) d-> r r c->( b a) c->( b a) b->( a gs)
@@ -187,10 +194,19 @@ scoreAFluteI = \relative c'' {
       \volta 2 {
         R2.*2 \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a,4.\mf e'->~2. g4-> f d e-> c b a4. d c b
-        f,16\p
+        \mark\default r4 g,16\mp\<( a b c a8-.) r b16( c d e c8-.) r d16( e f g)
+        a4.\mf d c b a8 r r4 r R2. a4.\mf\< d-> c b->\f R2.*2
+        \override TextSpanner.bound-details.left.text = "rall."
+        cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        c-.-> c-. c-. c-. c-. c-. g'-.->\ff g-. g-. gs-.-^ gs-.-^ gs-.-^ R2.\fermata\stopTextSpan
       }
     }
   }
+
+  \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
+  \key e \minor
+
+  R1*4 \mark\default
 }
 
 scoreAFluteII = \relative c'' {
@@ -230,11 +246,11 @@ scoreAFluteII = \relative c'' {
         R2.*2  \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         r4 a16\p (e f gs a8-.) r a16 (e f gs a8-.) r a16 (e f gs
         a8-.\<) r b16 (gs a b c8-.) r d16 (b c d e8-.) r g16( e f g)
-        a4.\f d, c b a8-> r r4 r R2. a'4. d, c b a8-> r r4 r R2.
+        \mark\default a4.\f d, c b a8-> r r4 r R2. a'4. d, c b a8-> r r4 r R2.
         a'4.\p\< d, c b R2.*2\! cs4.\mf\< fs e ds a8->-.\fp\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-.
-        a'-.->\fp e-. e-. e-.-> e-. e-. g->( f) d( e) c->( b) e->\< e e e-> e e e-> e e e-> e e
+        \mark\default a'-.->\fp e-. e-. e-.-> e-. e-. g->( f) d( e) c->( b) e->\< e e e-> e e e-> e e e-> e e
         a-.->\fp e-. e-. e-.-> e-. e-. g->( f) d( e) c->( b) e->\< e e e-> e e e-> e e e-> e e
-        a,\fp c->( b a b c) a c->( b a b c) d c->( b) c->( b a) c->( b a) b->( a gs)
+        \mark\default a,\fp c->( b a b c) a c->( b a b c) d c->( b) c->( b a) c->( b a) b->( a gs)
         a c->( b a b c) a c->( b a b c) d' c->( b) c->( b a) c->( b a) b->( a gs)
         a c->( b a b c) a c->( b a b c) d-> r r c->( b a) c->( b a) b->( a gs)
         a c->( b a b c) a c->( b a b c) d-> r r4 r e8-> r r4 r
@@ -242,10 +258,19 @@ scoreAFluteII = \relative c'' {
       \volta 2 {
         R2.*2 \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a,,4.\mf e'->~2. g4-> f d e-> c b a4. d c b
-        r4
+        \mark\default f16\mp\<( g a b g8-.) r a16( b c d b8-.) r c16( d e f d8-.) r
+        a'4.\mf d c b a8 r r4 r R2.*5
+        \override TextSpanner.bound-details.left.text = "rall."
+        cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        c-.-> c-. c-. c-. c-. c-. g-.->\ff g-. g-. gs-.-^ gs-.-^ gs-.-^ R2.\fermata\stopTextSpan
       }
     }
   }
+
+  \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
+  \key e \minor
+
+  R1*4 \mark\default
 }
 
 scoreAOboe = \relative c'' {
@@ -280,18 +305,29 @@ scoreAOboe = \relative c'' {
     \alternative {
       \volta 1 {
         a r R2. \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        a8\p r a r a r a r a r a r a\< r b r c r d r e r g r a4.\f d c b a8-> r r4 r R2. a4. d c b a8 r r4 r R2.*3
-        b4.\mp\< e d b R2.*2 e,2.\fp\<~2. a,8\fp r r e r4 g8 r r4 c8( b) bf\< r r bf r4 bf8 r r bf r4
-        a8\fp r r e r4 g8 r r4 c8( b) bf\< r r bf r4 bf8 r r bf r4 a8\fp r r4 r R2.*5
+        a8\p r a r a r a r a r a r a\< r b r c r d r e r g r
+        \mark\default a4.\f d c b a8-> r r4 r R2. a4. d c b a8 r r4 r R2.*3
+        b4.\mp\< e d b R2.*2 e,2.\fp\<~2.
+        \mark\default a,8\fp r r e r4 g8 r r4 c8( b) bf\< r r bf r4 bf8 r r bf r4
+        a8\fp r r e r4 g8 r r4 c8( b) bf\< r r bf r4 bf8 r r bf r4 \mark\default a8\fp r r4 r R2.*5
         f'8 e->( d) e->( d c) e->( d c) b->( a gs) a r r a r4 a-.\< b-. a-. a16\f(b c8--) r a\p r4 a-. a-. a-.
         a8 r r a r4 a-.\< b-. a-. a16\f( c d8--) r a\p r4 a16\f( d e8--) r4 r
       }
       \volta 2 {
         R2.*3 \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        g8-.->\mf f-. d-. e-. c-.-> b-. g'4-> f d e-> c b a4. d c b a8->
+        g8-.->\mf f-. d-. e-. c-.-> b-. g'4-> f d e-> c b a4. d c b
+        \mark\default a8-> r r4 r R2. a4.\mf d c b a8 r r4 r R2.*3
+        b4.\f\< e-> d b-> \override TextSpanner.bound-details.left.text = "rall."
+        cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        c-.-> c-. c-. c-. c-. c-. c-.->\ff c-. c-. c-.-^ c-.-^ c-.-^ R2.\fermata\stopTextSpan
       }
     }
   }
+
+  \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
+  \key e \minor
+
+  R1*2 r2 r8 b'4.\p\<~1\> \mark\default
 }
 
 scoreABassoon = \relative c' {
@@ -340,15 +376,15 @@ scoreABassoon = \relative c' {
       \volta 1 {
         a-> r r4 r R2. \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a4.\f e'->~2. g4->\< f d e c b
-        a8-.->\fp\< a-. a-. a-.-> a-. a-. g-.-> g-. g-. g-.-> g-. g-. e-.->\f r r4 r R2.
+        \mark\default a8-.->\fp\< a-. a-. a-.-> a-. a-. g-.-> g-. g-. g-.-> g-. g-. e-.->\f r r4 r R2.
         a8-.->\fp\< a-. a-. a-.-> a-. a-. g-.-> g-. g-. g-.-> g-. g-. e-.->\f r r4 r R2.
         fs8-.->\< fs-. fs-. fs-.-> fs-. fs-. f?-.-> f-. f-. f-.-> f-. f-.
         gs-.-> gs-. gs-. gs-.-> gs-. gs-. g?-.-> g-. g-. g-.-> g-. g-.
         bf-.-> bf-. bf-. bf-.-> bf-. bf-. a-.-> a-. a-. a-.-> a-. a-.
         f-.->\fp\< f-. f-. f-.-> f-. f-. f-.-> f-. f-. f-.-> f-. f-.
-        a-.->\fp a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-.-> a-. a-. bf2.\<~2.\f\>
+        \mark\default a-.->\fp a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-.-> a-. a-. bf2.\<~2.\f\>
         a8-.->\p a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-.-> a-. a-. bf2.\<~2.\f\>
-        a8-.->\p a-. a-. a-. a-. a-. a-. a-. a-. a-. a-. a-.
+        \mark\default a8-.->\p a-. a-. a-. a-. a-. a-. a-. a-. a-. a-. a-.
         a-. a-. a-. a-. a-. a-. a-. a-. a-. a-. a-. a-.
         a-. a-. a-. a-. a-. a-. a-. a-. a-. a-. a-. a-.
         a-. a-. a-. a-. a-. a-. b-.-> b-. a-.-> a-. g-.-> g-.
@@ -360,17 +396,28 @@ scoreABassoon = \relative c' {
         a->\! r r4 r R2. \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a8-.->\mf a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-. a-.
         ef'-.-> ef-. ef-. ef-.-> ef-. ef-. d-.-> d-. d-. d-. d-. d-.
-        a-.->\< a-. a-. a-. a-. a-. g-. g-. g-. g-. g-. g-. e-.\fp
+        a-.->\< a-. a-. a-. a-. a-. g-. g-. g-. g-. g-. g-.
+        \mark\default e-.\fp r r4 r R2. a8-.->\< a-. a-. a-. a-. a-. g-. g-. g-. g-. g-. g-. e-.\fp r r4 r R2.
+        fs8-.->\<\p fs-. fs-. fs-.-> fs-. fs-. f?-.->\mf\> f-. f-. f-.-> f-. f-.
+        gs-.->\mp\< gs-. gs-. gs-.-> gs-. gs-. g?-.->\f\> g-. g-. g-.-> g-. g-.
+        bf-.->\mf\< bf-. bf-. bf-.-> bf-. bf-. a-.->\ff\> a-. a-. a-.-> a-. a-.
+        \override TextSpanner.bound-details.left.text = "rall."
+        f2.\fp\<\startTextSpan ~2.~2.~2.\ff R2.\fermata \stopTextSpan
       }
     }
   }
+
+  \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
+  \key e \minor
+
+  R1*4 \mark\default
 }
 
 scoreAEflatClarinet = \relative c'' {
   \global
   % Music goes here
   \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
-  e1\pp\>\laissezVibrer^"Keep as long as possible" R1*8 \mark \default R1*16\! \mark\default R1*15
+  e1\p\>^"Keep as long as possible"~1~1~1~1~1~1~1~1 \mark \default R1*16\! \mark\default R1*15
   \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
   R2.*4 \mark\default R2.*16
 
@@ -394,21 +441,31 @@ scoreAEflatClarinet = \relative c'' {
     \alternative {
       \volta 1 {
         f8 r g r a r b r c r d r \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        a\p r a r a r a r a r a r a\< r b r c r d r e r g r a4.\f d c b a8-> r r4 r R2.
+        a\p r a r a r a r a r a r a\< r b r c r d r e r g r
+        \mark\default a4.\f d c b a8-> r r4 r R2.
         a4. d c b a8 r r4 r R2. a4.\p\< d c b R2.*2\! cs4.\mf\< fs e ds
         a8-.->\fp\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-.
-        \repeat unfold 2 {a8\fp r r e r4 g8 r r4 c,8 r bf'\< r r bf r4 bf8 r r bf r4}
-        a8->\fp r r4 r R2.*5 f8 e->( d) e->( d c) e->( d c) b->( a gs)
+        \mark\default a8\fp r r e r4 g8 r r4 c,8 r bf'\< r r bf r4 bf8 r r bf r4
+        a8\fp r r e r4 g8 r r4 c,8 r bf'\< r r bf r4 bf8 r r bf r4
+        \mark\default a8->\fp r r4 r R2.*5 f8 e->( d) e->( d c) e->( d c) b->( a gs)
         a r r a r4 a-.\< b-. a-. a16\f(b c8--) r a\p r4 a-. a-. a-.
         a8 r r a r4 a-.\< b-. a-. a16\f( c d8--) r a\p r4 a16\f( d e8--) r4 r
       }
       \volta 2 {
         f,8 r g r a r b r c r d r \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         e4.\mf e->~2. g4-> f d e-> c b a4. d c b
-        f16\p
+        \mark\default f8 r g r a r b r c r d r a4.\mf d c b a8 r r4 r R2.*3 b4.\f\< e-> d b->
+        \override TextSpanner.bound-details.left.text = "rall."
+        cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        c-.-> c-. c-. c-. c-. c-. g'-.->\ff g-. g-. gs-.-^ gs-.-^ gs-.-^ R2.\fermata\stopTextSpan
       }
     }
   }
+
+  \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
+  \key e \minor
+
+  R1*2 r2 r8 fs4.\p\<~1\> \mark\default
 }
 
 scoreAClarinetI = \relative c'' {
@@ -445,11 +502,11 @@ scoreAClarinetI = \relative c'' {
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a16\fp( e f gs a8-.) r a16( e f gs a8-.) r a16( e f gs a8-.) r
         a16\<( f gs a b8-.) r c16( a b c d8-.) r e16( d e f g8-.) r
-        a4.\f d, c b a8-> r r4 r R2. a'4. d, c b a8-> r r4 r R2.*3
+        \mark\default a4.\f d, c b a8-> r r4 r R2. a'4. d, c b a8-> r r4 r R2.*3
         b4.\mp\< e d b cs4. fs e ds a8->-.\fp\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-.
-        a'-.->\fp e-. e-. e-.-> e-. e-. g->( f) d( e) c->( b) e->\< e e e-> e e e-> e e e-> e e
+        \mark\default a'-.->\fp e-. e-. e-.-> e-. e-. g->( f) d( e) c->( b) e->\< e e e-> e e e-> e e e-> e e
         a-.->\fp e-. e-. e-.-> e-. e-. g->( f) d( e) c->( b) e->\< e e e-> e e e-> e e e-> e e
-        a,\fp^"Ossia, tremolo 2x"
+        \mark\default a,\fp^"Ossia, tremolo 2x"
         c->( b a b c) a c->( b a b c) d c->( b) c->( b a) c->( b a) b->( a gs)
         a c->( b a b c) a c->( b a b c) f e->( d) e->( d c) e->( d c) b->( a gs)
         a c->( b a b c) a c->( b a b c) d-> r r c->( b a) c->( b a) b->( a gs)
@@ -459,10 +516,19 @@ scoreAClarinetI = \relative c'' {
         f,16\mp\<( g a b g8-.) r a16( b c d b8-.) r c16( d e f d8-.) r
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a'4.\mf e->~2. g4-> f d e-> c b a4. d c b
-        f16\p
+        \mark\default f16\mp\<( g a b g8-.) r a16( b c d b8-.) r c16( d e f d8-.) r
+        a'4.\mf d, c b a8 r r4 r R2. a4.\mf\< d-> c b->\f R2.*2
+        \override TextSpanner.bound-details.left.text = "rall."
+        cs4.\ff fs e gs a,8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        c-.-> c-. c-. c-. c-. c-. g'-.->\ff g-. g-. gs-.-^ gs-.-^ gs-.-^ R2.\fermata\stopTextSpan
       }
     }
   }
+
+  \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
+  \key e \minor
+
+  R1*4 \mark\default
 }
 
 scoreAClarinetII = \relative c'' {
@@ -499,11 +565,11 @@ scoreAClarinetII = \relative c'' {
         b16( gs a b c8-.) r d16( b c d e8-.) r g16( e f g)
 
 
-        a4.\f d, c b a8-> r r4 r R2. a'4. d, c b a8-> r r4 r R2.*3
+        \mark\default a4.\f d, c b a8-> r r4 r R2. a'4. d, c b a8-> r r4 r R2.*3
         b4.\mp\< e d b cs4. fs e ds e2.\fp\<~2.
-        a,8\fp r r e r4 g8 r r4 c8( b) bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-.
+        \mark\default a,8\fp r r e r4 g8 r r4 c8( b) bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-.
         a8\fp r r e r4 g8 r r4 c8( b) bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-.
-        a8->\fp r r4 r R2.*5
+        \mark\default a8->\fp r r4 r R2.*5
         d8 c->( b) c->( b a) c->( b a) g->( f e) a r r a r4 a-.\< b-. a-. a16\f(b c8--) r a\p r4 a-. a-. a-.
         a8 r r a r4 a-.\< b-. a-. a16\f( c d8--) r a\p r4 a16\f( d e8--) r4 r
       }
@@ -511,10 +577,19 @@ scoreAClarinetII = \relative c'' {
         r4 g,16\mp\<( a b c a8-.) r b16( c d e c8-.) r d16( e f g)
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a4.\mf e->~2. g4-> f d e-> c b a4. d c b
-        r4
+        \mark\default r4 g16\mp\<( a b c a8-.) r b16( c d e c8-.) r d16( e f g)
+        a4.\mf d, c b a8 r r4 r R2.*3 b4.\f\< e-> d b->
+        \override TextSpanner.bound-details.left.text = "rall."
+        cs4.\ff fs e gs a,8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        c-.-> c-. c-. c-. c-. c-. g'-.->\ff g-. g-. gs-.-^ gs-.-^ gs-.-^ R2.\fermata\stopTextSpan
       }
     }
   }
+
+  \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
+  \key e \minor
+
+  R1*4 \mark\default
 }
 
 scoreAClarinetIII = \relative c'' {
@@ -557,11 +632,11 @@ scoreAClarinetIII = \relative c'' {
         b16( gs a b c8-.) r d16( b c d e8-.) r g16( e f g)
 
 
-        a4.\f d, c b a8-> r r4 r R2. a'4. d, c b a8-> r r4 r R2.*3
+        \mark\default a4.\f d, c b a8-> r r4 r R2. a'4. d, c b a8-> r r4 r R2.*3
         b,4.\mp\< e d b cs4. fs e ds e2.\fp\<~2.
-        a8\fp r r e r4 g8 r r4 c,8( b) bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-.
+        \mark\default a8\fp r r e r4 g8 r r4 c,8( b) bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-.
         a'8\fp r r e r4 g8 r r4 c,8( b) bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-.
-        a8->\fp r r4 r R2.*5
+        \mark\default a8->\fp r r4 r R2.*5
         d8 c->( b) c->( b a) c->( b a) g->( f e) a r r a r4 a-.\< b-. a-. a16\f(b c8--) r a\p r4 a-. a-. a-.
         a8 r r a r4 a-.\< b-. a-. a16\f( c d8--) r a\p r4 a16\f( d e8--) r4 r
       }
@@ -569,10 +644,19 @@ scoreAClarinetIII = \relative c'' {
         r4 g16\mp\<( a b c a8-.) r b16( c d e c8-.) r d16( e f g)
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a4.\mf e->~2. g4-> f d e-> c b a4. d c b
-        r4
+        \mark\default r4 g16\mp\<( a b c a8-.) r b16( c d e c8-.) r d16( e f g)
+        a4.\mf d, c b a8 r r4 r R2.*3 b4.\f\< e-> d b->
+        \override TextSpanner.bound-details.left.text = "rall."
+        cs4.\ff fs e gs a,8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        c-.-> c-. c-. c-. c-. c-. g'-.->\ff g-. g-. gs-.-^ gs-.-^ gs-.-^ R2.\fermata\stopTextSpan
       }
     }
   }
+
+  \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
+  \key e \minor
+
+  R1*4 \mark\default
 }
 
 scoreABassClarinet = \relative c'' {
@@ -609,15 +693,15 @@ scoreABassClarinet = \relative c'' {
         a-.\< a-. a-. a-. a-. a-. b-. b-. b-. b-. b-. b-.
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a-.\f r r4 r r8 e''16 e e4 c a\< a8 b~8 b c->( b) e->( f) g->( af)
-        a?->-.\fp\< a,-. a-. a-.-> a-. a-. g-.-> g-. g-. g-.-> g-. g-. e-.->\f r r4 r R2.
+        \mark\default a?->-.\fp\< a,-. a-. a-.-> a-. a-. g-.-> g-. g-. g-.-> g-. g-. e-.->\f r r4 r R2.
         a8->-.\fp\< a-. a-. a-.-> a-. a-. g-.-> g-. g-. g-.-> g-. g-. e-.->\f r r4 r R2.
         fs8-.->\< fs-. fs-. fs-.-> fs-. fs-. f?-.-> f-. f-. f-.-> f-. f-.
         gs-.-> gs-. gs-. gs-.-> gs-. gs-. g?-.-> g-. g-. g-.-> g-. g-.
         bf-.-> bf-. bf-. bf-.-> bf-. bf-. a-.-> a-. a-. a-.-> a-. a-.
         f-.->\fp\< f-. f-. f-.-> f-. f-. f-.-> f-. f-. f-.-> f-. f-.
-        a-.->\fp a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-.-> a-. a-. bf4.\< bf4. bf4.\f\> bf4.
+        \mark\default a-.->\fp a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-.-> a-. a-. bf4.\< bf4. bf4.\f\> bf4.
         a8-.->\p a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-.-> a-. a-. bf4.\< bf4. bf4.\f\> bf4.
-        a8-.->\p a-. a-. a-. a-. a-. a-. a-. a-. a-. a-. a-.
+        \mark\default a8-.->\p a-. a-. a-. a-. a-. a-. a-. a-. a-. a-. a-.
         a-. a-. a-. a-. a-. a-. a-. a-. a-. a-. a-. a-.
         a-. a-. a-. a-. a-. a-. a-. a-. a-. a-. a-. a-.
         a-. a-. a-. a-. a-. a-. b-.-> b-. a-.-> a-. g-.-> g-.
@@ -631,10 +715,21 @@ scoreABassClarinet = \relative c'' {
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a-.->\mf a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-. a-.
         ef'-.-> ef-. ef-. ef-.-> ef-. ef-. d-.-> d-. d-. d-. d-. d-.
-        a'-.->\< a-. a-. a-. a-. a-. g-. g-. g-. g-. g-. g-. e-.\fp
+        a'-.->\< a-. a-. a-. a-. a-. g-. g-. g-. g-. g-. g-.
+        \mark\default e-.\fp r r4 r R2. a8-.->\< a-. a-. a-. a-. a-. g-. g-. g-. g-. g-. g-. e-.\fp r r4 r R2.
+        fs8-.->\<\p fs-. fs-. fs-.-> fs-. fs-. f?-.->\mf\> f-. f-. f-.-> f-. f-.
+        gs-.->\mp\< gs-. gs-. gs-.-> gs-. gs-. g?-.->\f\> g-. g-. g-.-> g-. g-.
+        bf-.->\mf\< bf-. bf-. bf-.-> bf-. bf-. a-.->\ff\> a-. a-. a-.-> a-. a-.
+        \override TextSpanner.bound-details.left.text = "rall."
+        f2.\fp\<\startTextSpan ~2.~2.~2.\ff R2.\fermata \stopTextSpan
       }
     }
   }
+
+  \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
+  \key e \minor
+
+  R1*4 \mark\default
 }
 
 scoreAAltoSaxI = \relative c'' {
@@ -683,14 +778,14 @@ scoreAAltoSaxI = \relative c'' {
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         e8-.\fp) r a,16( e f gs a8-.) r a16( e f gs a8-.) r a16( e f gs a8-.\<) r
         b16( gs a b c8-.) r d16( b c d e8-.) r g16( e f g)
-        a4.\f d c b a8-> r r4 r R2. a4. d c b a8-> r r4 r R2.
+        \mark\default a4.\f d c b a8-> r r4 r R2. a4. d c b a8-> r r4 r R2.
         a,4.\p\< d c b b e d b cs fs e ds
         a8-.->\fp\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-.
-        a'\fp-.-> e-. e-. e-.-> e-. e-. g-.-> r r4 r
+        \mark\default a'\fp-.-> e-. e-. e-.-> e-. e-. g-.-> r r4 r
         e8\<-> e e e-> e e e-> e e e-> e e
         a8\fp-.-> e-. e-. e-.-> e-. e-. g-.-> r r4 r
         e8\<-> e e e-> e e e-> e e e-> e e
-        a,\fp c->( b a b c) a c->( b a b c) d c->( b) c->( b a) c->( b a) b->( a gs)
+        \mark\default a,\fp c->( b a b c) a c->( b a b c) d c->( b) c->( b a) c->( b a) b->( a gs)
         a c->( b a b c) a c->( b a b c) f e->( d) e->( d c) e->( d c) b->( a gs)
         a c->( b a b c) a c->( b a b c) d-> r r c->( b a) c->( b a) b->( a gs)
         a c->( b a b c) a c->( b a b c) d-> r r4 r e8-> r r4 r
@@ -699,10 +794,19 @@ scoreAAltoSaxI = \relative c'' {
         r4 g,16\mp\<( a b c a8-.) r b16( c d e c8-.) r d16( e f g)
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a4.\mf e->~2. g4-> f d e-> c b a4. d c b
-        r4
+        \mark\default r4 g16\mp\<( a b c a8-.) r b16( c d e c8-.) r d,16( e f g)
+        a4.\mf d c b a8 r r4 r R2. a4.\mf\< d-> c b->\f R2.*2
+        \override TextSpanner.bound-details.left.text = "rall."
+        cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        c-.-> c-. c-. c-. c-. c-. g'-.->\ff g-. g-. gs-.-^ gs-.-^ gs-.-^ R2.\fermata\stopTextSpan
       }
     }
   }
+
+  \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
+  \key e \minor
+
+  R1 g\mp\> R1*1\! e1\p\> \mark\default
 }
 
 scoreAAltoSaxII = \relative c'' {
@@ -742,14 +846,14 @@ scoreAAltoSaxII = \relative c'' {
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a16\fp( e f gs a8-.) r a16( e f gs a8-.) r a16( e f gs a8-.) r
         a16\<( f gs a b8-.) r c16( a b c d8-.) r e16( d e f g8-.) r
-        a4.\f d c b a8-> r r4 r R2. a4. d c b a8-> r r4 r R2.
+        \mark\default a4.\f d c b a8-> r r4 r R2. a4. d c b a8-> r r4 r R2.
         a,4.\p\< d c b b e d b cs fs e ds
         a8-.->\fp\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-.
-        a'\fp-.-> e-. e-. e-.-> e-. e-. g-.-> r r4 r
+        \mark\default a'\fp-.-> e-. e-. e-.-> e-. e-. g-.-> r r4 r
         e8\<-> e e e-> e e e-> e e e-> e e
         a8\fp-.-> e-. e-. e-.-> e-. e-. g-.-> r r4 r
         e8\<-> e e e-> e e e-> e e e-> e e
-        a,\fp c->( b a b c) a c->( b a b c) d c->( b) c->( b a) c->( b a) b->( a gs)
+        \mark\default a,\fp c->( b a b c) a c->( b a b c) d c->( b) c->( b a) c->( b a) b->( a gs)
         a c->( b a b c) a c->( b a b c) f e->( d) e->( d c) e->( d c) b->( a gs)
         a c->( b a b c) a c->( b a b c) d-> r r c->( b a) c->( b a) b->( a gs)
         a c->( b a b c) a c->( b a b c) d-> r r4 r e8-> r r4 r
@@ -758,10 +862,19 @@ scoreAAltoSaxII = \relative c'' {
         f,16\mp\<( g a b g8-.) r a16( b c d b8-.) r c16( d e f d8-.) r
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a'4.\mf e->~2. g4-> f d e-> c b a4. d c b
-        f16\p
+        \mark\default f16\mp\<( g a b g8-.) r a16( b c d b8-.) r c16( d e f d8-.) r
+        a4.\mf d c b a8 r r4 r R2.*3 b4.\f\< e-> d b->
+        \override TextSpanner.bound-details.left.text = "rall."
+        cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        c-.-> c-. c-. c-. c-. c-. c-.->\ff c-. c-. c-.-^ c-.-^ c-.-^ R2.\fermata\stopTextSpan
       }
     }
   }
+
+  \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
+  \key e \minor
+
+  e1\pp\<~1\> R1*2\! \mark\default
 }
 
 scoreATenorSax = \relative c'' {
@@ -790,19 +903,28 @@ scoreATenorSax = \relative c'' {
       \volta 1 {
         a-> r r4 r R2. \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a4.\f e'->~2. g4->\< f d e c b
-        a8-.->\fp\< a-. a-. a-.-> a-. a-. g-.-> g-. g-. g-.-> g-. g-. e-.->\f r r4 r R2.
+        \mark\default a8-.->\fp\< a-. a-. a-.-> a-. a-. g-.-> g-. g-. g-.-> g-. g-. e-.->\f r r4 r R2.
         a8-.->\fp\< a-. a-. a-.-> a-. a-. g-.-> g-. g-. g-.-> g-. g-. e-.->\f r r4 r R2.*3
-        b4.\mp\< e d b cs4. fs e ds e2.\fp\<~2. a8\fp r r e r4 g8 r r4 c8( b) bf2.\<~2.\f\>
-        a8\p r r e r4 g8 r r4 c8( b) bf2.\<~2.\f\> a8-.->\p r r4 r R2.*5
+        b4.\mp\< e d b cs4. fs e ds e2.\fp\<~2. \mark\default a8\fp r r e r4 g8 r r4 c8( b) bf2.\<~2.\f\>
+        a8\p r r e r4 g8 r r4 c8( b) bf2.\<~2.\f\> \mark\default a8-.->\p r r4 r R2.*5
         d8 c->( b) c->( b a) c->( b a) g->( f e) e r r a r4 a-.\< b-. a-. a16\f(b c8--) r a\p r4 a-. a-. a-.
         a8 r r a r4 a-.\< b-. a-. a16\f( c d8--) r a\p r4 a16\f( d e8--) r4 r
       }
       \volta 2 {
         a8-> r r4 r R2.*2 \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        g8-.->\mf f-. d-. e-. c-.-> b-. g4-> f d e-> c b a4. d c b a8->
+        g8-.->\mf f-. d-. e-. c-.-> b-. g4-> f d e-> c b a4. d c b
+        \mark\default a8-> r r4 r R2.*5 a4.\mf\< d-> c b-> b4. e-> d b->
+        \override TextSpanner.bound-details.left.text = "rall."
+        cs4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        c-.-> c-. c-. c-. c-. c-. g'-.->\ff g-. g-. gs-.-^ gs-.-^ gs-.-^ R2.\fermata\stopTextSpan
       }
     }
   }
+
+  \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
+  \key e \minor
+
+  R1 e1\p\> R1*1\! cs1\p\> \mark\default
 }
 
 scoreABaritoneSax = \relative c'' {
@@ -838,15 +960,15 @@ scoreABaritoneSax = \relative c'' {
         a-.\< a-. a-. a-. a-. a-. b-. b-. b-. b-. b-. b-.
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a-.\f r r4 r r8 e'16 e e4 c a\< a8 b~8 b c->( b) e->( f) g->( af)
-        a?->-.\fp\< a,-. a-. a-.-> a-. a-. g-.-> g-. g-. g-.-> g-. g-. e-.->\f r r4 r R2.
+        \mark\default a?->-.\fp\< a,-. a-. a-.-> a-. a-. g-.-> g-. g-. g-.-> g-. g-. e-.->\f r r4 r R2.
         a8->-.\fp\< a-. a-. a-.-> a-. a-. g-.-> g-. g-. g-.-> g-. g-. e-.->\f r r4 r R2.
         fs8-.->\< fs-. fs-. fs-.-> fs-. fs-. f?-.-> f-. f-. f-.-> f-. f-.
         gs-.-> gs-. gs-. gs-.-> gs-. gs-. g?-.-> g-. g-. g-.-> g-. g-.
         bf-.-> bf-. bf-. bf-.-> bf-. bf-. a-.-> a-. a-. a-.-> a-. a-.
         f-.->\fp\< f-. f-. f-.-> f-. f-. f-.-> f-. f-. f-.-> f-. f-.
-        a-.->\fp a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-.-> a-. a-. bf4.\< bf4. bf4.\f\> bf4.
+        \mark\default a-.->\fp a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-.-> a-. a-. bf4.\< bf4. bf4.\f\> bf4.
         a8-.->\p a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-.-> a-. a-. bf4.\< bf4. bf4.\f\> bf4.
-        a'8-.->\p a-. a-. a-. a-. a-. a-. a-. a-. a-. a-. a-.
+        \mark\default a'8-.->\p a-. a-. a-. a-. a-. a-. a-. a-. a-. a-. a-.
         a-. a-. a-. a-. a-. a-. a-. a-. a-. a-. a-. a-.
         a-. a-. a-. a-. a-. a-. a-. a-. a-. a-. a-. a-.
         a-. a-. a-. a-. a-. a-. b-.-> b-. a-.-> a-. g-.-> g-.
@@ -860,10 +982,21 @@ scoreABaritoneSax = \relative c'' {
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a-.->\mf a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-. a-.
         ef'-.-> ef-. ef-. ef-.-> ef-. ef-. d-.-> d-. d-. d-. d-. d-.
-        a'-.->\< a-. a-. a-. a-. a-. g-. g-. g-. g-. g-. g-. e-.\fp
+        a'-.->\< a-. a-. a-. a-. a-. g-. g-. g-. g-. g-. g-.
+        \mark\default e-.\fp r r4 r R2. a8-.->\< a-. a-. a-. a-. a-. g-. g-. g-. g-. g-. g-. e-.\fp r r4 r R2.
+        fs8-.->\<\p fs-. fs-. fs-.-> fs-. fs-. f?-.->\mf\> f-. f-. f-.-> f-. f-.
+        gs-.->\mp\< gs-. gs-. gs-.-> gs-. gs-. g?-.->\f\> g-. g-. g-.-> g-. g-.
+        bf-.->\mf\< bf-. bf-. bf-.-> bf-. bf-. a-.->\ff\> a-. a-. a-.-> a-. a-.
+        \override TextSpanner.bound-details.left.text = "rall."
+        f2.\fp\<\startTextSpan ~2.~2.~2.\ff R2.\fermata \stopTextSpan
       }
     }
   }
+
+  \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
+  \key e \minor
+
+  R1*4 \mark\default
 }
 
 scoreATrumpetBbI = \relative c'' {
@@ -900,10 +1033,10 @@ scoreATrumpetBbI = \relative c'' {
     \alternative {
       \volta 1 {
         d'4.\p\< d, e' e, \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        a,\f e'->~2. g4->\< f d e c b a8->-.\! r r4 r R2.
+        a,\f e'->~2. g4->\< f d e c b \mark\default a8->-.\! r r4 r R2.
         e''8\ff e-. r e-. r4 ef8 ef-. r ef-. r4 R2.*2 e8\ff e-. r e-. r4 ef8 ef-. r ef-. r4 R2.*4
-        cs4.\mf\< fs e ds e2.\fp\<~2. a8-.->\fp r r4 r R2.
-        bf,2.\<~2.\f\> a8-.\p r r4 r R2. bf,2.\<~2.\f\> a8-.\p r r4 r
+        cs4.\mf\< fs e ds e2.\fp\<~2. \mark\default a8-.->\fp r r4 r R2.
+        bf,2.\<~2.\f\> a8-.\p r r4 r R2. bf,2.\<~2.\f\> \mark\default a8-.\p r r4 r
         R2.*2 r4 r8 a'16-.\ff a-. a-. a-. a-. a-. a8-. r r4 r R2.*2
         b16-. b-. b-. b-. a-. a-. a-. a-. g-. g-. g-. g-.
         f8-. r r4 r R2.*2 r4 r8 a16-. a-. a-. a-. a-. a-. a8-. r r b16-. b-. b-. b-. b-. b-. b8-. r r
@@ -912,10 +1045,18 @@ scoreATrumpetBbI = \relative c'' {
       }
       \volta 2 {
         R2.*8\! \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        a,4.\f
+        \mark\default a,4.\f d c b R2.*2 a4. d c b R2.*4
+        \override TextSpanner.bound-details.left.text = "rall."
+        cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        c-.-> c-. c-. c-. c-. c-. g'-.->\ff g-. g-. gs-.-^ gs-.-^ gs-.-^ R2.\fermata\stopTextSpan
       }
     }
   }
+
+  \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
+  \key e \minor
+
+  R1*4 \mark\default
 }
 
 scoreATrumpetBbII = \relative c'' {
@@ -958,10 +1099,10 @@ scoreATrumpetBbII = \relative c'' {
     \alternative {
       \volta 1 {
         d'4.\p\< d, e' e, \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        R2.\! r8 e16\f e e4 c a\< a8 b~8 b c->( b) e->( f) g->( af) a?8->-.\! r r4 r R2.
+        R2.\! r8 e16\f e e4 c a\< a8 b~8 b c->( b) e->( f) g->( af) \mark\default a?8->-.\! r r4 r R2.
         e8\ff e-. r e-. r4 ef8 ef-. r ef-. r4 R2.*2 e8\ff e-. r e-. r4 ef8 ef-. r ef-. r4 R2.*4
         bf8-.->\mf\< bf-. bf-. bf-.-> bf-. bf-. a-.-> a-. a-. a-.-> a-. a-.
-        e'2.\fp\<~2. a8-.->\fp r r4 r R2.*10 r4 r8
+        e'2.\fp\<~2. \mark\default a8-.->\fp r r4 r R2.*7 \mark\default R2.*3 r4 r8
         c,16-.\ff c-. c-. c-. c-. c-. c8-. r r4 r R2.*2 b'16-. b-. b-. b-. a-. a-. a-. a-. g-. g-. g-. g-.
         f8-. r r4 r R2.*2 r4 r8 d16-. d-. d-. d-. d-. d-. d8-. r r e16-. e-. e-. e-. e-. e-. e8-. r r
         e16-.\> e-. e-. e-. e-. e-. a-.\p\< a-. a-. a-. b-. b-. b-. b-. c-. c-. c-. c-.
@@ -969,10 +1110,18 @@ scoreATrumpetBbII = \relative c'' {
       }
       \volta 2 {
         R2.*8\! \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        a,4.\f
+        \mark\default a,4.\f d c b R2.*2 a4. d c b R2.*4
+        \override TextSpanner.bound-details.left.text = "rall."
+        cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        c-.-> c-. c-. c-. c-. c-. c-.->\ff c-. c-. c-.-^ c-.-^ c-.-^ R2.\fermata\stopTextSpan
       }
     }
   }
+
+  \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
+  \key e \minor
+
+  R1*4 \mark\default
 }
 
 scoreAHornFI = \relative c' {
@@ -1001,10 +1150,10 @@ scoreAHornFI = \relative c' {
     \alternative {
       \volta 1 {
         R2.*2 \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        a4.\f e'->~2. g4->\< f d e c b a4.->-.\ff fs g g
+        a4.\f e'->~2. g4->\< f d e c b \mark\default a4.->-.\ff fs g g
         a'8 a-. r a-. r4 a8 a-. r a-. r4 R2.*2 a8\ff a-. r a-. r4 a8 a-. r a-. r4 R2.*4
         cs,4.\mf\< fs e ds a8-.->\fp\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-.
-        a'8-.->\fp r r4 r R2. bf2.\<~2.\f\> a8-.\p r r4 r R2. bf,2.\<~2.\f\> a8-.\p r r4 r
+        \mark\default a'8-.->\fp r r4 r R2. bf2.\<~2.\f\> a8-.\p r r4 r R2. bf,2.\<~2.\f\> \mark\default a8-.\p r r4 r
         R2.*2 r4 r8 e'16-.\ff e-. e-. e-. e-. e-. e8-. r r4 r R2.*2
         b16-. b-. b-. b-. a-. a-. a-. a-. g-. g-. g-. g-.
         f8-. r r4 r R2.*2 r4 r8 a16-. a-. a-. a-. a-. a-. a8-. r r b16-. b-. b-. b-. b-. b-. b8-. r r
@@ -1013,10 +1162,18 @@ scoreAHornFI = \relative c' {
       }
       \volta 2 {
         R2.*8\! \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        a,4.\f
+        \mark\default a,4.\ff d c b R2.*2 a4. d c b R2.*4
+        \override TextSpanner.bound-details.left.text = "rall."
+        cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        c-.-> c-. c-. c-. c-. c-. g'-.->\ff g-. g-. gs-.-^ gs-.-^ gs-.-^ R2.\fermata\stopTextSpan
       }
     }
   }
+
+  \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
+  \key e \minor
+
+  R1*4 \mark\default
 }
 
 scoreAHornFII = \relative c' {
@@ -1049,7 +1206,7 @@ scoreAHornFII = \relative c' {
 
   \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
-    a8\fp-.-> r r4 r R2.*2 r2 b4\p\< a8\fp-.-> r r4 r R2.*3 \time 4/4 R1 \time 3/4
+    a8\fp-.-> r r4 r R2.*2 r4 r b4\p\< a8\fp-.-> r r4 r R2.*3 \time 4/4 R1 \time 3/4
     d,8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g'->( f e) f->( e d)
     d4-.\f bf f
     \mark\default a4-.-> r r R2.*5
@@ -1057,11 +1214,11 @@ scoreAHornFII = \relative c' {
     \alternative {
       \volta 1 {
         R2.*3\! \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        r8 e'16\f e e4 c a\< a8 b~8 b c->( b) e->( f) g->( af) a?8->-.\! r r4 r R2.
+        r8 e'16\f e e4 c a\< a8 b~8 b c->( b) e->( f) g->( af) \mark\default a?8->-.\! r r4 r R2.
         e8\ff e-. r e-. r4 ef8 ef-. r ef-. r4 R2.*2 e8\ff e-. r e-. r4 ef8 ef-. r ef-. r4 R2.*4
         bf8-.->\mf\< bf-. bf-. bf-.-> bf-. bf-. a-.-> a-. a-. a-.-> a-. a-.
         f'8-.->\fp\< f-. f-. f-.-> f-. f-. f-.-> f-. f-. f-.-> f-. f-.
-        a8-.->\fp r r4 r R2.*10
+        \mark\default a8-.->\fp r r4 r R2.*7 \mark\default R2.*3
         r4 r8 c,16-.\ff c-. c-. c-. c-. c-. c8-. r r4 r R2.*2
         b16-. b-. b-. b-. a-. a-. a-. a-. g-. g-. g-. g-.
         f8-. r r4 r R2.*2 r4 r8 d16-. d-. d-. d-. d-. d-. d8-. r r e16-. e-. e-. e-. e-. e-. e8-. r r
@@ -1070,10 +1227,18 @@ scoreAHornFII = \relative c' {
       }
       \volta 2 {
         R2.*8\! \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        a,4.\f
+        \mark\default a,4.\ff d c b R2.*2 a4. d c b R2.*4
+        \override TextSpanner.bound-details.left.text = "rall."
+        cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        c-.-> c-. c-. c-. c-. c-. c-.->\ff c-. c-. c-.-^ c-.-^ c-.-^ R2.\fermata\stopTextSpan
       }
     }
   }
+
+  \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
+  \key e \minor
+
+  R1*4 \mark\default
 }
 
 scoreATromboneI = \relative c {
@@ -1105,10 +1270,11 @@ scoreATromboneI = \relative c {
         a-.\< a-. a-. a-. a-. a-. b-. b-. b-. b-. b-. b-.
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a4.\f e'->~2. g4->\< f d e c b
-        a8\!-.-> r r4 r R2.
+        \mark\default a8\!-.-> r r4 r R2.
         e'8\ff e-. r e-. r4 ef8 ef-. r ef-. r4 R2.*2 e8\ff e-. r e-. r4 ef8 ef-. r ef-. r4 R2.*4
-        cs'4.\mf\< fs e ds a8-.->\fp\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-.a8-.->\fp r r4 r R2.
-        bf2.\<~2.\f\> a8-.\p r r4 r R2. bf2.\<~2.\f\> a8-.\p r r4 r
+        cs'4.\mf\< fs e ds a8-.->\fp\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-.
+        \mark\default a8-.->\fp r r4 r R2.
+        bf2.\<~2.\f\> a8-.\p r r4 r R2. bf2.\<~2.\f\> \mark\default a8-.\p r r4 r
         R2.*2 r4 r8 e16-.\ff e-. e-. e-. e-. e-. e8-. r r4 r R2.*2
         b'16-. b-. b-. b-. a-. a-. a-. a-. g-. g-. g-. g-.
         f8-. r r4 r R2.*2 r4 r8 a16-. a-. a-. a-. a-. a-. a8-. r r b16-. b-. b-. b-. b-. b-. b8-. r r
@@ -1117,10 +1283,18 @@ scoreATromboneI = \relative c {
       }
       \volta 2 {
         R2.*8\! \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        a,4.\f
+        \mark\default a,4.\f d c b R2.*2 a4. d c b R2.*4
+        \override TextSpanner.bound-details.left.text = "rall."
+        cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        c-.-> c-. c-. c-. c-. c-. c-.->\ff c-. c-. c-.-^ c-.-^ c-.-^ R2.\fermata\stopTextSpan
       }
     }
   }
+
+  \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
+  \key e \minor
+
+  R1*4 \mark\default
 }
 
 scoreATromboneII = \relative c {
@@ -1144,12 +1318,12 @@ scoreATromboneII = \relative c {
       \volta 1 {
         a8-.\< a-. a-. a-. a-. a-. b-. b-. b-. b-. b-. b-. a-.\f r r4 r
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        r8 e'16\f e e4 c a\< a8 b~8 b c->( b) e->( f) g->( af) a?8->-.\! r r4 r R2.
+        r8 e'16\f e e4 c a\< a8 b~8 b c->( b) e->( f) g->( af) \mark\default a?8->-.\! r r4 r R2.
         e8->\ff e e e-> e e ef-> ef ef ef-> ef ef d-> r r4 r R2.
         e8->\ff e e e-> e e ef-> ef ef ef-> ef ef d-> r r4 r R2.*3
         bf'8-.->\mf\< bf-. bf-. bf-.-> bf-. bf-. a-.-> a-. a-. a-.-> a-. a-.
         f8-.->\fp\< f-. f-. f-.-> f-. f-. f-.-> f-. f-. f-.-> f-. f-.
-        a8-.->\fp r r4 r R2.*10
+        \mark\default a8-.->\fp r r4 r R2.*7 \mark\default R2.*3
         r4 r8 c,16-.\ff c-. c-. c-. c-. c-. c8-. r r4 r R2.*2
         b'16-. b-. b-. b-. a-. a-. a-. a-. g-. g-. g-. g-.
         f8-. r r4 r R2.*2 r4 r8 d16-. d-. d-. d-. d-. d-. d8-. r r e16-. e-. e-. e-. e-. e-. e8-. r r
@@ -1161,11 +1335,19 @@ scoreATromboneII = \relative c {
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a-.->\mf a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-.-> a-. a-.
         ef'-.-> ef-. ef-. ef-.-> ef-. ef-. d-.-> d-. d-. d-. d-. d-. a-.-> r r4 r R2.
-        e'8-.->\p
-
+        \mark\default e'8-.->\p\< e-. e-. e-.-> e-. e-. ef-.-> ef-. ef-. ef-.-> ef-. ef-. d-.->\mf r r4 r R2.
+        e8-.->\p\< e-. e-. e-.-> e-. e-. ef-.-> ef-. ef-. ef-.-> ef-. ef-. d-.->\mf r r4 r R2.*3
+        bf8-.->\mf\< bf-. bf-. bf-.-> bf-. bf-. a-.->\ff\> a-. a-. a-.-> a-. a-.
+        \override TextSpanner.bound-details.left.text = "rall."
+        f'2.\fp\<\startTextSpan ~2.~2.~2.\ff R2.\fermata \stopTextSpan
       }
     }
   }
+
+  \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
+  \key e \minor
+
+  R1*4 \mark\default
 }
 
 scoreAEuphonium = \relative c {
@@ -1205,7 +1387,7 @@ scoreAEuphonium = \relative c {
     a4->\fp a8 \repeat unfold 5 {a4-> a8} f4 f g,\< a->\fp a'8 \repeat unfold 3 {a4-> a8}
     a4->\< a8 a4-> a8 g4-> g8 g4-> g8 \time 4/4 f4-> f f f \time 3/4 d d' a f a c
     bf,8-.\ff f'-. a-. bf-. c-. d-. f2.-.->\>
-    a,,4\fp-> a'8 a4-> a8 g8->\mf f d e c-> b e-> r
+    \mark\default a,,4\fp-> a'8 a4-> a8 g8->\mf f d e c-> b e-> r
     a\p \repeat unfold 3 {a4-> a8} f4-> a8 a4-> a8
     e'8->\mf d b c a-> b
 
@@ -1213,12 +1395,12 @@ scoreAEuphonium = \relative c {
       \volta 1 {
         a-.\< a-. a-. a-. a-. a-. b-. b-. b-. b-. b-. b-.
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1) a-.\f r r4 r
-        r8 e16\f e e4 c a\< a8 b~8 b c->( b) e->( f) g->( af) a?4.->-.\ff fs g g
+        r8 e16\f e e4 c a\< a8 b~8 b c->( b) e->( f) g->( af) \mark\default a?4.->-.\ff fs g g
         a8 a-. r a-. r4 a8 a-. r a-. r4 a4.->-.\ff fs g g
         a8 a-. r a-. r4 a8 a-. r a-. r4 R2.*6
-        a8-.->\fp\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-. a8-.->\fp r r4 r R2.
+        a8-.->\fp\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-. \mark\default a8-.->\fp r r4 r R2.
         e8\<-> e e e-> e e e-> e e e-> e e a8\fp-.-> r r4 r R2.
-        e8\<-> e e e-> e e e-> e e e-> e e a8\fp-.-> r r4 r R2.*2
+        e8\<-> e e e-> e e e-> e e e-> e e \mark\default a8\fp-.-> r r4 r R2.*2
         r4 r8 a16-.\ff a-. a-. a-. a-. a-. a8-. r r4 r R2.
         d8\mp c->( b) c->( b a) b->\ff b a-> a g-> g f\fp r r4 r R2.*2
         r4 r8 a16-. a-. a-. a-. a-. a-. a8-. r r b16-. b-. b-. b-. b-. b-. b8-. r r
@@ -1228,10 +1410,17 @@ scoreAEuphonium = \relative c {
       \volta 2 {
         d4.\< d, e' e, \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a4\mf-> a8 a4-> a8 g8-.-> f-. d-. e-. c-.-> b-.
-        ef4-> ef8 ef4-> ef8 d4 d d a'8-.-> a-. a-. a-. a-. a-. g-. g-. g-. g-. g-. g-. a4.\f
+        ef4-> ef8 ef4-> ef8 d4 d d a8-.->\< a-. a-. a-. a-. a-. g-. g-. g-. g-. g-. g-.
+        \mark\default a4.\ff d c b R2.*2 a4. d c b R2.*2 b4. e-> d b->
+        \override TextSpanner.bound-details.left.text = "rall."
+        cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        c-.-> c-. c-. c-. c-. c-. g'-.->\ff g-. g-. gs-.-^ gs-.-^ gs-.-^ R2.\fermata\stopTextSpan
       }
     }
   }
+
+  \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
+  \key e \minor
 }
 
 scoreATuba = \relative c {
@@ -1269,7 +1458,7 @@ scoreATuba = \relative c {
         a-.\< a-. a-. a-. a-. a-. b-. b-. b-. b-. b-. b-.
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a4\f-> a8 a4-> a8 a4-> a8 a4-> a8 a4\< a8 b~8 b c->( b) e->( f) g->( af)
-        a?->-.\fp\< a-. a-. a-.-> a-. a-. g-.-> g-. g-. g-.-> g-. g-.
+        \mark\default a?->-.\fp\< a-. a-. a-.-> a-. a-. g-.-> g-. g-. g-.-> g-. g-.
         e-.->\f e-. e-. e-.-> e-. e-. ef-.-> ef-. ef-. ef-.-> ef-. ef-.
         a8->-.\fp\< a-. a-. a-.-> a-. a-. g-.-> g-. g-. g-.-> g-. g-.
         e-.->\f e-. e-. e-.-> e-. e-. ef-.-> ef-. ef-. ef-.-> ef-. ef-.
@@ -1277,11 +1466,11 @@ scoreATuba = \relative c {
         gs-.-> gs-. gs-. gs-.-> gs-. gs-. g?-.-> g-. g-. g-.-> g-. g-.
         bf-.-> bf-. bf-. bf-.-> bf-. bf-. a-.-> a-. a-. a-.-> a-. a-.
         e2.\fp\<~2.
-        a8-.->\fp r r4 r R2.
+        \mark\default a8-.->\fp r r4 r R2.
         bf4.\< bf4. bf4.\f\> bf4.
         a8-.->\fp r r4 r R2.
         bf4.\< bf4. bf4.\f\> bf4.
-        a8-.->\p r r4 r R2.*15
+        \mark\default a8-.->\p r r4 r R2.*15
       }
       \volta 2 {
 
@@ -1289,10 +1478,18 @@ scoreATuba = \relative c {
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a-.->\mf a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-. a-.
         ef'-.-> ef-. ef-. ef-.-> ef-. ef-. d-.-> d-. d-. d-. d-. d-.
-        a'-.->\< a-. a-. a-. a-. a-. g-. g-. g-. g-. g-. g-. e-.\fp
+        a'-.->\< a-. a-. a-. a-. a-. g-. g-. g-. g-. g-. g-.
+        \mark\default e8-.->\fp\< e-. e-. e-.-> e-. e-. ef-.-> ef-. ef-. ef-.-> ef-. ef-. d-.->\mf r r4 r R2.
+        e8-.->\p\< e-. e-. e-.-> e-. e-. ef-.-> ef-. ef-. ef-.-> ef-. ef-. d-.->\mf r r4 r R2.*3
+        bf8-.->\mf\< bf-. bf-. bf-.-> bf-. bf-. a-.->\ff\> a-. a-. a-.-> a-. a-.
+        \override TextSpanner.bound-details.left.text = "rall."
+        f2.\fp\<\startTextSpan ~2.~2.~2.\ff R2.\fermata \stopTextSpan
       }
     }
   }
+
+  \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
+  \key e \minor
 }
 
 scoreATimpani = \relative c {
@@ -1323,26 +1520,34 @@ scoreATimpani = \relative c {
     a,->\fp a8 a4-> a8 a4-> a8 a4-> a8 a4->\< a8 a4-> a8 \repeat unfold 2 {e'4-> e8}
     \time 4/4 f,4-> f8 f8->~8 f f4-> \time 3/4
     \repeat unfold 4 {a4-> a8} \repeat unfold 2 {bf4-> bf8} bf2.:32\f\>
-    a4->\p a8 \repeat unfold 6 {a4-> a8} a4-> a16 a
+    \mark\default a4->\p a8 \repeat unfold 6 {a4-> a8} a4-> a16 a
     c4-> c8 c4-> c8 c4-> c8 c4-> c8
 
     \alternative {
       \volta 1 {
         a2.:32\< b:32 \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        a4.\f e' r8 e16 e e4 c a4->\< a8 b4-> b8 c2.:32-> a8\fp\< a a a a a b2.:32
+        a4.\f e' r8 e16 e e4 c a4->\< a8 b4-> b8 c2.:32-> \mark\default a8\fp\< a a a a a b2.:32
         a8\ff a a a a a a a a a a a a\fp\< a a a a a b2.:32 a8\ff a a a a a a a a a a a R2.*6
-        a8\fp\< a a a a a f f f f f f a\fp r r4 r R2. bf2.:32\< ~2.:32\f\> R2.*2\! bf2.:32\< ~2.:32\f\>
-        R2.*3\! r4 r8 a16\ff a a a a a a8 r r4 r R2.*2 a8 a a a a a a r r4 r R2.*2
+        a8\fp\< a a a a a f f f f f f \mark\default a\fp r r4 r R2. bf2.:32\< ~2.:32\f\> R2.*2\! bf2.:32\< ~2.:32\f\>
+        \mark\default R2.*3\! r4 r8 a16\ff a a a a a a8 r r4 r R2.*2 a8 a a a a a a r r4 r R2.*2
         r4 r8 a16 a a a a a a8 r r e'16 e e e e e e8 r r e16 e e e e e e2.:32\p\< ~2.:32
       }
       \volta 2 {
         a,2.:32\< b2.:32 \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a4\mf-> a8 \repeat unfold 3 {a4-> a8} \repeat unfold 2 {ef'4-> ef8} a,4-> a8 a a4:32->
-        a8\fp a a a4. c2.:32 e8\!->
+        a8\fp\< a a a4. c2.:32
+        \mark\default e8\!->\f e e e-> e e b-> b b b-> b b a->\fp\< a a a a a c2.:32
+        e8->\f e e e-> e e b-> b b b-> b b a-> r r4 r R2.*2 e'2.:32\p\<
+        \override TextSpanner.bound-details.left.text = "rall."
+        bf8\fp\< bf bf bf bf bf a->\ff\>\startTextSpan
+        a a a a a a->\fp\< a a a a a a-> a a a a a
+        c-> c c c c c c\ff-> c c <c e>-^ q-^ q-^ R2.\fermata\stopTextSpan
       }
     }
   }
 
+  \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
+  \key e \minor
 }
 
 scoreAGlockenspiel = \relative c'' {
@@ -1373,22 +1578,30 @@ scoreAGlockenspiel = \relative c'' {
   \repeat volta 2 {
     e8\fp r r4 r g8 r r4 c,8 r e r r4 r d8 r r4 b8 r e8 r r4 r g8 r r4 c,8 r a'2.\< g \time 4/4 f2 f \time 3/4
     d4 d, f f' a, d bf4. bf bf2.\f
-    a4.\mf e'->~2. g4-> f d e-> c b a4.-> d c b
+    \mark\default a4.\mf e'->~2. g4-> f d e-> c b a4.-> d c b
 
     \alternative {
       \volta 1 {
-        a8-> r r4 r R2.*7 \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        <a e'>8\ff q r q-. r4 <a ef'>8 q r q-. r4 R2.*2 <a e'>8 q r q-. r4 <a ef'>8 q r q-. r4 R2.*10
-        <bf e>4.\p\< q q\> q <a e'>8-.\p r r4 r R2. <bf e>4.\< q q\> q <a e'>8-.\p r r4 r R2.*7
+        a8-> r r4 r R2.*5 \once \set Score.voltaSpannerDuration = #(ly:make-moment 1) \mark\default R2.*2
+        <a e'>8\ff q r q-. r4 <a ef'>8 q r q-. r4 R2.*2 <a e'>8 q r q-. r4 <a ef'>8 q r q-. r4 R2.*8
+        \mark\default R2.*2
+        <bf e>4.\p\< q q\> q <a e'>8-.\p r r4 r R2. <bf e>4.\< q q\> q \mark\default <a e'>8-.\p r r4 r R2.*7
         a8 r r a r4 a-.\< b-. a-. a16\f(b c8--) r a\p r4 a-. a-. a-.
         a8 r r a r4 a-.\< b-. a-. a16\f( c d8--) r a\p r4 a16\f( d e8--) r4 r
       }
       \volta 2 {
         a,8-> r r4 r R2.*2 \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        g'8\mf f d e c b ef4-. r r R2. a,4. d c b
+        g'8\mf f d e c b ef4-. r r R2. a,4. d c b \mark\default R2.*2
+        a4. d c b R2.*2 a4.\mp\< d c b b e d b cs\ff fs e gs
+        \override TextSpanner.bound-details.left.text = "rall."
+        a,8\fp\< \startTextSpan a a a a a b b b b b b
+        c c c c c c <c g'>\ff q q <c gs'>-^ q-^ q-^ R2.\fermata\stopTextSpan
       }
     }
   }
+
+  \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
+  \key e \minor
 }
 
 scoreAXylo = \relative c' {
@@ -1416,17 +1629,22 @@ scoreAXylo = \relative c' {
 
   \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
-    R2.*8 \time 4/4 R1 \time 3/4 R2.*10
+    R2.*8 \time 4/4 R1 \time 3/4 R2.*4 \mark\default R2.*6
 
     \alternative {
       \volta 1 {
-        R2.*46 \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        R2.*6 \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        \mark\default R2.*16 \mark\default R2.*8 \mark\default R2.*16
       }
       \volta 2 {
         R2.*8 \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        \mark\default R2.*16 R2.\fermata
       }
     }
   }
+
+  \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
+  \key e \minor
 }
 
 scoreADrum = \drummode {
@@ -1468,7 +1686,7 @@ scoreADrum = \drummode {
     sn8\< sn sn sn sn16 sn sn8 sn sn sn sn sn16 sn sn8 \time 4/4 sn sn sn sn sn16 sn sn8 sn sn
     \time 3/4 sn8 sn sn sn sn sn16 sn sn8 sn sn sn16 sn sn8 sn sn sn sn sn sn sn16 sn
     \tuplet 3/2 {sn8\f\> sn sn} \tuplet 3/2 {sn sn sn} \tuplet 3/2 {sn sn sn}
-    sn8\p sn sn sn sn sn sn sn16 sn sn8 sn sn16 sn sn sn
+    \mark\default sn8\p sn sn sn sn sn sn sn16 sn sn8 sn sn16 sn sn sn
     sn8 sn sn sn16 sn sn8 sn sn sn16 sn sn8 sn sn sn16 sn
     sn8 sn sn sn16 sn sn8 sn sn sn sn16 sn sn8 sn sn
 
@@ -1478,7 +1696,7 @@ scoreADrum = \drummode {
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         sn8\fp sn sn sn16 sn sn8 sn sn sn sn sn16 sn sn8 sn
         sn\< sn sn sn16 sn sn8 sn sn sn sn sn16 sn sn4:32
-        sn8\fp\< sn sn sn sn sn sn sn sn sn sn4:32
+        \mark\default sn8\fp\< sn sn sn sn sn sn sn sn sn sn4:32
         sn8\ff sn sn\p sn4.:32\< sn8\ff sn sn\p sn4.:32\<
         sn8\fp\< sn sn sn sn sn sn sn sn sn sn4:32
         sn8\ff sn sn\p sn4.:32\< sn8\ff sn sn\p sn4.:32\<
@@ -1486,11 +1704,11 @@ scoreADrum = \drummode {
         sn8\fp\< sn sn sn sn sn sn sn sn sn sn4:32
         sn8\fp\< sn sn sn sn sn sn sn sn sn sn4:32
         sn8\fp\< sn sn sn sn sn sn2.:32
-        sn8\fp sn sn sn sn sn sn sn16 sn sn8 sn sn16 sn sn sn
+        \mark\default sn8\fp sn sn sn sn sn sn sn16 sn sn8 sn sn16 sn sn sn
         sn8 sn sn sn sn16 sn sn sn sn8 sn16 sn sn8 sn sn16 sn sn8
         sn sn sn sn sn sn sn sn16 sn sn8 sn sn16 sn sn8
         sn8\< sn sn sn16 sn sn8 sn sn sn sn sn16 sn sn8 sn
-        sn\fp sn sn sn sn16 sn sn sn sn8 sn sn sn sn16 sn sn sn
+        \mark\default sn\fp sn sn sn sn16 sn sn sn sn8 sn sn sn sn16 sn sn sn
         sn8 sn sn sn sn4:32 sn8 sn sn sn sn16 sn sn sn
         sn8 sn sn sn sn4:32 sn8 sn sn sn sn16 sn sn sn
         sn8 sn sn sn sn16 sn sn sn sn2.:32\fp\<
@@ -1500,11 +1718,25 @@ scoreADrum = \drummode {
         sn\< sn sn8 sn sn sn sn sn16 sn sn8\fp\<~2
       }
       \volta 2 {
-        sn8\! sn sn sn16 sn sn8 sn sn2.:32
+        sn8\! sn sn sn16 sn sn8 sn sn2.:32\<
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        sn8\mf sn sn sn16 sn sn8 sn sn sn sn sn16 sn sn8 sn
+        sn sn sn sn16 sn sn8 sn sn sn sn sn16 sn sn4:32
+        sn8\fp\< sn sn sn sn sn sn sn sn sn sn16 sn sn sn
+        \mark\default sn8\fp\< sn sn sn sn sn sn sn sn sn sn16 sn sn sn
+        sn8\fp\< sn sn sn sn sn sn sn sn sn sn16 sn sn sn
+        sn8\fp\< sn sn sn sn sn sn sn sn sn sn16 sn sn sn
+        sn8\fp\< sn sn sn4.:32 sn8 sn sn sn sn16 sn sn sn
+        sn8\mp\< sn sn sn4.:32 sn8 sn sn sn sn16 sn sn sn
+        sn8\mf\< sn sn sn4.:32 sn8 sn sn sn sn16 sn sn sn
+        \override TextSpanner.bound-details.left.text = "rall."
+        sn8\fp\<\startTextSpan sn sn sn sn sn sn sn sn sn sn sn
+        sn sn sn sn sn sn sn\ff sn sn sn-^ sn-^ sn-^ R2.\fermata\stopTextSpan
       }
     }
   }
+
+  \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
 }
 
 scoreARight = \relative c' {
@@ -1551,25 +1783,37 @@ scoreARight = \relative c' {
     q r r e r4 g8 r r4 e8 r e\< e e <d f> q q <d e g> q q <d f a> q q
     \time 4/4 <d g b> q q q <d a' c> q q q \time 3/4
     d'4 d, f f' a, d bf4. bf bf2.\f
-    a4.\mf e'->~2. g4 f d e c b a4.-> d c b
+    \mark\default a4.\mf e'->~2. g4 f d e c b a4.-> d c b
 
     \alternative {
       \volta 1 {
-        d\p\< d, e' e, a\f e'->~2. g4\< f d e c b a4. d c b
+        d\p\< d, e' e, \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        a\f e'->~2. g4\< f d e c b \mark\default a4. d c b
         <a e a,>8\ff q r q r4 <a ef a,>8 q r q r4
         a4. d  c b
         <a e a,>8\ff q r q r4 <a ef a,>8 q r q r4
-        a4.\p\< d c b b e d b cs fs e ds a8->\fp\< a a a-> a a b-> b b c-> c c a\fp r r4 r R2.
+        a4.\p\< d c b b e d b cs fs e ds a8->\fp\< a a a-> a a b-> b b c-> c c
+        \mark\default a\fp r r4 r R2.
         <bf bf,>8->\< q q q-> q q q->\> q q q-> q q <a a,>->\p r r4 r R2.
-        <bf bf,>8->\< q q q-> q q q->\> q q q-> q q <a a,>->\p r r4 r
+        <bf bf,>8->\< q q q-> q q q->\> q q q-> q q \mark\default <a a,>->\p r r4 r
         R2.*2 r4 r8 a,16\ff a' a, a' a, a' a,8 r r4 r R2.*2
         <b'' b,>8-> q <a a,>8-> q <g g,>8-> q <f f,>8-> r r4 r R2.*7
       }
       \volta 2 {
-        d4.\< d, e' e, a\mf e'->~2. g4 f d e c b a4. d c b
+        d4.\< d, e' e, \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        a\mf e'->~2. g4 f d e c b a4. d c b
+        \mark\default a8 r r4 r R2.
+        a4. d c b a8 r r4 r R2.
+        a'4.\p\< d-> c\mf\> b-> b,\mp\< e-> d\f\> b-> cs,\mf\< fs-> e\ff\> ds'->
+        \override TextSpanner.bound-details.left.text = "rall."
+        <a a'>8\fp\< \startTextSpan q q q q q <b b'> q q q q q
+        <c c'> q q q q q <g' g'>\ff q q <gs gs'>-^ q-^ q-^ R2.\fermata\stopTextSpan
       }
     }
   }
+
+  \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
+  \key e \minor
 }
 
 scoreALeft = \relative c, {
@@ -1618,22 +1862,44 @@ scoreALeft = \relative c, {
   e,,4. e e e e e e e e e e e e e fs g c c d d e e a, a a a b b c c c e
 
   \repeat unfold 3 {\greenPathLeftHandB}
-  
+
   \key a \minor
-  {
+  \repeat volta 2 {
     <a, a,>4-> a'8 \repeat unfold 5 {a4 a8} f4 f g,
     q4-> a'8 \repeat unfold 5 {a4 a8} \repeat unfold 2 {g4 g8}
     \time 4/4 f4 f f f \time 3/4 d d' a f a c bf,8 f' a bf c d f2.->
     q4-> a,8 \repeat unfold 7 {a4 a8}
-    q4-> a8 \repeat unfold 3 {a4 a8}
+    q4-> a8 a4 a8 a4 a8 a4 a8
 
-    d,4. d, e' e, q4-> a'8 a4 a8 a4 a a
-    <g g'> <f f'> <d d'> <e e'> <c c'> <b b'> <a a'>4. <fs fs'> <g g'> <g g'>
-    <a e a,>8 q r q r4 <a ef a,>8 q r q r4
+    \alternative {
+      \volta 1 {
+        d,4. d, e' e, q4-> a'8 a4 a8 a4 a a
+        <g g'> <f f'> <d d'> <e e'> <c c'> <b b'> <a a'>4. <fs fs'> <g g'> <g g'>
+        <a e a,>8 q r q r4 <a ef a,>8 q r q r4
         <g g,>4. <f f,> <d d,> <e e,>
         <a e a,>8 q r q r4 <a ef a,>8 q r q r4
-    
+        <fs fs'>8-> q q q-> q q <f? f'?>8-> q q q-> q q
+        <gs gs'>8-> q q q-> q q <g? g'?>8-> q q q-> q q
+        <bf bf'>8-> q q q-> q q <a a'>8-> q q q-> q q
+        <f f'>8-> q q q-> q q q-> q q q-> q q <a a'>8-> r r4 r R2.
+        <e e'>8-> q q q-> q q q-> q q q-> q q <a, a'>8-> r r4 r R2.
+        <e' e'>8-> q q q-> q q q-> q q q-> q q <a, a'>8-> r r4 r R2.*2
+        r4 r8 a'16\ff a, a' a, a' a, a'8 r r4 r R2.*2
+        <b, b'>8-> q <a a'>-> q <g g'>-> q <f f'>-> r r4 r R2.*7
+      }
+      \volta 2 {
+        d''4. d, e' e, <a a,>4-> a'8 \repeat unfold 3 {a4 a8} \repeat unfold 2 {ef4 ef8} d4 d d
+        a8-> a a a a a g g g g g g e r r4 r R2.
+        a8-> a a a a a g g g g g g e r r4 r R2.
+        <fs fs'>8-.-> q-. q-. q-.-> q-. q-. <f? f'?>-.-> q-. q-. q-.-> q-. q-.
+        <gs gs'>-.-> q-. q-. q-.-> q-. q-. <g? g'?>-.-> q-. q-. q-.-> q-. q-.
+        <bf bf'>-.-> q-. q-. q-.-> q-. q-. <a a'>-.-> q-. q-. q-.-> q-. q-.
+        <f f'>8 q q q q q q q q q q q q q q q q q q q q q-^ q-^ q-^ R2.\fermata
+      }
+    }
   }
+
+  \key e \minor
 }
 
 scoreAPiccoloPart = \new Staff \with {
@@ -1883,7 +2149,7 @@ scoreADrumsPart = \new DrumStaff \with {
       \scoreAPianoPart
     >>
     \layout {
-      #(layout-set-staff-size 14)
+      #(layout-set-staff-size 12)
     }
     \midi { }
   }
@@ -1894,6 +2160,7 @@ scoreADrumsPart = \new DrumStaff \with {
 }
 
 %{
+%
 \book {
   \bookOutputName "Part 01 - Piccolo"
   \score {
@@ -2132,12 +2399,13 @@ scoreADrumsPart = \new DrumStaff \with {
   \bookOutputName "Part 17-18 - HornFI-II"
   \score {
     \compressMMRests {
-          <<
+      <<
         \new StaffGroup <<
           \transpose f c' \scoreAHornFIPart
           \transpose f c' \scoreAHornFIIPart
         >>
-      >>}
+      >>
+    }
     \layout {
       \override MultiMeasureRest.expand-limit = 1
       #(layout-set-staff-size 14)
@@ -2203,6 +2471,32 @@ scoreADrumsPart = \new DrumStaff \with {
   \bookOutputName "Part 23 - Timpani"
   \score {
     \compressMMRests {\scoreATimpaniPart}
+    \layout {
+      \override MultiMeasureRest.expand-limit = 1
+      #(layout-set-staff-size 14)
+    }
+  }
+  \paper {
+    #(set-paper-size "letter")
+  }
+}
+\book {
+  \bookOutputName "Part 24 - Glockenspiel"
+  \score {
+    \compressMMRests {\scoreAGlockenspielPart}
+    \layout {
+      \override MultiMeasureRest.expand-limit = 1
+      #(layout-set-staff-size 14)
+    }
+  }
+  \paper {
+    #(set-paper-size "letter")
+  }
+}
+\book {
+  \bookOutputName "Part 25 - Xylo"
+  \score {
+    \compressMMRests {\scoreAXyloPart}
     \layout {
       \override MultiMeasureRest.expand-limit = 1
       #(layout-set-staff-size 14)
