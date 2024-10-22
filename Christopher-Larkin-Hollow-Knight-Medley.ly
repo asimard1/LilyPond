@@ -1819,6 +1819,7 @@ scoreARight = \relative c' {
 scoreALeft = \relative c, {
   \global
   % Music goes here
+  \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
   R1 {e8\sustainOn b' e fs g b g fs e, b' e fs g b g fs}\sustainOff
   {e,\sustainOn b' e fs g b g fs e, b' e fs g b g fs}\sustainOff
   {e,\sustainOn b' e fs g b g fs d, a' e' fs g b g fs}\sustainOff
@@ -1851,6 +1852,8 @@ scoreALeft = \relative c, {
     b' e g b \clef treble e fs g b1\stopTextSpan
   }
 
+  \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
+
   \override MultiMeasureRest.staff-position = 0
   \clef bass
   \override MultiMeasureRest.staff-position = 0
@@ -1863,7 +1866,7 @@ scoreALeft = \relative c, {
 
   \repeat unfold 3 {\greenPathLeftHandB}
 
-  \key a \minor
+  \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     <a, a,>4-> a'8 \repeat unfold 5 {a4 a8} f4 f g,
     q4-> a'8 \repeat unfold 5 {a4 a8} \repeat unfold 2 {g4 g8}
@@ -1899,6 +1902,7 @@ scoreALeft = \relative c, {
     }
   }
 
+  \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
   \key e \minor
 }
 
