@@ -10,6 +10,18 @@
   tagline = ##f
 }
 
+#(define mydrums '(
+                    (hiwoodblock  cross   #f  2)
+                    (lowoodblock  cross   #f  0)
+                    (bassdrum     default #f -3)
+                    (snare        default #f  1)
+                    (crashcymbal  xcircle #f  5)
+                    (lowfloortom  default #f -4)
+                    (highfloortom default #f -2)
+                    (tambourine   default #f  0)
+                    )
+   )
+
 \layout {
   \context {
     \StaffGroup
@@ -89,6 +101,16 @@ greenPathBassC = {
   {fs8-. fs16-. fs-. r fs-. fs8.-. fs16-. fs-. fs-.\stopTextSpan}
 }
 
+fungalBass = \fixed c {
+  e8-. e'-. b-. d-. d'-. a-. r4
+}
+
+
+
+
+
+%%% PARTS
+
 scoreAPiccolo = \relative c'' {
   \global
   \transposition c''
@@ -136,7 +158,7 @@ scoreAPiccolo = \relative c'' {
         a,4.\mf e'->~2. g4-> f d e-> c b a4. d c b
         \mark\default a8-> r r4 r R2.*9
         \override TextSpanner.bound-details.left.text = "rall."
-        es4.\ff fs e gs a8 \startTextSpan
+        \mark\default es4.\ff fs e gs a8 \startTextSpan
         r r4 r R2.*2 g8^\markup{\italic "8va ad lib"} \ff->-. g-. g-. gs-.-^ gs-.-^ gs-.-^ R2.\fermata\stopTextSpan
       }
     }
@@ -146,6 +168,13 @@ scoreAPiccolo = \relative c'' {
   \key e \minor
 
   R1*4 \mark\default
+  R1*8 \mark\default
+  R1*8 \mark\default
+  R1*2 r2 b,2\pp\<~1\> R1*6\! r2 e\pp\<~1\>~1\<~1\> R1*2\!
+
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+
+  \grace{bf'16( b} c8->\f)
 }
 
 scoreAFluteI = \relative c'' {
@@ -197,7 +226,7 @@ scoreAFluteI = \relative c'' {
         \mark\default r4 g,16\mp\<( a b c a8-.) r b16( c d e c8-.) r d16( e f g)
         a4.\mf d c b a8 r r4 r R2. a4.\mf\< d-> c b->\f R2.*2
         \override TextSpanner.bound-details.left.text = "rall."
-        cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        \mark\default cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
         c-.-> c-. c-. c-. c-. c-. g'-.->\ff g-. g-. gs-.-^ gs-.-^ gs-.-^ R2.\fermata\stopTextSpan
       }
     }
@@ -207,6 +236,13 @@ scoreAFluteI = \relative c'' {
   \key e \minor
 
   R1*4 \mark\default
+  R1*8 \mark\default
+  R1*8 \mark\default
+  e,1\pp~1~1~1 R1*6 r2 b\pp\<~1\>~1\<~1\> R1*2\!
+
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+
+  \grace{bf'16( b} c8->\f)
 }
 
 scoreAFluteII = \relative c'' {
@@ -261,7 +297,7 @@ scoreAFluteII = \relative c'' {
         \mark\default f16\mp\<( g a b g8-.) r a16( b c d b8-.) r c16( d e f d8-.) r
         a'4.\mf d c b a8 r r4 r R2.*5
         \override TextSpanner.bound-details.left.text = "rall."
-        cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        \mark\default cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
         c-.-> c-. c-. c-. c-. c-. g-.->\ff g-. g-. gs-.-^ gs-.-^ gs-.-^ R2.\fermata\stopTextSpan
       }
     }
@@ -271,6 +307,13 @@ scoreAFluteII = \relative c'' {
   \key e \minor
 
   R1*4 \mark\default
+  R1*8 \mark\default
+  R1*8 \mark\default
+  R1*2 r2 b,2\pp\<~1\> R1*6\! r2 e\pp\<~1\>~1\<~1\> R1*2\!
+
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+
+  \grace{f16( fs} g8->\f)
 }
 
 scoreAOboe = \relative c'' {
@@ -318,7 +361,7 @@ scoreAOboe = \relative c'' {
         g8-.->\mf f-. d-. e-. c-.-> b-. g'4-> f d e-> c b a4. d c b
         \mark\default a8-> r r4 r R2. a4.\mf d c b a8 r r4 r R2.*3
         b4.\f\< e-> d b-> \override TextSpanner.bound-details.left.text = "rall."
-        cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        \mark\default cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
         c-.-> c-. c-. c-. c-. c-. c-.->\ff c-. c-. c-.-^ c-.-^ c-.-^ R2.\fermata\stopTextSpan
       }
     }
@@ -328,6 +371,13 @@ scoreAOboe = \relative c'' {
   \key e \minor
 
   R1*2 r2 r8 b'4.\p\<~1\> \mark\default
+  R1*5\! r4 g2.\p\>~1~1 \mark\default
+  R1*8\! \mark\default
+  e1\pp\<~1\>~1\<~1\> R1*10\! r2 r4 as,~1\>
+
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+
+  \grace{bf16( b} c8->\f)
 }
 
 scoreABassoon = \relative c' {
@@ -400,7 +450,7 @@ scoreABassoon = \relative c' {
         \mark\default e-.\fp r r4 r R2. a8-.->\< a-. a-. a-. a-. a-. g-. g-. g-. g-. g-. g-. e-.\fp r r4 r R2.
         fs8-.->\<\p fs-. fs-. fs-.-> fs-. fs-. f?-.->\mf\> f-. f-. f-.-> f-. f-.
         gs-.->\mp\< gs-. gs-. gs-.-> gs-. gs-. g?-.->\f\> g-. g-. g-.-> g-. g-.
-        bf-.->\mf\< bf-. bf-. bf-.-> bf-. bf-. a-.->\ff\> a-. a-. a-.-> a-. a-.
+        \mark\default bf-.->\mf\< bf-. bf-. bf-.-> bf-. bf-. a-.->\ff\> a-. a-. a-.-> a-. a-.
         \override TextSpanner.bound-details.left.text = "rall."
         f2.\fp\<\startTextSpan ~2.~2.~2.\ff R2.\fermata \stopTextSpan
       }
@@ -411,13 +461,23 @@ scoreABassoon = \relative c' {
   \key e \minor
 
   R1*4 \mark\default
+  R1*8 \mark\default
+  R1*8 \mark\default
+  e'4.\f^\markup{\italic "solo"} fs8 g4. a8 b2 cs~2 ~8 d b a b1
+  r4 e\< d4. e8 fs2 \grace {e16( fs g} fs4) d cs2 \grace {d16( cs} b4.) a8 b1\>
+  b8\f d b d e2~4 b8 d b d e fs g4. fs8 e2\> <>\!
+  r4 r8 d8\mf\< e c b a b1\f\> \grace {b16( a g} fs2)~8 e\mp( a4) a4. g16 fs e4 ds~1\>
+
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+
+  \grace{s8} c8-.\f
 }
 
 scoreAEflatClarinet = \relative c'' {
   \global
   % Music goes here
   \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
-  e,1\p\>^"Keep as long as possible"~1~1~1~1~1~1~1~1 \mark \default R1*16\! \mark\default R1*15
+  e,1\pp\>^"Keep as long as possible and slowly face"~1~1~1~1~1~1~1~1 \mark \default R1*16\! \mark\default R1*15
   \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
   R2.*4 \mark\default R2.*16
 
@@ -456,7 +516,7 @@ scoreAEflatClarinet = \relative c'' {
         e4.\mf e->~2. g4-> f d e-> c b a4. d c b
         \mark\default f8 r g r a r b r c r d r a4.\mf d c b a8 r r4 r R2.*3 b4.\f\< e-> d b->
         \override TextSpanner.bound-details.left.text = "rall."
-        cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        \mark\default cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
         c-.-> c-. c-. c-. c-. c-. g'-.->\ff g-. g-. gs-.-^ gs-.-^ gs-.-^ R2.\fermata\stopTextSpan
       }
     }
@@ -466,6 +526,13 @@ scoreAEflatClarinet = \relative c'' {
   \key e \minor
 
   R1*2 r2 r8 fs4.\p\<~1\> \mark\default
+  R1*8\! \mark\default
+  R1*8 \mark\default
+  R1*16
+
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+
+  \grace{s8} c8-.\f
 }
 
 scoreAClarinetI = \relative c'' {
@@ -519,7 +586,7 @@ scoreAClarinetI = \relative c'' {
         \mark\default f16\mp\<( g a b g8-.) r a16( b c d b8-.) r c16( d e f d8-.) r
         a'4.\mf d, c b a8 r r4 r R2. a4.\mf\< d-> c b->\f R2.*2
         \override TextSpanner.bound-details.left.text = "rall."
-        cs4.\ff fs e gs a,8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        \mark\default cs4.\ff fs e gs a,8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
         c-.-> c-. c-. c-. c-. c-. g'-.->\ff g-. g-. gs-.-^ gs-.-^ gs-.-^ R2.\fermata\stopTextSpan
       }
     }
@@ -529,6 +596,14 @@ scoreAClarinetI = \relative c'' {
   \key e \minor
 
   R1*4 \mark\default
+  R1*8 \mark\default
+  fs,4.\mf^\markup {\italic "solo"} g8 a2 \grace {fs16 g fs} e2 b' \grace {cs16 d cs} b1 r4 d2 cs8 d
+  b2. a8 b g4 fs8 g e2 ~1\> R1\! \mark\default
+  R1*16
+
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+
+  \grace{s8} c'8-.\f
 }
 
 scoreAClarinetII = \relative c'' {
@@ -580,7 +655,7 @@ scoreAClarinetII = \relative c'' {
         \mark\default r4 g16\mp\<( a b c a8-.) r b16( c d e c8-.) r d16( e f g)
         a4.\mf d, c b a8 r r4 r R2.*3 b4.\f\< e-> d b->
         \override TextSpanner.bound-details.left.text = "rall."
-        cs4.\ff fs e gs a,8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        \mark\default cs4.\ff fs e gs a,8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
         c-.-> c-. c-. c-. c-. c-. g'-.->\ff g-. g-. gs-.-^ gs-.-^ gs-.-^ R2.\fermata\stopTextSpan
       }
     }
@@ -590,6 +665,14 @@ scoreAClarinetII = \relative c'' {
   \key e \minor
 
   R1*4 \mark\default
+  e,4\mf-.^\markup {\italic "quasi pizz."} e-. fs8-. g-. fs4-. r2 r4 ds\p\< e\mf-. b8-. a-. b4-. r R1
+  e4-. e-. fs8-. g-. a4-. r4 r8 g-. fs4-. b8.-. as16-. b4-. g8-. fs-. a4-. r R1 \mark\default
+  R1*8 \mark\default
+  R1*16
+
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+
+  \grace{s8} g8-.\f
 }
 
 scoreAClarinetIII = \relative c'' {
@@ -647,7 +730,7 @@ scoreAClarinetIII = \relative c'' {
         \mark\default r4 g16\mp\<( a b c a8-.) r b16( c d e c8-.) r d16( e f g)
         a4.\mf d, c b a8 r r4 r R2.*3 b4.\f\< e-> d b->
         \override TextSpanner.bound-details.left.text = "rall."
-        cs4.\ff fs e gs a,8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        \mark\default cs4.\ff fs e gs a,8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
         c-.-> c-. c-. c-. c-. c-. g'-.->\ff g-. g-. gs-.-^ gs-.-^ gs-.-^ R2.\fermata\stopTextSpan
       }
     }
@@ -657,6 +740,14 @@ scoreAClarinetIII = \relative c'' {
   \key e \minor
 
   R1*4 \mark\default
+  e,4\mf-.^\markup {\italic "quasi pizz."} e-. fs8-. e-. fs4-. r2 r4 b,\p\< e\mf-. b8-. a-. b4-. r R1
+  e4-. e-. fs8-. e-. a4-. r4 r8 g-. fs4-. g8.-. fs16-. e4-. g8-. fs-. e4-. r R1 \mark\default
+  R1*8 \mark\default
+  R1*16
+
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+
+  \grace{s8} e8-.\f
 }
 
 scoreABassClarinet = \relative c'' {
@@ -719,7 +810,7 @@ scoreABassClarinet = \relative c'' {
         \mark\default e-.\fp r r4 r R2. a8-.->\< a-. a-. a-. a-. a-. g-. g-. g-. g-. g-. g-. e-.\fp r r4 r R2.
         fs8-.->\<\p fs-. fs-. fs-.-> fs-. fs-. f?-.->\mf\> f-. f-. f-.-> f-. f-.
         gs-.->\mp\< gs-. gs-. gs-.-> gs-. gs-. g?-.->\f\> g-. g-. g-.-> g-. g-.
-        bf-.->\mf\< bf-. bf-. bf-.-> bf-. bf-. a-.->\ff\> a-. a-. a-.-> a-. a-.
+        \mark\default bf-.->\mf\< bf-. bf-. bf-.-> bf-. bf-. a-.->\ff\> a-. a-. a-.-> a-. a-.
         \override TextSpanner.bound-details.left.text = "rall."
         f2.\fp\<\startTextSpan ~2.~2.~2.\ff R2.\fermata \stopTextSpan
       }
@@ -730,6 +821,13 @@ scoreABassClarinet = \relative c'' {
   \key e \minor
 
   R1*4 \mark\default
+  R1*8 \mark\default
+  R1*8 \mark\default
+  R1*16
+
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+
+  \grace{s8} c8-.\f
 }
 
 scoreAAltoSaxI = \relative c'' {
@@ -797,7 +895,7 @@ scoreAAltoSaxI = \relative c'' {
         \mark\default r4 g16\mp\<( a b c a8-.) r b16( c d e c8-.) r d,16( e f g)
         a4.\mf d c b a8 r r4 r R2. a4.\mf\< d-> c b->\f R2.*2
         \override TextSpanner.bound-details.left.text = "rall."
-        cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        \mark\default cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
         c-.-> c-. c-. c-. c-. c-. g'-.->\ff g-. g-. gs-.-^ gs-.-^ gs-.-^ R2.\fermata\stopTextSpan
       }
     }
@@ -807,6 +905,13 @@ scoreAAltoSaxI = \relative c'' {
   \key e \minor
 
   R1 g\mp\> R1*1\! e1\p\> \mark\default
+  R1*2\! r2 a\p( b4. cs8 d2~2) r e1\>~1~1 \mark\default
+  R1*8\! \mark\default
+  R1*16
+
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+
+  \grace{s8} c8-.\f
 }
 
 scoreAAltoSaxII = \relative c'' {
@@ -865,7 +970,7 @@ scoreAAltoSaxII = \relative c'' {
         \mark\default f16\mp\<( g a b g8-.) r a16( b c d b8-.) r c16( d e f d8-.) r
         a4.\mf d c b a8 r r4 r R2.*3 b4.\f\< e-> d b->
         \override TextSpanner.bound-details.left.text = "rall."
-        cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        \mark\default cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
         c-.-> c-. c-. c-. c-. c-. c-.->\ff c-. c-. c-.-^ c-.-^ c-.-^ R2.\fermata\stopTextSpan
       }
     }
@@ -875,6 +980,13 @@ scoreAAltoSaxII = \relative c'' {
   \key e \minor
 
   e1\pp\<~1\> R1*2\! \mark\default
+  R1*2 r2 b'2\p~1~2 r4 b\p\>~1~1~1 \mark\default
+  R1*8\! \mark\default
+  R1*16
+
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+
+  \grace{s8} g8-.\f
 }
 
 scoreATenorSax = \relative c'' {
@@ -915,7 +1027,7 @@ scoreATenorSax = \relative c'' {
         g8-.->\mf f-. d-. e-. c-.-> b-. g4-> f d e-> c b a4. d c b
         \mark\default a8-> r r4 r R2.*5 a4.\mf\< d-> c b-> b4. e-> d b->
         \override TextSpanner.bound-details.left.text = "rall."
-        cs4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        \mark\default cs4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
         c-.-> c-. c-. c-. c-. c-. g'-.->\ff g-. g-. gs-.-^ gs-.-^ gs-.-^ R2.\fermata\stopTextSpan
       }
     }
@@ -925,6 +1037,13 @@ scoreATenorSax = \relative c'' {
   \key e \minor
 
   R1 e1\p\> R1*1\! cs1\p\> \mark\default
+  R1*2\! r2 e\p~1~2 r R1*3 \mark\default
+  R1*8 \mark\default
+  R1*16
+
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+
+  \grace{s8} e8-.\f
 }
 
 scoreABaritoneSax = \relative c'' {
@@ -986,7 +1105,7 @@ scoreABaritoneSax = \relative c'' {
         \mark\default e-.\fp r r4 r R2. a8-.->\< a-. a-. a-. a-. a-. g-. g-. g-. g-. g-. g-. e-.\fp r r4 r R2.
         fs8-.->\<\p fs-. fs-. fs-.-> fs-. fs-. f?-.->\mf\> f-. f-. f-.-> f-. f-.
         gs-.->\mp\< gs-. gs-. gs-.-> gs-. gs-. g?-.->\f\> g-. g-. g-.-> g-. g-.
-        bf-.->\mf\< bf-. bf-. bf-.-> bf-. bf-. a-.->\ff\> a-. a-. a-.-> a-. a-.
+        \mark\default bf-.->\mf\< bf-. bf-. bf-.-> bf-. bf-. a-.->\ff\> a-. a-. a-.-> a-. a-.
         \override TextSpanner.bound-details.left.text = "rall."
         f2.\fp\<\startTextSpan ~2.~2.~2.\ff R2.\fermata \stopTextSpan
       }
@@ -997,6 +1116,13 @@ scoreABaritoneSax = \relative c'' {
   \key e \minor
 
   R1*4 \mark\default
+  R1*2 r2 b\p~1~2 r R1*3 \mark\default
+  R1*8 \mark\default
+  R1*16
+
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+
+  \grace{s8} c,8-.\f
 }
 
 scoreATrumpetBbI = \relative c'' {
@@ -1047,7 +1173,7 @@ scoreATrumpetBbI = \relative c'' {
         R2.*8\! \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a,4.\f d c b R2.*2 a4. d c b R2.*4
         \override TextSpanner.bound-details.left.text = "rall."
-        cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        \mark\default cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
         c-.-> c-. c-. c-. c-. c-. g'-.->\ff g-. g-. gs-.-^ gs-.-^ gs-.-^ R2.\fermata\stopTextSpan
       }
     }
@@ -1057,6 +1183,13 @@ scoreATrumpetBbI = \relative c'' {
   \key e \minor
 
   R1*4 \mark\default
+  R1*8 \mark\default
+  R1*8 \mark\default
+  R1*16
+
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+
+  \grace{s8} c,8-.\f
 }
 
 scoreATrumpetBbII = \relative c'' {
@@ -1112,7 +1245,7 @@ scoreATrumpetBbII = \relative c'' {
         R2.*8\! \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a,4.\f d c b R2.*2 a4. d c b R2.*4
         \override TextSpanner.bound-details.left.text = "rall."
-        cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        \mark\default cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
         c-.-> c-. c-. c-. c-. c-. c-.->\ff c-. c-. c-.-^ c-.-^ c-.-^ R2.\fermata\stopTextSpan
       }
     }
@@ -1122,6 +1255,13 @@ scoreATrumpetBbII = \relative c'' {
   \key e \minor
 
   R1*4 \mark\default
+  R1*8 \mark\default
+  R1*8 \mark\default
+  R1*16
+
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+
+  \grace{s8} g8-.\f
 }
 
 scoreAHornFI = \relative c' {
@@ -1155,6 +1295,7 @@ scoreAHornFI = \relative c' {
         cs,4.\mf\< fs e ds a8-.->\fp\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-.
         \mark\default a'8-.->\fp r r4 r R2. bf2.\<~2.\f\> a8-.\p r r4 r R2. bf,2.\<~2.\f\> \mark\default a8-.\p r r4 r
         R2.*2 r4 r8 e'16-.\ff e-. e-. e-. e-. e-. e8-. r r4 r R2.*2
+        % b4:16-. a:16-. g:16-.
         b16-. b-. b-. b-. a-. a-. a-. a-. g-. g-. g-. g-.
         f8-. r r4 r R2.*2 r4 r8 a16-. a-. a-. a-. a-. a-. a8-. r r b16-. b-. b-. b-. b-. b-. b8-. r r
         a16-.\> a-. a-. a-. a-. a-. a-.\p\< a-. a-. a-. b-. b-. b-. b-. c-. c-. c-. c-.
@@ -1164,7 +1305,7 @@ scoreAHornFI = \relative c' {
         R2.*8\! \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a,4.\ff d c b R2.*2 a4. d c b R2.*4
         \override TextSpanner.bound-details.left.text = "rall."
-        cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        \mark\default cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
         c-.-> c-. c-. c-. c-. c-. g'-.->\ff g-. g-. gs-.-^ gs-.-^ gs-.-^ R2.\fermata\stopTextSpan
       }
     }
@@ -1174,6 +1315,13 @@ scoreAHornFI = \relative c' {
   \key e \minor
 
   R1*4 \mark\default
+  R1*8 \mark\default
+  R1*8 \mark\default
+  R1*16
+
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+
+  \grace{s8} c,8-.\f
 }
 
 scoreAHornFII = \relative c' {
@@ -1229,7 +1377,7 @@ scoreAHornFII = \relative c' {
         R2.*8\! \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a,4.\ff d c b R2.*2 a4. d c b R2.*4
         \override TextSpanner.bound-details.left.text = "rall."
-        cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        \mark\default cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
         c-.-> c-. c-. c-. c-. c-. c-.->\ff c-. c-. c-.-^ c-.-^ c-.-^ R2.\fermata\stopTextSpan
       }
     }
@@ -1239,6 +1387,13 @@ scoreAHornFII = \relative c' {
   \key e \minor
 
   R1*4 \mark\default
+  R1*8 \mark\default
+  R1*8 \mark\default
+  R1*16
+
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+
+  \grace{s8} g8-.\f
 }
 
 scoreATromboneI = \relative c {
@@ -1285,7 +1440,7 @@ scoreATromboneI = \relative c {
         R2.*8\! \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a,4.\f d c b R2.*2 a4. d c b R2.*4
         \override TextSpanner.bound-details.left.text = "rall."
-        cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        \mark\default cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
         c-.-> c-. c-. c-. c-. c-. c-.->\ff c-. c-. c-.-^ c-.-^ c-.-^ R2.\fermata\stopTextSpan
       }
     }
@@ -1295,6 +1450,13 @@ scoreATromboneI = \relative c {
   \key e \minor
 
   R1*4 \mark\default
+  R1*8 \mark\default
+  R1*8 \mark\default
+  R1*16
+
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+
+  \grace{s8} c,8-.\f
 }
 
 scoreATromboneII = \relative c {
@@ -1337,7 +1499,7 @@ scoreATromboneII = \relative c {
         ef'-.-> ef-. ef-. ef-.-> ef-. ef-. d-.-> d-. d-. d-. d-. d-. a-.-> r r4 r R2.
         \mark\default e'8-.->\p\< e-. e-. e-.-> e-. e-. ef-.-> ef-. ef-. ef-.-> ef-. ef-. d-.->\mf r r4 r R2.
         e8-.->\p\< e-. e-. e-.-> e-. e-. ef-.-> ef-. ef-. ef-.-> ef-. ef-. d-.->\mf r r4 r R2.*3
-        bf8-.->\mf\< bf-. bf-. bf-.-> bf-. bf-. a-.->\ff\> a-. a-. a-.-> a-. a-.
+        \mark\default bf8-.->\mf\< bf-. bf-. bf-.-> bf-. bf-. a-.->\ff\> a-. a-. a-.-> a-. a-.
         \override TextSpanner.bound-details.left.text = "rall."
         f'2.\fp\<\startTextSpan ~2.~2.~2.\ff R2.\fermata \stopTextSpan
       }
@@ -1348,6 +1510,13 @@ scoreATromboneII = \relative c {
   \key e \minor
 
   R1*4 \mark\default
+  R1*8 \mark\default
+  R1*8 \mark\default
+  R1*16
+
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+
+  \grace{s8} g,8-.\f
 }
 
 scoreAEuphonium = \relative c {
@@ -1413,7 +1582,7 @@ scoreAEuphonium = \relative c {
         ef4-> ef8 ef4-> ef8 d4 d d a8-.->\< a-. a-. a-. a-. a-. g-. g-. g-. g-. g-. g-.
         \mark\default a4.\ff d c b R2.*2 a4. d c b R2.*2 b4. e-> d b->
         \override TextSpanner.bound-details.left.text = "rall."
-        cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        \mark\default cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
         c-.-> c-. c-. c-. c-. c-. g'-.->\ff g-. g-. gs-.-^ gs-.-^ gs-.-^ R2.\fermata\stopTextSpan
       }
     }
@@ -1421,6 +1590,19 @@ scoreAEuphonium = \relative c {
 
   \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
   \key e \minor
+
+
+  e8-.^\markup{ \italic "quasi pizz."} e'-. b-. d,-. d'-. a-. r4 R1 e8-. e'-. b-. d,-. d'4-. r4 R1
+  \mark\default
+  \repeat unfold 3 {\fungalBass R1} \fixed c {e8-. e'-. b-. d-. d'-. a-. r a-. r2 a8( g f g)} \mark\default
+  \repeat unfold 3 {\fungalBass R1} \fixed c {e8-. e'-. b-. d-. d'-. a-. r a-. r2 a8( g f g)} \mark\default
+  \fungalBass R1 e,8-. e'-. b-. d,-. d'4-. r4 R1
+  \repeat unfold 3 {\fungalBass R1} \fixed c {e8-. e'-. b-. d-. d'-. a-. r a-. r2 a8( g f g)}
+  \repeat unfold 2 {\fungalBass R1}
+
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+
+  \grace{s8} c8-.\f
 }
 
 scoreATuba = \relative c {
@@ -1481,7 +1663,7 @@ scoreATuba = \relative c {
         a'-.->\< a-. a-. a-. a-. a-. g-. g-. g-. g-. g-. g-.
         \mark\default e8-.->\fp\< e-. e-. e-.-> e-. e-. ef-.-> ef-. ef-. ef-.-> ef-. ef-. d-.->\mf r r4 r R2.
         e8-.->\p\< e-. e-. e-.-> e-. e-. ef-.-> ef-. ef-. ef-.-> ef-. ef-. d-.->\mf r r4 r R2.*3
-        bf8-.->\mf\< bf-. bf-. bf-.-> bf-. bf-. a-.->\ff\> a-. a-. a-.-> a-. a-.
+        \mark\default bf8-.->\mf\< bf-. bf-. bf-.-> bf-. bf-. a-.->\ff\> a-. a-. a-.-> a-. a-.
         \override TextSpanner.bound-details.left.text = "rall."
         f2.\fp\<\startTextSpan ~2.~2.~2.\ff R2.\fermata \stopTextSpan
       }
@@ -1490,6 +1672,20 @@ scoreATuba = \relative c {
 
   \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
   \key e \minor
+
+  e8-.^\markup{ \italic "quasi pizz."} e'-. b-. d,-. d'-. a-. r4 R1 e8-. e'-. b-. d,-. d'4-. r4 R1
+  \mark\default
+  \transpose c c, {
+    \repeat unfold 3 {\fungalBass R1} \fixed c {e8-. e'-. b-. d-. d'-. a-. r a-. r2 a8( g f g)} \mark\default
+    \repeat unfold 3 {\fungalBass R1} \fixed c {e8-. e'-. b-. d-. d'-. a-. r a-. r2 a8( g f g)} \mark\default
+    \fungalBass R1 e8-. e'-. b-. d-. d'4-. r4 R1
+    \repeat unfold 3 {\fungalBass R1} \fixed c {e8-. e'-. b-. d-. d'-. a-. r a-. r2 a8( g f g)}
+    \repeat unfold 2 {\fungalBass R1}
+  }
+
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+
+  \grace{s8} c,8-.\f
 }
 
 scoreATimpani = \relative c {
@@ -1539,7 +1735,7 @@ scoreATimpani = \relative c {
         \mark\default e8\!->\f e e e-> e e b-> b b b-> b b a->\fp\< a a a a a c2.:32
         e8->\f e e e-> e e b-> b b b-> b b a-> r r4 r R2.*2 e'2.:32\p\<
         \override TextSpanner.bound-details.left.text = "rall."
-        bf8\fp\< bf bf bf bf bf a->\ff\>\startTextSpan
+        \mark\default bf8\fp\< bf bf bf bf bf a->\ff\>\startTextSpan
         a a a a a a->\fp\< a a a a a a-> a a a a a
         c-> c c c c c c\ff-> c c <c e>-^ q-^ q-^ R2.\fermata\stopTextSpan
       }
@@ -1548,6 +1744,15 @@ scoreATimpani = \relative c {
 
   \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
   \key e \minor
+
+  R1*4 \mark\default
+  R1*8 \mark\default
+  R1*8 \mark\default
+  R1*14 c1:32\pp\<~1:32
+
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+
+  \grace{s8} c8\f
 }
 
 scoreAGlockenspiel = \relative c'' {
@@ -1592,7 +1797,7 @@ scoreAGlockenspiel = \relative c'' {
       \volta 2 {
         a,8-> r r4 r R2.*2 \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         g'8\mf f d e c b ef4-. r r R2. a,4. d c b \mark\default R2.*2
-        a4. d c b R2.*2 a4.\mp\< d c b b e d b cs\ff fs e gs
+        a4. d c b R2.*2 a4.\mp\< d c b b e d b \mark\default cs\ff fs e gs
         \override TextSpanner.bound-details.left.text = "rall."
         a,8\fp\< \startTextSpan a a a a a b b b b b b
         c c c c c c <c g'>\ff q q <c gs'>-^ q-^ q-^ R2.\fermata\stopTextSpan
@@ -1602,6 +1807,15 @@ scoreAGlockenspiel = \relative c'' {
 
   \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
   \key e \minor
+
+  R1*4 \mark\default
+  R1*8 \mark\default
+  R1*8 \mark\default
+  R1*16
+
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+
+  \grace{s8} c1^"Tub. Bells"\fff
 }
 
 scoreAXylo = \relative c' {
@@ -1638,17 +1852,28 @@ scoreAXylo = \relative c' {
       }
       \volta 2 {
         R2.*8 \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        \mark\default R2.*16 R2.\fermata
+        \mark\default R2.*10 \mark\default R2.*6 R2.\fermata
       }
     }
   }
 
   \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
   \key e \minor
+
+  R1*4 \mark\default
+  e,4\mf e fs8 g fs4 r2 r4 ds e b8 a b4 r R1
+  e4 e fs8 g a4 r4 r8 g fs4 b8. as16 b4 g8 fs a4 r R1 \mark\default
+  R1*8 \mark\default
+  R1*16
+
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+
+  \grace{s8} c8-.\f
 }
 
 scoreADrum = \drummode {
   \global
+  \set DrumStaff.drumStyleTable = #(alist->hash-table mydrums)
   % Drums follow here.
   \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
   R1*9 \mark \default R1*16 \mark\default R1*10
@@ -1680,7 +1905,7 @@ scoreADrum = \drummode {
 
   \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4
   \repeat volta 2 {
-    sn8^"TODO Must redo all"\fp-> sn sn sn sn sn sn sn16 sn sn8 sn sn16 sn sn sn
+    sn8^"Snare TODO Must redo all"\fp-> sn sn sn sn sn sn sn16 sn sn8 sn sn16 sn sn sn
     sn8 sn sn sn sn16 sn sn sn sn8 sn16 sn sn8 sn sn4:32\p\<
     sn8\fp sn sn sn sn sn sn sn16 sn sn8 sn sn16 sn sn sn
     sn8\< sn sn sn sn16 sn sn8 sn sn sn sn sn16 sn sn8 \time 4/4 sn sn sn sn sn16 sn sn8 sn sn
@@ -1728,7 +1953,7 @@ scoreADrum = \drummode {
         sn8\fp\< sn sn sn sn sn sn sn sn sn sn16 sn sn sn
         sn8\fp\< sn sn sn4.:32 sn8 sn sn sn sn16 sn sn sn
         sn8\mp\< sn sn sn4.:32 sn8 sn sn sn sn16 sn sn sn
-        sn8\mf\< sn sn sn4.:32 sn8 sn sn sn sn16 sn sn sn
+        \mark\default sn8\mf\< sn sn sn4.:32 sn8 sn sn sn sn16 sn sn sn
         \override TextSpanner.bound-details.left.text = "rall."
         sn8\fp\<\startTextSpan sn sn sn sn sn sn sn sn sn sn sn
         sn sn sn sn sn sn sn\ff sn sn sn-^ sn-^ sn-^ R2.\fermata\stopTextSpan
@@ -1737,6 +1962,51 @@ scoreADrum = \drummode {
   }
 
   \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
+
+  r2 r4 r8 wbh^"Woodblocks"\pp\> wbh16 wbh8 wbh16 wbh8 wbh16 wbh~16 wbh wbh8 wbh16 wbh8 wbh16
+  wbh8 wbh16 wbh~16 wbh wbh8 wbh16 wbh8 wbh16 wbh8 wbh16 wbh
+  r2\! r4 cymc4:32^"Susp. cymbal" \pp\<\laissezVibrer \mark\default
+  r2\! r4 r8 wbh16\pp\< wbh wbh-> wbh wbh wbh-> wbh wbh wbh-> wbh wbh wbh-> wbh wbh wbh-> wbh wbh wbh->
+  wbh\> wbh wbh-> wbh wbh wbh-> wbh wbh wbh-> wbh wbh wbh-> wbh wbh wbh-> wbh
+  wbl\! wbl wbl-> wbl wbl wbl-> wbl wbl r4 r8 wbl\p\>
+  wbl16 wbl8 wbl16 wbl8 wbl16 wbl~16 wbl wbl8 wbl16 wbl8 wbl16
+  wbl8 wbl16 wbl~16 wbl wbl8 wbl16 wbl8 wbl16 wbl8 wbl16 wbl
+  wbl8.\! wbl16~8 wbl~16 wbl8. wbl8 wbh16\p\> wbh
+  <<
+    {s2 s4 cymc:32\laissezVibrer^\pp^\< <>^\!} \\
+    {wbh16-> wbh wbh wbh-> wbh wbh wbh-> wbh wbh wbh-> wbh wbh wbh-> wbh wbh wbh->}
+  >> <>\! \mark\default
+  R1*2 r2 r4 r8 wbl16\p\> wbl
+  <<
+    {s2 s4 cymc:32\laissezVibrer^\pp^\< <>^\!} \\
+    {wbl16-> wbl wbl wbl-> wbl wbl wbl-> wbl wbl wbl-> wbl wbl wbl-> wbl wbl wbl->}
+  >>
+  wbh16\p\> wbh8 wbh16 wbh8 wbh16 wbh~16 wbh wbh8 wbh16 wbh8 wbh16
+  wbh8 wbh16 wbh~16 wbh wbh8 wbh16 wbh8 wbh16 wbh8 wbh16 wbh
+  wbh8 wbh16 wbh~16 wbh wbh8 wbh16 wbh8 wbh16 wbh8 wbh16 wbh
+  <<
+    {s2 s4 cymc:32\laissezVibrer^\pp^\< <>^\!} \\
+    {r16 wbl wbl8 wbl16 wbl8 wbl16 wbl8 wbl16 wbl~16 wbl wbl8}
+  >> <>\!
+  \mark\default
+  wbl16\p\> wbl8 wbl16 wbl8 wbl16 wbl~16 wbl wbl8 wbl16 wbl8 wbl16
+  wbl8 wbl16 wbl~16 wbl wbl8 wbl16 wbl8 wbl16 wbl8 wbl16 wbl
+  wbh16\p\> wbh8 wbh16 wbh8 wbh16 wbh~16 wbh wbh8 wbh16 wbh8 wbh16
+  wbh8 wbh16 wbh~16 wbh wbh8 r4\! wbh8. wbh16
+  wbl8 wbh16 wbl~16 wbh wbl8 wbh16 wbl8 wbh16 wbl8 wbh16 wbl
+  r8 wbl~16 wbl8. wbl4 r R1
+  r4 r8 wbh\p\> wbh16 wbh8 wbh16 wbh8 wbh16 wbh
+  wbl8 wbl16 wbl~16 wbl wbl8 wbl16 wbl8 wbl16 wbl4 r2\! r4 r8 wbh8\p\>
+  wbh16 wbh8 wbh16 wbh8 wbh16 wbh~16 wbh wbh8 wbh16 wbh8 wbh16
+  wbh8 wbh16 wbh~16 wbh wbh8 wbh16 wbh8 wbh16 wbh8 wbh16 wbh
+  \tuplet 5/4 {wbl8 wbl8 wbl8 wbl8 wbl8} \tuplet 5/4 {wbl8 wbl8 wbl8 wbl8 wbl8}
+  \tuplet 5/4 {wbl8 wbl8 wbl8 r4\!} r4 wbl8.\p\> wbl16
+  wbl8 wbl16 wbl~16 wbl wbl8 wbl16 wbl8 wbl16 wbl8 wbl16 wbl
+  r wbl wbl8 wbl16 wbl8 wbl16 wbl8 wbl16 wbl~16 wbl wbl8
+
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+
+  \grace{s8} sn4\f
 }
 
 scoreARight = \relative c' {
@@ -1804,7 +2074,7 @@ scoreARight = \relative c' {
         a\mf e'->~2. g4 f d e c b a4. d c b
         \mark\default a8 r r4 r R2.
         a4. d c b a8 r r4 r R2.
-        a'4.\p\< d-> c\mf\> b-> b,\mp\< e-> d\f\> b-> cs,\mf\< fs-> e\ff\> ds'->
+        a'4.\p\< d-> c\mf\> b-> b,\mp\< e-> d\f\> b-> \mark\default cs,\mf\< fs-> e\ff\> ds'->
         \override TextSpanner.bound-details.left.text = "rall."
         <a a'>8\fp\< \startTextSpan q q q q q <b b'> q q q q q
         <c c'> q q q q q <g' g'>\ff q q <gs gs'>-^ q-^ q-^ R2.\fermata\stopTextSpan
@@ -1814,6 +2084,15 @@ scoreARight = \relative c' {
 
   \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
   \key e \minor
+
+  \repeat percent 4 {e,4->\p\> e e-> e <>\!} \mark\default
+  \repeat percent 8 {e4->\p\> e e-> e <>\!} \mark\default
+  \repeat percent 8 {e4->\p\> e e-> e <>\!} \mark\default
+  \repeat percent 16 {e4->\p\> e e-> e <>\!}
+
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+
+  \grace{bf''16( b} <c) c,>8->\f
 }
 
 scoreALeft = \relative c, {
@@ -1904,6 +2183,19 @@ scoreALeft = \relative c, {
 
   \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
   \key e \minor
+
+  e8-.^\markup{ \italic "quasi pizz."} e'-. b-. d,-. d'-. a-. r4 R1 e8-. e'-. b-. d,-. d'4-. r4 R1
+  \transpose c c, {
+    \repeat unfold 3 {\fungalBass R1} \fixed c {e8-. e'-. b-. d-. d'-. a-. r a-. r2 a8( g f g)}
+    \repeat unfold 3 {\fungalBass R1} \fixed c {e8-. e'-. b-. d-. d'-. a-. r a-. r2 a8( g f g)}
+    \fungalBass R1 e8-. e'-. b-. d-. d'4-. r4 R1
+    \repeat unfold 3 {\fungalBass R1} \fixed c {e8-. e'-. b-. d-. d'-. a-. r a-. r2 a8( g f g)}
+    \repeat unfold 2 {\fungalBass R1}
+  }
+
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+
+  \grace{s8} <c c,>8-.\f
 }
 
 scoreAPiccoloPart = \new Staff \with {
@@ -2165,7 +2457,7 @@ scoreADrumsPart = \new DrumStaff \with {
 }
 
 %{
-%}
+%
 \book {
   \bookOutputName "Part 01 - Piccolo"
   \score {
