@@ -170,11 +170,11 @@ scoreAPiccolo = \relative c'' {
   R1*4 \mark\default
   R1*8 \mark\default
   R1*8 \mark\default
-  R1*2 r2 b,2\pp\<~1\> R1*6\! r2 e\pp\<~1\>~1\<~1\> R1*2\!
+  R1*2 r2 b,2\pp\<~1\> R1*6\! r2 e\pp\<~1\>~1\<~1\> R1*1\! r2 r4 r8 bf'16\f( b
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
 
-  \grace{bf'16( b} c8->\f)
+  c8->)
 }
 
 scoreAFluteI = \relative c'' {
@@ -238,11 +238,11 @@ scoreAFluteI = \relative c'' {
   R1*4 \mark\default
   R1*8 \mark\default
   R1*8 \mark\default
-  e,1\pp~1~1~1 R1*6 r2 b\pp\<~1\>~1\<~1\> R1*2\!
+  e,1\pp~1~1~1 R1*6 r2 b\pp\<~1\>~1\<~1\> R1\! r2 r4 r8 bf'16\f( b
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
 
-  \grace{bf'16( b} c8->\f)
+  c8->)
 }
 
 scoreAFluteII = \relative c'' {
@@ -309,11 +309,11 @@ scoreAFluteII = \relative c'' {
   R1*4 \mark\default
   R1*8 \mark\default
   R1*8 \mark\default
-  R1*2 r2 b,2\pp\<~1\> R1*6\! r2 e\pp\<~1\>~1\<~1\> R1*2\!
+  R1*2 r2 b,2\pp\<~1\> R1*6\! r2 e\pp\<~1\>~1\<~1\> R1\! r2 r4 r8 f16\f( fs
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
 
-  \grace{f16( fs} g8->\f)
+  g8->)
 }
 
 scoreAOboe = \relative c'' {
@@ -373,11 +373,11 @@ scoreAOboe = \relative c'' {
   R1*2 r2 r8 b'4.\p\<~1\> \mark\default
   R1*5\! r4 g2.\p\>~1~1 \mark\default
   R1*8\! \mark\default
-  e1\pp\<~1\>~1\<~1\> R1*10\! r2 r4 as,~1\>
+  e1\pp\<~1\>~1\<~1\> R1*10\! r2 r4 as,~2..\> bf16\f( b
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
 
-  \grace{bf16( b} c8->\f)
+  c8->)
 }
 
 scoreABassoon = \relative c' {
@@ -470,7 +470,7 @@ scoreABassoon = \relative c' {
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
 
-  \grace{s8} c8-.\f
+  c8-.\f
 }
 
 scoreAEflatClarinet = \relative c'' {
@@ -528,11 +528,11 @@ scoreAEflatClarinet = \relative c'' {
   R1*2 r2 r8 fs4.\p\<~1\> \mark\default
   R1*8\! \mark\default
   R1*8 \mark\default
-  R1*16
+  R1*15 r2 r4 r8 bf16\f( b
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
 
-  \grace{s8} c8-.\f
+  c8->)
 }
 
 scoreAClarinetI = \relative c'' {
@@ -603,7 +603,7 @@ scoreAClarinetI = \relative c'' {
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
 
-  \grace{s8} c'8-.\f
+  c'8-.\f
 }
 
 scoreAClarinetII = \relative c'' {
@@ -672,7 +672,7 @@ scoreAClarinetII = \relative c'' {
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
 
-  \grace{s8} g8-.\f
+  g8-.\f
 }
 
 scoreAClarinetIII = \relative c'' {
@@ -747,7 +747,7 @@ scoreAClarinetIII = \relative c'' {
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
 
-  \grace{s8} e8-.\f
+  e8-.\f
 }
 
 scoreABassClarinet = \relative c'' {
@@ -827,7 +827,7 @@ scoreABassClarinet = \relative c'' {
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
 
-  \grace{s8} c8-.\f
+  c8-.\f
 }
 
 scoreAAltoSaxI = \relative c'' {
@@ -911,7 +911,7 @@ scoreAAltoSaxI = \relative c'' {
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
 
-  \grace{s8} c8-.\f
+  c8-.\f
 }
 
 scoreAAltoSaxII = \relative c'' {
@@ -986,7 +986,7 @@ scoreAAltoSaxII = \relative c'' {
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
 
-  \grace{s8} g8-.\f
+  g8-.\f
 }
 
 scoreATenorSax = \relative c'' {
@@ -1043,7 +1043,7 @@ scoreATenorSax = \relative c'' {
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
 
-  \grace{s8} e8-.\f
+  e8-.\f
 }
 
 scoreABaritoneSax = \relative c'' {
@@ -1122,7 +1122,7 @@ scoreABaritoneSax = \relative c'' {
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
 
-  \grace{s8} c,8-.\f
+  c,8-.\f
 }
 
 scoreATrumpetBbI = \relative c'' {
@@ -1189,7 +1189,7 @@ scoreATrumpetBbI = \relative c'' {
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
 
-  \grace{s8} c,8-.\f
+  c,8-.\f
 }
 
 scoreATrumpetBbII = \relative c'' {
@@ -1261,7 +1261,7 @@ scoreATrumpetBbII = \relative c'' {
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
 
-  \grace{s8} g8-.\f
+  g8-.\f
 }
 
 scoreAHornFI = \relative c' {
@@ -1321,7 +1321,7 @@ scoreAHornFI = \relative c' {
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
 
-  \grace{s8} c,8-.\f
+  c,8-.\f
 }
 
 scoreAHornFII = \relative c' {
@@ -1393,7 +1393,7 @@ scoreAHornFII = \relative c' {
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
 
-  \grace{s8} g8-.\f
+  g8-.\f
 }
 
 scoreATromboneI = \relative c {
@@ -1456,7 +1456,7 @@ scoreATromboneI = \relative c {
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
 
-  \grace{s8} c,8-.\f
+  c,8-.\f
 }
 
 scoreATromboneII = \relative c {
@@ -1516,7 +1516,7 @@ scoreATromboneII = \relative c {
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
 
-  \grace{s8} g,8-.\f
+  g,8-.\f
 }
 
 scoreAEuphonium = \relative c {
@@ -1602,7 +1602,7 @@ scoreAEuphonium = \relative c {
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
 
-  \grace{s8} c8-.\f
+  c8-.\f
 }
 
 scoreATuba = \relative c {
@@ -1685,7 +1685,7 @@ scoreATuba = \relative c {
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
 
-  \grace{s8} c,8-.\f
+  c,8-.\f
 }
 
 scoreATimpani = \relative c {
@@ -1752,7 +1752,7 @@ scoreATimpani = \relative c {
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
 
-  \grace{s8} c8\f
+  c8\f
 }
 
 scoreAGlockenspiel = \relative c'' {
@@ -1815,7 +1815,7 @@ scoreAGlockenspiel = \relative c'' {
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
 
-  \grace{s8} c1^"Tub. Bells"\fff
+  c1^"Tub. Bells"\fff
 }
 
 scoreAXylo = \relative c' {
@@ -1868,7 +1868,7 @@ scoreAXylo = \relative c' {
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
 
-  \grace{s8} c8-.\f
+  c8-.\f
 }
 
 scoreADrum = \drummode {
@@ -2001,12 +2001,12 @@ scoreADrum = \drummode {
   wbh8 wbh16 wbh~16 wbh wbh8 wbh16 wbh8 wbh16 wbh8 wbh16 wbh
   \tuplet 5/4 {wbl8 wbl8 wbl8 wbl8 wbl8} \tuplet 5/4 {wbl8 wbl8 wbl8 wbl8 wbl8}
   \tuplet 5/4 {wbl8 wbl8 wbl8 r4\!} r4 wbl8.\p\> wbl16
-  wbl8 wbl16 wbl~16 wbl wbl8 wbl16 wbl8 wbl16 wbl8 wbl16 wbl
+  wbl8^"Snare roll ad lib" wbl16 wbl~16 wbl wbl8 wbl16 wbl8 wbl16 wbl8 wbl16 wbl
   r wbl wbl8 wbl16 wbl8 wbl16 wbl8 wbl16 wbl~16 wbl wbl8
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
 
-  \grace{s8} sn4\f
+  sn4\f
 }
 
 scoreARight = \relative c' {
@@ -2092,7 +2092,7 @@ scoreARight = \relative c' {
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
 
-  \grace{bf''16( b} <c) c,>8->\f
+  <c c,>8->\f
 }
 
 scoreALeft = \relative c, {
@@ -2195,7 +2195,7 @@ scoreALeft = \relative c, {
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
 
-  \grace{s8} <c c,>8-.\f
+  <c c,>8-.
 }
 
 scoreAPiccoloPart = \new Staff \with {
@@ -2457,7 +2457,7 @@ scoreADrumsPart = \new DrumStaff \with {
 }
 
 %{
-%
+%}
 \book {
   \bookOutputName "Part 01 - Piccolo"
   \score {
