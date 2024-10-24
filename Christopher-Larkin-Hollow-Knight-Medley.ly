@@ -136,7 +136,7 @@ scoreAPiccolo = \relative c'' {
     a8\fp r r e r4 g8 r r4 c,8 r e r r e r4 d8 r r4 b8 r e r r e r4 g8 r r4 c,8 r
     e-.->\< e-. e-. f-.-> f-. f-. g-.-> g-. g-. a-.-> a-. a-.
     \time 4/4 b-.-> b-. b-. b-. c-.-> c-. c-. c-. \time 3/4
-    d\mf\<(-> c b) c(-> b a) d(-> c b) c(-> b a) g(-> f e) f(-> e d)
+    \mark\default d\mf\<(-> c b) c(-> b a) d(-> c b) c(-> b a) g(-> f e) f(-> e d)
     \tuplet 3/2 {d\f-.-> c-. bf-.} \tuplet 3/2 {bf-.-> a-. g-.} \tuplet 3/2 {f'-.-> e-. d-.}
     \mark\default a'4-.-> r r
     R2.*5
@@ -172,12 +172,20 @@ scoreAPiccolo = \relative c'' {
   R1*8 \mark\default
   R1*2 r2 b,2\pp\<~1\> R1*6\! r2 e\pp\<~1\>~1\<~1\> R1*1\! r2 r4 r8. bf'32\f( b
 
-  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
 
   c8->) r r c,-> r4 c-.-> c8-> r r c-> r4 c-.-> c8-> r r c-> r4 c-.->
-  \tuplet 6/4 {ef16\p\<( d c b c d} \tuplet 6/4 {ef e f fs f e}
-  \tuplet 6/4 {a bf a af a bf} \tuplet 6/4 {fs g gs a as b}
+  \tuplet 11/8 {c16^\markup {\italic "solo ad lib"} \p\<(  b bf c cs d ef d ef e f }
+  \tuplet 11/8 {gf f e f gf g af g a bf b}
   c8->\ff) r r c,-> r4 c-.-> c8-> r r c-> r4 c-.-> R1*2 \mark\default
+
+  R1*4 c'4.\ff c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
+
+  c-. r r4 r2 R1*7 \mark\default
+
+  R1*4 c4.\f c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
 }
 
 scoreAFluteI = \relative c'' {
@@ -204,7 +212,7 @@ scoreAFluteI = \relative c'' {
     e-.-> e-. e-. e-.-> e-. e-. d->( c) a( c) b->( g)
     e'-.-> e-. e-. e-.-> e-. e-. g->( f) d( e) c-> (b) e,->-. r r4 r R2.
     \time 4/4 R1 \time 3/4
-    d'8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g'->( f e) f->( e d)
+    \mark\default d'8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g'->( f e) f->( e d)
     \tuplet 3/2 {d-.->\f c-. bf-.} \tuplet 3/2 {bf-.-> a-. g-.} \tuplet 3/2 {f-.-> e-. d-.}
     \mark\default a'4-.-> r r R2.*5
 
@@ -243,12 +251,22 @@ scoreAFluteI = \relative c'' {
   R1*8 \mark\default
   e,1\pp~1~1~1 R1*6 r2 b\pp\<~1\>~1\<~1\> R1\! r2 r4 r8. bf'32\f( b
 
-  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
 
   c8->) r r c,-> r4 c-.-> c8-> r r c-> r4 c-.-> c8-> r r c-> r4 c-.->
   \tuplet 6/4 {g'16\p\<( fs ef d ef fs} \tuplet 6/4 {g gs a gs bf c}
   \tuplet 6/4 {d, ef f g gs a} \tuplet 6/4 {bf b c cs d ef}
   g8->\ff) r r c,,-> r4 c-.-> c8-> r r c-> r4 c-.-> R1*2 \mark\default
+
+  R1*7 \tuplet 6/4 {g'16\p\<( fs ef d ef fs} \tuplet 6/4 {g gs a gs bf c}
+  \tuplet 6/4 {d, ef f g gs a} \tuplet 6/4 {bf b c cs d ef} \mark\default
+
+  g8->)\ff r r4 r2 c,16\p( bf g bf c bf g bf c bf g bf c bf g bf c8) r r4 r2
+  c16( bf g bf c bf g bf c bf g bf c bf g bf c8) r r4 r2
+  c16( bf g bf c bf g bf c bf g bf c bf g bf c8) r r4 r2 R1 \mark\default
+
+  c,,4.\p c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. R1*4 \mark\default
 }
 
 scoreAFluteII = \relative c'' {
@@ -279,7 +297,7 @@ scoreAFluteII = \relative c'' {
     e-.-> e-. e-. e-.-> e-. e-. d->( c) a( c) b->( g)
     e'-.-> e-. e-. e-.-> e-. e-. g->( f) d( e) c-> (b) e->-. r r4 r R2.
     \time 4/4 R1 \time 3/4
-    d'8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g->( f e) f->( e d)
+    \mark\default d'8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g->( f e) f->( e d)
     \tuplet 3/2 {d'-.->\f c-. bf-.} \tuplet 3/2 {bf-.-> a-. g-.} \tuplet 3/2 {f-.-> e-. d-.}
     \mark\default a4-.-> r r R2.*5
 
@@ -317,12 +335,23 @@ scoreAFluteII = \relative c'' {
   R1*8 \mark\default
   R1*2 r2 b,2\pp\<~1\> R1*6\! r2 e\pp\<~1\>~1\<~1\> R1\! r2 r4 r8. f32\f( fs
 
-  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
 
   g8->) r r g-> r4 g-.-> g8-> r r g-> r4 g-.-> g8-> r r g-> r4 g-.->
   \tuplet 6/4 {ef16\p\<( d c b c d} \tuplet 6/4 {ef e f fs f e}
   \tuplet 6/4 {a bf a af a bf} \tuplet 6/4 {fs g gs a as b}
   c8->\ff) r r g-> r4 g-.-> g8-> r r g-> r4 g-.-> R1*2 \mark\default
+
+  R1*7 \tuplet 6/4 {ef16\p\<( d c b c d} \tuplet 6/4 {ef e f fs f e}
+  \tuplet 6/4 {a bf a af a bf} \tuplet 6/4 {fs g gs a as b} \mark\default
+
+  c16\fp bf g bf c bf g bf c bf g bf c bf g bf c8) r r4 r2
+  c16( bf g bf c bf g bf c bf g bf c bf g bf c8) r r4 r2
+  c16( bf g bf c bf g bf c bf g bf c bf g bf c8) r r4 r2
+  c16( bf g bf c bf g bf c bf g bf c bf g bf c8) r r4 r2 \mark\default
+
+  c,,4.\p c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} ef8-. ef-. r ef-. ef4-. ef8-. ef-.
+  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} ef8-. ef-. r f-. f4-. f8-. f-. R1*4 \mark\default
 }
 
 scoreAOboe = \relative c'' {
@@ -351,7 +380,7 @@ scoreAOboe = \relative c'' {
     a8\fp r r e r4 g8 r r4 c8->( b) e, r r e r4 d8 r r4 b'8 r a r r e r4 g8 r r4 c8->( d)
     e-.->\< e-. e-. f-.-> f-. f-. g-.-> g-. g-. a->-. a-. a-.
     \time 4/4 b-.-> b-. b-. b-. c->-. c-. c-. c-. \time 3/4
-    d8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g->( f e) f->( e d) d-.->\f r r4 r
+    \mark\default d8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g->( f e) f->( e d) d-.->\f r r4 r
     \mark\default a4.\mf e'->~2. g4-> f d e-> c b a4.-> d c b
 
     \alternative {
@@ -384,13 +413,21 @@ scoreAOboe = \relative c'' {
   R1*8\! \mark\default
   e1\pp\<~1\>~1\<~1\> R1*10\! r2 r4 as,~2...\> bf32\f( b
 
-  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
 
   c8->) \repeat unfold 7 {c8-.} \repeat unfold 8 {af8-.}
   \repeat unfold 8 {g8-.} \tuplet 3/2 {f4-. f'-. f,-.} \tuplet 3/2 {f-. f'-. f,-.}
   \repeat unfold 8 {c'8-.} \repeat unfold 8 {af8-.}
   \tuplet 3/2 {gf4-. gf'-. gf,-.} \tuplet 3/2 {gf-. gf'-. gf,-.}
   \tuplet 3/2 {ef4-. ef'-. ef,-.} \tuplet 3/2 {ef-. ef'-. g,-.} \mark\default
+
+  R1*8 \mark\default
+  R1*8 \mark\default
+
+  c,4.\p c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c'4.\f c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
 }
 
 scoreABassoon = \relative c' {
@@ -432,7 +469,7 @@ scoreABassoon = \relative c' {
     a-.-> a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-.-> a-.
     a-.->\< a-. a-. a-.-> a-. a-. g-.-> g-. g-. g-.-> g-. g-.
     \time 4/4 f-.-> f-. f-. f-. f-.-> f-. f-. f-. \time 3/4
-    d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. bf-.-> bf-. bf-. bf-.-> bf-. bf-. bf2.\f\>
+    \mark\default d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. bf-.-> bf-. bf-. bf-.-> bf-. bf-. bf2.\f\>
     \mark\default a4-.->\p r r g'8->\mf f d e c-> b e-> r r4 r R2.*2 e8-> d b c a-> b
 
     \alternative {
@@ -481,11 +518,18 @@ scoreABassoon = \relative c' {
   b8\f d b d e2~4 b8 d b d e fs g4. fs8 e2\> <>\!
   r4 r8 d8\mf\< e c b a b1\f\> \grace {b16( a g} fs2)~8 e\mp( a4) a4. g16 fs e4 ds~1\>
 
-  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
 
   c8-.\f \repeat unfold 23 {c8-.} \tuplet 3/2 {f,4-. f'-. f,-.} \tuplet 3/2 {f-. f'-. f,-.}
   \repeat unfold 16 {c'8-.} \tuplet 3/2 {gf4-. gf'-. gf,-.} \tuplet 3/2 {gf-. gf'-. gf,-.}
   \tuplet 3/2 {ef4-. ef'-. ef,-.} \tuplet 3/2 {ef-. ef'-. g,-.} \mark\default
+
+  \repeat unfold 2 {c4-. c-. c-. c-. c8-. c-. r c-. c4-. c8-. c-. c4-. c-. c-. c-. af8-. af-. r f-. f4-. f8-. f-.}
+  \mark\default
+
+  g'1\f af f2 f f1 c f ef2 f g1 \mark\default
+
+  R1*4 c,,4-.\f \repeat unfold 15 {c4-.}
 }
 
 scoreAEflatClarinet = \relative c'' {
@@ -510,7 +554,8 @@ scoreAEflatClarinet = \relative c'' {
     a'8\fp-.-> e-. e-. e-.-> e-. e-. g->( f) d( e) c->( b)
     e-.-> e-. e-. e-.-> e-. e-. d->( c) a( c) b->( g)
     e'-.-> e-. e-. e-.-> e-. e-. g->( f) d( c) c->( b) e-.-> r r4 r R2.
-    \time 4/4 R1 \time 3/4 d8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g'->( f e) f->( e d) d-.->\f r r4 r
+    \time 4/4 R1 \time 3/4
+    \mark\default d8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g'->( f e) f->( e d) d-.->\f r r4 r
     \mark\default a4.\mf e'->~2. g4-> f d e-> c b a4.-> d c b
 
     \alternative {
@@ -545,12 +590,22 @@ scoreAEflatClarinet = \relative c'' {
   R1*8 \mark\default
   R1*15 r2 r4 r8. bf32\f( b
 
-  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
 
   c8->) r r c,-> r4 c-.-> c8-> r r c-> r4 c-.-> c8-> r r c-> r4 c-.->
   \tuplet 6/4 {g'16\p\<( fs ef d ef fs} \tuplet 6/4 {g gs a gs bf c}
   \tuplet 6/4 {d, ef f g gs a} \tuplet 6/4 {bf b c cs d ef}
   g8->\ff) r r c,,-> r4 c-.-> c8-> r r c-> r4 c-.-> R1*2 \mark\default
+
+  R1*8 \mark\default
+
+  c16\fp( bf g bf c bf g bf c bf g bf c bf g bf c8) r r4 r2
+  c16( bf g bf c bf g bf c bf g bf c bf g bf c8) r r4 r2
+  c16( bf g bf c bf g bf c bf g bf c bf g bf c8) r r4 r2
+  c16( bf g bf c bf g bf c bf g bf c bf g bf c8) r r4 r2 \mark\default
+
+  R1*4 c4.\f c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
 }
 
 scoreAClarinetI = \relative c'' {
@@ -577,7 +632,7 @@ scoreAClarinetI = \relative c'' {
     e-.-> e-. e-. e-.-> e-. e-. d->( c) a( c) b->( g)
     e'-.-> e-. e-. e-.-> e-. e-. g->( f) d( e) c-> (b) e->-. r r4 r R2.
     \time 4/4 R1 \time 3/4
-    d8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g->( f e) f->( e d)
+    \mark\default d8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g->( f e) f->( e d)
     \tuplet 3/2 {d'-.->\f c-. bf-.} \tuplet 3/2 {bf-.-> a-. g-.} \tuplet 3/2 {f-.-> e-. d-.}
     \mark\default a'4-.-> r r R2.*5
 
@@ -619,7 +674,7 @@ scoreAClarinetI = \relative c'' {
   b2. a8 b g4 fs8 g e2 ~1\> R1\! \mark\default
   R1*16
 
-  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
 
   c'8-.\f c-. c-. c-> r4 c-.-> \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
   \tuplet 6/4 {ef16\p\<( d c b c d} \tuplet 6/4 {ef e f fs f e}
@@ -627,6 +682,15 @@ scoreAClarinetI = \relative c'' {
   c8->\ff) c,-. c-. c-> r4 c-.-> c8-. c-. c-. c-> r4 c-.->
   \tuplet 3/2 {c4-. c-. c-.} \tuplet 3/2 {bf-. bf-. bf-.}
   \tuplet 3/2 {bf-. bf-. bf-.} \tuplet 3/2 {bf-. bf-. b-.} \mark\default
+
+  R1*8 \mark\default
+
+  R1 c16\p( bf g bf c bf g bf c bf g bf c bf g bf c8) r r4 r2
+  c16( bf g bf c bf g bf c bf g bf c bf g bf c8) r r4 r2
+  c16( bf g bf c bf g bf c bf g bf c bf g bf c8) r r4 r2
+  c16( bf g bf c bf g bf c bf g bf c bf g bf) \mark\default
+
+  R1*8\mark\default
 }
 
 scoreAClarinetII = \relative c'' {
@@ -651,7 +715,7 @@ scoreAClarinetII = \relative c'' {
   \repeat volta 2 {
     a8\fp r r e r4 g8 r r4 c,8 r e r r e r4 d8 r r4 b8 r b r r e r4 g8 r r4 c,8 r
     e r r4 r R2. \time 4/4 R1 \time 3/4
-    d8\mf\<(-> c b) c(-> b a) d(-> c b) c(-> b a) g(-> f e) f(-> e d)
+    \mark\default d8\mf\<(-> c b) c(-> b a) d(-> c b) c(-> b a) g(-> f e) f(-> e d)
     d'4-.\f bf-. f-. \mark\default e8-.\p e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-.
     e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-.
     c-. c-. c-. c-. c-. c-. c-. c-. c-. c-. c-. c-.
@@ -693,13 +757,22 @@ scoreAClarinetII = \relative c'' {
   R1*8 \mark\default
   R1*16
 
-  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
 
   g8-.\f g-. g-. g-> r4 g-.-> af8-. af-. af-. af-> r4 af-.-> g8-. g-. g-. g-> r4 g-.->
   \tuplet 3/2 {bf4-. bf-. bf-.} \tuplet 3/2 {a-. a-. a-.}
   g8-. g-. g-. g-> r4 g-.-> af8-. af-. af-. af-> r4 af-.->
   \tuplet 3/2 {gf4-. gf-. gf-.} \tuplet 3/2 {gf-. gf-. gf-.}
   \tuplet 3/2 {gf-. gf-. gf-.} \tuplet 3/2 {gf-. gf-. g-.} \mark\default
+
+  R1*8 \mark\default
+
+  c16\fp( bf g bf c bf g bf c bf g bf c bf g bf c8) r r4 r2
+  c16( bf g bf c bf g bf c bf g bf c bf g bf c8) r r4 r2
+  c16( bf g bf c bf g bf c bf g bf c bf g bf c8) r r4 r2
+  c16( bf g bf c bf g bf c bf g bf c bf g bf c8) r r4 r2 \mark\default
+
+  R1*8 \mark\default
 }
 
 scoreAClarinetIII = \relative c'' {
@@ -728,7 +801,7 @@ scoreAClarinetIII = \relative c'' {
   \repeat volta 2 {
     a,8\fp r r e r4 g8 r r4 c8->( b) e, r r e r4 d8 r r4 b'8 r a r r e r4 g8 r r4 c8->( b)
     e r r4 r R2. \time 4/4 R1 \time 3/4
-    d8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g->( f e) f->( e d)
+    \mark\default d8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g->( f e) f->( e d)
     d'4-.\f bf-. f-.
     \mark\default e8-.\p e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-.
     e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-.
@@ -772,13 +845,22 @@ scoreAClarinetIII = \relative c'' {
   R1*8 \mark\default
   R1*16
 
-  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
 
   e8-.\f e-. e-. e-> r4 e-.-> ef8-. ef-. ef-. ef-> r4 ef-.-> ef8-. ef-. ef-. ef-> r4 ef-.->
   \tuplet 3/2 {c4-. c-. c-.} \tuplet 3/2 {c-. c-. c-.}
   e8-. e-. e-. e-> r4 e-.-> ef8-. ef-. ef-. ef-> r4 ef-.->
   \tuplet 3/2 {c4-. c-. c-.} \tuplet 3/2 {cs-. cs-. cs-.}
   \tuplet 3/2 {cs-. cs-. cs-.} \tuplet 3/2 {cs-. cs-. d-.} \mark\default
+
+  R1*8 \mark\default
+
+  R1 c'16\p( bf g bf c bf g bf c bf g bf c bf g bf c8) r r4 r2
+  c16( bf g bf c bf g bf c bf g bf c bf g bf c8) r r4 r2
+  c16( bf g bf c bf g bf c bf g bf c bf g bf c8) r r4 r2
+  c16( bf g bf c bf g bf c bf g bf c bf g bf) \mark\default
+
+  R1*8 \mark\default
 }
 
 scoreABassClarinet = \relative c'' {
@@ -805,7 +887,8 @@ scoreABassClarinet = \relative c'' {
     a-.-> a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-.-> a-.
     a-.->\< a-. a-. a-.-> a-. a-. g-.-> g-. g-. g-. g-.-> g-.
     \time 4/4 f-.-> f-. f-. f-. f-.-> f-. f-. f-. \time 3/4
-    d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. bf-.-> bf-. bf-. bf-.-> bf-. bf-. bf2.\f\>
+    \mark\default d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-.
+    bf-.-> bf-. bf-. bf-.-> bf-. bf-. bf2.\f\>
     \mark\default e8-.\p e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-.
     e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-.
     c-. c-. c-. c-. c-. c-. c-. c-. c-. c-. c-. c-.
@@ -856,11 +939,18 @@ scoreABassClarinet = \relative c'' {
   R1*8 \mark\default
   R1*16
 
-  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
 
   c8-.\f \repeat unfold 23 {c8-.} \tuplet 3/2 {f,4-. f'-. f,-.} \tuplet 3/2 {f-. f'-. f,-.}
   \repeat unfold 16 {c'8-.} \tuplet 3/2 {gf4-. gf'-. gf,-.} \tuplet 3/2 {gf-. gf'-. gf,-.}
   \tuplet 3/2 {ef4-. ef'-. ef,-.} \tuplet 3/2 {ef-. ef'-. g,-.} \mark\default
+
+  R1*8 \mark\default
+
+  R1*8 \mark\default
+
+  R1*4 c4.\f c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
 }
 
 scoreAAltoSaxI = \relative c'' {
@@ -899,7 +989,7 @@ scoreAAltoSaxI = \relative c'' {
   \repeat volta 2 {
     e,8\fp-.-> e-. e-. e-.-> e-. e-. g-.-> r r4 r e8-.-> e-. e-. e-.-> e-. e-. d-.-> r r4 r
     e8-.-> e-. e-. e-.-> e-. e-. g-.-> r r4 r e8 r r4 r R2. \time 4/4 R1 \time 3/4
-    d8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g->( f e) f->( e d)
+    \mark\default d8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g->( f e) f->( e d)
     \tuplet 3/2 {d'-.->\f c-. bf-.} \tuplet 3/2 {bf-.-> a-. g-.} \tuplet 3/2 {f'-.-> e-. d-.}
     \mark\default a4-.-> r r R2.*5
 
@@ -942,12 +1032,20 @@ scoreAAltoSaxI = \relative c'' {
   R1*8\! \mark\default
   R1*16
 
-  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
 
   c8-.\f c-. c-. c-> r4 c-.-> \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
   \tuplet 3/2 {bf4-. bf-. bf-.} \tuplet 3/2 {a-. a-. a-.} \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
   \tuplet 3/2 {c4-. c-. c-.} \tuplet 3/2 {df-. df-. df-.}
   \tuplet 3/2 {ef-. ef-. ef-.} \tuplet 3/2 {gf-. gf-. g-.} \mark\default
+
+  R1*7 r2 \tuplet 6/4 {b,,16\f\<( c cs d ds e} \tuplet 6/4 {fs g gs a as b}
+  \mark\default c8)->\ff r r4 r2 R1*7 \mark\default
+
+  c,4.\p c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} g8-. g-. r g-. g4-. g8-. g-.
+  c,4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} af'8-. af-. r bf-. bf4-. a8-. a-.
+  c4.\f c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
 }
 
 scoreAAltoSaxII = \relative c'' {
@@ -978,7 +1076,7 @@ scoreAAltoSaxII = \relative c'' {
   \repeat volta 2 {
     e'8\fp-.-> e-. e-. e-.-> e-. e-. g-.-> r r4 r e8-.-> e-. e-. e-.-> e-. e-. d-.-> r r4 r
     e8-.-> e-. e-. e-.-> e-. e-. g-.-> r r4 r e8 r r4 r R2. \time 4/4 R1 \time 3/4
-    d8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g->( f e) f->( e d)
+    \mark\default d8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g->( f e) f->( e d)
     bf'2.\> \mark\default a4\p-.-> r r R2.*5
 
     \alternative {
@@ -1020,13 +1118,21 @@ scoreAAltoSaxII = \relative c'' {
   R1*8\! \mark\default
   R1*16
 
-  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
 
   g8-.\f g-. g-. g-> r4 g-.-> af8-. af-. af-. af-> r4 af-.-> g8-. g-. g-. g-> r4 g-.->
   \tuplet 3/2 {f4-. f-. f-.} \tuplet 3/2 {f-. f-. f-.}
   g8-. g-. g-. g-> r4 g-.-> af8-. af-. af-. af-> r4 af-.->
   \tuplet 3/2 {gf4-. gf-. gf-.} \tuplet 3/2 {gf-. gf-. gf-.}
   \tuplet 3/2 {gf-. gf-. gf-.} \tuplet 3/2 {gf-. gf-. g-.} \mark\default
+
+  R1*7 \tuplet 6/4 {b,,16\mf\<( c cs d ds e} \tuplet 6/4 {fs g gs a as b)} r2\f
+  \mark\default R1*8 \mark\default
+
+  c4.\p c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} ef8-. ef-. r ef-. ef4-. ef8-. ef-.
+  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} ef8-. ef-. r f-. f4-. f8-. f-.
+  c4.\f c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
 }
 
 scoreATenorSax = \relative c'' {
@@ -1047,7 +1153,7 @@ scoreATenorSax = \relative c'' {
     a8\fp r r e r4 g8 r r4 c8->( b) e, r r e r4 d8 r r4 b'8 r a r r e r4 g8 r r4 c8->( b)
     a-.->\< a-. a-. a-.-> a-. a-. g-.-> g-. g-. g-. g-.-> g-.
     \time 4/4 f-.-> f-. f-. f-. f-.-> f-. f-. f-. \time 3/4
-    d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-.
+    \mark\default d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-.
     g->( f e) f->( e d) bf'2.\> \mark\default e4\p-.-> r r
     g8->\mf f d e c-> b c-> r r4 r R2.*2 e8->\mf d b c a-> b
 
@@ -1081,13 +1187,22 @@ scoreATenorSax = \relative c'' {
   R1*8 \mark\default
   R1*16
 
-  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
 
   e8-.\f e-. e-. e-> r4 e-.-> ef8-. ef-. ef-. ef-> r4 ef-.-> ef8-. ef-. ef-. ef-> r4 ef-.->
   \tuplet 3/2 {c4-. c-. c-.} \tuplet 3/2 {c-. c-. c-.}
   e8-.\f e-. e-. e-> r4 e-.-> ef8-. ef-. ef-. ef-> r4 ef-.->
   \tuplet 3/2 {cs4-. cs-. cs-.} \tuplet 3/2 {cs-. cs-. cs-.}
   \tuplet 3/2 {cs-. cs-. cs-.} \tuplet 3/2 {cs-. cs-. d-.} \mark\default
+
+  R1*8 \mark\default
+
+  c4\f-. c8-. c-. c4-. c8-. c-. \repeat unfold 2 {af4-. af8-. af-.}
+  \repeat unfold 2 {d4-. d8-. d-.} \repeat unfold 2 {f,4-. f8-. f-.}
+  \repeat unfold 2 {c'4-. c8-. c-.} \repeat unfold 2 {f,4-. f8-. f-.}
+  \repeat unfold 2 {ef4-. ef8-. ef-.} \repeat unfold 2 {g4-. g8-. g-.} \mark\default
+
+  R1*4 c,4-.\f \repeat unfold 15 {c4-.} \mark\default
 }
 
 scoreABaritoneSax = \relative c'' {
@@ -1113,7 +1228,7 @@ scoreABaritoneSax = \relative c'' {
     a-.-> a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-.-> a-.
     a-.->\< a-. a-. a-.-> a-. a-. g-.-> g-. g-. g-. g-.-> g-.
     \time 4/4 f-.-> f-. f-. f-. f-.-> f-. f-. f-. \time 3/4
-    d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. bf-.-> bf-. bf-. bf-.-> bf-. bf-. bf2.\f\>
+    \mark\default d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. bf-.-> bf-. bf-. bf-.-> bf-. bf-. bf2.\f\>
     \mark\default e8-.\p e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-.
     e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-.
     c-. c-. c-. c-. c-. c-. c-. c-. c-. c-. c-. c-.
@@ -1164,11 +1279,20 @@ scoreABaritoneSax = \relative c'' {
   R1*8 \mark\default
   R1*16
 
-  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
 
   c,8-.\f \repeat unfold 23 {c8-.} \tuplet 3/2 {f,4-. f'-. f,-.} \tuplet 3/2 {f-. f'-. f,-.}
   \repeat unfold 16 {c'8-.} \tuplet 3/2 {gf4-. gf'-. gf,-.} \tuplet 3/2 {gf-. gf'-. gf,-.}
   \tuplet 3/2 {ef4-. ef'-. ef,-.} \tuplet 3/2 {ef-. ef'-. g,-.} \mark\default
+
+  R1*8 \mark\default
+
+  c4\f-. c8-. c-. c4-. c8-. c-. \repeat unfold 2 {af4-. af8-. af-.}
+  \repeat unfold 2 {d4-. d8-. d-.} \repeat unfold 2 {f,4-. f8-. f-.}
+  \repeat unfold 2 {c'4-. c8-. c-.} \repeat unfold 2 {f,4-. f8-. f-.}
+  \repeat unfold 2 {ef4-. ef8-. ef-.} \repeat unfold 2 {g4-. g8-. g-.} \mark\default
+
+  R1*4 c,4-.\f \repeat unfold 15 {c4-.} \mark\default
 }
 
 scoreATrumpetBbI = \relative c'' {
@@ -1198,7 +1322,7 @@ scoreATrumpetBbI = \relative c'' {
   \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2
   {
-    a'8\fp-.-> r r4 r R2.*2 r2 b,4\p\< e8\fp-.-> r r4 r R2.*3 \time 4/4 R1 \time 3/4 R2.*3
+    a'8\fp-.-> r r4 r R2.*2 r2 b,4\p\< e8\fp-.-> r r4 r R2.*3 \time 4/4 R1 \time 3/4 \mark\default R2.*3
     \tuplet 3/2 {d8-.->\f c-. bf-.} \tuplet 3/2 {bf-.-> a-. g-.} \tuplet 3/2 {f-.-> e-. d-.}
     \mark\default a4-.-> r r R2.*5
 
@@ -1233,9 +1357,19 @@ scoreATrumpetBbI = \relative c'' {
   R1*8 \mark\default
   R1*16
 
-  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
 
   R1*8 \mark\default
+
+  c,4.\f c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
+
+  R1*8 \mark\default
+
+  c4.\p c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. c4-. r r2 R1*3 \mark\default
 }
 
 scoreATrumpetBbII = \relative c'' {
@@ -1271,7 +1405,7 @@ scoreATrumpetBbII = \relative c'' {
   \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2
   {
-    a8\fp-.-> r r4 r R2.*2 r2 b4\p\< a8\fp-.-> r r4 r R2.*3 \time 4/4 R1 \time 3/4 R2.*3
+    a8\fp-.-> r r4 r R2.*2 r2 b4\p\< a8\fp-.-> r r4 r R2.*3 \time 4/4 R1 \time 3/4 \mark\default R2.*3
     d4-.\f bf-. f-.
     \mark\default a,4-.-> r r R2.*5
 
@@ -1305,9 +1439,21 @@ scoreATrumpetBbII = \relative c'' {
   R1*8 \mark\default
   R1*16
 
-  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
 
   R1*8 \mark\default
+
+  c4.\f c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} af8-. af-. r bf-. bf4-. a8-. a-.
+  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} af8-. af-. r bf-. bf4-. a8-. a-. \mark\default
+
+  R1*8 \mark\default
+
+  R1 g8-. g-. r g-. g4-. g8-. g-.
+  R1 af8-. af-. r bf-. bf4-. a8-. a-.
+  c4.\f c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
 }
 
 scoreAHornFI = \relative c' {
@@ -1329,7 +1475,7 @@ scoreAHornFI = \relative c' {
   \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     a8\fp-.-> r r4 r R2.*2 r2 b4\p\< a8\fp-.-> r r4 r R2.*3 \time 4/4 R1 \time 3/4
-    d,8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g'->( f e) f->( e d)
+    \mark\default d,8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g'->( f e) f->( e d)
     \tuplet 3/2 {d-.->\f c-. bf-.} \tuplet 3/2 {bf-.-> a-. g-.} \tuplet 3/2 {f-.-> e-. d-.}
     \mark\default a'4-.-> r r R2.*5
 
@@ -1339,7 +1485,8 @@ scoreAHornFI = \relative c' {
         a4.\f e'->~2. g4->\< f d e c b \mark\default a4.->-.\ff fs g g
         a'8 a-. r a-. r4 a8 a-. r a-. r4 R2.*2 a8\ff a-. r a-. r4 a8 a-. r a-. r4 R2.*4
         cs,4.\mf\< fs e ds a8-.->\fp\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-.
-        \mark\default a'8-.->\fp r r4 r R2. bf2.\<~2.\f\> a8-.\p r r4 r R2. bf,2.\<~2.\f\> \mark\default a8-.\p r r4 r
+        \mark\default a'8-.->\fp r r4 r R2. bf2.\<~2.\f\> a8-.\p r r4 r R2. bf,2.\<~2.\f\>
+        \mark\default a8-.\p r r4 r
         R2.*2 r4 r8 e'16-.\ff e-. e-. e-. e-. e-. e8-. r r4 r R2.*2
         % b4:16-. a:16-. g:16-.
         b16-. b-. b-. b-. a-. a-. a-. a-. g-. g-. g-. g-.
@@ -1351,7 +1498,8 @@ scoreAHornFI = \relative c' {
         R2.*8\! \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a,4.\ff d c b R2.*2 a4. d c b R2.*4
         \override TextSpanner.bound-details.left.text = "rall."
-        \mark\default cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        \mark\default cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan
+        a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
         c-.-> c-. c-. c-. c-. c-. g'-.->\ff g-. g-. gs-.-^ gs-.-^ gs-.-^ R2.\fermata\stopTextSpan
       }
     }
@@ -1365,12 +1513,21 @@ scoreAHornFI = \relative c' {
   R1*8 \mark\default
   R1*16
 
-  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
 
   c,8-.\f \repeat unfold 23 {c8-.}
   \tuplet 3/2 {bf4-. bf-. bf-.} \tuplet 3/2 {a-. a-. a-.} \repeat unfold 16 {c8-.}
   \tuplet 3/2 {c4-. c-. c-.} \tuplet 3/2 {df-. df-. df-.}
   \tuplet 3/2 {ef-. ef-. ef-.} \tuplet 3/2 {gf-. gf-. g-.} \mark\default
+
+  R1 c,8-. c-. r c-. c4-. c8-. c-. R1 ef8-. ef-. r f-. f4-. f8-. f-.
+  R1 c,8-. c-. r c-. c4-. c8-. c-. R1 ef8-. ef-. r f-. f4-. f8-. f-. \mark\default
+
+  c'2\ff c4 d ef2 d4 c \tuplet 3/2 {d4 ef d} \tuplet 3/2 {d ef d} c1
+  c2 c4 d \tuplet 3/2 {f ef f} g2 \tuplet 3/2 {g4 f g} a f g1 \mark\default
+
+  R1*4 c,4.\f c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
 }
 
 scoreAHornFII = \relative c' {
@@ -1404,7 +1561,7 @@ scoreAHornFII = \relative c' {
   \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     a8\fp-.-> r r4 r R2.*2 r4 r b4\p\< a8\fp-.-> r r4 r R2.*3 \time 4/4 R1 \time 3/4
-    d,8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g'->( f e) f->( e d)
+    \mark\default d,8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g'->( f e) f->( e d)
     d4-.\f bf f
     \mark\default a4-.-> r r R2.*5
 
@@ -1440,13 +1597,21 @@ scoreAHornFII = \relative c' {
   R1*8 \mark\default
   R1*16
 
-  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
 
   g8-.\f \repeat unfold 23 {g8-.}
   \tuplet 3/2 {f4-. f-. f-.} \tuplet 3/2 {f-. f-. f-.}
   \repeat unfold 16 {g8-.}
   \tuplet 3/2 {gf4-. gf-. gf-.} \tuplet 3/2 {gf-. gf-. gf-.}
   \tuplet 3/2 {bf-. bf-. bf-.} \tuplet 3/2 {df-. df-. d-.} \mark\default
+
+  \repeat unfold 4 {R1 c8-. c-. r c-. c4-. c8-. c-.} \mark\default
+
+  c,2\ff c4 d ef2 d4 c \tuplet 3/2 {d4 ef d} \tuplet 3/2 {d ef d} c1
+  c2 c4 d \tuplet 3/2 {f ef f} g2 \tuplet 3/2 {g4 f g} a f g1 \mark\default
+
+  R1*4 c4.\f c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
 }
 
 scoreATromboneI = \relative c {
@@ -1467,7 +1632,7 @@ scoreATromboneI = \relative c {
   \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     a8\fp-.-> r r4 r R2.*2 r2 b4\p\< a8\fp-.-> r r4 r R2.*3 \time 4/4 R1 \time 3/4
-    d,8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g'->( f e) f->( e d)
+    \mark\default d,8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g'->( f e) f->( e d)
     d'4-.\f bf f
     \mark\default e8-.\p e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-.
     e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-.
@@ -1507,13 +1672,19 @@ scoreATromboneI = \relative c {
   R1*8 \mark\default
   R1*16
 
-  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
 
   c,8-.\f c-. c-. c-> r4 c-.-> \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
   \tuplet 3/2 {bf4-. bf-. bf-.} \tuplet 3/2 {a-. a-. a-.}
   \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
   \tuplet 3/2 {c4-. c-. c-.} \tuplet 3/2 {df-. df-. df-.}
   \tuplet 3/2 {ef-. ef-. ef-.} \tuplet 3/2 {gf-. gf-. g-.} \mark\default
+
+  R1*4 \repeat unfold 2 {c4-. c-. c-. c-. c8-. c-. r c-. c4-. c8-. c-.} \mark\default
+
+  c1\ff ef, bf' bf2 a c1 c bf2 a c d \mark\default
+
+  R1*4 c,4-.\f \repeat unfold 15 {c4-.} \mark\default
 }
 
 scoreATromboneII = \relative c {
@@ -1530,7 +1701,7 @@ scoreATromboneII = \relative c {
   \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     e8\fp-.-> r r4 r R2.*2 r2 b4\p\< e8\fp-.-> r r4 r R2.*3 \time 4/4 R1 \time 3/4
-    d8-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. bf-.-> bf-. bf-. bf-.-> bf-. bf-. bf2.\f\>
+    \mark\default d8-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. bf-.-> bf-. bf-. bf-.-> bf-. bf-. bf2.\f\>
     \mark\default a4-.\p r r R2.*5
 
     \alternative {
@@ -1571,13 +1742,19 @@ scoreATromboneII = \relative c {
   R1*8 \mark\default
   R1*16
 
-  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
 
   g,8-.\f g-. g-. g-> r4 g-.-> af8-. af-. af-. af-> r4 af-.-> g8-. g-. g-. g-> r4 g-.->
   \tuplet 3/2 {f4-. f-. f-.} \tuplet 3/2 {f-. f-. f-.}
   g8-. g-. g-. g-> r4 g-.-> af8-. af-. af-. af-> r4 af-.->
   \tuplet 3/2 {gf4-. gf-. gf-.} \tuplet 3/2 {gf-. gf-. gf-.}
   \tuplet 3/2 {gf-. gf-. gf-.} \tuplet 3/2 {gf-. gf-. g-.} \mark\default
+
+  R1*8 \mark\default
+
+  ef1\ff c' d f, g' af g2 f d'1 \mark\default
+
+  R1*4 g,4-.\f \repeat unfold 15 {g4-.} \mark\default
 }
 
 scoreAEuphonium = \relative c {
@@ -1615,7 +1792,7 @@ scoreAEuphonium = \relative c {
   \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     a4->\fp a8 \repeat unfold 5 {a4-> a8} f4 f g,\< a->\fp a'8 \repeat unfold 3 {a4-> a8}
-    a4->\< a8 a4-> a8 g4-> g8 g4-> g8 \time 4/4 f4-> f f f \time 3/4 d d' a f a c
+    a4->\< a8 a4-> a8 g4-> g8 g4-> g8 \time 4/4 f4-> f f f \time 3/4 \mark\default d d' a f a c
     bf,8-.\ff f'-. a-. bf-. c-. d-. f2.-.->\>
     \mark\default a,,4\fp-> a'8 a4-> a8 g8->\mf f d e c-> b e-> r
     a\p \repeat unfold 3 {a4-> a8} f4-> a8 a4-> a8
@@ -1661,13 +1838,20 @@ scoreAEuphonium = \relative c {
   \repeat unfold 3 {\fungalBass R1} \fixed c {e8-. e'-. b-. d-. d'-. a-. r a-. r2 a8( g f g)}
   \repeat unfold 2 {\fungalBass R1}
 
-  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
 
   c8-.\f c-. c-. c-> r4 c-.-> \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
   \tuplet 3/2 {bf4-. bf-. bf-.} \tuplet 3/2 {a-. a-. a-.}
   \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
   \tuplet 3/2 {c4-. c-. c-.} \tuplet 3/2 {df-. df-. df-.}
   \tuplet 3/2 {ef-. ef-. ef-.} \tuplet 3/2 {gf-. gf-. g-.} \mark\default
+
+  R1*4 \repeat unfold 2 {c,4-. c-. c-. c-. c8-. c-. r c-. c4-. c8-. c-.} \mark\default
+
+  c2\ff c4 d ef2 d4 c \tuplet 3/2 {d4 ef d} \tuplet 3/2 {d ef d} c1
+  c2 c4 d \tuplet 3/2 {f ef f} g2 \tuplet 3/2 {g4 f g} a f g1 \mark\default
+
+  R1*4 c,,4-.\f \repeat unfold 15 {c4-.} \mark\default
 }
 
 scoreATuba = \relative c {
@@ -1695,7 +1879,7 @@ scoreATuba = \relative c {
     a8-.->\fp a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-.-> a-.
     a-.->\< a-. a-. a-.-> a-. a-. g-.-> g-. g-. g-. g-.-> g-.
     \time 4/4 f-.-> f-. f-. f-. f-.-> f-. f-. f-. \time 3/4
-    d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. bf-.-> bf-. bf-. bf-.-> bf-. bf-. bf2.\f\>
+    \mark\default d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. bf-.-> bf-. bf-. bf-.-> bf-. bf-. bf2.\f\>
     \mark\default e8-.\p e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-.
     e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-.
     c-. c-. c-. c-. c-. c-. c-. c-. c-. c-. c-. c-.
@@ -1748,11 +1932,18 @@ scoreATuba = \relative c {
     \repeat unfold 2 {\fungalBass R1}
   }
 
-  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
 
   c,8-.\f \repeat unfold 23 {c8-.} \tuplet 3/2 {f4-. f'-. f,-.} \tuplet 3/2 {f-. f'-. f,-.}
   \repeat unfold 16 {c8-.} \tuplet 3/2 {gf'4-. gf'-. gf,-.} \tuplet 3/2 {gf-. gf'-. gf,-.}
   \tuplet 3/2 {ef4-. ef'-. ef,-.} \tuplet 3/2 {ef-. ef'-. g,-.} \mark\default
+
+  \repeat unfold 2 {c4-. c-. c-. c-. c8-. c-. r c-. c4-. c8-. c-. c4-. c-. c-. c-. af8-. af-. r f-. f4-. f8-. f-.}
+  \mark\default
+
+  c2\ff c af af bf bf f' f c c f f ef ef g g \mark\default
+
+  R1*4 c,4-.\f \repeat unfold 15 {c4-.} \mark\default
 }
 
 scoreATimpani = \relative c {
@@ -1782,7 +1973,7 @@ scoreATimpani = \relative c {
     a4->\fp a8 \repeat unfold 5 {a4-> a8} a4-> a e':32\<
     a,->\fp a8 a4-> a8 a4-> a8 a4-> a8 a4->\< a8 a4-> a8 \repeat unfold 2 {e'4-> e8}
     \time 4/4 f,4-> f8 f8->~8 f f4-> \time 3/4
-    \repeat unfold 4 {a4-> a8} \repeat unfold 2 {bf4-> bf8} bf2.:32\f\>
+    \mark\default \repeat unfold 4 {a4-> a8} \repeat unfold 2 {bf4-> bf8} bf2.:32\f\>
     \mark\default a4->\p a8 \repeat unfold 6 {a4-> a8} a4-> a16 a
     c4-> c8 c4-> c8 c4-> c8 c4-> c8
 
@@ -1791,7 +1982,8 @@ scoreATimpani = \relative c {
         a2.:32\< b:32 \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a4.\f e' r8 e16 e e4 c a4->\< a8 b4-> b8 c2.:32-> \mark\default a8\fp\< a a a a a b2.:32
         a8\ff a a a a a a a a a a a a\fp\< a a a a a b2.:32 a8\ff a a a a a a a a a a a R2.*6
-        a8\fp\< a a a a a f f f f f f \mark\default a\fp r r4 r R2. bf2.:32\< ~2.:32\f\> R2.*2\! bf2.:32\< ~2.:32\f\>
+        a8\fp\< a a a a a f f f f f f \mark\default
+        a\fp r r4 r R2. bf2.:32\< ~2.:32\f\> R2.*2\! bf2.:32\< ~2.:32\f\>
         \mark\default R2.*3\! r4 r8 a16\ff a a a a a a8 r r4 r R2.*2 a8 a a a a a a r r4 r R2.*2
         r4 r8 a16 a a a a a a8 r r e'16 e e e e e e8 r r e16 e e e e e e2.:32\p\< ~2.:32
       }
@@ -1817,12 +2009,18 @@ scoreATimpani = \relative c {
   R1*8 \mark\default
   R1*14 c1:32\pp\<~1:32
 
-  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
 
   c8\f \repeat unfold 23 {c8} \tuplet 3/2 {f,4 f f} \tuplet 3/2 {f f f}
   \repeat unfold 16 {c'8}
   \repeat unfold 2 {\tuplet 3/2 {\repeat unfold 3 {df4-.}}}
   \repeat unfold 2 {\tuplet 3/2 {\repeat unfold 3 {ef4-.}}} \mark\default
+
+  \repeat unfold 4 {c4-. c-. c-. c-. c8-. c-. r c-. c4-. c8-. c-.} \mark\default
+
+  R1*8 \mark\default
+
+  R1*3 c1:32\p\< ~c\ff R1*3 \mark\default
 }
 
 scoreAGlockenspiel = \relative c'' {
@@ -1852,7 +2050,7 @@ scoreAGlockenspiel = \relative c'' {
   \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     e8\fp r r4 r g8 r r4 c,8 r e r r4 r d8 r r4 b8 r e8 r r4 r g8 r r4 c,8 r a'2.\< g \time 4/4 f2 f \time 3/4
-    d4 d, f f' a, d bf4. bf bf2.\f
+    \mark\default d4 d, f f' a, d bf4. bf bf2.\f
     \mark\default a4.\mf e'->~2. g4-> f d e-> c b a4.-> d c b
 
     \alternative {
@@ -1883,9 +2081,16 @@ scoreAGlockenspiel = \relative c'' {
   R1*8 \mark\default
   R1*16
 
-  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
 
-  c1^"Tub. Bells"\fff
+  c1^"Tub. Bells"\fff af g f2 a c1 af c,2 df ef gf \mark\default
+
+  c1 <c c,>8^"Glock." q r q q4 q8 q R1 <bf ef,>8 q r <c f,> q4 <a f>8 q
+  R1 <c c,>8 q r q q4 q8 q R1 <bf ef,>8 q r <c f,> q4 <a f>8 q \mark\default
+
+  g1\ff^"Tub. Bells" af f2 bf, c1 ef f ef2 f g1 \mark\default
+
+  R1*8 \mark\default
 }
 
 scoreAXylo = \relative c' {
@@ -1905,7 +2110,7 @@ scoreAXylo = \relative c' {
   }
 
   \time 6/8 \mark\default
-  { e2.^"Tub. Bells"\mp b c a b g a c } { e2. b c a b g a c^"To Xyl." } \mark\default R2.
+  { e2.^"Tub. Bells"\mp b c a b g a c } { e2. b c a b g a c} \mark\default R2.
   fs,16^"Xylophone"\mf (b cs fs e fs cs' b cs fs e fs) R2.*3 %a,,8 e' b' fs' b, e, a, r r r4.
   fs,,16 (b cs fs e fs cs' b cs fs e fs) R2. e,16 (fs b fs b cs fs, b cs b cs fs) \mark\default R2.
   fs,,16 (b cs fs e fs cs' b cs fs e fs) R2.*3 fs,,16 (b cs fs e fs cs' b cs fs e fs)
@@ -1913,7 +2118,7 @@ scoreAXylo = \relative c' {
 
   \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
-    R2.*8 \time 4/4 R1 \time 3/4 R2.*4 \mark\default R2.*6
+    R2.*8 \time 4/4 R1 \time 3/4 \mark\default R2.*4 \mark\default R2.*6
 
     \alternative {
       \volta 1 {
@@ -1936,9 +2141,28 @@ scoreAXylo = \relative c' {
   R1*8 \mark\default
   R1*16
 
-  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
 
-  c8-.\f
+  c8-. \repeat unfold 7 {c8-.} \repeat unfold 8 {af8-.}
+  \repeat unfold 8 {g8-.} \tuplet 3/2 {f4-. f'-. f,-.} \tuplet 3/2 {f-. f'-. f,-.}
+  \repeat unfold 8 {c'8-.} \repeat unfold 8 {af8-.}
+  \tuplet 3/2 {gf4-. gf'-. gf,-.} \tuplet 3/2 {gf-. gf'-. gf,-.}
+  \tuplet 3/2 {ef4-. ef'-. ef,-.} \tuplet 3/2 {ef-. ef'-. g,-.} \mark\default
+
+  R1*8 \mark\default
+
+  c,8\mf \tuplet 3/2 {\repeat unfold 3 {c16}}
+  \repeat unfold 31 {c8 \tuplet 3/2 {\repeat unfold 3 {c16}}} \mark\default
+
+  c'4.\mf c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)}
+  <c g>8 q r q q4 q8 q
+  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)}
+  <c ef,>8 q r <c f,> q4 <c f,>8 q
+  c4.\f c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)}
+  <c g>8 q r q q4 q8 q
+  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)}
+  <c ef,>8 q r <c f,> q4 <c f,>8 q
+  \mark\default
 }
 
 scoreADrum = \drummode {
@@ -1979,7 +2203,7 @@ scoreADrum = \drummode {
     sn8 sn sn sn sn16 sn sn sn sn8 sn16 sn sn8 sn sn4:32\p\<
     sn8\fp sn sn sn sn sn sn sn16 sn sn8 sn sn16 sn sn sn
     sn8\< sn sn sn sn16 sn sn8 sn sn sn sn sn16 sn sn8 \time 4/4 sn sn sn sn sn16 sn sn8 sn sn
-    \time 3/4 sn8 sn sn sn sn sn16 sn sn8 sn sn sn16 sn sn8 sn sn sn sn sn sn sn16 sn
+    \time 3/4 \mark\default sn8 sn sn sn sn sn16 sn sn8 sn sn sn16 sn sn8 sn sn sn sn sn sn sn16 sn
     \tuplet 3/2 {sn8\f\> sn sn} \tuplet 3/2 {sn sn sn} \tuplet 3/2 {sn sn sn}
     \mark\default sn8\p sn sn sn sn sn sn sn16 sn sn8 sn sn16 sn sn sn
     sn8 sn sn sn16 sn sn8 sn sn sn16 sn sn8 sn sn sn16 sn
@@ -2057,7 +2281,7 @@ scoreADrum = \drummode {
   <<
     {s2 s4 cymc:32\laissezVibrer^\pp^\< <>^\!} \\
     {r16 wbl wbl8 wbl16 wbl8 wbl16 wbl8 wbl16 wbl~16 wbl wbl8}
-  >> <>\!
+  >>
   \mark\default
   wbl16\p\> wbl8 wbl16 wbl8 wbl16 wbl~16 wbl wbl8 wbl16 wbl8 wbl16
   wbl8 wbl16 wbl~16 wbl wbl8 wbl16 wbl8 wbl16 wbl8 wbl16 wbl
@@ -2072,11 +2296,68 @@ scoreADrum = \drummode {
   \tuplet 5/4 {wbl8 wbl8 wbl8 wbl8 wbl8} \tuplet 5/4 {wbl8 wbl8 wbl8 wbl8 wbl8}
   \tuplet 5/4 {wbl8 wbl8 wbl8 r4\!} r4 wbl8.\p\> wbl16
   wbl8^"Snare roll ad lib" wbl16 wbl~16 wbl wbl8 wbl16 wbl8 wbl16 wbl8 wbl16 wbl
-  r wbl wbl8 wbl16 wbl8 wbl16 wbl8 wbl16 wbl~16 wbl wbl8
+  r wbl wbl8 wbl16 wbl8 wbl16 wbl8 wbl16 wbl~16 wbl wbl8 <>\!
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
 
-  sn4\f
+  <<
+    {
+      sn4\f sn8 sn r sn sn sn16 sn sn4 sn8 sn r sn sn16 sn sn sn sn4 sn8 sn r sn sn sn16 sn
+      sn\p\< \repeat unfold 15 {sn} sn4\f sn8 sn r sn sn sn16 sn sn4 sn8 sn r sn sn4
+      \tuplet 3/2 {sn4-> sn sn} \tuplet 3/2 {sn4-> sn sn} \tuplet 3/2 {sn4-> sn sn} \tuplet 3/2 {sn4-> sn sn:32}
+    }
+    \\
+    {
+      bd4. bd8 r4 bd \repeat unfold 2 {bd4. bd8 r4 bd}
+      \repeat unfold 2 {\tuplet 3/2 {\repeat unfold 3 {bd4}}}
+      \repeat unfold 2 {bd4. bd8 r4 bd} \repeat unfold 4 {bd2}
+    }
+  >>
+  \mark\default
+
+  <<
+    {
+      \repeat unfold 4 {\repeat unfold 4 {sn8 \tuplet 3/2 {\repeat unfold 3 {sn16}}} sn8 sn r sn sn4 sn8 sn}
+    }
+    \\
+    {
+      \repeat unfold 4 {\repeat unfold 4 {bd4} bd8 bd r bd bd4 bd8 bd}
+    }
+  >>
+  \mark\default
+
+  <<
+    {
+      sn4\f sn8 sn r sn sn sn16 sn sn4 sn8 sn r sn sn sn16 sn
+      sn4 sn8 sn r sn sn sn16 sn sn4 sn8 sn \repeat unfold 8 {sn16}
+      sn4\f sn8 sn r sn sn sn16 sn sn4 sn8 sn r sn sn16 sn sn sn
+      sn4 sn8 sn r sn sn sn16 sn sn4 sn8 sn \repeat unfold 8 {sn16}
+    }
+    \\
+    {
+      \repeat unfold 8 {bd2-> bd}
+    }
+  >>
+  \mark\default
+
+  <<
+    {
+      sn8\mp^"Chains off or bongo" \tuplet 3/2 {\repeat unfold 3 {sn16}}
+      \repeat unfold 3 {sn8 \tuplet 3/2 {\repeat unfold 3 {sn16}}} sn8 sn r sn sn4 sn8 sn
+      sn8 \tuplet 3/2 {\repeat unfold 3 {sn16}}
+      \repeat unfold 3 {sn8 \tuplet 3/2 {\repeat unfold 3 {sn16}}} sn8 sn r sn sn4 sn8 sn
+      sn8^"Chains on" \tuplet 3/2 {\repeat unfold 3 {sn16}}
+      \repeat unfold 3 {sn8 \tuplet 3/2 {\repeat unfold 3 {sn16}}} sn8 sn r sn sn4 sn8 sn
+      sn8 \tuplet 3/2 {\repeat unfold 3 {sn16}}
+      \repeat unfold 3 {sn8 \tuplet 3/2 {\repeat unfold 3 {sn16}}} sn8 sn r sn sn4 sn8 sn
+    }
+    \\
+    {
+      R1*3 bd1:32\p\< bd4\f \repeat unfold 3 {bd4} bd8 bd r bd bd4 bd8 bd
+      \repeat unfold 4 {bd4} bd8 bd r bd bd4 bd8 bd
+    }
+  >>
+  \mark\default
 }
 
 scoreARight = \relative c' {
@@ -2122,7 +2403,7 @@ scoreARight = \relative c' {
     <a' e a,>8\fp r r  e, r4 g8 r r4 e8 r q r r e r4 d'8 c a c b g
     q r r e r4 g8 r r4 e8 r e\< e e <d f> q q <d e g> q q <d f a> q q
     \time 4/4 <d g b> q q q <d a' c> q q q \time 3/4
-    d'4 d, f f' a, d bf4. bf bf2.\f
+    \mark\default d'4 d, f f' a, d bf4. bf bf2.\f
     \mark\default a4.\mf e'->~2. g4 f d e c b a4.-> d c b
 
     \alternative {
@@ -2160,9 +2441,7 @@ scoreARight = \relative c' {
   \repeat percent 8 {e4->\p\> e e-> e <>\!} \mark\default
   \repeat percent 16 {e4->\p\> e e-> e <>\!}
 
-  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
-
-  <c c,>8->\f
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
 }
 
 scoreALeft = \relative c, {
@@ -2263,9 +2542,7 @@ scoreALeft = \relative c, {
     \repeat unfold 2 {\fungalBass R1}
   }
 
-  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120
-
-  <c c,>8-.
+  \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
 }
 
 scoreAPiccoloPart = \new Staff \with {
@@ -2527,7 +2804,7 @@ scoreADrumsPart = \new DrumStaff \with {
 }
 
 %{
-%}
+%
 \book {
   \bookOutputName "Part 01 - Piccolo"
   \score {
