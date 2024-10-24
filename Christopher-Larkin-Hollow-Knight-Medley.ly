@@ -179,13 +179,13 @@ scoreAPiccolo = \relative c'' {
   \tuplet 11/8 {gf f e f gf g af g a bf b}
   c8->\ff) r r c,-> r4 c-.-> c8-> r r c-> r4 c-.-> R1*2 \mark\default
 
-  R1*4 c'4.\ff c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
-  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
+  R1*4 c'4.\ff c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
 
   c-. r r4 r2 R1*7 \mark\default
 
-  R1*4 c4.\f c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
-  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
+  R1*4 c4.\f c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
 }
 
 scoreAFluteI = \relative c'' {
@@ -265,8 +265,8 @@ scoreAFluteI = \relative c'' {
   c16( bf g bf c bf g bf c bf g bf c bf g bf c8) r r4 r2
   c16( bf g bf c bf g bf c bf g bf c bf g bf c8) r r4 r2 R1 \mark\default
 
-  c,,4.\p c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
-  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. R1*4 \mark\default
+  c,,4.\p c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. R1*4 \mark\default
 }
 
 scoreAFluteII = \relative c'' {
@@ -350,8 +350,8 @@ scoreAFluteII = \relative c'' {
   c16( bf g bf c bf g bf c bf g bf c bf g bf c8) r r4 r2
   c16( bf g bf c bf g bf c bf g bf c bf g bf c8) r r4 r2 \mark\default
 
-  c,,4.\p c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} ef8-. ef-. r ef-. ef4-. ef8-. ef-.
-  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} ef8-. ef-. r f-. f4-. f8-. f-. R1*4 \mark\default
+  c,,4.\p c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} ef8-. ef-. r ef-. ef4-. ef8-. ef-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} ef8-. ef-. r f-. f4-. f8-. f-. R1*4 \mark\default
 }
 
 scoreAOboe = \relative c'' {
@@ -411,7 +411,7 @@ scoreAOboe = \relative c'' {
   R1*2 r2 r8 b'4.\p\<~1\> \mark\default
   R1*5\! r4 g2.\p\>~1~1 \mark\default
   R1*8\! \mark\default
-  e1\pp\<~1\>~1\<~1\> R1*10\! r2 r4 as,~2...\> bf32\f( b
+  e1\pp\<~1\>~1\<~1\> R1*10\! r2 r4 as,~2...\pp\> bf32\f( b
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
 
@@ -424,10 +424,10 @@ scoreAOboe = \relative c'' {
   R1*8 \mark\default
   R1*8 \mark\default
 
-  c,4.\p c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
-  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
-  c'4.\f c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
-  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
+  c,4.\p c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c'4.\f c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
 }
 
 scoreABassoon = \relative c' {
@@ -529,7 +529,8 @@ scoreABassoon = \relative c' {
 
   g'1\f af f2 f f1 c f ef2 f g1 \mark\default
 
-  R1*4 c,,4-.\f \repeat unfold 15 {c4-.}
+  R1*4 c,4-.\f c-. c-. c-. c8-. c-. r c-. c4-. c8-. c-.
+  c4-. c-. c-. c-. af8-. af-. r f-. f4-. f8-. f-. \mark\default
 }
 
 scoreAEflatClarinet = \relative c'' {
@@ -604,8 +605,8 @@ scoreAEflatClarinet = \relative c'' {
   c16( bf g bf c bf g bf c bf g bf c bf g bf c8) r r4 r2
   c16( bf g bf c bf g bf c bf g bf c bf g bf c8) r r4 r2 \mark\default
 
-  R1*4 c4.\f c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
-  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
+  R1*4 c4.\f c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
 }
 
 scoreAClarinetI = \relative c'' {
@@ -949,8 +950,8 @@ scoreABassClarinet = \relative c'' {
 
   R1*8 \mark\default
 
-  R1*4 c4.\f c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
-  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
+  R1*4 c4.\f c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
 }
 
 scoreAAltoSaxI = \relative c'' {
@@ -1042,10 +1043,10 @@ scoreAAltoSaxI = \relative c'' {
   R1*7 r2 \tuplet 6/4 {b,,16\f\<( c cs d ds e} \tuplet 6/4 {fs g gs a as b}
   \mark\default c8)->\ff r r4 r2 R1*7 \mark\default
 
-  c,4.\p c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} g8-. g-. r g-. g4-. g8-. g-.
-  c,4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} af'8-. af-. r bf-. bf4-. a8-. a-.
-  c4.\f c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
-  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
+  c,4.\p c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} g8-. g-. r g-. g4-. g8-. g-.
+  c,4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} af'8-. af-. r bf-. bf4-. a8-. a-.
+  c4.\f c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
 }
 
 scoreAAltoSaxII = \relative c'' {
@@ -1129,10 +1130,10 @@ scoreAAltoSaxII = \relative c'' {
   R1*7 \tuplet 6/4 {b,,16\mf\<( c cs d ds e} \tuplet 6/4 {fs g gs a as b)} r2\f
   \mark\default R1*8 \mark\default
 
-  c4.\p c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} ef8-. ef-. r ef-. ef4-. ef8-. ef-.
-  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} ef8-. ef-. r f-. f4-. f8-. f-.
-  c4.\f c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
-  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
+  c4.\p c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} ef8-. ef-. r ef-. ef4-. ef8-. ef-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} ef8-. ef-. r f-. f4-. f8-. f-.
+  c4.\f c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
 }
 
 scoreATenorSax = \relative c'' {
@@ -1202,7 +1203,8 @@ scoreATenorSax = \relative c'' {
   \repeat unfold 2 {c'4-. c8-. c-.} \repeat unfold 2 {f,4-. f8-. f-.}
   \repeat unfold 2 {ef4-. ef8-. ef-.} \repeat unfold 2 {g4-. g8-. g-.} \mark\default
 
-  R1*4 c,4-.\f \repeat unfold 15 {c4-.} \mark\default
+  R1*4 c4-.\f c-. c-. c-. c8-. c-. r c-. c4-. c8-. c-.
+  c4-. c-. c-. c-. af8-. af-. r f-. f4-. f8-. f-. \mark\default
 }
 
 scoreABaritoneSax = \relative c'' {
@@ -1292,7 +1294,8 @@ scoreABaritoneSax = \relative c'' {
   \repeat unfold 2 {c'4-. c8-. c-.} \repeat unfold 2 {f,4-. f8-. f-.}
   \repeat unfold 2 {ef4-. ef8-. ef-.} \repeat unfold 2 {g4-. g8-. g-.} \mark\default
 
-  R1*4 c,4-.\f \repeat unfold 15 {c4-.} \mark\default
+  R1*4 c4-.\f c-. c-. c-. c8-. c-. r c-. c4-. c8-. c-.
+  c4-. c-. c-. c-. af8-. af-. r f-. f4-. f8-. f-. \mark\default
 }
 
 scoreATrumpetBbI = \relative c'' {
@@ -1361,15 +1364,15 @@ scoreATrumpetBbI = \relative c'' {
 
   R1*8 \mark\default
 
-  c,4.\f c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
-  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
-  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
-  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
+  c,4.\ff c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
 
   R1*8 \mark\default
 
-  c4.\p c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
-  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. c4-. r r2 R1*3 \mark\default
+  c4.\p c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. c4-. r r2 R1*3 \mark\default
 }
 
 scoreATrumpetBbII = \relative c'' {
@@ -1443,17 +1446,17 @@ scoreATrumpetBbII = \relative c'' {
 
   R1*8 \mark\default
 
-  c4.\f c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
-  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} af8-. af-. r bf-. bf4-. a8-. a-.
-  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
-  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} af8-. af-. r bf-. bf4-. a8-. a-. \mark\default
+  c4.\ff c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} af8-. af-. r bf-. bf4-. a8-. a-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} af8-. af-. r bf-. bf4-. a8-. a-. \mark\default
 
   R1*8 \mark\default
 
   R1 g8-. g-. r g-. g4-. g8-. g-.
   R1 af8-. af-. r bf-. bf4-. a8-. a-.
-  c4.\f c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
-  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
+  c4.\f c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
 }
 
 scoreAHornFI = \relative c' {
@@ -1526,8 +1529,8 @@ scoreAHornFI = \relative c' {
   c'2\ff c4 d ef2 d4 c \tuplet 3/2 {d4 ef d} \tuplet 3/2 {d ef d} c1
   c2 c4 d \tuplet 3/2 {f ef f} g2 \tuplet 3/2 {g4 f g} a f g1 \mark\default
 
-  R1*4 c,4.\f c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
-  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
+  R1*4 c,4.\f c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
 }
 
 scoreAHornFII = \relative c' {
@@ -1610,8 +1613,8 @@ scoreAHornFII = \relative c' {
   c,2\ff c4 d ef2 d4 c \tuplet 3/2 {d4 ef d} \tuplet 3/2 {d ef d} c1
   c2 c4 d \tuplet 3/2 {f ef f} g2 \tuplet 3/2 {g4 f g} a f g1 \mark\default
 
-  R1*4 c4.\f c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
-  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
+  R1*4 c4.\f c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
 }
 
 scoreATromboneI = \relative c {
@@ -1684,7 +1687,8 @@ scoreATromboneI = \relative c {
 
   c1\ff ef, bf' bf2 a c1 c bf2 a c d \mark\default
 
-  R1*4 c,4-.\f \repeat unfold 15 {c4-.} \mark\default
+  R1*4 c,4-.\f c-. c-. c-. c8-. c-. r c-. c4-. c8-. c-.
+  c4-. c-. c-. c-. af8-. af-. r f-. f4-. f8-. f-. \mark\default
 }
 
 scoreATromboneII = \relative c {
@@ -1754,7 +1758,8 @@ scoreATromboneII = \relative c {
 
   ef1\ff c' d f, g' af g2 f d'1 \mark\default
 
-  R1*4 g,4-.\f \repeat unfold 15 {g4-.} \mark\default
+  R1*4 g,,4-.\f g-. g-. g-. g8-. g-. r g-. g4-. g8-. g-.
+  g4-. g-. g-. g-. af8-. af-. r af-. af4-. f8-. f-. \mark\default
 }
 
 scoreAEuphonium = \relative c {
@@ -1830,7 +1835,7 @@ scoreAEuphonium = \relative c {
   \key e \minor
 
 
-  e8-.^\markup{ \italic "quasi pizz."} e'-. b-. d,-. d'-. a-. r4 R1 e8-. e'-. b-. d,-. d'4-. r4 R1
+  e8-.^\markup{ \italic "quasi pizz."}\pp e'-. b-. d,-. d'-. a-. r4 R1 e8-. e'-. b-. d,-. d'4-. r4 R1
   \mark\default
   \repeat unfold 3 {\fungalBass R1} \fixed c {e8-. e'-. b-. d-. d'-. a-. r a-. r2 a8( g f g)} \mark\default
   \repeat unfold 3 {\fungalBass R1} \fixed c {e8-. e'-. b-. d-. d'-. a-. r a-. r2 a8( g f g)} \mark\default
@@ -1922,7 +1927,7 @@ scoreATuba = \relative c {
   \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
   \key e \minor
 
-  e8-.^\markup{ \italic "quasi pizz."} e'-. b-. d,-. d'-. a-. r4 R1 e8-. e'-. b-. d,-. d'4-. r4 R1
+  e8-.^\markup{ \italic "quasi pizz."}\pp e'-. b-. d,-. d'-. a-. r4 R1 e8-. e'-. b-. d,-. d'4-. r4 R1
   \mark\default
   \transpose c c, {
     \repeat unfold 3 {\fungalBass R1} \fixed c {e8-. e'-. b-. d-. d'-. a-. r a-. r2 a8( g f g)} \mark\default
@@ -2151,16 +2156,16 @@ scoreAXylo = \relative c' {
 
   R1*8 \mark\default
 
-  c,8\mf \tuplet 3/2 {\repeat unfold 3 {c16}}
+  c8\mf \tuplet 3/2 {\repeat unfold 3 {c16}}
   \repeat unfold 31 {c8 \tuplet 3/2 {\repeat unfold 3 {c16}}} \mark\default
 
-  c'4.\mf c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)}
+  c4.\mf c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)}
   <c g>8 q r q q4 q8 q
-  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)}
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)}
   <c ef,>8 q r <c f,> q4 <c f,>8 q
-  c4.\f c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)}
+  c4.\f c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)}
   <c g>8 q r q q4 q8 q
-  c4. c16( d) ef8 d16( c d ef \tuplet 3/2 {d ef d)}
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)}
   <c ef,>8 q r <c f,> q4 <c f,>8 q
   \mark\default
 }
@@ -2347,9 +2352,9 @@ scoreADrum = \drummode {
       sn8 \tuplet 3/2 {\repeat unfold 3 {sn16}}
       \repeat unfold 3 {sn8 \tuplet 3/2 {\repeat unfold 3 {sn16}}} sn8 sn r sn sn4 sn8 sn
       sn8^"Chains on" \tuplet 3/2 {\repeat unfold 3 {sn16}}
-      \repeat unfold 3 {sn8 \tuplet 3/2 {\repeat unfold 3 {sn16}}} sn8 sn r sn sn4 sn8 sn
+      \repeat unfold 7 {sn8 \tuplet 3/2 {\repeat unfold 3 {sn16}}}
       sn8 \tuplet 3/2 {\repeat unfold 3 {sn16}}
-      \repeat unfold 3 {sn8 \tuplet 3/2 {\repeat unfold 3 {sn16}}} sn8 sn r sn sn4 sn8 sn
+      \repeat unfold 3 {sn8 \tuplet 3/2 {\repeat unfold 3 {sn16}}} sn8 sn r sn:32\fp\<~2:32
     }
     \\
     {
@@ -2804,7 +2809,7 @@ scoreADrumsPart = \new DrumStaff \with {
 }
 
 %{
-%
+%}
 \book {
   \bookOutputName "Part 01 - Piccolo"
   \score {
