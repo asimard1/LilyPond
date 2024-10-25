@@ -757,7 +757,7 @@ scoreAClarinetI = \relative c'' {
         b4.\mp\< e d b cs4. fs e ds a8->-.\fp\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-.
         \mark\default a'-.->\fp e-. e-. e-.-> e-. e-. g->( f) d( e) c->( b) e->\< e e e-> e e e-> e e e-> e e
         a-.->\fp e-. e-. e-.-> e-. e-. g->( f) d( e) c->( b) e->\< e e e-> e e e-> e e e-> e e
-        \mark\default a,\fp^"Ossia, tremolo 2x"
+        \mark\default a,\fp^\markup{\italic "ossia, tremolo 2x"}
         c->( b a b c) a c->( b a b c) d c->( b) c->( b a) c->( b a) b->( a gs)
         a c->( b a b c) a c->( b a b c) f e->( d) e->( d c) e->( d c) b->( a gs)
         a c->( b a b c) a c->( b a b c) d-> r r c->( b a) c->( b a) b->( a gs)
@@ -1564,7 +1564,9 @@ scoreATrumpetBbI = \relative c'' {
   \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2
   {
-    a'8\fp-.-> r r4 r R2.*2 r2 b,4\p\< e8\fp-.-> r r4 r R2.*3 \time 4/4 R1 \time 3/4 \mark\default R2.*3
+    a'8\fp-.-> r r4 r R2.*2 r2
+    \once \override Hairpin.bound-padding = #0.25
+    b,4\p\< e8\fp-.-> r r4 r R2.*3 \time 4/4 R1 \time 3/4 \mark\default R2.*3
     \tuplet 3/2 {d8-.->\f c-. bf-.} \tuplet 3/2 {bf-.-> a-. g-.} \tuplet 3/2 {f-.-> e-. d-.}
     \mark\default a4-.-> r r R2.*5
 
@@ -1660,7 +1662,9 @@ scoreATrumpetBbII = \relative c'' {
   \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2
   {
-    a8\fp-.-> r r4 r R2.*2 r2 b4\p\< a8\fp-.-> r r4 r R2.*3 \time 4/4 R1 \time 3/4 \mark\default R2.*3
+    a8\fp-.-> r r4 r R2.*2 r2
+    \once \override Hairpin.bound-padding = #0.25
+    b4\p\< a8\fp-.-> r r4 r R2.*3 \time 4/4 R1 \time 3/4 \mark\default R2.*3
     d4-.\f bf-. f-.
     \mark\default a,4-.-> r r R2.*5
 
@@ -1736,14 +1740,16 @@ scoreAHornFI = \relative c' {
   \time 6/8 \mark\default
   R2.*16
   \mark\default  R2.*8 \mark\default \relative c'{\greenPathBassA} \mark\default R2.*7
-  e'8.\< fs g a fs2.\ff~4. \tuplet 2/3 {g8 a} fs4.~8 b,4 cs2. e~4. \tuplet 2/3 {fs8 g} e4.~8 g4 a4. c
+  e8.\< fs g a fs2.\ff~4. \tuplet 2/3 {g8 a} fs4.~8 b,4 cs2. e~4. \tuplet 2/3 {fs8 g} e4.~8 g4 a4. c
   \mark\default b2.~4.~8 e4 b2. e d4. cs d b \override TextSpanner.bound-details.left.text = "poco rit."
   a2.\startTextSpan \< a4. c\stopTextSpan
 
   \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
-    a8\fp-.-> r r4 r R2.*2 r2 b4\p\< a8\fp-.-> r r4 r R2.*3 \time 4/4 R1 \time 3/4
-    \mark\default d,8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g'->( f e) f->( e d)
+    a8\fp-.-> r r4 r R2.*2 r2
+    \once \override Hairpin.bound-padding = #0.25
+    b4\p\< a8\fp-.-> r r4 r R2.*3 \time 4/4 R1 \time 3/4
+    \mark\default d8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g'->( f e) f->( e d)
     \tuplet 3/2 {d-.->\f c-. bf-.} \tuplet 3/2 {bf-.-> a-. g-.} \tuplet 3/2 {f-.-> e-. d-.}
     \mark\default a'4-.-> r r R2.*5
 
@@ -1849,7 +1855,9 @@ scoreAHornFII = \relative c' {
 
   \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
-    a8\fp-.-> r r4 r R2.*2 r4 r b4\p\< a8\fp-.-> r r4 r R2.*3 \time 4/4 R1 \time 3/4
+    a8\fp-.-> r r4 r R2.*2 r4 r
+    \once \override Hairpin.bound-padding = #0.25
+    b4\p\< a8\fp-.-> r r4 r R2.*3 \time 4/4 R1 \time 3/4
     \mark\default d,8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g'->( f e) f->( e d)
     d4-.\f bf f
     \mark\default a4-.-> r r R2.*5
@@ -1936,16 +1944,18 @@ scoreATromboneI = \relative c {
 
   \time 6/8 \mark\default
   R2.*16 \mark\default R2.*7
-  {e,16\f-. fs-. b-. fs-. b-. cs-. cs-. cs-. e-. cs-. e-. fs-.} \mark\default g8-. r8 r2
+  {e16\f-. fs-. b-. fs-. b-. cs-. cs-. cs-. e-. cs-. e-. fs-.} \mark\default g8-. r8 r2
   R2.*7 \mark\default
   \relative c' {\greenPathBassPreB \greenPathBassB}
 
   \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
-    a8\fp-.-> r r4 r R2.*2 r2 b4\p\< a8\fp-.-> r r4 r R2.*3 \time 4/4 R1 \time 3/4
-    \mark\default d,8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g'->( f e) f->( e d)
+    a,8\fp-.-> r r4 r R2.*2 r2
+    \once \override Hairpin.bound-padding = #0.25
+    b4\p\< a8\fp-.-> r r4 r R2.*3 \time 4/4 R1 \time 3/4
+    \mark\default d8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g->( f e) f->( e d)
     d'4-.\f bf f
-    \mark\default e8-.\p e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-.
+    \mark\default e'8-.\p e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-.
     e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-.
     c-. c-. c-. c-. c-. c-. c-. c-. c-. c-. c-. c-.
 
@@ -1956,11 +1966,11 @@ scoreATromboneI = \relative c {
         a4.\f e'->~2. g4->\< f d e c b
         \mark\default a8\!-.-> r r4 r R2.
         e'8\ff e-. r e-. r4 ef8 ef-. r ef-. r4 R2.*2 e8\ff e-. r e-. r4 ef8 ef-. r ef-. r4 R2.*4
-        cs'4.\mf\< fs e ds a8-.->\fp\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-.
+        cs4.\mf\< fs e ds a8-.->\fp\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-.
         \mark\default a8-.->\fp r r4 r R2.
         bf2.\<~2.\f\> a8-.\p r r4 r R2. bf2.\<~2.\f\> \mark\default a8-.\p r r4 r
-        R2.*2 r4 r8 e16-.\ff e-. e-. e-. e-. e-. e8-. r r4 r R2.*2
-        b'16-. b-. b-. b-. a-. a-. a-. a-. g-. g-. g-. g-.
+        R2.*2 r4 r8 e'16-.\ff e-. e-. e-. e-. e-. e8-. r r4 r R2.*2
+        b16-. b-. b-. b-. a-. a-. a-. a-. g-. g-. g-. g-.
         f8-. r r4 r R2.*2 r4 r8 a16-. a-. a-. a-. a-. a-. a8-. r r b16-. b-. b-. b-. b-. b-. b8-. r r
         a16-.\> a-. a-. a-. a-. a-. a-.\p\< a-. a-. a-. b-. b-. b-. b-. c-. c-. c-. c-.
         b-. b-. b-. b-. c-. c-. c-. c-. e-. e-. e-. e-.
@@ -1969,7 +1979,7 @@ scoreATromboneI = \relative c {
         R2.*8\! \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a,4.\f d c b R2.*2 a4. d c b R2.*4
         \override TextSpanner.bound-details.left.text = "rall."
-        \mark\default cs,4.\ff fs e gs a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        \mark\default cs4.\ff fs e gs a,8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
         c-.-> c-. c-. c-. c-. c-. c-.->\ff c-. c-. c-.-^ c-.-^ c-.-^ R2.\fermata\stopTextSpan
       }
     }
@@ -1985,17 +1995,17 @@ scoreATromboneI = \relative c {
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
 
-  c,8-.\f c-. c-. c-> r4 c-.-> \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
+  c8-.\f c-. c-. c-> r4 c-.-> \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
   \tuplet 3/2 {bf4-. bf-. bf-.} \tuplet 3/2 {a-. a-. a-.}
   \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
   \tuplet 3/2 {c4-. c-. c-.} \tuplet 3/2 {df-. df-. df-.}
   \tuplet 3/2 {ef-. ef-. ef-.} \tuplet 3/2 {gf-. gf-. g-.} \mark\default
 
-  R1*4 \repeat unfold 2 {c4-. c-. c-. c-. c8-. c-. r c-. c4-. c8-. c-.} \mark\default
+  R1*4 \repeat unfold 2 {c,4-. c-. c-. c-. c8-. c-. r c-. c4-. c8-. c-.} \mark\default
 
-  c1\ff ef, bf' bf2 a c1 c bf2 a c d \mark\default
+  c1\ff ef bf bf2 a c1 c bf2 a c d \mark\default
 
-  R1*4 c,4-.\f c-. c-. c-. c8-. c-. r c-. c4-. c8-. c-.
+  R1*4 c4-.\f c-. c-. c-. c8-. c-. r c-. c4-. c8-. c-.
   c4-. c-. c-. c-. af8-. af-. r f-. f4-. f8-. f-. \mark\default
 
   c'4-.\ff c-. c-. c-. af'8-.\mf\< g-. f-. ef-. f-. ef-. d-. df-.
@@ -2016,14 +2026,14 @@ scoreATromboneI = \relative c {
   R1*4 \mark\default c,4-.-^\ff c-.-^ c-.-^ c-.-^ c8-.-^ c-.-^ r c-.-^ c4-.-^ c8-.-^ c-.-^
   c4-.-^ c-.-^ c-.-^ c-.-^ af8-.-^ af-.-^ r f-.-^ f4-.-^ f8-.-^ f-.-^
 
-  r2 g'\ff\< g8-^\ff g-^ r g-^ g4-^ c8-^ c-^ c4-^ r r2 \fine
+  r2 g'\ff\< g8-^\ff g-^ r g-^ g4-^ g8-^ g-^ g4-^ r r2 \fine
 }
 
 scoreATromboneII = \relative c {
   \global
   % Music goes here
   \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
-  R1*9 \mark \default R1*16 \mark\default R1*8 e1\p\<~1 f1~1 e1\f\> R1*2\!
+  R1*9 \mark \default R1*16 \mark\default R1*8 e'1\p\<~1 f1~1 e1\f\> R1*2\!
   \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
   R2.*4 \mark\default R2.*16
 
@@ -2032,7 +2042,9 @@ scoreATromboneII = \relative c {
 
   \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
-    e8\fp-.-> r r4 r R2.*2 r2 b4\p\< e8\fp-.-> r r4 r R2.*3 \time 4/4 R1 \time 3/4
+    e8\fp-.-> r r4 r R2.*2 r2
+    \once \override Hairpin.bound-padding = #0.25
+    b4\p\< e8\fp-.-> r r4 r R2.*3 \time 4/4 R1 \time 3/4
     \mark\default d8-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. bf-.-> bf-. bf-. bf-.-> bf-. bf-. bf2.\f\>
     \mark\default a4-.\p r r R2.*5
 
@@ -2040,20 +2052,20 @@ scoreATromboneII = \relative c {
       \volta 1 {
         a8-.\< a-. a-. a-. a-. a-. b-. b-. b-. b-. b-. b-. a-.\f r r4 r
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        r8 e'16\f e e4 c a\< a8 b~8 b c->( b) e->( f) g->( af) \mark\default a?8->-.\! r r4 r R2.
-        e8->\ff e e e-> e e ef-> ef ef ef-> ef ef d-> r r4 r R2.
+        r8 e'16\f e e4 c a\< a8 b~8 b c->( b) e,->( f) g->( af) \mark\default a?8->-.\! r r4 r R2.
+        e'8->\ff e e e-> e e ef-> ef ef ef-> ef ef d-> r r4 r R2.
         e8->\ff e e e-> e e ef-> ef ef ef-> ef ef d-> r r4 r R2.*3
-        bf'8-.->\mf\< bf-. bf-. bf-.-> bf-. bf-. a-.-> a-. a-. a-.-> a-. a-.
+        bf8-.->\mf\< bf-. bf-. bf-.-> bf-. bf-. a-.-> a-. a-. a-.-> a-. a-.
         f8-.->\fp\< f-. f-. f-.-> f-. f-. f-.-> f-. f-. f-.-> f-. f-.
         \mark\default a8-.->\fp r r4 r R2.*7 \mark\default R2.*3
-        r4 r8 c,16-.\ff c-. c-. c-. c-. c-. c8-. r r4 r R2.*2
-        b'16-. b-. b-. b-. a-. a-. a-. a-. g-. g-. g-. g-.
-        f8-. r r4 r R2.*2 r4 r8 d16-. d-. d-. d-. d-. d-. d8-. r r e16-. e-. e-. e-. e-. e-. e8-. r r
-        e16-.\> e-. e-. e-. e-. e-. a-.\p\< a-. a-. a-. b-. b-. b-. b-. c-. c-. c-. c-.
+        r4 r8 c16-.\ff c-. c-. c-. c-. c-. c8-. r r4 r R2.*2
+        b16-. b-. b-. b-. a-. a-. a-. a-. g-. g-. g-. g-.
+        f8-. r r4 r R2.*2 r4 r8 d'16-. d-. d-. d-. d-. d-. d8-. r r e16-. e-. e-. e-. e-. e-. e8-. r r
+        e16-.\> e-. e-. e-. e-. e-. a,-.\p\< a-. a-. a-. b-. b-. b-. b-. c-. c-. c-. c-.
         b-. b-. b-. b-. c-. c-. c-. c-. e-. e-. e-. e-.
       }
       \volta 2 {
-        a,,8-.->\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. b-.-> b-. b-.
+        a,8-.->\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. b-.-> b-. b-.
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a-.->\mf a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-.-> a-. a-.
         ef'-.-> ef-. ef-. ef-.-> ef-. ef-. d-.-> d-. d-. d-. d-. d-. a-.-> r r4 r R2.
@@ -2084,13 +2096,13 @@ scoreATromboneII = \relative c {
 
   R1*8 \mark\default
 
-  ef1\ff c' d f, g' af g2 f d'1 \mark\default
+  ef'1\ff c d f g af g2 f d1 \mark\default
 
-  R1*4 g,,4-.\f g-. g-. g-. g8-. g-. r g-. g4-. g8-. g-.
+  R1*4 g,4-.\f g-. g-. g-. g8-. g-. r g-. g4-. g8-. g-.
   g4-. g-. g-. g-. af8-. af-. r af-. af4-. f8-. f-. \mark\default
 
-  g4-.\ff g-. g-. g-. af'8-.\mf\< g-. f-. ef-. f-. ef-. d-. df-.
-  g,4-.\ff g-. g-. g-.
+  g4-.\ff g-. g-. g-. af8-.\mf\< g-. f-. ef-. f-. ef-. d-. df-.
+  g4-.\ff g-. g-. g-.
   ef'8-.\mf\< df-. cf-. bf-. df-. cf-. bf-. a-.
   af4-.\ff af-. af-. af-.
 
@@ -2104,10 +2116,10 @@ scoreATromboneII = \relative c {
   \tuplet 3/2 {gf4-. gf-. gf-.} \tuplet 3/2 {gf-. gf-. gf-.}
   \tuplet 3/2 {gf-. gf-. gf-.} \tuplet 3/2 {gf-. gf-. g-.} \mark\default
 
-  R1*4 \mark\default g'4-.-^\ff g-.-^ g-.-^ g-.-^ g8-.-^ g-.-^ r g-.-^ g4-.-^ g8-.-^ g-.-^
+  R1*4 \mark\default g4-.-^\ff g-.-^ g-.-^ g-.-^ g8-.-^ g-.-^ r g-.-^ g4-.-^ g8-.-^ g-.-^
   g4-.-^ g-.-^ g-.-^ g-.-^ af8-.-^ af-.-^ r f-.-^ f4-.-^ f8-.-^ f-.-^
 
-  c1 c8-^ c-^ r c-^ c4-^ c8-^ c-^ c4-^ r r2 \fine
+  c'1 c8-^ c-^ r c-^ c4-^ c8-^ c-^ c4-^ r r2 \fine
 }
 
 scoreAEuphonium = \relative c {
@@ -2774,7 +2786,7 @@ scoreADrum = \drummode {
 
       \repeat unfold 8 {bd2-> bd}
 
-      R1*3 bd1:32\p\< bd4\f \repeat unfold 3 {bd4} bd8 bd r bd bd4 bd8 bd
+      s1 s1 s1 bd1:32\p\< bd4\f \repeat unfold 3 {bd4} bd8 bd r bd bd4 bd8 bd
       \repeat unfold 4 {bd4} bd8 bd r bd bd4 bd8 bd
 
       \repeat unfold 4 {bd4} r2 r4 bd
@@ -3353,6 +3365,7 @@ scoreADrumsPart = \new DrumStaff \with {
   }
   \paper {
     #(set-paper-size "letter")
+    page-count = #2
   }
 }
 \book {
@@ -3366,6 +3379,7 @@ scoreADrumsPart = \new DrumStaff \with {
   }
   \paper {
     #(set-paper-size "letter")
+    page-count = #2
   }
 }
 \book {
@@ -3379,6 +3393,7 @@ scoreADrumsPart = \new DrumStaff \with {
   }
   \paper {
     #(set-paper-size "letter")
+    page-count = #2
   }
 }
 \book {
@@ -3392,6 +3407,7 @@ scoreADrumsPart = \new DrumStaff \with {
   }
   \paper {
     #(set-paper-size "letter")
+    page-count = #2
   }
 }
 \book {
@@ -3405,6 +3421,7 @@ scoreADrumsPart = \new DrumStaff \with {
   }
   \paper {
     #(set-paper-size "letter")
+    page-count = #3
   }
 }
 \book {
@@ -3418,6 +3435,7 @@ scoreADrumsPart = \new DrumStaff \with {
   }
   \paper {
     #(set-paper-size "letter")
+    page-count = #2
   }
 }
 \book {
@@ -3431,6 +3449,7 @@ scoreADrumsPart = \new DrumStaff \with {
   }
   \paper {
     #(set-paper-size "letter")
+    page-count = #2
   }
 }
 \book {
@@ -3444,6 +3463,7 @@ scoreADrumsPart = \new DrumStaff \with {
   }
   \paper {
     #(set-paper-size "letter")
+    page-count = #2
   }
 }
 \book {
@@ -3457,6 +3477,7 @@ scoreADrumsPart = \new DrumStaff \with {
   }
   \paper {
     #(set-paper-size "letter")
+    page-count = #2
   }
 }
 \book {
@@ -3470,6 +3491,7 @@ scoreADrumsPart = \new DrumStaff \with {
   }
   \paper {
     #(set-paper-size "letter")
+    page-count = #2
   }
 }
 \book {
@@ -3483,6 +3505,7 @@ scoreADrumsPart = \new DrumStaff \with {
   }
   \paper {
     #(set-paper-size "letter")
+    page-count = #2
   }
 }
 \book {
@@ -3496,6 +3519,7 @@ scoreADrumsPart = \new DrumStaff \with {
   }
   \paper {
     #(set-paper-size "letter")
+    page-count = #2
   }
 }
 \book {
@@ -3509,6 +3533,7 @@ scoreADrumsPart = \new DrumStaff \with {
   }
   \paper {
     #(set-paper-size "letter")
+    page-count = #2
   }
 }
 \book {
@@ -3522,6 +3547,7 @@ scoreADrumsPart = \new DrumStaff \with {
   }
   \paper {
     #(set-paper-size "letter")
+    page-count = #2
   }
 }
 \book {
@@ -3535,6 +3561,7 @@ scoreADrumsPart = \new DrumStaff \with {
   }
   \paper {
     #(set-paper-size "letter")
+    page-count = #2
   }
 }
 \book {
@@ -3548,6 +3575,7 @@ scoreADrumsPart = \new DrumStaff \with {
   }
   \paper {
     #(set-paper-size "letter")
+    page-count = #2
   }
 }
 \book {
@@ -3561,6 +3589,7 @@ scoreADrumsPart = \new DrumStaff \with {
   }
   \paper {
     #(set-paper-size "letter")
+    page-count = #2
   }
 }
 \book {
@@ -3574,6 +3603,7 @@ scoreADrumsPart = \new DrumStaff \with {
   }
   \paper {
     #(set-paper-size "letter")
+    page-count = #2
   }
 }
 \book {
@@ -3587,6 +3617,7 @@ scoreADrumsPart = \new DrumStaff \with {
   }
   \paper {
     #(set-paper-size "letter")
+    page-count = #2
   }
 }
 \book {
@@ -3600,6 +3631,7 @@ scoreADrumsPart = \new DrumStaff \with {
   }
   \paper {
     #(set-paper-size "letter")
+    page-count = #2
   }
 }
 \book {
@@ -3613,6 +3645,7 @@ scoreADrumsPart = \new DrumStaff \with {
   }
   \paper {
     #(set-paper-size "letter")
+    page-count = #3
   }
 }
 \book {
@@ -3626,6 +3659,7 @@ scoreADrumsPart = \new DrumStaff \with {
   }
   \paper {
     #(set-paper-size "letter")
+    page-count = #3
   }
 }
 \book {
@@ -3639,6 +3673,7 @@ scoreADrumsPart = \new DrumStaff \with {
   }
   \paper {
     #(set-paper-size "letter")
+    page-count = #2
   }
 }
 \book {
@@ -3652,6 +3687,7 @@ scoreADrumsPart = \new DrumStaff \with {
   }
   \paper {
     #(set-paper-size "letter")
+    page-count = #2
   }
 }
 \book {
@@ -3665,6 +3701,7 @@ scoreADrumsPart = \new DrumStaff \with {
   }
   \paper {
     #(set-paper-size "letter")
+    page-count = #2
   }
 }
 \book {
@@ -3678,8 +3715,10 @@ scoreADrumsPart = \new DrumStaff \with {
   }
   \paper {
     #(set-paper-size "letter")
+    page-count = #4
   }
 }
+%}
 \book {
   \bookOutputName "Part 27 - Piano"
   \score {
