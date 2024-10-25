@@ -2903,7 +2903,7 @@ scoreARight = \relative c' {
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
 
-  c'8-.\f \repeat unfold 7 {c8-.} \repeat unfold 8 {af8-.}
+  c'8-.\f^\markup {\italic "8vb e 8va ad lib"} \repeat unfold 7 {c8-.} \repeat unfold 8 {af8-.}
   \repeat unfold 8 {g8-.} \tuplet 3/2 {f4-. f'-. f,-.} \tuplet 3/2 {f-. f'-. f,-.}
   \repeat unfold 8 {c'8-.} \repeat unfold 8 {af8-.}
   \tuplet 3/2 {gf4-. gf'-. gf,-.} \tuplet 3/2 {gf-. gf'-. gf,-.}
@@ -2927,9 +2927,13 @@ scoreARight = \relative c' {
   c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
   \mark\default
 
-  ef8.-.\f ef16-.~8 ef-.~16 ef8.-. ef4-. af8-.\mf\< g-. f-. ef-. f-. ef-. d-. df-.
-  ef8.-.\f ef16-.~8 ef-.~16 ef8.-. ef4-. ef8-.\mf\< df-. cf-. bf-. df-. cf-. bf-. a-.
-  ef'8.-.\f ef16-.~8 ef-.~16 ef8.-. ef4-. \mark\default R1*4 \mark\default
+  ef8.-.\ff ef16-.~8 ef-.~16 ef8.-. ef4-. af8-.\mf\< g-. f-. ef-. f-. ef-. d-. df-.
+  ef8.-.\ff ef16-.~8 ef-.~16 ef8.-. ef4-. ef8-.\mf\< df-. cf-. bf-. df-. cf-. bf-. a-.
+  ef'8.-.\ff ef16-.~8 ef-.~16 ef8.-. ef4-. \mark\default
+
+  af,,8-.\p\< g-. af-. bf-. bf-. af-. bf-. cf-. cf-. bf-. cf-. df-. df-. cf-. df-. d-.
+  ef-. df-. ef-. e-. e-. ef-. e-. f-. f-. ef-. f-. g-. g-. f-. g-. g-.\fff \mark\default
+  \mark\default
 
   c8\f-> \repeat unfold 7 {c8-.} \repeat unfold 8 {af8-.}
   \repeat unfold 8 {g8-.} \tuplet 3/2 {f4-. f'-. f,-.} \tuplet 3/2 {f-. f'-. f,-.}
@@ -2937,10 +2941,10 @@ scoreARight = \relative c' {
   \tuplet 3/2 {gf4-. gf'-. gf,-.} \tuplet 3/2 {gf-. gf'-. gf,-.}
   \tuplet 3/2 {ef4-. ef'-. ef,-.} \tuplet 3/2 {ef-. ef'-. g,-.} \mark\default
 
-  R1*4 \mark\default c4.\ff c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  R1*4\ff \mark\default c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
   c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
 
-  c4-. r8 c16 c c8 c16 c c c c c g'8-^ g-^ r g-^ g4-^ c8-^ c-^ c4-^ r r2 \fine
+  c4-.\fff r8 c16\< c c8 c16 c c c c c g'8-^\ff g-^ r g-^ g4-^ c8-^ c-^ c4-^ r r2 \fine
 }
 
 scoreALeft = \relative c, {
@@ -3043,7 +3047,7 @@ scoreALeft = \relative c, {
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
 
-  c8-.\f c-. c-. c-> r4 c-.-> \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
+  c8-. c-. c-. c-> r4 c-.-> \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
   \tuplet 3/2 {bf4-. bf-. bf-.} \tuplet 3/2 {a-. a-. a-.}
   \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
   \tuplet 3/2 {c4-. c-. c-.} \tuplet 3/2 {df-. df-. df-.}
@@ -3051,31 +3055,31 @@ scoreALeft = \relative c, {
 
   R1*4 \repeat unfold 2 {c,4-. c-. c-. c-. c8-. c-. r c-. c4-. c8-. c-.} \mark\default
 
-  c2\ff c4 d ef2 d4 c \tuplet 3/2 {d4 ef d} \tuplet 3/2 {d ef d} c1
+  c2 c4 d ef2 d4 c \tuplet 3/2 {d4 ef d} \tuplet 3/2 {d ef d} c1
   c2 c4 d \tuplet 3/2 {f ef f} g2 \tuplet 3/2 {g4 f g} a f g1 \mark\default
 
-  R1*4 c,,4-.\f \repeat unfold 15 {c4-.} \mark\default
+  R1*4 c,,4-. \repeat unfold 15 {c4-.} \mark\default
 
-  c'8.-.\f c16-.~8 c-.~16 c8.-. c4-. R1
-  c8.-. c16-.~8 c-.~16 c8.-. c4-. R1
-  af8.-. af16-.~8 af-.~16 af8.-. af4-.
+  c'4-. c-. c-. c-. R1
+  c4-. c-. c-. c-. R1
+  af4-. af-. af-. af-.
 
   \mark\default
-  af,8-.\p\< g-. af-. bf-. bf-. af-. bf-. cf-. cf-. bf-. cf-. df-. df-. cf-. df-. d-.
-  ef-. df-. ef-. e-. e-. ef-. e-. f-. f-. ef-. f-. g-. g-. f-. g-. g-.\fff \mark\default
+  af,8-. g-. af-. bf-. bf-. af-. bf-. cf-. cf-. bf-. cf-. df-. df-. cf-. df-. d-.
+  ef-. df-. ef-. e-. e-. ef-. e-. f-. f-. ef-. f-. g-. g-. f-. g-. g-. \mark\default
 
-  c8-.\f c-. c-. c-> r4 c-.-> \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
+  c8-. c-. c-. c-> r4 c-.-> \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
   \tuplet 3/2 {bf4-. bf-. bf-.} \tuplet 3/2 {a-. a-. a-.}
   \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
   \tuplet 3/2 {c4-. c-. c-.} \tuplet 3/2 {df-. df-. df-.}
   \tuplet 3/2 {ef-. ef-. ef-.} \tuplet 3/2 {gf-. gf-. g-.} \mark\default
 
-  c,4-.\ff c-. c-. c-. c8-. c-. r c-. c4-. c8-. c-.
+  c,4-. c-. c-. c-. c8-. c-. r c-. c4-. c8-. c-.
   c4-. c-. c-. c-. af8-. af-. r f-. f4-. f8-. f-.
   \mark\default c'4-.-^ c-.-^ c-.-^ c-.-^ c8-.-^ c-.-^ r c-.-^ c4-.-^ c8-.-^ c-.-^
   c4-.-^ c-.-^ c-.-^ c-.-^ af8-.-^ af-.-^ r f-.-^ f4-.-^ f8-.-^ f-.-^
 
-  c2\fff g'\< g8-^\ff g-^ r c,-^ c4-^ c'8-^ c-^ c4-^ r r2 \fine
+  c2 g' g8-^ g-^ r c,-^ c4-^ c8-^ c-^ c4-^ r r2 \fine
 }
 
 scoreAPiccoloPart = \new Staff \with {
@@ -3687,6 +3691,7 @@ scoreADrumsPart = \new DrumStaff \with {
   }
   \paper {
     #(set-paper-size "letter")
+    page-count = #6
   }
 }
 %}
