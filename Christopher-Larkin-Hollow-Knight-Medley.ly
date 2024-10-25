@@ -186,6 +186,23 @@ scoreAPiccolo = \relative c'' {
 
   R1*4 c4.\f c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
   c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
+
+  c8.-.\f c16-.~8 c-.~16 c8.-. c4-. R1
+  c8.-. c16-.~8 c-.~16 c8.-. c4-. R1
+  af8.-. af16-.~8 af-.~16 af8.-. af4-. \mark\default R1*3
+  \tuplet 11/8 {c,16^\markup {\italic "solo ad lib"} \p\<(  b bf c cs d ef d ef e f }
+  \tuplet 11/8 {gf f e f gf g af g a bf b}
+
+  \mark\default
+  c8->\ff) r r c,-> r4 c-.-> c8-> r r c-> r4 c-.-> c8-> r r c-> r4 c-.->
+  \tuplet 11/8 {c16^\markup {\italic "solo ad lib"} \p\<(  b bf c cs d ef d ef e f }
+  \tuplet 11/8 {gf f e f gf g af g a bf b}
+  c8->\ff) r r c,-> r4 c-.-> c8-> r r c-> r4 c-.-> R1*2 \mark\default
+
+  R1*4 \mark\default c'4.\ff c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+
+  c4-. r8 c16 c c8 c16 c c c c c g8-^ g-^ r g-^ g4-^ c8-^ c-^ c4-^ r r2 \fine
 }
 
 scoreAFluteI = \relative c'' {
@@ -267,6 +284,28 @@ scoreAFluteI = \relative c'' {
 
   c,,4.\p c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
   c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. R1*4 \mark\default
+
+  c''8.-.\f c16-.~8 c-.~16 c8.-. c4-.
+  \tuplet 6/4 {af16( bf af g af g} \tuplet 6/4 {f g f ef f ef}
+  \tuplet 6/4 {f g f ef f ef} \tuplet 6/4 {d ef d cs d cs)}
+  c'8.-. c16-.~8 c-.~16 c8.-. c4-.
+  \tuplet 6/4 {ef,16( ff ef df ef df} \tuplet 6/4 {cf df cf bf cf bf}
+  \tuplet 6/4 {df ef df cf df cf} \tuplet 6/4 {bf cf bf af bf af)}
+  af'8.-. af16-.~8 af-.~16 af8.-. af4-. \mark\default R1*3
+  \tuplet 6/4 {g16\p\<( fs ef d ef fs} \tuplet 6/4 {g gs a gs bf c}
+  \tuplet 6/4 {d, ef f g gs a} \tuplet 6/4 {bf b c cs d ef}
+
+  \mark\default
+  g8->\ff) r r c,,-> r4 c-.-> c8-> r r c-> r4 c-.-> c8-> r r c-> r4 c-.->
+  \tuplet 6/4 {g'16\p\<( fs ef d ef fs} \tuplet 6/4 {g gs a gs bf c}
+  \tuplet 6/4 {d, ef f g gs a} \tuplet 6/4 {bf b c cs d ef}
+  g8->\ff) r r c,,-> r4 c-.-> c8-> r r c-> r4 c-.-> R1*2 \mark\default
+
+  R1*4 \mark\default c'4.\ff c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. r8 r4 \tuplet 6/4 {g,16\p\<( fs ef d ef fs} \tuplet 6/4 {g gs a gs bf c}
+  \tuplet 6/4 {d, ef f g gs a} \tuplet 6/4 {bf b c cs d ef}
+
+  g4-.)\ff r8 g16 g g8 g16 g g g g g g8-^ g-^ r g-^ g4-^ <g c>8-^ q-^ q4-^ r r2  \fine
 }
 
 scoreAFluteII = \relative c'' {
@@ -352,6 +391,28 @@ scoreAFluteII = \relative c'' {
 
   c,,4.\p c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} ef8-. ef-. r ef-. ef4-. ef8-. ef-.
   c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} ef8-. ef-. r f-. f4-. f8-. f-. R1*4 \mark\default
+
+  g'8.-.\f g16-.~8 g-.~16 g8.-. g4-.
+  \tuplet 6/4 {af16( bf af g af g} \tuplet 6/4 {f g f ef f ef}
+  \tuplet 6/4 {f g f ef f ef} \tuplet 6/4 {d ef d cs d cs)}
+  g'8.-. g16-.~8 g-.~16 g8.-. g4-.
+  \tuplet 6/4 {ef16( ff ef df ef df} \tuplet 6/4 {cf df cf bf cf bf}
+  \tuplet 6/4 {df ef df cf df cf} \tuplet 6/4 {bf cf bf af bf af)}
+  ef'8.-. ef16-.~8 ef-.~16 ef8.-. ef4-. \mark\default R1*3
+  \tuplet 6/4 {ef16\p\<( d c b c d} \tuplet 6/4 {ef e f fs f e}
+  \tuplet 6/4 {a bf a af a bf} \tuplet 6/4 {fs g gs a as b}
+
+  \mark\default
+  c8->\ff) r r g-> r4 g-.-> g8-> r r g-> r4 g-.-> g8-> r r g-> r4 g-.->
+  \tuplet 6/4 {ef16\p\<( d c b c d} \tuplet 6/4 {ef e f fs f e}
+  \tuplet 6/4 {a bf a af a bf} \tuplet 6/4 {fs g gs a as b}
+  c8->\ff) r r g-> r4 g-.-> g8-> r r g-> r4 g-.-> R1*2 \mark\default
+
+  R1*4 \mark\default c4.\ff c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. r8 r4 \tuplet 6/4 {ef,16\p\<( d c b c d} \tuplet 6/4 {ef e f fs f e}
+  \tuplet 6/4 {a bf a af a bf} \tuplet 6/4 {fs g gs a as b}
+
+  c4-.)\ff r8 c16 c c8 c16 c c c c c g8-^ g-^ r g-^ g4-^ g8-^ g-^ c4-^ r r2 \fine
 }
 
 scoreAOboe = \relative c'' {
@@ -422,12 +483,29 @@ scoreAOboe = \relative c'' {
   \tuplet 3/2 {ef4-. ef'-. ef,-.} \tuplet 3/2 {ef-. ef'-. g,-.} \mark\default
 
   R1*8 \mark\default
+
   R1*8 \mark\default
 
   c,4.\p c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
   c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
   c'4.\f c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
-  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  \mark\default
+
+  ef8.-.\f ef16-.~8 ef-.~16 ef8.-. ef4-. R1
+  ef8.-. ef16-.~8 ef-.~16 ef8.-. ef4-. R1
+  ef8.-. ef16-.~8 ef-.~16 ef8.-. ef4-. \mark\default R1*4 \mark\default
+
+  c8\f-> \repeat unfold 7 {c8-.} \repeat unfold 8 {af8-.}
+  \repeat unfold 8 {g8-.} \tuplet 3/2 {f4-. f'-. f,-.} \tuplet 3/2 {f-. f'-. f,-.}
+  \repeat unfold 8 {c'8-.} \repeat unfold 8 {af8-.}
+  \tuplet 3/2 {gf4-. gf'-. gf,-.} \tuplet 3/2 {gf-. gf'-. gf,-.}
+  \tuplet 3/2 {ef4-. ef'-. ef,-.} \tuplet 3/2 {ef-. ef'-. g,-.} \mark\default
+
+  R1*4 \mark\default c4.\ff c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+
+  c4-. r8 c16 c c8 c16 c c c c c g8-^ g-^ r g-^ g4-^ c8-^ c-^ c4-^ r r2 \fine
 }
 
 scoreABassoon = \relative c' {
@@ -531,6 +609,24 @@ scoreABassoon = \relative c' {
 
   R1*4 c,4-.\f c-. c-. c-. c8-. c-. r c-. c4-. c8-. c-.
   c4-. c-. c-. c-. af8-. af-. r f-. f4-. f8-. f-. \mark\default
+
+  c'4-.\ff c-. c-. c-.
+  af'8-.\mf\< g-. f-. ef-. f-. ef-. d-. df-.
+  c4-.\ff c-. c-. c-.
+  ef8-.\mf\< df-. cf-. bf-. df-. cf-. bf-. a-.
+  af4-.\ff af-. af-. af-. \mark\default R1*4 \mark\default
+
+  c8-.\f \repeat unfold 23 {c8-.} \tuplet 3/2 {f,4-. f'-. f,-.} \tuplet 3/2 {f-. f'-. f,-.}
+  \repeat unfold 16 {c'8-.} \tuplet 3/2 {gf4-. gf'-. gf,-.} \tuplet 3/2 {gf-. gf'-. gf,-.}
+  \tuplet 3/2 {ef4-. ef'-. ef,-.} \tuplet 3/2 {ef-. ef'-. g,-.}
+  \mark\default
+
+  c4-.\ff c-. c-. c-. c8-. c-. r c-. c4-. c8-. c-. c4-. c-. c-. c-.
+  af8-. af-. r f-. f4-. f8-. f-.
+  \mark\default c'4-.-^ c-.-^ c-.-^ c-.-^ c8-.-^ c-.-^ r c-.-^ c4-.-^ c8-.-^ c-.-^
+  c4-.-^ c-.-^ c-.-^ c-.-^ af8-.-^ af-.-^ r f-.-^ f4-.-^ f8-.-^ f-.-^
+
+  c'1\fp\< c8-^\ff c-^ r c-^ c4-^ c8-^ c-^ c4-^ r r2 \fine
 }
 
 scoreAEflatClarinet = \relative c'' {
@@ -607,6 +703,20 @@ scoreAEflatClarinet = \relative c'' {
 
   R1*4 c4.\f c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
   c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
+
+  c8.-.\f c16-.~8 c-.~16 c8.-. c4-. R1
+  c8.-. c16-.~8 c-.~16 c8.-. c4-. R1
+  af8.-. af16-.~8 af-.~16 af8.-. af4-. \mark\default R1*4 \mark\default
+
+  c'8->\f r r c,-> r4 c-.-> c8-> r r c-> r4 c-.-> c8-> r r c-> r4 c-.->
+  \tuplet 6/4 {g'16\p\<( fs ef d ef fs} \tuplet 6/4 {g gs a gs bf c}
+  \tuplet 6/4 {d, ef f g gs a} \tuplet 6/4 {bf b c cs d ef}
+  g8->\ff) r r c,,-> r4 c-.-> c8-> r r c-> r4 c-.-> R1*2 \mark\default
+
+  R1*4 \mark\default c4.\ff c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+
+  c4-. r8 c16 c c8 c16 c c c c c g8-^ g-^ r g-^ g4-^ c8-^ c-^ c4-^ r r2 \fine
 }
 
 scoreAClarinetI = \relative c'' {
@@ -692,6 +802,22 @@ scoreAClarinetI = \relative c'' {
   c16( bf g bf c bf g bf c bf g bf c bf g bf) \mark\default
 
   R1*8\mark\default
+
+  c8.-.\f c16-.~8 c-.~16 c8.-. c4-. R1
+  c8.-. c16-.~8 c-.~16 c8.-. c4-. R1
+  af8.-. af16-.~8 af-.~16 af8.-. af4-. \mark\default R1*4 \mark\default
+
+  c8-.\f c-. c-. c-> r4 c-.-> \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
+  \tuplet 6/4 {ef16\p\<( d c b c d} \tuplet 6/4 {ef e f fs f e}
+  \tuplet 6/4 {a bf a af a bf} \tuplet 6/4 {fs g gs a as b}
+  c8->\ff) c,-. c-. c-> r4 c-.-> c8-. c-. c-. c-> r4 c-.->
+  \tuplet 3/2 {c4-. c-. c-.} \tuplet 3/2 {bf-. bf-. bf-.}
+  \tuplet 3/2 {bf-. bf-. bf-.} \tuplet 3/2 {bf-. bf-. b-.} \mark\default
+
+  R1*4 \mark\default c4.\ff c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+
+  g'4-. r8 g16 g g8 g16 g g g g g g8-^ g-^ r g-^ g4-^ <g c>8-^ q-^ q4-^ r r2  \fine
 }
 
 scoreAClarinetII = \relative c'' {
@@ -774,6 +900,21 @@ scoreAClarinetII = \relative c'' {
   c16( bf g bf c bf g bf c bf g bf c bf g bf c8) r r4 r2 \mark\default
 
   R1*8 \mark\default
+
+  g8.-.\f g16-.~8 g-.~16 g8.-. g4-. R1
+  g8.-.\f g16-.~8 g-.~16 g8.-. g4-. R1
+  af8.-.\f af16-.~8 af-.~16 af8.-. af4-. \mark\default R1*4 \mark\default
+
+  g8-.\f g-. g-. g-> r4 g-.-> af8-. af-. af-. af-> r4 af-.-> g8-. g-. g-. g-> r4 g-.->
+  \tuplet 3/2 {bf4-. bf-. bf-.} \tuplet 3/2 {a-. a-. a-.}
+  g8-. g-. g-. g-> r4 g-.-> af8-. af-. af-. af-> r4 af-.->
+  \tuplet 3/2 {gf4-. gf-. gf-.} \tuplet 3/2 {gf-. gf-. gf-.}
+  \tuplet 3/2 {gf-. gf-. gf-.} \tuplet 3/2 {gf-. gf-. g-.} \mark\default
+
+  R1*4 \mark\default c4.\ff c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+
+  g4-. r8 g16 g g8 g16 g g g g g g8-^ g-^ r g-^ g4-^ g8-^ g-^ g4-^ r r2  \fine
 }
 
 scoreAClarinetIII = \relative c'' {
@@ -862,6 +1003,21 @@ scoreAClarinetIII = \relative c'' {
   c16( bf g bf c bf g bf c bf g bf c bf g bf) \mark\default
 
   R1*8 \mark\default
+
+  ef,8.-.\f ef16-.~8 ef-.~16 ef8.-. ef4-. R1
+  ef8.-. ef16-.~8 ef-.~16 ef8.-. ef4-. R1
+  ef8.-. ef16-.~8 ef-.~16 ef8.-. ef4-. \mark\default R1*4 \mark\default
+
+  e8-.\f e-. e-. e-> r4 e-.-> ef8-. ef-. ef-. ef-> r4 ef-.-> ef8-. ef-. ef-. ef-> r4 ef-.->
+  \tuplet 3/2 {c4-. c-. c-.} \tuplet 3/2 {c-. c-. c-.}
+  e8-. e-. e-. e-> r4 e-.-> ef8-. ef-. ef-. ef-> r4 ef-.->
+  \tuplet 3/2 {c4-. c-. c-.} \tuplet 3/2 {cs-. cs-. cs-.}
+  \tuplet 3/2 {cs-. cs-. cs-.} \tuplet 3/2 {cs-. cs-. d-.} \mark\default
+
+  R1*4 \mark\default c'4.\ff c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+
+  g4-. r8 g16 g g8 g16 g g g g g g8-^ g-^ r g-^ g4-^ g8-^ g-^ g4-^ r r2  \fine
 }
 
 scoreABassClarinet = \relative c'' {
@@ -952,6 +1108,20 @@ scoreABassClarinet = \relative c'' {
 
   R1*4 c4.\f c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
   c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
+
+  c4-.\ff c-. c-. c-. af'8-.\mf\< g-. f-. ef-. f-. ef-. d-. df-.
+  c4-.\ff c-. c-. c-.
+  ef8-.\mf\< df-. cf-. bf-. df-. cf-. bf-. a-.
+  af4-.\ff af-. af-. af-. \mark\default R1*4 \mark\default
+
+  c8-.\f \repeat unfold 23 {c8-.} \tuplet 3/2 {f,4-. f'-. f,-.} \tuplet 3/2 {f-. f'-. f,-.}
+  \repeat unfold 16 {c'8-.} \tuplet 3/2 {gf4-. gf'-. gf,-.} \tuplet 3/2 {gf-. gf'-. gf,-.}
+  \tuplet 3/2 {ef4-. ef'-. ef,-.} \tuplet 3/2 {ef-. ef'-. g,-.} \mark\default
+
+  R1*4 \mark\default c'4-.-^\ff c-.-^ c-.-^ c-.-^ c8-.-^ c-.-^ r c-.-^ c4-.-^ c8-.-^ c-.-^
+  c4-.-^ c-.-^ c-.-^ c-.-^ af8-.-^ af-.-^ r f-.-^ f4-.-^ f8-.-^ f-.-^
+
+  c4-. r8 c16 c c8 c16 c c c c c g'8-^ g-^ r g-^ g4-^ g8-^ g-^ c4-^ r r2 \fine
 }
 
 scoreAAltoSaxI = \relative c'' {
@@ -1047,6 +1217,25 @@ scoreAAltoSaxI = \relative c'' {
   c,4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} af'8-. af-. r bf-. bf4-. a8-. a-.
   c4.\f c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
   c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
+
+  g,8.-.\f g16-.~8 g-.~16 g8.-. g4-.
+  \tuplet 6/4 {af'16( bf af g af g} \tuplet 6/4 {f g f ef f ef}
+  \tuplet 6/4 {f g f ef f ef} \tuplet 6/4 {d ef d cs d cs)}
+  g8.-. g16-.~8 g-.~16 g8.-. g4-.
+  \tuplet 6/4 {ef'16( ff ef df ef df} \tuplet 6/4 {cf df cf bf cf bf}
+  \tuplet 6/4 {df ef df cf df cf} \tuplet 6/4 {bf cf bf af bf af)}
+  ef8.-. ef16-.~8 ef-.~16 ef8.-. ef4-. \mark\default R1*4 \mark\default
+
+  c'8-.\f c-. c-. c-> r4 c-.-> \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
+  \tuplet 3/2 {bf4-. bf-. bf-.} \tuplet 3/2 {a-. a-. a-.} \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
+  \tuplet 3/2 {c4-. c-. c-.} \tuplet 3/2 {df-. df-. df-.}
+  \tuplet 3/2 {ef-. ef-. ef-.} \tuplet 3/2 {gf-. gf-. g-.} \mark\default
+
+  R1*4 \mark\default c,4.\ff c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c4-. r
+  \tuplet 6/4 {b16\f\<( c cs d ds e} \tuplet 6/4 {fs g gs a as b}
+
+  c4-^)\ff r8 c16 c c8 c16 c c c c c c8-^ c-^ r c-^ c4-^ c8-^ c-^ c4-^ r r2 \fine
 }
 
 scoreAAltoSaxII = \relative c'' {
@@ -1127,13 +1316,31 @@ scoreAAltoSaxII = \relative c'' {
   \tuplet 3/2 {gf4-. gf-. gf-.} \tuplet 3/2 {gf-. gf-. gf-.}
   \tuplet 3/2 {gf-. gf-. gf-.} \tuplet 3/2 {gf-. gf-. g-.} \mark\default
 
-  R1*7 \tuplet 6/4 {b,,16\mf\<( c cs d ds e} \tuplet 6/4 {fs g gs a as b)} r2\f
-  \mark\default R1*8 \mark\default
+  R1*8 \mark\default R1*8 \mark\default
 
   c4.\p c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} ef8-. ef-. r ef-. ef4-. ef8-. ef-.
   c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} ef8-. ef-. r f-. f4-. f8-. f-.
   c4.\f c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
   c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
+
+  c,8.-.\f c16-.~8 c-.~16 c8.-. c4-.
+  \tuplet 6/4 {af'16( bf af g af g} \tuplet 6/4 {f g f ef f ef}
+  \tuplet 6/4 {f g f ef f ef} \tuplet 6/4 {d ef d cs d cs)}
+  c8.-. c16-.~8 c-.~16 c8.-. c4-.
+  \tuplet 6/4 {ef16( ff ef df ef df} \tuplet 6/4 {cf df cf bf cf bf}
+  \tuplet 6/4 {df ef df cf df cf} \tuplet 6/4 {bf cf bf af bf af)}
+  af'8.-. af16-.~8 af-.~16 af8.-. af4-. \mark\default R1*4 \mark\default
+
+  g8-.\f g-. g-. g-> r4 g-.-> af8-. af-. af-. af-> r4 af-.-> g8-. g-. g-. g-> r4 g-.->
+  \tuplet 3/2 {f4-. f-. f-.} \tuplet 3/2 {f-. f-. f-.}
+  g8-. g-. g-. g-> r4 g-.-> af8-. af-. af-. af-> r4 af-.->
+  \tuplet 3/2 {gf4-. gf-. gf-.} \tuplet 3/2 {gf-. gf-. gf-.}
+  \tuplet 3/2 {gf-. gf-. gf-.} \tuplet 3/2 {gf-. gf-. g-.} \mark\default
+
+  R1*4 \mark\default c,4.\ff c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+
+  c4-. r8 c16 c c8 c16 c c c c c g8-^ g-^ r g-^ g4-^ c8-^ c-^ c4-^ r r2 \fine
 }
 
 scoreATenorSax = \relative c'' {
@@ -1196,7 +1403,8 @@ scoreATenorSax = \relative c'' {
   \tuplet 3/2 {cs4-. cs-. cs-.} \tuplet 3/2 {cs-. cs-. cs-.}
   \tuplet 3/2 {cs-. cs-. cs-.} \tuplet 3/2 {cs-. cs-. d-.} \mark\default
 
-  R1*8 \mark\default
+  R1*7 \tuplet 6/4 {b,16\mf\<( c cs d ds e}
+  \tuplet 6/4 {fs g gs a as b)} r2\f \mark\default
 
   c4\f-. c8-. c-. c4-. c8-. c-. \repeat unfold 2 {af4-. af8-. af-.}
   \repeat unfold 2 {d4-. d8-. d-.} \repeat unfold 2 {f,4-. f8-. f-.}
@@ -1205,6 +1413,23 @@ scoreATenorSax = \relative c'' {
 
   R1*4 c4-.\f c-. c-. c-. c8-. c-. r c-. c4-. c8-. c-.
   c4-. c-. c-. c-. af8-. af-. r f-. f4-. f8-. f-. \mark\default
+
+  c'4-.\ff c-. c-. c-. af'8-.\mf\< g-. f-. ef-. f-. ef-. d-. df-.
+  c4-.\ff c-. c-. c-.
+  ef8-.\mf\< df-. cf-. bf-. df-. cf-. bf-. a-.
+  af4-.\ff af-. af-. af-. \mark\default R1*4 \mark\default
+
+  e8-.\f e-. e-. e-> r4 e-.-> ef8-. ef-. ef-. ef-> r4 ef-.-> ef8-. ef-. ef-. ef-> r4 ef-.->
+  \tuplet 3/2 {c4-. c-. c-.} \tuplet 3/2 {c-. c-. c-.}
+  e8-.\f e-. e-. e-> r4 e-.-> ef8-. ef-. ef-. ef-> r4 ef-.->
+  \tuplet 3/2 {cs4-. cs-. cs-.} \tuplet 3/2 {cs-. cs-. cs-.}
+  \tuplet 3/2 {cs-. cs-. cs-.} \tuplet 3/2 {cs-. cs-. d-.} \mark\default
+
+  R1*4 \mark\default c'4-.-^\ff c-.-^ c-.-^ c-.-^ c8-.-^ c-.-^ r c-.-^ c4-.-^ c8-.-^ c-.-^
+  c4-.-^ c-.-^ c-.-^ c-.-^ \tuplet 6/4 {b,16\mf\<( c cs d ds e}
+  \tuplet 6/4 {fs g gs a as b)} r2\f
+
+  r2 g\ff\< g8-^\ff g-^ r g-^ g4-^ c8-^ c-^ c4-^ r r2 \fine
 }
 
 scoreABaritoneSax = \relative c'' {
@@ -1296,6 +1521,20 @@ scoreABaritoneSax = \relative c'' {
 
   R1*4 c4-.\f c-. c-. c-. c8-. c-. r c-. c4-. c8-. c-.
   c4-. c-. c-. c-. af8-. af-. r f-. f4-. f8-. f-. \mark\default
+
+  c'4-.\ff c-. c-. c-. af'8-.\mf\< g-. f-. ef-. f-. ef-. d-. df-.
+  c4-.\ff c-. c-. c-.
+  ef8-.\mf\< df-. cf-. bf-. df-. cf-. bf-. a-.
+  af4-.\ff af-. af-. af-. \mark\default R1*4 \mark\default
+
+  c8-.\f \repeat unfold 23 {c8-.} \tuplet 3/2 {f,4-. f'-. f,-.} \tuplet 3/2 {f-. f'-. f,-.}
+  \repeat unfold 16 {c'8-.} \tuplet 3/2 {gf4-. gf'-. gf,-.} \tuplet 3/2 {gf-. gf'-. gf,-.}
+  \tuplet 3/2 {ef4-. ef'-. ef,-.} \tuplet 3/2 {ef-. ef'-. g,-.} \mark\default
+
+  R1*4 \mark\default c'4-.-^\ff c-.-^ c-.-^ c-.-^ c8-.-^ c-.-^ r c-.-^ c4-.-^ c8-.-^ c-.-^
+  c4-.-^ c-.-^ c-.-^ c-.-^ af8-.-^ af-.-^ r f-.-^ f4-.-^ f8-.-^ f-.-^
+
+  c1 c8-^ c-^ r c-^ c4-^ c8-^ c-^ c4-^ r r2 \fine
 }
 
 scoreATrumpetBbI = \relative c'' {
@@ -1373,6 +1612,19 @@ scoreATrumpetBbI = \relative c'' {
 
   c4.\p c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
   c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. c4-. r r2 R1*3 \mark\default
+
+  g'8.-.\f g16-.~8 g-.~16 g8.-. g4-. R1
+  g8.-. g16-.~8 g-.~16 g8.-. g4-. R1
+  af8.-. af16-.~8 af-.~16 af8.-. af4-. \mark\default R1*4 \mark\default
+
+  R1*8 \mark\default
+
+  c,4.\ff c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+
+  c4-. r8 c16 c c8 c16 c c c c c g'8-^ g-^ r g-^ g4-^ c8-^ c16-^ c-^ c4-^ r r2 \fine
 }
 
 scoreATrumpetBbII = \relative c'' {
@@ -1457,6 +1709,19 @@ scoreATrumpetBbII = \relative c'' {
   R1 af8-. af-. r bf-. bf4-. a8-. a-.
   c4.\f c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
   c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
+
+  c8.-.\f c16-.~8 c-.~16 c8.-. c4-. R1
+  c8.-. c16-.~8 c-.~16 c8.-. c4-. R1
+  ef8.-. ef16-.~8 ef-.~16 ef8.-. ef4-. \mark\default R1*4 \mark\default
+
+  R1*8 \mark\default
+
+  c4.\ff c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} af8-. af-. r bf-. bf4-. a8-. a-. \mark\default
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} af8-. af-. r bf-. bf4-. a8-. a-.
+
+  g4-. r8 g16 g g8 g16 g g g g g g8-^ g-^ r g-^ g4-^ g'8-^ g-^ g4-^ r r2 \fine
 }
 
 scoreAHornFI = \relative c' {
@@ -1531,6 +1796,27 @@ scoreAHornFI = \relative c' {
 
   R1*4 c,4.\f c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
   c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
+
+  g4-.\ff g-. g-. g-. af'8-.\mf\< g-. f-. ef-. f-. ef-. d-. df-.
+  c4-.\ff c-. c-. c-.
+  ef8-.\mf\< df-. cf-. bf-. df-. cf-. bf-. a-.
+  af4-.\ff af-. af-. af-.
+
+  \mark\default
+  af8-.\p\< g-. af-. bf-. bf-. af-. bf-. cf-. cf-. bf-. cf-. df-. df-. cf-. df-. d-.
+  ef-. df-. ef-. e-. e-. ef-. e-. f-. f-. ef-. f-. g-. g-. f-. g-. g-.\fff \mark\default
+
+  c,8-.\f \repeat unfold 23 {c8-.}
+  \tuplet 3/2 {bf4-. bf-. bf-.} \tuplet 3/2 {a-. a-. a-.} \repeat unfold 16 {c8-.}
+  \tuplet 3/2 {c4-. c-. c-.} \tuplet 3/2 {df-. df-. df-.}
+  \tuplet 3/2 {ef-. ef-. ef-.} \tuplet 3/2 {gf-. gf-. g-.} \mark\default
+
+  c,4.\ff c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+
+  r2 g'\ff\< g8-^\ff g-^ r g-^ g4-^ c8-^ c-^ c4-^ r r2 \fine
 }
 
 scoreAHornFII = \relative c' {
@@ -1615,6 +1901,28 @@ scoreAHornFII = \relative c' {
 
   R1*4 c4.\f c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
   c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
+
+  c4-.\ff c-. c-. c-. af'8-.\mf\< g-. f-. ef-. f-. ef-. d-. df-.
+  c4-.\ff c-. c-. c-.
+  ef8-.\mf\< df-. cf-. bf-. df-. cf-. bf-. a-.
+  af4-.\ff af-. af-. af-.
+
+  \mark\default
+  af8-.\p\< g-. af-. bf-. bf-. af-. bf-. cf-. cf-. bf-. cf-. df-. df-. cf-. df-. d-.
+  ef-. df-. ef-. e-. e-. ef-. e-. f-. f-. ef-. f-. g-. g-. f-. g-. g-.\fff \mark\default
+
+  g8-.\f \repeat unfold 23 {g8-.}
+  \tuplet 3/2 {f4-. f-. f-.} \tuplet 3/2 {f-. f-. f-.}
+  \repeat unfold 16 {g8-.}
+  \tuplet 3/2 {gf4-. gf-. gf-.} \tuplet 3/2 {gf-. gf-. gf-.}
+  \tuplet 3/2 {bf-. bf-. bf-.} \tuplet 3/2 {df-. df-. d-.} \mark\default
+
+  c4.\ff c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} af8-. af-. r bf-. bf4-. a8-. a-. \mark\default
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} af8-. af-. r bf-. bf4-. a8-. a-.
+
+  c1 c8-^ c-^ r c-^ c4-^ c8-^ c-^ c4-^ r r2 \fine
 }
 
 scoreATromboneI = \relative c {
@@ -1689,6 +1997,26 @@ scoreATromboneI = \relative c {
 
   R1*4 c,4-.\f c-. c-. c-. c8-. c-. r c-. c4-. c8-. c-.
   c4-. c-. c-. c-. af8-. af-. r f-. f4-. f8-. f-. \mark\default
+
+  c'4-.\ff c-. c-. c-. af'8-.\mf\< g-. f-. ef-. f-. ef-. d-. df-.
+  c4-.\ff c-. c-. c-.
+  ef8-.\mf\< df-. cf-. bf-. df-. cf-. bf-. a-.
+  af4-.\ff af-. af-. af-.
+
+  \mark\default
+  af8-.\p\< g-. af-. bf-. bf-. af-. bf-. cf-. cf-. bf-. cf-. df-. df-. cf-. df-. d-.
+  ef-. df-. ef-. e-. e-. ef-. e-. f-. f-. ef-. f-. g-. g-. f-. g-. g-.\fff \mark\default
+
+  c,8-.\f c-. c-. c-> r4 c-.-> \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
+  \tuplet 3/2 {bf4-. bf-. bf-.} \tuplet 3/2 {a-. a-. a-.}
+  \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
+  \tuplet 3/2 {c4-. c-. c-.} \tuplet 3/2 {df-. df-. df-.}
+  \tuplet 3/2 {ef-. ef-. ef-.} \tuplet 3/2 {gf-. gf-. g-.} \mark\default
+
+  R1*4 \mark\default c,4-.-^\ff c-.-^ c-.-^ c-.-^ c8-.-^ c-.-^ r c-.-^ c4-.-^ c8-.-^ c-.-^
+  c4-.-^ c-.-^ c-.-^ c-.-^ af8-.-^ af-.-^ r f-.-^ f4-.-^ f8-.-^ f-.-^
+
+  r2 g'\ff\< g8-^\ff g-^ r g-^ g4-^ c8-^ c-^ c4-^ r r2 \fine
 }
 
 scoreATromboneII = \relative c {
@@ -1760,6 +2088,26 @@ scoreATromboneII = \relative c {
 
   R1*4 g,,4-.\f g-. g-. g-. g8-. g-. r g-. g4-. g8-. g-.
   g4-. g-. g-. g-. af8-. af-. r af-. af4-. f8-. f-. \mark\default
+
+  g4-.\ff g-. g-. g-. af'8-.\mf\< g-. f-. ef-. f-. ef-. d-. df-.
+  g,4-.\ff g-. g-. g-.
+  ef'8-.\mf\< df-. cf-. bf-. df-. cf-. bf-. a-.
+  af4-.\ff af-. af-. af-.
+
+  \mark\default
+  af8-.\p\< g-. af-. bf-. bf-. af-. bf-. cf-. cf-. bf-. cf-. df-. df-. cf-. df-. d-.
+  ef-. df-. ef-. e-. e-. ef-. e-. f-. f-. ef-. f-. g-. g-. f-. g-. g-.\fff \mark\default
+
+  g,8-.\f g-. g-. g-> r4 g-.-> af8-. af-. af-. af-> r4 af-.-> g8-. g-. g-. g-> r4 g-.->
+  \tuplet 3/2 {f4-. f-. f-.} \tuplet 3/2 {f-. f-. f-.}
+  g8-. g-. g-. g-> r4 g-.-> af8-. af-. af-. af-> r4 af-.->
+  \tuplet 3/2 {gf4-. gf-. gf-.} \tuplet 3/2 {gf-. gf-. gf-.}
+  \tuplet 3/2 {gf-. gf-. gf-.} \tuplet 3/2 {gf-. gf-. g-.} \mark\default
+
+  R1*4 \mark\default g'4-.-^\ff g-.-^ g-.-^ g-.-^ g8-.-^ g-.-^ r g-.-^ g4-.-^ g8-.-^ g-.-^
+  g4-.-^ g-.-^ g-.-^ g-.-^ af8-.-^ af-.-^ r f-.-^ f4-.-^ f8-.-^ f-.-^
+
+  c1 c8-^ c-^ r c-^ c4-^ c8-^ c-^ c4-^ r r2 \fine
 }
 
 scoreAEuphonium = \relative c {
@@ -1857,6 +2205,27 @@ scoreAEuphonium = \relative c {
   c2 c4 d \tuplet 3/2 {f ef f} g2 \tuplet 3/2 {g4 f g} a f g1 \mark\default
 
   R1*4 c,,4-.\f \repeat unfold 15 {c4-.} \mark\default
+
+  c'8.-.\f c16-.~8 c-.~16 c8.-. c4-. R1
+  c8.-. c16-.~8 c-.~16 c8.-. c4-. R1
+  af8.-. af16-.~8 af-.~16 af8.-. af4-.
+
+  \mark\default
+  af,8-.\p\< g-. af-. bf-. bf-. af-. bf-. cf-. cf-. bf-. cf-. df-. df-. cf-. df-. d-.
+  ef-. df-. ef-. e-. e-. ef-. e-. f-. f-. ef-. f-. g-. g-. f-. g-. g-.\fff \mark\default
+
+  c8-.\f c-. c-. c-> r4 c-.-> \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
+  \tuplet 3/2 {bf4-. bf-. bf-.} \tuplet 3/2 {a-. a-. a-.}
+  \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
+  \tuplet 3/2 {c4-. c-. c-.} \tuplet 3/2 {df-. df-. df-.}
+  \tuplet 3/2 {ef-. ef-. ef-.} \tuplet 3/2 {gf-. gf-. g-.} \mark\default
+
+  c,4-.\ff c-. c-. c-. c8-. c-. r c-. c4-. c8-. c-.
+  c4-. c-. c-. c-. af8-. af-. r f-. f4-. f8-. f-.
+  \mark\default c'4-.-^ c-.-^ c-.-^ c-.-^ c8-.-^ c-.-^ r c-.-^ c4-.-^ c8-.-^ c-.-^
+  c4-.-^ c-.-^ c-.-^ c-.-^ af8-.-^ af-.-^ r f-.-^ f4-.-^ f8-.-^ f-.-^
+
+  c2\fff g'\< g8-^\ff g-^ r c,-^ c4-^ c'8-^ c-^ c4-^ r r2 \fine
 }
 
 scoreATuba = \relative c {
@@ -1949,6 +2318,25 @@ scoreATuba = \relative c {
   c2\ff c af af bf bf f' f c c f f ef ef g g \mark\default
 
   R1*4 c,4-.\f \repeat unfold 15 {c4-.} \mark\default
+
+  c'4-.\ff c-. c-. c-. R1
+  c4-. c-. c-. c-. R1
+  af4-. af-. af-. af-.
+
+  \mark\default
+  af8-.\p\< g-. af-. bf-. bf-. af-. bf-. cf-. cf-. bf-. cf-. df-. df-. cf-. df-. d-.
+  ef-. df-. ef-. e-. e-. ef-. e-. f-. f-. ef-. f-. g-. g-. f-. g-. g-.\fff \mark\default
+
+  c,8-.\f \repeat unfold 23 {c8-.} \tuplet 3/2 {f4-. f'-. f,-.} \tuplet 3/2 {f-. f'-. f,-.}
+  \repeat unfold 16 {c8-.} \tuplet 3/2 {gf'4-. gf'-. gf,-.} \tuplet 3/2 {gf-. gf'-. gf,-.}
+  \tuplet 3/2 {ef4-. ef'-. ef,-.} \tuplet 3/2 {ef-. ef'-. g,-.} \mark\default
+
+  c,4-.\ff c-. c-. c-. c8-. c-. r c-. c4-. c8-. c-.
+  c4-. c-. c-. c-. af8-. af-. r f-. f4-. f8-. f-.
+  \mark\default c'4-.-^ c-.-^ c-.-^ c-.-^ c8-.-^ c-.-^ r c-.-^ c4-.-^ c8-.-^ c-.-^
+  c4-.-^ c-.-^ c-.-^ c-.-^ af8-.-^ af-.-^ r f-.-^ f4-.-^ f8-.-^ f-.-^
+
+  c2\fff g'\< g8-^\ff g-^ r g,-^ g4-^ c8-^ c-^ c4-^ r r2 \fine
 }
 
 scoreATimpani = \relative c {
@@ -2026,6 +2414,20 @@ scoreATimpani = \relative c {
   R1*8 \mark\default
 
   R1*3 c1:32\p\< ~c\ff R1*3 \mark\default
+
+  R1*5 \mark\default R1*4 \mark\default
+
+  c8\f \repeat unfold 23 {c8} \tuplet 3/2 {f,4 f f} \tuplet 3/2 {f f f}
+  \repeat unfold 16 {c'8}
+  \repeat unfold 2 {\tuplet 3/2 {\repeat unfold 3 {df4-.}}}
+  \repeat unfold 2 {\tuplet 3/2 {\repeat unfold 3 {ef4-.}}} \mark\default
+
+  c4\ff c c c c8 c r c c4 c8 c
+  c4 c c c c8 c r c c4 c8 c \mark\default
+  c4-^ c-^ c-^ c-^ c8-^ c-^ r c-^ c4-^ c8-^ c-^
+  c4-^ c-^ c-^ c-^ c8-^ c-^ r c-^ c4-^ c8-^ c-^
+
+  c8 c r c c c16 c c c c c c8-^ c-^ r c-^ c4-^ c8-^ c-^ c4-^ r r2 \fine
 }
 
 scoreAGlockenspiel = \relative c'' {
@@ -2096,6 +2498,15 @@ scoreAGlockenspiel = \relative c'' {
   g1\ff^"Tub. Bells" af f2 bf, c1 ef f ef2 f g1 \mark\default
 
   R1*8 \mark\default
+
+  R1*5 \mark\default R1*4 \mark\default
+
+  c1^"Tub. Bells"\fff af g f2 a c1 af c,2 df ef gf \mark\default
+
+  c1 c8 c r c c4 c8 c c1 af8 af r bf bf4 a8 a \mark\default
+  c1 c8 c r c c4 c8 c c1 af8 af r bf bf4 a8 a
+
+  <g c,>8 q r q q q q q q-^ q-^ r q-^ q4-^ <g c>8-^ q-^ q4-^ r r2 \fine
 }
 
 scoreAXylo = \relative c' {
@@ -2168,6 +2579,21 @@ scoreAXylo = \relative c' {
   c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)}
   <c ef,>8 q r <c f,> q4 <c f,>8 q
   \mark\default
+
+  <c ef,>8.-.\f q16-.~8 q-.~16 q8.-. q4-. R1
+  <c ef,>8.-.\f q16-.~8 q-.~16 q8.-. q4-. R1
+  <af ef>8.-.\f q16-.~8 q-.~16 q8.-. q4-. \mark\default R1*4 \mark\default
+
+  c8-. \repeat unfold 7 {c8-.} \repeat unfold 8 {af8-.}
+  \repeat unfold 8 {g8-.} \tuplet 3/2 {f4-. f'-. f,-.} \tuplet 3/2 {f-. f'-. f,-.}
+  \repeat unfold 8 {c'8-.} \repeat unfold 8 {af8-.}
+  \tuplet 3/2 {gf4-. gf'-. gf,-.} \tuplet 3/2 {gf-. gf'-. gf,-.}
+  \tuplet 3/2 {ef4-. ef'-. ef,-.} \tuplet 3/2 {ef-. ef'-. g,-.} \mark\default
+
+  R1*4 \mark\default c4.\ff c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+
+  <g c,>8 q r q q g16\fff g g g g g q8-^\ff q-^ r q-^ q4-^ <g c>8-^ q-^ q4-^ r r2 \fine
 }
 
 scoreADrum = \drummode {
@@ -2204,55 +2630,55 @@ scoreADrum = \drummode {
 
   \section \sectionLabel "Hornet" \tempo "Jumpy" 4 = 145 \time 3/4
   \repeat volta 2 {
-    sn8^"Snare TODO Must redo all"\fp-> sn sn sn sn sn sn sn16 sn sn8 sn sn16 sn sn sn
-    sn8 sn sn sn sn16 sn sn sn sn8 sn16 sn sn8 sn sn4:32\p\<
-    sn8\fp sn sn sn sn sn sn sn16 sn sn8 sn sn16 sn sn sn
-    sn8\< sn sn sn sn16 sn sn8 sn sn sn sn sn16 sn sn8 \time 4/4 sn sn sn sn sn16 sn sn8 sn sn
-    \time 3/4 \mark\default sn8 sn sn sn sn sn16 sn sn8 sn sn sn16 sn sn8 sn sn sn sn sn sn sn16 sn
+    sn8^\markup {\italic "siempre piano"} \fp-> sn sn sn sn sn sn sn sn sn sn16 sn sn sn
+    sn8 sn sn sn sn sn sn sn sn sn sn4:32\p\<
+    sn8\fp sn sn sn sn sn sn sn sn8 sn sn16 sn sn sn
+    sn8->\< sn sn sn-> sn sn8 sn-> sn sn sn-> sn sn8 \time 4/4 sn-> sn sn sn-> sn sn8 sn-> sn
+    \time 3/4 \mark\default sn8 sn sn sn sn sn16 sn sn8 sn sn sn sn sn16 sn sn8 sn sn sn sn sn
     \tuplet 3/2 {sn8\f\> sn sn} \tuplet 3/2 {sn sn sn} \tuplet 3/2 {sn sn sn}
-    \mark\default sn8\p sn sn sn sn sn sn sn16 sn sn8 sn sn16 sn sn sn
-    sn8 sn sn sn16 sn sn8 sn sn sn16 sn sn8 sn sn sn16 sn
-    sn8 sn sn sn16 sn sn8 sn sn sn sn16 sn sn8 sn sn
+    \mark\default sn8\ppp sn sn sn sn sn sn sn sn8 sn sn16 sn sn sn
+    sn8 sn sn sn sn sn sn sn sn8 sn sn16 sn sn sn
+    sn8 sn sn sn sn sn sn sn sn8 sn sn16 sn sn sn
 
     \alternative {
       \volta 1 {
-        sn sn sn sn16 sn sn8 sn sn2.:32\<
+        sn8-> sn sn sn-> sn sn sn-> sn sn sn-> sn sn
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        sn8\fp sn sn sn16 sn sn8 sn sn sn sn sn16 sn sn8 sn
-        sn\< sn sn sn16 sn sn8 sn sn sn sn sn16 sn sn4:32
+        sn8 sn sn sn sn8 sn sn sn16 sn sn8 sn sn8 sn
+        sn\<-> sn sn sn-> sn8 sn sn-> sn sn-> sn sn4:32
         \mark\default sn8\fp\< sn sn sn sn sn sn sn sn sn sn4:32
-        sn8\ff sn sn\p sn4.:32\< sn8\ff sn sn\p sn4.:32\<
+        sn8\ff sn r sn4.:32\p\< sn8\ff sn r sn4.:32\p\<
         sn8\fp\< sn sn sn sn sn sn sn sn sn sn4:32
-        sn8\ff sn sn\p sn4.:32\< sn8\ff sn sn\p sn4.:32\<
+        sn8\ff sn r sn4.:32\p\< sn8\ff sn r sn4.:32\p\<
         sn8\fp\< sn sn sn sn sn sn sn sn sn sn4:32
         sn8\fp\< sn sn sn sn sn sn sn sn sn sn4:32
         sn8\fp\< sn sn sn sn sn sn sn sn sn sn4:32
         sn8\fp\< sn sn sn sn sn sn2.:32
-        \mark\default sn8\fp sn sn sn sn sn sn sn16 sn sn8 sn sn16 sn sn sn
-        sn8 sn sn sn sn16 sn sn sn sn8 sn16 sn sn8 sn sn16 sn sn8
-        sn sn sn sn sn sn sn sn16 sn sn8 sn sn16 sn sn8
-        sn8\< sn sn sn16 sn sn8 sn sn sn sn sn16 sn sn8 sn
-        \mark\default sn\fp sn sn sn sn16 sn sn sn sn8 sn sn sn sn16 sn sn sn
-        sn8 sn sn sn sn4:32 sn8 sn sn sn sn16 sn sn sn
-        sn8 sn sn sn sn4:32 sn8 sn sn sn sn16 sn sn sn
-        sn8 sn sn sn sn16 sn sn sn sn2.:32\fp\<
-        sn8\mf sn sn sn sn16 sn sn sn sn8 sn sn sn sn16 sn sn sn
-        sn sn sn8 sn sn sn4:32 sn8 sn sn sn sn16 sn sn sn
-        sn8 sn sn sn sn4:32 sn8 sn sn sn sn16 sn sn sn
-        sn\< sn sn8 sn sn sn sn sn16 sn sn8\fp\<~2
+        \mark\default sn8\fp sn sn sn sn sn sn sn sn8 sn sn16 sn sn sn
+        sn8 sn sn sn sn16 sn sn sn sn8 sn sn sn sn16 sn sn sn
+        sn8\fp sn sn sn sn sn sn sn sn8 sn sn16 sn sn sn
+        sn8 sn sn sn sn16 sn sn sn sn8 sn sn sn sn16 sn sn sn
+        \mark\default sn8\fp sn sn sn sn sn sn8 sn sn sn sn sn
+        sn8 sn sn sn sn sn sn8 sn sn sn16 sn sn16 sn sn sn
+        sn8 sn sn sn sn sn sn8 sn sn sn sn16 sn sn sn
+        sn8 sn sn sn sn sn sn2.:32\fp\<
+        sn8\mf sn sn sn sn sn sn8 sn sn sn sn sn
+        sn16 sn sn8 r sn4.:32 sn8 sn sn sn sn16 sn sn sn
+        sn8 sn r sn16 sn sn sn sn sn sn8 sn r sn16 sn sn sn sn sn
+        sn16\< sn sn8 r sn4.:32 sn16 sn sn8\fp\<~2:32
       }
       \volta 2 {
-        sn8\! sn sn sn16 sn sn8 sn sn2.:32\<
+        sn8\!-> sn sn sn-> sn8 sn sn2.:32\<
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        sn8\mf sn sn sn16 sn sn8 sn sn sn sn sn16 sn sn8 sn
-        sn sn sn sn16 sn sn8 sn sn sn sn sn16 sn sn4:32
+        sn8\mf sn sn sn sn8 sn sn sn sn sn sn8 sn
+        sn sn sn sn sn8 sn sn sn sn sn16 sn sn4:32
         sn8\fp\< sn sn sn sn sn sn sn sn sn sn16 sn sn sn
-        \mark\default sn8\fp\< sn sn sn sn sn sn sn sn sn sn16 sn sn sn
+        \mark\default sn8\fp\<-> sn sn sn-> sn sn sn-> sn sn sn sn16 sn sn sn
         sn8\fp\< sn sn sn sn sn sn sn sn sn sn16 sn sn sn
         sn8\fp\< sn sn sn sn sn sn sn sn sn sn16 sn sn sn
-        sn8\fp\< sn sn sn4.:32 sn8 sn sn sn sn16 sn sn sn
-        sn8\mp\< sn sn sn4.:32 sn8 sn sn sn sn16 sn sn sn
-        \mark\default sn8\mf\< sn sn sn4.:32 sn8 sn sn sn sn16 sn sn sn
+        sn8\fp\< sn sn sn sn sn sn8 sn sn sn sn16 sn sn sn
+        sn8\mp\< sn sn sn sn sn sn8 sn sn sn sn16 sn sn sn
+        \mark\default sn8\mf\< sn sn sn sn sn sn8 sn sn sn sn16 sn sn sn
         \override TextSpanner.bound-details.left.text = "rall."
         sn8\fp\<\startTextSpan sn sn sn sn sn sn sn sn sn sn sn
         sn sn sn sn sn sn sn\ff sn sn sn-^ sn-^ sn-^ R2.\fermata\stopTextSpan
@@ -2322,31 +2748,13 @@ scoreADrum = \drummode {
 
   <<
     {
-      \repeat unfold 4 {\repeat unfold 4 {sn8 \tuplet 3/2 {\repeat unfold 3 {sn16}}} sn8 sn r sn sn4 sn8 sn}
-    }
-    \\
-    {
-      \repeat unfold 4 {\repeat unfold 4 {bd4} bd8 bd r bd bd4 bd8 bd}
-    }
-  >>
-  \mark\default
+      \repeat unfold 4 {\repeat unfold 4 {sn8 \tuplet 3/2 {\repeat unfold 3 {sn16}}} sn8 sn r sn sn4 sn8 sn} \mark\default
 
-  <<
-    {
       sn4\f sn8 sn r sn sn sn16 sn sn4 sn8 sn r sn sn sn16 sn
       sn4 sn8 sn r sn sn sn16 sn sn4 sn8 sn \repeat unfold 8 {sn16}
       sn4\f sn8 sn r sn sn sn16 sn sn4 sn8 sn r sn sn16 sn sn sn
-      sn4 sn8 sn r sn sn sn16 sn sn4 sn8 sn \repeat unfold 8 {sn16}
-    }
-    \\
-    {
-      \repeat unfold 8 {bd2-> bd}
-    }
-  >>
-  \mark\default
+      sn4 sn8 sn r sn sn sn16 sn sn4 sn8 sn \repeat unfold 8 {sn16} \mark\default
 
-  <<
-    {
       sn8\mp^"Chains off or bongo" \tuplet 3/2 {\repeat unfold 3 {sn16}}
       \repeat unfold 3 {sn8 \tuplet 3/2 {\repeat unfold 3 {sn16}}} sn8 sn r sn sn4 sn8 sn
       sn8 \tuplet 3/2 {\repeat unfold 3 {sn16}}
@@ -2354,15 +2762,62 @@ scoreADrum = \drummode {
       sn8^"Chains on" \tuplet 3/2 {\repeat unfold 3 {sn16}}
       \repeat unfold 7 {sn8 \tuplet 3/2 {\repeat unfold 3 {sn16}}}
       sn8 \tuplet 3/2 {\repeat unfold 3 {sn16}}
-      \repeat unfold 3 {sn8 \tuplet 3/2 {\repeat unfold 3 {sn16}}} sn8 sn r sn:32\fp\<~2:32
+      \repeat unfold 3 {sn8 \tuplet 3/2 {\repeat unfold 3 {sn16}}} sn8 sn r sn:32\fp\<~2:32 \mark\default
+
+      \tuplet 4/3 {sn4\f sn sn sn} sn r2 sn:32\p\<
+      \tuplet 4/3 {sn4\f sn sn sn} sn r2 sn:32\p\<
+      \tuplet 4/3 {sn4\f sn sn sn} sn \mark\default sn1:32\pp\<~1:32~1:32~1:32
     }
     \\
     {
+      \repeat unfold 4 {\repeat unfold 4 {bd4} bd8 bd r bd bd4 bd8 bd}
+
+      \repeat unfold 8 {bd2-> bd}
+
       R1*3 bd1:32\p\< bd4\f \repeat unfold 3 {bd4} bd8 bd r bd bd4 bd8 bd
       \repeat unfold 4 {bd4} bd8 bd r bd bd4 bd8 bd
+
+      \repeat unfold 4 {bd4} r2 r4 bd
+      \repeat unfold 4 {bd4} r2 bd:32
+      \repeat unfold 4 {bd4} s1 s1 s1 s1
+    }
+  >> \mark\default
+
+  <<
+    {
+      sn4\f sn8 sn r sn sn sn16 sn sn4 sn8 sn r sn sn16 sn sn sn sn4 sn8 sn r sn sn sn16 sn
+      sn\p\< \repeat unfold 15 {sn} sn4\f sn8 sn r sn sn sn16 sn sn4 sn8 sn r sn sn4
+      \tuplet 3/2 {sn4-> sn sn} \tuplet 3/2 {sn4-> sn sn} \tuplet 3/2 {sn4-> sn sn} \tuplet 3/2 {sn4-> sn sn:32}
+
+      \repeat unfold 4 {sn8 \tuplet 3/2 {\repeat unfold 3 {sn16}}} sn8 sn r sn sn4 sn8 sn
+      \repeat unfold 4 {sn8 \tuplet 3/2 {\repeat unfold 3 {sn16}}} sn8 sn r sn sn4 sn8 sn
+      \mark\default
+      sn8-^\ff \tuplet 3/2 {\repeat unfold 3 {sn16}}
+      \repeat unfold 3 {sn8-^ \tuplet 3/2 {\repeat unfold 3 {sn16}}} sn8-^ sn r sn-^ sn4 sn8-^ sn
+      \repeat unfold 4 {sn8-^ \tuplet 3/2 {\repeat unfold 3 {sn16}}} s2 cymc2:32\laissezVibrer^\mf^\< <>^\ff
+    }
+    \\
+    {
+      bd4. bd8 r4 bd \repeat unfold 2 {bd4. bd8 r4 bd}
+      \repeat unfold 2 {\tuplet 3/2 {\repeat unfold 3 {bd4}}}
+      \repeat unfold 2 {bd4. bd8 r4 bd} \repeat unfold 4 {bd2}
+
+      \repeat unfold 4 {\repeat unfold 4 {bd4} bd8 bd r bd bd4 bd8 bd}
     }
   >>
-  \mark\default
+
+  R1
+
+  <<
+    {
+      sn8-^ sn-^ r sn-^ sn4-^ sn8-^ sn-^ sn4-^
+    }
+    \\
+    {
+      r2 r4 bd8-^ bd-^ bd4-^
+    }
+  >>
+  r r2 \fine
 }
 
 scoreARight = \relative c' {
@@ -2447,6 +2902,45 @@ scoreARight = \relative c' {
   \repeat percent 16 {e4->\p\> e e-> e <>\!}
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
+
+  c'8-.\f \repeat unfold 7 {c8-.} \repeat unfold 8 {af8-.}
+  \repeat unfold 8 {g8-.} \tuplet 3/2 {f4-. f'-. f,-.} \tuplet 3/2 {f-. f'-. f,-.}
+  \repeat unfold 8 {c'8-.} \repeat unfold 8 {af8-.}
+  \tuplet 3/2 {gf4-. gf'-. gf,-.} \tuplet 3/2 {gf-. gf'-. gf,-.}
+  \tuplet 3/2 {ef4-. ef'-. ef,-.} \tuplet 3/2 {ef-. ef'-. g,-.} \mark\default
+
+  R1*8 \mark\default
+
+  c16\fp( bf g bf c bf g bf c bf g bf c bf g bf
+  c bf g bf c bf g bf c bf g bf c bf g bf
+  c bf g bf c bf g bf c bf g bf c bf g bf
+  c bf g bf c bf g bf c bf g bf c bf g bf
+  c bf g bf c bf g bf c bf g bf c bf g bf
+  c bf g bf c bf g bf c bf g bf c bf g bf
+  c bf g bf c bf g bf c bf g bf c bf g bf
+  c bf g bf c bf g bf c bf g bf c bf g bf)
+  \mark\default
+
+  c4.\p c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4.\f c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  \mark\default
+
+  ef8.-.\f ef16-.~8 ef-.~16 ef8.-. ef4-. af8-.\mf\< g-. f-. ef-. f-. ef-. d-. df-.
+  ef8.-.\f ef16-.~8 ef-.~16 ef8.-. ef4-. ef8-.\mf\< df-. cf-. bf-. df-. cf-. bf-. a-.
+  ef'8.-.\f ef16-.~8 ef-.~16 ef8.-. ef4-. \mark\default R1*4 \mark\default
+
+  c8\f-> \repeat unfold 7 {c8-.} \repeat unfold 8 {af8-.}
+  \repeat unfold 8 {g8-.} \tuplet 3/2 {f4-. f'-. f,-.} \tuplet 3/2 {f-. f'-. f,-.}
+  \repeat unfold 8 {c'8-.} \repeat unfold 8 {af8-.}
+  \tuplet 3/2 {gf4-. gf'-. gf,-.} \tuplet 3/2 {gf-. gf'-. gf,-.}
+  \tuplet 3/2 {ef4-. ef'-. ef,-.} \tuplet 3/2 {ef-. ef'-. g,-.} \mark\default
+
+  R1*4 \mark\default c4.\ff c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+
+  c4-. r8 c16 c c8 c16 c c c c c g'8-^ g-^ r g-^ g4-^ c8-^ c-^ c4-^ r r2 \fine
 }
 
 scoreALeft = \relative c, {
@@ -2548,6 +3042,40 @@ scoreALeft = \relative c, {
   }
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor
+
+  c8-.\f c-. c-. c-> r4 c-.-> \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
+  \tuplet 3/2 {bf4-. bf-. bf-.} \tuplet 3/2 {a-. a-. a-.}
+  \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
+  \tuplet 3/2 {c4-. c-. c-.} \tuplet 3/2 {df-. df-. df-.}
+  \tuplet 3/2 {ef-. ef-. ef-.} \tuplet 3/2 {gf-. gf-. g-.} \mark\default
+
+  R1*4 \repeat unfold 2 {c,4-. c-. c-. c-. c8-. c-. r c-. c4-. c8-. c-.} \mark\default
+
+  c2\ff c4 d ef2 d4 c \tuplet 3/2 {d4 ef d} \tuplet 3/2 {d ef d} c1
+  c2 c4 d \tuplet 3/2 {f ef f} g2 \tuplet 3/2 {g4 f g} a f g1 \mark\default
+
+  R1*4 c,,4-.\f \repeat unfold 15 {c4-.} \mark\default
+
+  c'8.-.\f c16-.~8 c-.~16 c8.-. c4-. R1
+  c8.-. c16-.~8 c-.~16 c8.-. c4-. R1
+  af8.-. af16-.~8 af-.~16 af8.-. af4-.
+
+  \mark\default
+  af,8-.\p\< g-. af-. bf-. bf-. af-. bf-. cf-. cf-. bf-. cf-. df-. df-. cf-. df-. d-.
+  ef-. df-. ef-. e-. e-. ef-. e-. f-. f-. ef-. f-. g-. g-. f-. g-. g-.\fff \mark\default
+
+  c8-.\f c-. c-. c-> r4 c-.-> \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
+  \tuplet 3/2 {bf4-. bf-. bf-.} \tuplet 3/2 {a-. a-. a-.}
+  \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
+  \tuplet 3/2 {c4-. c-. c-.} \tuplet 3/2 {df-. df-. df-.}
+  \tuplet 3/2 {ef-. ef-. ef-.} \tuplet 3/2 {gf-. gf-. g-.} \mark\default
+
+  c,4-.\ff c-. c-. c-. c8-. c-. r c-. c4-. c8-. c-.
+  c4-. c-. c-. c-. af8-. af-. r f-. f4-. f8-. f-.
+  \mark\default c'4-.-^ c-.-^ c-.-^ c-.-^ c8-.-^ c-.-^ r c-.-^ c4-.-^ c8-.-^ c-.-^
+  c4-.-^ c-.-^ c-.-^ c-.-^ af8-.-^ af-.-^ r f-.-^ f4-.-^ f8-.-^ f-.-^
+
+  c2\fff g'\< g8-^\ff g-^ r c,-^ c4-^ c'8-^ c-^ c4-^ r r2 \fine
 }
 
 scoreAPiccoloPart = \new Staff \with {
