@@ -203,26 +203,27 @@ scoreAPiccolo = \relative c'' {
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
-  \time 7/8 d4( a') a8( g f) \time 3,3,3 9/8 g( f e) f( e d) e( d c)
-  \time 7/8 d4( a) a4.~ \time 9/8 2~4. r4
+  \time 7/8 d4\mf( a') a8( g f) \time 3,3,3 9/8 g( f e) f( e d) e( d c)
+  \time 7/8 d4( a) a4.\>~ \time 9/8 2~4. r4\!
 
   \mark\default
   \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
   \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
-  \time 7/8 d4-. d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. b-.
+  \time 7/8 d4-.\mp\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. cs-.
 
-  \time 7/8 a4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
+  \time 7/8 d4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
+
+  \mark\default \time 4/4
+  d,16(\p e f g a4-.) d,16( e f g a4-.) d,16( e f g a4-.) d,16( e f g a4-.)
+  d,16( e f g a4-.) b16( a g f e4-.) b'16( a g f e4-.) g16( f e d c4-.)
+  d16( e f g a4-.) d,16( e f g a4-.) d,16( e f g a4-.) d,16( e f g a4-.)
 
   \mark\default
-  \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
-  \time 7/8 R1*7/8 \time 9/8 R1*9/8
+  d,16( e f g a4-.) d,16( e f g a4-.) d,16( e f g a4-.) d,16( e f g a4-.)
+  d,16( e f g a4-.) d,16( e f g a4-.) d,16( e f g a4-.) d,16( e f g a4-.)
+  d,16( e f g a4-.) d,16( e f g a4-.) d,16( e f g a4-.) f16( g a b c4-.)
 
-  \mark\default
-  \time 7/8 R1*7/8 \time 9/8 R1*9/8
-  \time 7/8 R1*7/8 \time 9/8 R1*9/8
-  \time 7/8 R1*7/8 \time 9/8 R1*9/8
-
-  \time 2/4 R2
+  \time 2/4 a'4-.-^ r
 
   \grace {bf32\f( b}
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
@@ -341,7 +342,7 @@ scoreAFluteI = \relative c'' {
 
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
-  \time 7/8 d,4( a') a8( g f) \time 3,3,3 9/8 g( f e) f( e d) e( d c)
+  \time 7/8 d,4(\f a') a8( g f) \time 3,3,3 9/8 g( f e) f( e d) e( d c)
   \time 7/8 d4( a') a4.~ \time 9/8 2~4. r4
   \time 7/8 d,4( a') a8( g f) \time 3,3,3 9/8 g( f e) f( e d) e( d c)
   \time 7/8 d4( a) a4.~ \time 9/8 2~4. r4
@@ -349,7 +350,7 @@ scoreAFluteI = \relative c'' {
   \mark\default
   \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
   \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
-  \time 7/8 d8\f-. a-. d-. a-. e'-. f-. e-. d-. a-. d-. a-. cs-. d-. e-. d-. a-. d-. a-. e'-. f-. e-.
+  \time 7/8 d8\f-.\< a-. d-. a-. e'-. f-. e-. d-. a-. d-. a-. cs-. d-. e-. d-. a-. d-. a-. e'-. f-. e-.
   \time 3,3,3 9/8 g-. a-. g-. a-. b-. a-. b-. c-. cs-.
 
   \time 7/8 d4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
@@ -492,7 +493,7 @@ scoreAFluteII = \relative c'' {
 
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
-  \time 7/8 a,4( e') e4 c8( \time 9/8 d4-.) b8( c4-.) a8( b4-.) g8(
+  \time 7/8 a,4(\f e') e4 c8( \time 9/8 d4-.) b8( c4-.) a8( b4-.) g8(
   \time 7/8 a4 e') e4.~\time 9/8 2~4. r4
   \time 7/8 a,4( e') e4 c8( \time 9/8 d4-.) b8( c4-.) a8( b4-.) g8(
   \time 7/8 a4 e) e4.~\time 9/8 2~4. r4
@@ -500,7 +501,7 @@ scoreAFluteII = \relative c'' {
   \mark\default
   \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
   \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
-  \time 7/8 d'8\f-. a-. d-. a-. e'-. f-. e-. d-. a-. d-. a-. cs-. d-. e-. d-. a-. d-. a-. e'-. f-. e-.
+  \time 7/8 d'8\f-.\< a-. d-. a-. e'-. f-. e-. d-. a-. d-. a-. cs-. d-. e-. d-. a-. d-. a-. e'-. f-. e-.
   \time 3,3,3 9/8 g-. a-. g-. a-. b-. a-. b-. c-. cs-.
 
   \time 7/8 d4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
@@ -630,7 +631,7 @@ scoreAOboe = \relative c'' {
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
   \mark\default
 
-  \time 7/8 d4( a') a8( g f) \time 3,3,3 9/8 g( f e) f( e d) e( d c)
+  \time 7/8 d4\f( a') a8( g f) \time 3,3,3 9/8 g( f e) f( e d) e( d c)
   \time 7/8 d4( a') a4.~ \time 9/8 2~4. r4
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
   \time 7/8 d,4( a') a8( g f) \time 3,3,3 9/8 g( f e) f( e d) e( d c)
@@ -642,20 +643,21 @@ scoreAOboe = \relative c'' {
   \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
   \time 7/8 d8\f-. a-. d-. a-. e'-. f-. e-. d-. a-. d-. a-. c-. d-. e-. d-. a-. d-. a-. e'-. f-. e-.
   \time 3,3,3 9/8 f-. e-. d-. e-. d-. c-. d-. c-. d-.
-  \time 7/8 d4-. d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. b
+  \time 7/8 d4-.\mp\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. cs-.
 
-  \time 7/8 a4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
+  \time 7/8 d4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
+
+  \mark\default \time 4/4
+  d,4-.\p a'16( g f e d4-.) a'16( g f e d4-.) a'16( g f e d4-.) a'16( g f e
+  d4-.) a'16( g f e d4-.) c'16( b a g f4-.) a16( g f e d4-.) f16( e d c
+  d4-.) a'16( g f e d4-.) a'16( g f e d4-.) a'16( g f e d4-.) a'16( g f e
 
   \mark\default
-  \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
-  \time 7/8 R1*7/8 \time 9/8 R1*9/8
+  d4-.) a'16( g f e d4-.) a'16( g f e d4-.) a'16( g f e d4-.) a'16( g f e
+  d4-.) a'16( g f e d4-.) a'16( g f e d4-.) a'16( g f e d4-.) a'16( g f e
+  d4-.) a'16( g f e d4-.) a'16( g f e d4-.) e16( f g a f4-.) g16( a b c)
 
-  \mark\default
-  \time 7/8 R1*7/8 \time 9/8 R1*9/8
-  \time 7/8 R1*7/8 \time 9/8 R1*9/8
-  \time 7/8 R1*7/8 \time 9/8 R1*9/8
-
-  \time 2/4 R2
+  \time 2/4 d4-.-> r
 
   \grace {bf,32\f( b}
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
@@ -794,7 +796,7 @@ scoreABassoon = \relative c' {
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
   \mark\default
 
-  \time 7/8 a'4( e') e4 c8( \time 9/8 d4-.) b8( c4-.) a8( b4-.) g8(
+  \time 7/8 a'4\f( e') e4 c8( \time 9/8 d4-.) b8( c4-.) a8( b4-.) g8(
   \time 7/8 a4 e') e4.~\time 9/8 2~4. r4
   \time 7/8 a,4( e') e4 c8( \time 9/8 d4-.) b8( c4-.) a8( b4-.) g8(
   \time 7/8 a4 e) e4.~\time 9/8 2~4. r4
@@ -804,26 +806,27 @@ scoreABassoon = \relative c' {
   \time 7/8 a4 e) e4.~\time 9/8 2~4. r4
 
   \mark\default
-  \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
   \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
-  \time 7/8 d4-. d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. b
+  \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
+  \time 7/8 d4-.\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. a-.
 
   \time 7/8 a4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \mark\default
-  \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
-  \time 7/8 R1*7/8 \time 9/8 R1*9/8
+  \time 7/8 d,4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
+  \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
+  \time 7/8 bf4-.-> r bf4.-.-> \time 9/8 c4-.-> r4 c4.-.-> c4-.->
 
   \mark\default
-  \time 7/8 R1*7/8 \time 9/8 R1*9/8
-  \time 7/8 R1*7/8 \time 9/8 R1*9/8
-  \time 7/8 R1*7/8 \time 9/8 R1*9/8
+  \time 7/8 bf4-.-> r bf4.-.-> \time 9/8 c4-.-> r4 c4.-.-> c4-.->
+  \time 7/8 bf4-.-> r bf4.-.-> \time 9/8 c4-.-> r4 c4.-.-> c4-.->
+  \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
 
   \time 2/4 R2
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
 
-  c,8-.\f \repeat unfold 23 {c8-.} \tuplet 3/2 {f,4-. f'-. f,-.} \tuplet 3/2 {f-. f'-. f,-.}
+  c8-.\f \repeat unfold 23 {c8-.} \tuplet 3/2 {f,4-. f'-. f,-.} \tuplet 3/2 {f-. f'-. f,-.}
   \repeat unfold 16 {c'8-.} \tuplet 3/2 {gf4-. gf'-. gf,-.} \tuplet 3/2 {gf-. gf'-. gf,-.}
   \tuplet 3/2 {ef4-. ef'-. ef,-.} \tuplet 3/2 {ef-. ef'-. g,-.} \mark\default
 
@@ -914,53 +917,53 @@ scoreAEflatClarinet = \relative c'' {
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
-  \time 7/8 d4-.->\mf r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
-  \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.-> \mark\default
+  \time 7/8 d4-.->\mp d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
+  \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.-> \mark\default
 
-  \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
-  \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
-  \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
-  \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
-  \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
+  \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
+  \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
+  \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
+  \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
+  \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
 
   \mark\default
-  \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
-  \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
-  \time 7/8 bf4-.-> r bf4.-.-> \time 9/8 c4-.-> r4 c4.-.-> c4-.->
-  \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
-  \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
-  \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
+  \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
+  \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
+  \time 7/8 bf4-.-> bf-. bf-.-> bf8-. \time 9/8 c4-.-> c4-. c4-.-> c8-. c4-.->
+  \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
+  \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
+  \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
   \mark\default
 
-  \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4.-.-> d4.-.-> d4.-.->
-  \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
-  \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4.-.-> d4.-.-> d4.-.->
-  \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
-  \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4.-.-> d4.-.-> d4.-.->
-  \time 7/8 d4-.-> r d4.-.-> \time 9/8 e4-.-> r4 e4.-.-> e4-.->
-  \time 7/8 d4-.-> r d4.-.-> \time 9/8 e4.-.-> e4.-.-> e4.-.->
-  \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
+  \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d8-. d4-.-> d8-. d4-.-> d8-.
+  \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
+  \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d8-. d4-.-> d8-. d4-.-> d8-.
+  \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
+  \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d8-. d4-.-> d8-. d4-.-> d8-.
+  \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 e4-.-> e4-. e4-.-> e8-. e4-.->
+  \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 e4-.-> e8-. d4-.-> d8-. c4-.-> c8-.
+  \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
 
   \mark\default
   \time 7/8 d8\f-. a-. d-. a-. e'-. f-. e-. d-. a-. d-. a-. c-. d-. e-. d-. a-. d-. a-. e'-. f-. e-.
   \time 3,3,3 9/8 f-. e-. d-. e-. d-. c-. d-. c-. d-.
-  \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
-  \time 7/8 d4-. d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. b
+  \time 7/8 d4-.\mp d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
+  \time 7/8 d4-.\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. e-.
 
-  \time 7/8 d,4-.->\mf r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
-  \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
-
-  \mark\default
-  \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
-  \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
-  \time 7/8 bf4-.-> r bf4.-.-> \time 9/8 c4-.-> r4 c4.-.-> c4-.->
+  \time 7/8 d4-.->\mp d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
+  \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
 
   \mark\default
-  \time 7/8 bf4-.-> r bf4.-.-> \time 9/8 c4-.-> r4 c4.-.-> c4-.->
-  \time 7/8 bf4-.-> r bf4.-.-> \time 9/8 c4-.-> r4 c4.-.-> c4-.->
-  \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
+  \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
+  \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
+  \time 7/8 bf4-.-> bf-. bf-.-> bf8-. \time 9/8 c4-.-> c4-. c4-.-> c8-. c4-.->
 
-  \time 2/4 d4-.-> r
+  \mark\default
+  \time 7/8 bf4-.-> bf-. bf-.-> bf8-. \time 9/8 c4-.-> c4-. c4-.-> c8-. c4-.->
+  \time 7/8 bf4-.-> bf-. bf-.-> bf8-. \time 9/8 c4-.-> c4-. c4-.-> c8-. c4-.->
+  \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
+
+  \time 2/4 R2
 
   \grace {bf'32\f( b}
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
@@ -1062,7 +1065,7 @@ scoreAClarinetI = \relative c'' {
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
-  \time 7/8 a4-.->\mf a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
+  \time 7/8 a4-.->\mp a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.-> \mark\default
 
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 b4-.-> b4-. b4-.-> b8-. b4-.->
@@ -1081,9 +1084,9 @@ scoreAClarinetI = \relative c'' {
 
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 b4-.-> b8-. a4-.-> a8-. g4-.-> g8-.
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
-  \time 7/8 d,4( a') a8( g f) \time 3,3,3 9/8 g( f e) f( e d) e( d c)
+  \time 7/8 d,4(\f a') a8( g f) \time 3,3,3 9/8 g( f e) f( e d) e( d c)
   \time 7/8 d4( a) a4. ~ \time 9/8 2~4. r4
-  \time 7/8 a'4-.-> a-. a-.-> a8-. \time 9/8 b4-.-> b8-. a4-.-> a8-. g4-.-> g8-.
+  \time 7/8 a'4-.->\mp a-. a-.-> a8-. \time 9/8 b4-.-> b8-. a4-.-> a8-. g4-.-> g8-.
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 b4-.-> b8-. a4-.-> a8-. g4-.-> g8-.
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
@@ -1092,9 +1095,9 @@ scoreAClarinetI = \relative c'' {
   \time 7/8 a4-. a-. b4.-. a4-. a-. gs4.-. a4-. a-. b4.-. \time 9/8 c-. b-. r
   \time 7/8 d8\f-. a-. d-. a-. e'-. f-. e-. d-. a-. d-. a-. c-. d-. e-. d-. a-. d-. a-. e'-. f-. e-.
   \time 3,3,3 9/8 f-. e-. d-. e-. d-. c-. d-. c-. d-.
-  \time 7/8 d4-. d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. b
+  \time 7/8 d4-.\mp\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. e-.
 
-  \time 7/8 a,4-.->\mf a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
+  \time 7/8 a,4-.->\mp a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
 
   \mark\default
@@ -1213,7 +1216,7 @@ scoreAClarinetII = \relative c'' {
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
-  \time 7/8 g4-.->\mf g-. g-.-> g8-. \time 9/8 g4-.-> g4-. g4-.-> g8-. g4-.->
+  \time 7/8 g4-.->\mp g-. g-.-> g8-. \time 9/8 g4-.-> g4-. g4-.-> g8-. g4-.->
   \time 7/8 g4-.-> g-. g-.-> g8-. \time 9/8 g4-.-> g4-. g4-.-> g8-. g4-.-> \mark\default
 
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 b4-.-> b4-. b4-.-> b8-. b4-.->
@@ -1243,10 +1246,10 @@ scoreAClarinetII = \relative c'' {
   \mark\default
   \time 7/8 a4-. a-. b4.-. a4-. a-. gs4.-. a4-. a-. b4.-. \time 9/8 c-. b-. r
   \time 7/8 a4-. a-. b4.-. a4-. a-. gs4.-. a4-. a-. b4.-. \time 9/8 c-. b-. r
-  \time 7/8 d4-. d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. b
+  \time 7/8 d4-.\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. cs,-.
 
-  \time 7/8 g,4-.->\mf g-. g-.-> g8-. \time 9/8 g4-.-> g4-. g4-.-> g8-. g4-.->
-  \time 7/8 g4-.-> g-. g-.-> g8-. \time 9/8 g4-.-> g4-. g4-.-> g8-. g4-.->
+  \time 7/8 a4-.->\mp a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
+  \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
 
   \mark\default
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 b4-.-> b4-. b4-.-> b8-. b4-.->
@@ -1369,7 +1372,7 @@ scoreAClarinetIII = \relative c'' {
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
-  \time 7/8 d4-.->\mf d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
+  \time 7/8 d4-.->\mp d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.-> \mark\default
 
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
@@ -1399,9 +1402,9 @@ scoreAClarinetIII = \relative c'' {
   \mark\default
   \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
   \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
-  \time 7/8 d4-. d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. b
+  \time 7/8 d4-.\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. a
 
-  \time 7/8 d,4-.->\mf d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
+  \time 7/8 d,4-.->\mp d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
 
   \mark\default
@@ -1528,7 +1531,7 @@ scoreABassClarinet = \relative c'' {
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
-  \time 7/8 d4-.->\mf d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
+  \time 7/8 d4-.->\mp d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.-> \mark\default
 
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
@@ -1558,9 +1561,9 @@ scoreABassClarinet = \relative c'' {
   \mark\default
   \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
   \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
-  \time 7/8 d4-. d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. b-.
+  \time 7/8 d4-.\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. e-.
 
-  \time 7/8 d,4-.->\mf d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
+  \time 7/8 d4-.->\mp d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
 
   \mark\default
@@ -1685,7 +1688,7 @@ scoreAAltoSaxI = \relative c'' {
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
-  \time 7/8 d,4-.->\mf d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
+  \time 7/8 d,4-.->\mp d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.-> \mark\default
 
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
@@ -1715,10 +1718,10 @@ scoreAAltoSaxI = \relative c'' {
   \mark\default
   \time 7/8 d8\f-. a-. d-. a-. e'-. f-. e-. d-. a-. d-. a-. c-. d-. e-. d-. a-. d-. a-. e'-. f-. e-.
   \time 3,3,3 9/8 f-. e-. d-. e-. d-. c-. d-. c-. d-.
-  \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
-  \time 7/8 d4-. d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. b-.
+  \time 7/8 d4-.\mp d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
+  \time 7/8 d4-.\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. cs,-.
 
-  \time 7/8 d,4-.->\mf d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
+  \time 7/8 d4-.->\mp d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
 
   \mark\default
@@ -1841,7 +1844,7 @@ scoreAAltoSaxII = \relative c'' {
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
-  \time 7/8 a,4-.->\mf a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
+  \time 7/8 a,4-.->\mp a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.-> \mark\default
 
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 b4-.-> b4-. b4-.-> b8-. b4-.->
@@ -1871,9 +1874,9 @@ scoreAAltoSaxII = \relative c'' {
   \mark\default
   \time 7/8 a4-. a-. b4.-. a4-. a-. gs4.-. a4-. a-. b4.-. \time 9/8 c-. b-. r
   \time 7/8 a4-. a-. b4.-. a4-. a-. gs4.-. a4-. a-. b4.-. \time 9/8 c-. b-. r
-  \time 7/8 a4-. a-. b4.-. a4-. a-. gs4.-. a4-. a-. b4.-. \time 9/8 e-. d-. cs-.
+  \time 7/8 a4-.\< a-. b4.-. a4-. a-. gs4.-. a4-. a-. b4.-. \time 9/8 e-. d-. cs-.
 
-  \time 7/8 a4-.->\mf a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
+  \time 7/8 a4-.->\mp a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
 
   \mark\default
@@ -1978,7 +1981,7 @@ scoreATenorSax = \relative c'' {
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
-  \time 7/8 g,4-.->\mf g-. g-.-> g8-. \time 9/8 g4-.-> g4-. g4-.-> g8-. g4-.->
+  \time 7/8 g,4-.->\mp g-. g-.-> g8-. \time 9/8 g4-.-> g4-. g4-.-> g8-. g4-.->
   \time 7/8 g4-.-> g-. g-.-> g8-. \time 9/8 g4-.-> g4-. g4-.-> g8-. g4-.-> \mark\default
 
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
@@ -2007,10 +2010,10 @@ scoreATenorSax = \relative c'' {
   \mark\default
   \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
   \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
-  \time 7/8 d4-. d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. b-.
+  \time 7/8 d4-.\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. a-.
 
-  \time 7/8 g4-.->\mf g-. g-.-> g8-. \time 9/8 g4-.-> g4-. g4-.-> g8-. g4-.->
-  \time 7/8 g4-.-> g-. g-.-> g8-. \time 9/8 g4-.-> g4-. g4-.-> g8-. g4-.->
+  \time 7/8 a4-.->\mp a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
+  \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
 
   \mark\default
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
@@ -2138,7 +2141,7 @@ scoreABaritoneSax = \relative c'' {
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
-  \time 7/8 d,4-.->\mf d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
+  \time 7/8 d,4-.->\mp d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.-> \mark\default
 
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
@@ -2168,9 +2171,9 @@ scoreABaritoneSax = \relative c'' {
   \mark\default
   \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
   \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
-  \time 7/8 d4-. d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. b-.
+  \time 7/8 d4-.\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. e-.
 
-  \time 7/8 d,4-.->\mf d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
+  \time 7/8 d,4-.->\mp d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
 
   \mark\default
@@ -2291,7 +2294,7 @@ scoreATrumpetBbI = \relative c'' {
   \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \mark\default
-  \time 7/8 a4(\ff d) d4.->~ \time 9/8 2\> r4.\! r4 \time 7/8 r4. a8 b(-> c b) \time 9/8 a2->\> r4.\! r4
+  \time 7/8 a4(\ff d) d4.->~ \time 9/8 2\> r4.\! r4 \time 7/8 r4. a8\f b(-> c b) \time 9/8 a2->\> r4.\! r4
   \time 7/8 g4(\ff d') c4.\> \time 9/8 R1*9/8\!
   \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
@@ -2302,18 +2305,18 @@ scoreATrumpetBbI = \relative c'' {
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
-  \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 r2 a4.~4
+  \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 r2 a4.\f\<~4
 
   \mark\default
+  \time 7/8 a4\ff-. r r4. R1*7/8*2 \time 9/8 R1*9/8
   \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
-  \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
-  \time 7/8 d,4\f-. d-. e8-. f-. e-. d4\f-. d-. cs8-. d-. e-. d4\f-. d-. e8-. f-. e-.
+  \time 7/8 d,4\f-. d-. e8-. f-. e-. d4-. d-. cs8-. d-. e-. d4-. d-. e8-. f-. e-.
   \time 3,3,3 9/8 g-. a-. g-. a-. b-. a-. b-. c-. cs-.
 
-  \time 7/8 d4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
+  \time 7/8 d4\ff -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \mark\default
-  \time 7/8 a4(\ff d) d4.->~ \time 9/8 2\> r4.\! r4 \time 7/8 r4. a8 b(-> c b) \time 9/8 a2->\> r4.\! r4
+  \time 7/8 a4(\ff d) d4.->~ \time 9/8 2\> r4.\! r4 \time 7/8 r4. a8\f b(-> c b) \time 9/8 a2->\> r4.\! r4
   \time 7/8 g4(\ff d') c4.\> \time 9/8 R1*9/8\!
 
   \mark\default
@@ -2440,15 +2443,15 @@ scoreATrumpetBbII = \relative c'' {
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
-  \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 d2~4.~4
+  \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 d2\f\<~4.~4
 
   \mark\default
+  \time 7/8 d4\ff-. r r4. R1*7/8*2 \time 9/8 R1*9/8
   \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
-  \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
-  \time 7/8 d4\f-. d-. e8-. f-. e-. d4\f-. d-. cs8-. d-. e-. d4\f-. d-. e8-. f-. e-.
+  \time 7/8 d4\f-. d-. e8-. f-. e-. d4-. d-. cs8-. d-. e-. d4-. d-. e8-. f-. e-.
   \time 3,3,3 9/8 g-. a-. g-. a-. b-. a-. b-. c-. cs-.
 
-  \time 7/8 d4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
+  \time 7/8 d4\ff -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \mark\default
   \time 7/8 d,4(\ff a') a4.->~ \time 9/8 2 b4 c8(b4-> ) \time 7/8 a2..\> \time 9/8 R1*9/8\!
@@ -2557,7 +2560,7 @@ scoreAHornFI = \relative c' {
 
   \mark\default
   \time 7/8 d4(\ff a') a4.->~ \time 9/8 2 b4 c8(b4-> ) \time 7/8 a2..\> \time 9/8 R1*9/8\!
-  \time 7/8 d,4(\ff a') a4.->~ \time 9/8 2 g4 a8(g4-> ) \time 7/8 f2 e8 f e \time 9/8 d2->~4. r4\!
+  \time 7/8 d,4(\ff a') a4.->~ \time 9/8 2 g4 a8(g4-> ) \time 7/8 f2 e8 f e \time 9/8 d2->\>~4. r4\!
   \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \mark\default
@@ -2576,7 +2579,7 @@ scoreAHornFI = \relative c' {
   \mark\default
   \time 7/8 R1*7/8*3\! \time 9/8 R1*9/8
   \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
-  \time 7/8 d,2..\< e g \time 9/8 g4.-.\ff a-. b-.
+  \time 7/8 d,2..\< e g \time 9/8 g4.-.\ff a-. cs-.
 
   \time 7/8 a4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
@@ -2705,7 +2708,7 @@ scoreAHornFII = \relative c' {
 
   \mark\default
   \time 7/8 d4(\ff a') a4.->~ \time 9/8 2 b4 c8(b4-> ) \time 7/8 a2..\> \time 9/8 R1*9/8\!
-  \time 7/8 d,4(\ff a') a4.->~ \time 9/8 2 g4 a8(g4-> ) \time 7/8 f2 e8 f e \time 9/8 d2->~4. r4\!
+  \time 7/8 d,4(\ff a') a4.->~ \time 9/8 2 g4 a8(g4-> ) \time 7/8 f2 e8 f e \time 9/8 d2->\>~4. r4\!
   \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \mark\default
@@ -2849,7 +2852,7 @@ scoreATromboneI = \relative c {
 
   \mark\default
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
-  \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 c,2->~4.\< \time 9/8 b2 b'4.~4
+  \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 c,2->\<~4. \time 9/8 b2 b'4.~4
   \time 7/8 d4-.-^\ff r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \mark\default \time 7/8 R1*7/8 \time 9/8 R1*9/8
@@ -2861,7 +2864,7 @@ scoreATromboneI = \relative c {
   \mark\default
   \time 7/8 R1*7/8*3\! \time 9/8 R1*9/8
   \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
-  \time 7/8 d,2..\< e g \time 9/8 g4.-.\ff a-. b-.
+  \time 7/8 d,2..\< e g \time 9/8 g4.-.\ff a-. e-.
 
   \time 7/8 a4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
@@ -3048,7 +3051,7 @@ scoreATromboneIII = \relative c {
   \global
   % Music goes here
   \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
-  R1*9 \mark \default R1*16 \mark\default R1*8 e'1\p\<~1 f1~1 e1\f\> R1*2\!
+  R1*9 \mark \default R1*16 \mark\default R1*8 e1\p\<~1 f1~1 e1\f\> R1*2\!
   \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
   R2.*4 \mark\default R2.*16
 
@@ -3111,7 +3114,7 @@ scoreATromboneIII = \relative c {
   \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \mark\default \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
-  \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 d2->\<~4. \time 9/8 d2 d4.~4
+  \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 d'2->\<~4. \time 9/8 d2 d4.~4
   \time 7/8 g4-.-^\ff r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \mark\default \time 7/8 R1*7/8 \time 9/8 R1*9/8
@@ -3261,7 +3264,7 @@ scoreAEuphonium = \relative c {
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
-  \time 7/8 a4-.->\mf a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
+  \time 7/8 a4-.->\mp a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.-> \mark\default
 
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 b4-.-> b4-. b4-.-> b8-. b4-.->
@@ -3291,9 +3294,10 @@ scoreAEuphonium = \relative c {
   \mark\default
   \time 7/8 a4-. a-. b4.-. a4-. a-. gs4.-. a4-. a-. b4.-. \time 9/8 c-. b-. r
   \time 7/8 a4-. a-. b4.-. a4-. a-. gs4.-. a4-. a-. b4.-. \time 9/8 c-. b-. r
-  \time 7/8 a4-. a-. b4.-. a4-. a-. gs4.-. a4-. a-. b4.-. \time 9/8 g-. a-. b-.
+  \time 7/8 d,4\f-. d-. e8-. f-. e-. d4-. d-. cs8-. d-. e-. d4-. d-. e8-. f-. e-.
+  \time 3,3,3 9/8 g-. a-. g-. a-. b-. a-. b-. c-. cs-.
 
-  \time 7/8 a4-.->\mf a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
+  \time 7/8 a4-.->\mp a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
 
   \mark\default
@@ -3457,7 +3461,7 @@ scoreATuba = \relative c {
   \mark\default
   \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
   \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
-  \time 7/8 d4-. d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 e-. d-. cs-.
+  \time 7/8 d4-.\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 e-. d-. cs-.
 
   \time 7/8 d4-.->\mf r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
   \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
@@ -3831,9 +3835,12 @@ scoreAXylo = \relative c' {
   \time 7/8 <a d,>4-.-> q-. q-.-> q8-. \time 9/8 q4-.-> q4-. q4-.-> q8-. q4-.->
 
   \mark\default
-  \time 7/8 <a d,>4-. q-. <b e,>4.-. <a d,>4-. q-. <gs c,>4.-. <a d,>4-. q-. <b e,>4.-. \time 9/8 <c f,>-. <b e,>-. r
-  \time 7/8 <a d,>4-. q-. <b e,>4.-. <a d,>4-. q-. <gs c,>4.-. <a d,>4-. q-. <b e,>4.-. \time 9/8 <c f,>-. <b e,>-. r
-  \time 7/8 <a d,>4-. q-. <b e,>4.-. <a d,>4-. q-. <gs cs,>4.-. <a d,>4-. q-. <b e,>4.-. \time 9/8 <g e>-. <a d,>-. <b cs,>-.
+  \time 7/8 <a d,>4-. q-. <b e,>4.-. <a d,>4-. q-. <gs c,>4.-.
+  <a d,>4-. q-. <b e,>4.-. \time 9/8 <c f,>-. <b e,>-. r
+  \time 7/8 <a d,>4-. q-. <b e,>4.-. <a d,>4-. q-. <gs c,>4.-.
+  <a d,>4-. q-. <b e,>4.-. \time 9/8 <c f,>-. <b e,>-. r
+  \time 7/8 <a d,>4-.\< q-. <b e,>4.-. <a d,>4-. q-. <gs cs,>4.-.
+  <a d,>4-. q-. <b e,>4.-. \time 9/8 <g e>-. <a d,>-. <a cs,>-.
 
   \time 7/8
   <a d,>4-.->\mf q-. q-.-> q8-. \time 9/8 q4-.-> q4-. q4-.-> q8-. q4-.->
@@ -4026,7 +4033,7 @@ scoreADrum = \drummode {
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
-  \time 7/8 sn8\mp-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn sn sn sn-> sn16 sn sn8 sn-> sn
+  \time 7/8 sn8\p-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn sn sn sn-> sn16 sn sn8 sn-> sn
   \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn sn sn sn-> sn16 sn sn8 sn-> sn \mark\default
 
   \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn sn sn sn-> sn16 sn sn8 sn-> sn
@@ -4056,7 +4063,7 @@ scoreADrum = \drummode {
   \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
   \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
 
-  \time 7/8 sn8\mp-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn sn sn sn-> sn16 sn sn8 sn-> sn
+  \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn sn sn sn-> sn16 sn sn8 sn-> sn
   \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn sn sn sn-> sn16 sn sn8 sn-> sn
 
   \mark\default
@@ -4248,7 +4255,7 @@ scoreARight = \relative c' {
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
   \time 7/8
-  <a d,>4-.->\mf q-. q-.-> q8-. \time 9/8 q4-.-> q4-. q4-.-> q8-. q4-.->
+  <a d,>4-.->\mp q-. q-.-> q8-. \time 9/8 q4-.-> q4-. q4-.-> q8-. q4-.->
   \time 7/8 q4-.-> q-. q-.-> q8-. \time 9/8 q4-.-> q4-. q4-.-> q8-. q4-.-> \mark\default
 
   \time 7/8 q4-.-> q-. q-.-> q8-. \time 9/8 <b d,>4-.-> q4-. q-.-> q8-. q4-.->
@@ -4276,9 +4283,12 @@ scoreARight = \relative c' {
   \time 7/8 <a d,>4-.-> q-. q-.-> q8-. \time 9/8 q4-.-> q4-. q4-.-> q8-. q4-.->
 
   \mark\default
-  \time 7/8 <a d,>4-. q-. <b e,>4.-. <a d,>4-. q-. <gs c,>4.-. <a d,>4-. q-. <b e,>4.-. \time 9/8 <c f,>-. <b e,>-. r
-  \time 7/8 <a d,>4-. q-. <b e,>4.-. <a d,>4-. q-. <gs c,>4.-. <a d,>4-. q-. <b e,>4.-. \time 9/8 <c f,>-. <b e,>-. r
-  \time 7/8 <a d,>4-. q-. <b e,>4.-. <a d,>4-. q-. <gs cs,>4.-. <a d,>4-. q-. <b e,>4.-. \time 9/8 <g e>-. <a d,>-. <b cs,>-.
+  \time 7/8 <a d,>4-. q-. <b e,>4.-. <a d,>4-. q-. <gs c,>4.-.
+  <a d,>4-. q-. <b e,>4.-. \time 9/8 <c f,>-. <b e,>-. r
+  \time 7/8 <a d,>4-. q-. <b e,>4.-. <a d,>4-. q-. <gs c,>4.-.
+  <a d,>4-. q-. <b e,>4.-. \time 9/8 <c f,>-. <b e,>-. r
+  \time 7/8 <a d,>4-. q-. <b e,>4.-. <a d,>4-. q-. <gs cs,>4.-.
+  <a d,>4-. q-. <b e,>4.-.\time 9/8 <g e>-. <a d,>-. <a cs,>-.
 
   \time 7/8
   <a d,>4-.->\mf q-. q-.-> q8-. \time 9/8 q4-.-> q4-. q4-.-> q8-. q4-.->
@@ -4445,7 +4455,7 @@ scoreALeft = \relative c, {
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
-  \time 7/8 d4-.->\mf r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
+  \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
   \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.-> \mark\default
 
   \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
