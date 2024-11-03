@@ -93,22 +93,22 @@ greenPathBassPreB = {
 greenPathBassB = {
   \override TextSpanner.bound-details.left.text = "poco rit."
   {e8-.\ff e16-. e-. r e-. e8-. e-. e-.} {b8-. b16-. b-. r b-. b8-. b16-. b-. b8-.}
-  {c,8-. c16-. c-. r c-. c8-. c-. c-.} {a'8-. a16-. a-. r a-. a8-. a16-. a-. a8-.}
+  {c8-. c16-. c-. r c-. c8-. c-. c-.} {a8-. a16-. a-. r a-. a8-. a16-. a-. a8-.}
   {b8-. b16-. b-. r b-. b8-. b-. b-.} {g8-. g16-. g-. r g-. g8-. g-. g-.}
   {a8-. a16-. a-. r a-. a8-. a-. a-.} {c8-. c16-. c-. r c-. c8-. c-. c-.}
   \mark\default {e8-. e16-. e-. r e-. e8-. e-. e-.} {b8-. b16-. b-. r b-. b8-. b16-. b-. b8-.}
-  {c,8-. c16-. c-. r c-. c8-. c-. c-.} {a'8-. a16-. a-. r a-. a8-. a16-. a-. a8-.}
+  {c8-. c16-. c-. r c-. c8-. c-. c-.} {a8-. a16-. a-. r a-. a8-. a16-. a-. a8-.}
   {b8-. b16-. b-. r b-. b8-. b-. b-.} {g8-. g16-. g-. r g-. g8-. g16-. g-. g8-.}
   {a8-.\startTextSpan a16-. a-. r a-. a8-. a-. a-.} {c8-. c16-. c-. r c-. c8.-. c16-. c-. c-.\stopTextSpan}
 }
 greenPathBassC = {
   \override TextSpanner.bound-details.left.text = "poco rit."
   {b8-.\ff b16-. b-. r b-. b8-. b-. b-.} {fs8-. fs16-. fs-. r fs-. fs8-. fs16-. fs-. fs8-.}
-  {g,8-. g16-. g-. r g-. g8-. g-. g-.} {e'8-. e16-. e-. r e-. e8-. e16-. e-. e8-.}
+  {g8-. g16-. g-. r g-. g8-. g-. g-.} {e8-. e16-. e-. r e-. e8-. e16-. e-. e8-.}
   {fs8-. fs16-. fs-. r fs-. fs8-. fs-. fs-.} {d8-. d16-. d-. r d-. d8-. d-. d-.}
   {e8-. e16-. e-. r e-. e8-. e-. e-.} {e8-. e16-. e-. r f-. f8-. f-. f-.}
   {\mark\default fs8-. fs16-. fs-. r fs-. fs8-. fs-. fs-.} {fs8-. fs16-. fs-. r fs-. fs8-. fs16-. fs-. fs8-.}
-  {fs,8-. fs16-. fs-. r fs-. fs8-. fs-. fs-.} {fs'8-. fs16-. fs-. r fs-. fs8-. fs16-. fs-. fs8-.}
+  {fs8-. fs16-. fs-. r fs-. fs8-. fs-. fs-.} {fs8-. fs16-. fs-. r fs-. fs8-. fs16-. fs-. fs8-.}
   {fs8-. fs16-. fs-. r fs-. fs8-. fs-. fs-.} {fs8-. fs16-. fs-. r fs-. fs8-. fs16-. fs-. fs8-.}
   {fs8-.\startTextSpan fs16-. fs-. r fs-. fs8-. fs-. fs-.}
   {fs8-. fs16-. fs-. r fs-. fs8.-. fs16-. fs-. fs-.\stopTextSpan}
@@ -183,7 +183,7 @@ scoreAPiccolo = \relative c'' {
   R1*4 \mark\default
   R1*5 r2 r8 e4.\pp~1~1 \mark\default
   R1*8 \mark\default
-  R1*2 r2 b2\pp\<~1\> R1*6\! r2 e\pp\<~1\>~1\<~1\> R1*2\!
+  R1*2 r2 b2\pp\<~1\> R1*6\! r2 e\pp\<~1\>~1\<~1\> R1\! R1\fermata R1\fermata
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
@@ -223,7 +223,7 @@ scoreAPiccolo = \relative c'' {
   d,16( e f g a4-.) d,16( e f g a4-.) d,16( e f g a4-.) d,16( e f g a4-.)
   d,16( e f g a4-.) d,16( e f g a4-.) d,16( e f g a4-.) f16( g a b c4-.)
 
-  \time 2/4 a'4-.-^ r
+  \time 2/4 r4 d4-.-^\fermata
 
   \grace {bf32\f( b}
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
@@ -320,7 +320,7 @@ scoreAFluteI = \relative c'' {
   R1*4 \mark\default
   R1*6 r4 g,2.\pp~1 \mark\default
   R1 r4 fs2.~1 R1*2 r2 d\pp~1~1 \mark\default
-  e1\pp~1~1~1 R1*6 r2 b\pp\<~1\>~1\<~1\> R1\! R1
+  e1\pp~1~1~1 R1*6 r2 b\pp\<~1\>~1\<~1\> R1\! R1\fermata R1\fermata
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
@@ -365,7 +365,7 @@ scoreAFluteI = \relative c'' {
   d,16( e f g a4-.) d,16( e f g a4-.) d,16( e f g a4-.) d,16( e f g a4-.)
   d,16( e f g a4-.) d,16( e f g a4-.) d,16( e f g a4-.) f16( g a b c4-.)
 
-  \time 2/4 a'4-.-^ r
+  \time 2/4 r4 a'4-.-^\fermata
 
   \grace {bf,32\f( b}
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
@@ -472,7 +472,7 @@ scoreAFluteII = \relative c'' {
   R1*4 \mark\default
   R1*8 \mark\default
   R1*5 r4. cs,8\pp\>~2~1\!~1 \mark\default
-  R1*2 r2 b2\pp\<~1\> R1*6\! r2 e\pp\<~1\>~1\<~1\> R1\! R1
+  R1*2 r2 b2\pp\<~1\> R1*6\! r2 e\pp\<~1\>~1\<~1\> R1\! R1\fermata R1\fermata
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
@@ -516,7 +516,7 @@ scoreAFluteII = \relative c'' {
   d4-.) a'16( g f e d4-.) a'16( g f e d4-.) a'16( g f e d4-.) a'16( g f e
   d4-.) a'16( g f e d4-.) a'16( g f e d4-.) e16( f g a f4-.) g16( a b c)
 
-  \time 2/4 d4-.-> r
+  \time 2/4 r4 d4-.->\fermata
 
   \grace {f,32\f( fs}
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
@@ -614,7 +614,7 @@ scoreAOboe = \relative c'' {
   R1*2 r2 r8 b'4.\p\<~1\> \mark\default
   R1*5\! r4 g2.\p\>~1~1 \mark\default
   R1*5\! r4 b,2.\pp~1~1 \mark\default
-  e1\pp\<~1\>~1\<~1\> R1*4\! r2 e~1~2 r R1*3 r2 r4 as,~1\pp\>
+  e1\pp\<~1\>~1\<~1\> R1*4\! r2 e~1~2 r R1*3 r2 r4 as,\pp\>~1\fermata R1\!\fermata
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
@@ -657,7 +657,7 @@ scoreAOboe = \relative c'' {
   d4-.) a'16( g f e d4-.) a'16( g f e d4-.) a'16( g f e d4-.) a'16( g f e
   d4-.) a'16( g f e d4-.) a'16( g f e d4-.) e16( f g a f4-.) g16( a b c)
 
-  \time 2/4 d4-.-> r
+  \time 2/4 r4 d4-.->\fermata
 
   \grace {bf,32\f( b}
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
@@ -779,7 +779,7 @@ scoreABassoon = \relative c' {
   e'4.\f^\markup{\italic "solo"} fs8 g4. a8 b2 cs~2 ~8 d b a b1
   r4 e\< d4. e8 fs2 \grace {e16( fs g} fs4) d cs2 \grace {d16( cs} b4.) a8 b1\>
   b8\f d b d e2~4 b8 d b d e fs g4. fs8 e2\>
-  r4\! r8 d8\mf\< e c b a b1\f\> \grace {b16( a g} fs2)~8 e\mp( a4) a4. g16 fs e4 ds~1\>
+  r4\! r8 d8\mf\< e c b a b1\f\> \grace {b16( a g} fs2)~8 e\mp( a4) a4. g16 fs e4 ds~1\>\fermata R1\!\fermata
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
@@ -822,7 +822,7 @@ scoreABassoon = \relative c' {
   \time 7/8 bf4-.-> r bf4.-.-> \time 9/8 c4-.-> r4 c4.-.-> c4-.->
   \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
 
-  \time 2/4 R2
+  \time 2/4 r4 d4-^-.\fermata
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
 
@@ -913,7 +913,7 @@ scoreAEflatClarinet = \relative c'' {
   R1*2 r2 r8 fs4.\p\<~1\> \mark\default
   R1*8\! \mark\default
   R1*8 \mark\default
-  R1*16
+  R1*15 R1\fermata R1\fermata
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
@@ -963,7 +963,7 @@ scoreAEflatClarinet = \relative c'' {
   \time 7/8 bf4-.-> bf-. bf-.-> bf8-. \time 9/8 c4-.-> c4-. c4-.-> c8-. c4-.->
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
 
-  \time 2/4 R2
+  \time 2/4 r4 d4-.-^\fermata
 
   \grace {bf'32\f( b}
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
@@ -994,7 +994,7 @@ scoreAEflatClarinet = \relative c'' {
   R1*4 \mark\default c4.\mf c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
   c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
 
-  c4-. r8 c16 c c8 c16 c c c c c g8-^ g-^ r g-^ g4-^ c8-^ c-^ c4-^ r r2 \fine
+  c4-. r8 c16 c c8 c16 c c c c c g'8-^ g-^ r g-^ g4-^ c8-^ c-^ c4-^ r r2 \fine
 }
 
 scoreAClarinetI = \relative c'' {
@@ -1061,7 +1061,7 @@ scoreAClarinetI = \relative c'' {
   R1*8 \mark\default
   fs,4.\mf^\markup {\italic "solo"} g8 a2 \grace {fs16 g fs} e2 b' \grace {cs16 d cs} b1 r4 d2 cs8 d
   b2. a8 b g4 fs8 g e2 ~1\> ~1\! \mark\default
-  R1*16
+  R1*15 R1\fermata R1\fermata
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
@@ -1110,7 +1110,7 @@ scoreAClarinetI = \relative c'' {
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 e4-.-> e4-. e4-.-> e8-. e4-.->
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
 
-  \time 2/4 a4-.-> r
+  \time 2/4 r4 a4-.-^\fermata
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
 
@@ -1212,7 +1212,7 @@ scoreAClarinetII = \relative c'' {
   e4-. e-. fs8-. g-. a4-. r4 r8 g-. fs4-. b8.-. as16-. b4-. g8-. fs-. a4-. r R1 \mark\default
   e4->\p\> e e-> e e4->\p e8 ds~8 e->~8 ds e4-> e e-> e e4-> e e-> g
   e4-> e e-> e e4-> e e-> e8 ds e4-> b8-. a-. b4-. r e4->\p\> e e-> e \mark\default
-  R1*15\! R1
+  R1*15\! R1\fermata R1\fermata
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
@@ -1261,7 +1261,7 @@ scoreAClarinetII = \relative c'' {
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 e4-.-> e4-. e4-.-> e8-. e4-.->
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
 
-  \time 2/4 g4-.-> r
+  \time 2/4 r4 g4-.-^\fermata
 
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
@@ -1317,7 +1317,7 @@ scoreAClarinetIII = \relative c'' {
   e,-. r e-. g-. e-. r fs-. r fs-. r fs-. r
   e-. r e-. e-. e-. r e-.\< r fs-. g-. b-. e-. \mark\default e4.-.\! r4. R2.*13
 
-  \relative c {\greenPathPatternA  \greenPathPatternB}
+  \relative c' {\greenPathPatternA  \greenPathPatternB}
 
   \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
@@ -1368,7 +1368,7 @@ scoreAClarinetIII = \relative c'' {
   e4-. e-. fs8-. e-. a4-. r4 r8 g-. fs4-. g8.-. fs16-. e4-. g8-. fs-. e4-. r R1 \mark\default
   e4->\p\> e e-> e e4->\p e8 ds~8 e->~8 ds e4-> e e-> e e4-> e e-> g
   e4-> e e-> e e4-> e e-> e8 ds e4-> b8-. a-. b4-. r e4->\p\> e e-> e \mark\default
-  R1*15\! R1
+  R1*15\! R1\fermata R1\fermata
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
@@ -1417,7 +1417,7 @@ scoreAClarinetIII = \relative c'' {
   \time 7/8 bf4-.-> bf-. bf-.-> bf8-. \time 9/8 c4-.-> c4-. c4-.-> c8-. c4-.->
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
 
-  \time 2/4 d4-.-> r
+  \time 2/4 r4 d4-.-^\fermata
 
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
@@ -1527,7 +1527,7 @@ scoreABassClarinet = \relative c'' {
   R1*4 \mark\default
   R1*8 \mark\default
   R1*8 \mark\default
-  R1*16
+  R1*15 R1\fermata R1\fermata
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
@@ -1576,7 +1576,7 @@ scoreABassClarinet = \relative c'' {
   \time 7/8 bf4-.-> bf-. bf-.-> bf8-. \time 9/8 c4-.-> c4-. c4-.-> c8-. c4-.->
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
 
-  \time 2/4 d4-.-> r
+  \time 2/4 r4 d4-.-^\fermata
 
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
@@ -1684,7 +1684,7 @@ scoreAAltoSaxI = \relative c'' {
   R1 g\mp\>~1 e1 \mark\default
   R1*2\! r2 a\p( b4. cs8 d2~2) r e1\>~1~1 \mark\default
   R1*8\! \mark\default
-  R1*16
+  R1*15 R1\fermata R1\fermata
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
@@ -1734,17 +1734,17 @@ scoreAAltoSaxI = \relative c'' {
   \time 7/8 bf4-.-> bf-. bf-.-> bf8-. \time 9/8 c4-.-> c4-. c4-.-> c8-. c4-.->
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
 
-  \time 2/4 R2
+  \time 2/4 r4 d4-.-^\fermata
 
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
 
-  c'8-.\f c-. c-. c-> r4 c-.-> \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
+  c8-.\f c-. c-. c-> r4 c-.-> \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
   \tuplet 3/2 {bf4-. bf-. bf-.} \tuplet 3/2 {a-. a-. a-.} \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
   \tuplet 3/2 {c4-. c-. c-.} \tuplet 3/2 {df-. df-. df-.}
   \tuplet 3/2 {ef-. ef-. ef-.} \tuplet 3/2 {gf-. gf-. g-.} \mark\default
 
-  R1*7 r2 \tuplet 6/4 {b,,16\f\<( c cs d ds e} \tuplet 6/4 {fs g gs a as b}
+  R1*7 r2 \tuplet 6/4 {b,16\f\<( c cs d ds e} \tuplet 6/4 {fs g gs a as b}
   \mark\default c4)->\ff r4 r2 R1*7 \mark\default
 
   c,4.\p c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} g8-. g-. r g-. g4-. g8-. g-.
@@ -1840,7 +1840,7 @@ scoreAAltoSaxII = \relative c'' {
   1~1\>~1 R1\! \mark\default
   R1*2 r2 b'2\p~1~2 r4 b\p\>~1~1~1 \mark\default
   R1*8\! \mark\default
-  R1*16
+  R1*15 R1\fermata R1\fermata
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
@@ -1889,12 +1889,12 @@ scoreAAltoSaxII = \relative c'' {
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 e4-.-> e4-. e4-.-> e8-. e4-.->
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
 
-  \time 2/4 R2
+  \time 2/4 r4 a4-.-^\fermata
 
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
 
-  g'8-.\f g-. g-. g-> r4 g-.-> af8-. af-. af-. af-> r4 af-.-> g8-. g-. g-. g-> r4 g-.->
+  g8-.\f g-. g-. g-> r4 g-.-> af8-. af-. af-. af-> r4 af-.-> g8-. g-. g-. g-> r4 g-.->
   \tuplet 3/2 {f4-. f-. f-.} \tuplet 3/2 {f-. f-. f-.}
   g8-. g-. g-. g-> r4 g-.-> af8-. af-. af-. af-> r4 af-.->
   \tuplet 3/2 {gf4-. gf-. gf-.} \tuplet 3/2 {gf-. gf-. gf-.}
@@ -1907,7 +1907,7 @@ scoreAAltoSaxII = \relative c'' {
   c4.\f c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
   c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
 
-  c,8.-.\f c16-.~8 c-.~16 c8.-. c4-.
+  c8.-.\f c16-.~8 c-.~16 c8.-. c4-.
   \tuplet 6/4 {af'16( bf af g af g} \tuplet 6/4 {f g f ef f ef}
   \tuplet 6/4 {f g f ef f ef} \tuplet 6/4 {d ef d cs d cs)}
   c?8.-. c16-.~8 c-.~16 c8.-. c4-.
@@ -1915,13 +1915,13 @@ scoreAAltoSaxII = \relative c'' {
   \tuplet 6/4 {df ef df cf df cf} \tuplet 6/4 {bf cf bf a bf a)}
   af8.-. af16-.~8 af-.~16 af8.-. af4-. \mark\default R1*4 \mark\default
 
-  g'8-.\f g-. g-. g-> r4 g-.-> af8-. af-. af-. af-> r4 af-.-> g8-. g-. g-. g-> r4 g-.->
+  g8-.\f g-. g-. g-> r4 g-.-> af8-. af-. af-. af-> r4 af-.-> g8-. g-. g-. g-> r4 g-.->
   \tuplet 3/2 {f4-. f-. f-.} \tuplet 3/2 {f-. f-. f-.}
   g8-. g-. g-. g-> r4 g-.-> af8-. af-. af-. af-> r4 af-.->
   \tuplet 3/2 {gf4-. gf-. gf-.} \tuplet 3/2 {gf-. gf-. gf-.}
   \tuplet 3/2 {gf-. gf-. gf-.} \tuplet 3/2 {gf-. gf-. g-.} \mark\default
 
-  R1*4 \mark\default c,4.\mf c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  R1*4 \mark\default c4.\mf c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
   c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
 
   c4-. r8 c16 c c8 c16 c c c c c g8-^ g-^ r g-^ g4-^ c8-^ c-^ c4-^ r r2 \fine
@@ -1977,7 +1977,7 @@ scoreATenorSax = \relative c'' {
   R1 e1\p\> R1*1\! cs1\p\> \mark\default
   R1*2\! r2 e\p~1~2 r R1*3 \mark\default
   R1*8 \mark\default
-  R1*16
+  R1*15 R1\fermata R1\fermata
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
@@ -2025,7 +2025,7 @@ scoreATenorSax = \relative c'' {
   \time 7/8 bf4-.-> bf-. bf-.-> bf8-. \time 9/8 c4-.-> c4-. c4-.-> c8-. c4-.->
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
 
-  \time 2/4 R2
+  \time 2/4 r4 d4-.-^\fermata
 
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
@@ -2137,7 +2137,7 @@ scoreABaritoneSax = \relative c'' {
   R1*4 \mark\default
   R1*2 r2 b\p~1~2 r R1*3 \mark\default
   R1*8 \mark\default
-  R1*16
+  R1*15 R1\fermata R1\fermata
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
@@ -2173,7 +2173,7 @@ scoreABaritoneSax = \relative c'' {
   \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
   \time 7/8 d4-.\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. e-.
 
-  \time 7/8 d,4-.->\mp d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
+  \time 7/8 d4-.->\mp d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
 
   \mark\default
@@ -2186,7 +2186,7 @@ scoreABaritoneSax = \relative c'' {
   \time 7/8 bf4-.-> bf-. bf-.-> bf8-. \time 9/8 c4-.-> c4-. c4-.-> c8-. c4-.->
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
 
-  \time 2/4 R2
+  \time 2/4 r4 d4-.-^\fermata
 
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
@@ -2282,7 +2282,7 @@ scoreATrumpetBbI = \relative c'' {
   R1*4 \mark\default
   R1*8 \mark\default
   R1*8 \mark\default
-  R1*4 r2 b,2\pp\<~1\> R1\! r2 e,2\pp\<~1\> R1*6\! R1
+  R1*4 r2 b,2\pp\<~1\> R1\! r2 e,2\pp\<~1\> R1*6\! R1\fermata R1\fermata
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
@@ -2324,14 +2324,14 @@ scoreATrumpetBbI = \relative c'' {
   \time 7/8 d'4(\ff a') g4. \time 9/8 f4 e4 d4 e8 c4->
   \time 7/8 d2..\> \time 9/8 R1*9/8\!
 
-  \time 2/4 R2
+  \time 2/4 r4 a'4-.-^\fermata
 
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
 
   R1*8 \mark\default
 
-  c'4.\ff c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c,4.\ff c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
   c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
   c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
   c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
@@ -2372,8 +2372,8 @@ scoreATrumpetBbII = \relative c'' {
   {
     e16-. b-. a-. b-. a-. g-. b8-. r r e16-. b-. a-. b-. a-. g-. e'8-. r r
     e16-. b-. a-. b-. a-. g-. e8-. r r
-    e'16-.\<^\markup{\italic "stagger breathing"}
-    b-. a-. e'-. b-. a-. e'-. b-. a-. e'-. b-. a-.
+    e'16->\<^\markup{\italic "stagger breathing"}
+    b-. a-. e'-> b-. a-. e'-> b-. a-. e'-> b-. a-.
   }
   {
     e'->\ff c-. b-. c-. b-. a-. b-. a-. g-. a-. g-. e-.
@@ -2422,7 +2422,7 @@ scoreATrumpetBbII = \relative c'' {
   R1*4 \mark\default
   R1*8 \mark\default
   R1*8 \mark\default
-  R1*10 r2 e,2\pp\<~1\>~1~1 R1\! R1
+  R1*10 r2 e,2\pp\<~1\>~1~1 R1\! R1\fermata R1\fermata
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
@@ -2458,18 +2458,18 @@ scoreATrumpetBbII = \relative c'' {
   \time 7/8 d,4(\ff a') g4. \time 9/8 f4 e4 d4 e8 c4->
 
   \mark\default
-  \time 7/8 g4(\ff d') c4. \time 9/8 bf4 a4 g4 a8 f4->
-  \time 7/8 d'4(\ff a') g4. \time 9/8 f4 e4 d4 e8 c4->
+  \time 7/8 g'4(\ff d') c4. \time 9/8 bf4 a4 g4 a8 f4->
+  \time 7/8 d4(\ff a') g4. \time 9/8 f4 e4 d4 e8 c4->
   \time 7/8 d2..\> \time 9/8 R1*9/8\!
 
-  \time 2/4 R2
+  \time 2/4 r4 d'4-.-^\fermata
 
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
 
   R1*8 \mark\default
 
-  c'4.\ff c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4.\ff c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
   c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} af8-. af-. r bf-. bf4-. a8-. a-.
   c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
   c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} af8-. af-. r bf-. bf4-. a8-. a-. \mark\default
@@ -2513,9 +2513,9 @@ scoreAHornFI = \relative c' {
 
   \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
-    a4\fp-.-> r4 r R2.*2 r2
+    a'4\fp-.-> r4 r R2.*2 r2
     \once \override Hairpin.bound-padding = #0.25
-    b4\p\< a4\fp-.-> r4 r R2.*3 \time 4/4 R1 \time 3/4
+    b,4\p\< a4\fp-.-> r4 r R2.*3 \time 4/4 R1 \time 3/4
     \mark\default d8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g'->( f e) f->( e d)
     \tuplet 3/2 {d-.->\f c-. bf-.} \tuplet 3/2 {bf-.-> a-. g-.} \tuplet 3/2 {f-.-> e-. d-.}
     \mark\default a'4-.-> r r R2.*5
@@ -2524,9 +2524,9 @@ scoreAHornFI = \relative c' {
       \volta 1 {
         R2.*2 \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a4.\f e'->~2. g4(->\< f d) e( c b) \mark\default a4.->-.\ff fs g g
-        a'8 a-. r a-. r4 a8 a-. r a-. r4 R2.*2 a8\ff a-. r a-. r4 a8 a-. r a-. r4 R2.*4
-        cs,4.(\mf\< fs e ds) a8-.->\fp\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-.
-        \mark\default a'4-.->\fp r4 r R2. bf2.\<~2.\f\> a4-.\p r4 r R2. bf,2.\<~2.\f\>
+        a8 a-. r a-. r4 a8 a-. r a-. r4 R2.*2 a8\ff a-. r a-. r4 a8 a-. r a-. r4 R2.*4
+        cs4.(\mf\< fs e ds) a8-.->\fp\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-.
+        \mark\default a'4-.->\fp r4 r R2. bf,2.\<~2.\f\> a4-.\p r4 r R2. bf2.\<~2.\f\>
         \mark\default a4-.\p r4 r
         R2.*2 r4 r8 e'16-.\ff e-. e-. e-. e-. e-. e4-. r4 r R2.*2
         % b4:16-. a:16-. g:16-.
@@ -2539,9 +2539,9 @@ scoreAHornFI = \relative c' {
         R2.*8\! \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a,4.(\ff d c b) R2.*2 a4.( d c b) R2.*4
         \override TextSpanner.bound-details.left.text = "rall."
-        \mark\default cs,4.(\ff fs e gs) a8\<-.->\fp\startTextSpan
+        \mark\default cs4.(\ff fs e gs) a8\<-.->\fp\startTextSpan
         a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
-        c-.-> c-. c-. c-. c-. c-. g'-.->\ff g-. g-. gs-.-^ gs-.-^ gs-.-^ R2.\fermata\stopTextSpan
+        c-.-> c-. c-. c-. c-. c-. g-.->\ff g-. g-. gs-.-^ gs-.-^ gs-.-^ R2.\fermata\stopTextSpan
       }
     }
   }
@@ -2552,7 +2552,7 @@ scoreAHornFI = \relative c' {
   R1*4 \mark\default
   R1*8 \mark\default
   R1*8 \mark\default
-  R1*16
+  R1*15 R1\fermata R1\fermata
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
@@ -2592,7 +2592,7 @@ scoreAHornFI = \relative c' {
   \time 7/8 d'4(\ff a') g4. \time 9/8 f4 e4 d4 e8 c4->
   \time 7/8 d2..\> \time 9/8 R1*9/8\!
 
-  \time 2/4 R2
+  \time 2/4 r4 d4-.-^\fermata
 
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
@@ -2603,9 +2603,9 @@ scoreAHornFI = \relative c' {
   \tuplet 3/2 {ef-. ef-. ef-.} \tuplet 3/2 {gf-. gf-. g-.} \mark\default
 
   R1 c,8-. c-. r c-. c4-. c8-. c-. R1 ef8-. ef-. r f-. f4-. f8-. f-.
-  R1 c,8-. c-. r c-. c4-. c8-. c-. R1 ef8-. ef-. r f-. f4-. f8-. f-. \mark\default
+  R1 c8-. c-. r c-. c4-. c8-. c-. R1 ef8-. ef-. r f-. f4-. f8-. f-. \mark\default
 
-  c'2\ff c4 d ef2 d4 c \tuplet 3/2 {d4 ef d} \tuplet 3/2 {d ef d} c1
+  c2\ff c4 d ef2 d4 c \tuplet 3/2 {d4 ef d} \tuplet 3/2 {d ef d} c1
   c2 c4 d \tuplet 3/2 {f ef f} g2 \tuplet 3/2 {g4 f g} a f g1 \mark\default
 
   R1*4 c,4.\f c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
@@ -2700,7 +2700,7 @@ scoreAHornFII = \relative c' {
   R1*4 \mark\default
   R1*8 \mark\default
   R1*8 \mark\default
-  R1*16
+  R1*15 R1\fermata R1\fermata
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
@@ -2739,12 +2739,12 @@ scoreAHornFII = \relative c' {
   \time 7/8 d'4(\ff a') g4. \time 9/8 f4 e4 d4 e8 c4->
   \time 7/8 d2..\> \time 9/8 R1*9/8\!
 
-  \time 2/4 R2
+  \time 2/4 r4 a4-.-^\fermata
 
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
 
-  g,8-.\f \repeat unfold 23 {g8-.}
+  g8-.\f \repeat unfold 23 {g8-.}
   \tuplet 3/2 {f4-. f-. f-.} \tuplet 3/2 {f-. f-. f-.}
   \repeat unfold 16 {g8-.}
   \tuplet 3/2 {gf4-. gf-. gf-.} \tuplet 3/2 {gf-. gf-. gf-.}
@@ -2752,10 +2752,10 @@ scoreAHornFII = \relative c' {
 
   \repeat unfold 4 {R1 c8-. c-. r c-. c4-. c8-. c-.} \mark\default
 
-  c,2\ff c4 d ef2 d4 c \tuplet 3/2 {d4 ef d} \tuplet 3/2 {d ef d} c1
+  c2\ff c4 d ef2 d4 c \tuplet 3/2 {d4 ef d} \tuplet 3/2 {d ef d} c1
   c2 c4 d \tuplet 3/2 {f ef f} g2 \tuplet 3/2 {g4 f g} a f g1 \mark\default
 
-  R1*4 c4.\f c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  R1*4 c,4.\f c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
   c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-. \mark\default
 
   c4-.\ff c-. c-. c-. af'8-.\mf\< g-. f-. ef-. f-. ef-. d-. df-.
@@ -2771,7 +2771,7 @@ scoreAHornFII = \relative c' {
   \tuplet 3/2 {f4-. f-. f-.} \tuplet 3/2 {f-. f-. f-.}
   \repeat unfold 16 {g8-.}
   \tuplet 3/2 {gf4-. gf-. gf-.} \tuplet 3/2 {gf-. gf-. gf-.}
-  \tuplet 3/2 {bf-. bf-. bf-.} \tuplet 3/2 {df-. df-. d-.} \mark\default
+  \tuplet 3/2 {bf-. bf-. bf-.} \tuplet 3/2 {df,-. df-. d-.} \mark\default
 
   c4.\ff c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
   c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} af8-. af-. r bf-. bf4-. a8-. a-. \mark\default
@@ -2827,8 +2827,7 @@ scoreATromboneI = \relative c {
         R2.*8\! \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a,4.(\f d c b) R2.*2 a4.( d c b) R2.*4
         \override TextSpanner.bound-details.left.text = "rall."
-        \mark\default cs4.(\ff fs e gs) a,8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
-        c-.-> c-. c-. c-. c-. c-. c-.->\ff c-. c-. c-.-^ c-.-^ c-.-^ R2.\fermata\stopTextSpan
+        \mark\default cs4.(\ff fs e gs) f2.\fp\<\startTextSpan ~2.~2.~2.\ff R2.\fermata \stopTextSpan
       }
     }
   }
@@ -2839,7 +2838,12 @@ scoreATromboneI = \relative c {
   R1*4 \mark\default
   R1*8 \mark\default
   R1*8 \mark\default
-  R1*16
+  R1*15 R1\fermata
+  \tuplet 3/2 {
+    f2\ff^\markup{\italic "solo"}^"Out of pitch"^"Goofy war shout"
+    \glissando af4-^
+  } f2\fermata->
+
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
@@ -2877,7 +2881,7 @@ scoreATromboneI = \relative c {
   \time 7/8 R1*7/8 \time 9/8 R1*9/8
   \time 7/8 c,,2->~4.\< \time 9/8 b2 b'4.~4
 
-  \time 2/4 R2
+  \time 2/4 r4\! d4-.-^\fermata
 
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
@@ -2960,7 +2964,8 @@ scoreATromboneII = \relative c {
         e8-.->\p\< e-. e-. e-.-> e-. e-. ef-.-> ef-. ef-. ef-.-> ef-. ef-. d4-.->\mf r4 r R2.*3
         \mark\default bf8-.->\mf\< bf-. bf-. bf-.-> bf-. bf-. a-.->\ff\> a-. a-. a-.-> a-. a-.
         \override TextSpanner.bound-details.left.text = "rall."
-        f'2.\fp\<\startTextSpan ~2.~2.~2.\ff R2.\fermata \stopTextSpan
+        a,8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        c-.-> c-. c-. c-. c-. c-. c-.->\ff c-. c-. c-.-^ c-.-^ c-.-^ R2.\fermata\stopTextSpan
       }
     }
   }
@@ -2971,11 +2976,12 @@ scoreATromboneII = \relative c {
   R1*4 \mark\default
   R1*8 \mark\default
   R1*8 \mark\default
-  R1*16
+  R1*15 R1\fermata
+  \grace{a'8\glissando\mf^\markup{\italic "flz."}} b2\glissando a2\fermata
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
-  \time 7/8 a,4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
+  \time 7/8 a4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \mark\default
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
@@ -3008,7 +3014,7 @@ scoreATromboneII = \relative c {
   \time 7/8 R1*7/8 \time 9/8 R1*9/8
   \time 7/8 d,2->\<~4. \time 9/8 b2 b'4.~4
 
-  \time 2/4 R2
+  \time 2/4 r4\! a4-.-^\fermata
 
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
@@ -3056,7 +3062,7 @@ scoreATromboneIII = \relative c {
   R2.*4 \mark\default R2.*16
 
   \time 6/8 \mark\default
-  R2.*16 \mark\default  R2.*8 \mark\default R2.*8 \mark\default R2.*8 \relative c' {\greenPathBassC}
+  R2.*16 \mark\default  R2.*8 \mark\default R2.*8 \mark\default R2.*8 \relative c {\greenPathBassC}
 
   \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
@@ -3102,7 +3108,7 @@ scoreATromboneIII = \relative c {
   R1*4 \mark\default
   R1*8 \mark\default
   R1*8 \mark\default
-  R1*16
+  R1*15 R1\fermata R1\fermata
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
@@ -3139,7 +3145,7 @@ scoreATromboneIII = \relative c {
   \time 7/8 R1*7/8 \time 9/8 R1*9/8
   \time 7/8 d2->\<~4. \time 9/8 d2 d4.~4
 
-  \time 2/4 R2
+  \time 2/4 r4\! d4-.-^\fermata
 
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
@@ -3260,7 +3266,7 @@ scoreAEuphonium = \relative c {
   \fungalBass R1 e8-. e'-. b-. d,-. d'4-. r4 R1 e,8-. e'-. b-. d,-. d'-. a-. d,4-. R1
   \repeat unfold 2 {\fungalBass R1}
   \fixed c {e8-. e'-. b-. d-. d'-. a-. r a-. r2 a8( g f g)}
-  \fungalBass R1 \fungalBass R1
+  \fungalBass R1 \fungalBass R1\fermata R1\fermata
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
@@ -3310,7 +3316,7 @@ scoreAEuphonium = \relative c {
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 e4-.-> e4-. e4-.-> e8-. e4-.->
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
 
-  \time 2/4 R2
+  \time 2/4 r4 a4-.-^\fermata
 
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
@@ -3360,7 +3366,7 @@ scoreATuba = \relative c {
   R2.*4 \mark\default R2.*16
 
   \time 6/8 \mark\default
-  e,8-.^\markup{ \italic "quasi pizz."} r r e-. r r b-. r r b-. r r c-. r r c-. r r a-. r r a-. r r b-.
+  e8-.^\markup{ \italic "quasi pizz."} r r e-. r r b-. r r b-. r r c-. r r c-. r r a-. r r a-. r r b-.
   r r b-. r r g-. r r g-. r r a-. r r a-. r r c-. r r c-. r r R2.*8
 
   \mark\default e4.\mp e e e e e fs g
@@ -3370,12 +3376,12 @@ scoreATuba = \relative c {
 
   \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
-    a8\fp-.-> a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-.-> a-.
+    a,8\fp-.-> a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-.-> a-.
     a-.-> a-. a-. a-.-> a-. a-. f-.-> f-. f-. f-. g4\<
     a8-.->\fp a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-.-> a-.
     a-.->\< a-. a-. a-.-> a-. a-. g-.-> g-. g-. g-. g-.-> g-.
-    \time 4/4 f-.-> f-. f-. f-. f-.-> f-. f-. f-. \time 3/4
-    \mark\default d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. bf-.-> bf-. bf-. bf-.-> bf-. bf-. bf2.\f\>
+    \time 4/4 f-.-> f-. f-. f-. f4-.-> r \time 3/4
+    \mark\default d'8-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. bf-.-> bf-. bf-. bf-.-> bf-. bf-. bf2.\f\>
     \mark\default e8-.\p e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-.
     e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-.
     c-. c-. c-. c-. c-. c-. c-. c-. c-. c-. c-. c-.
@@ -3393,7 +3399,7 @@ scoreATuba = \relative c {
         gs-.-> gs-. gs-. gs-.-> gs-. gs-. g?-.-> g-. g-. g-.-> g-. g-.
         bf-.-> bf-. bf-. bf-.-> bf-. bf-. a-.-> a-. a-. a-.-> a-. a-.
         e2.\fp\<~2.
-        \mark\default a4-.->\fp r4 r R2.
+        \mark\default a,4-.->\fp r4 r R2.
         bf4.\< bf4. bf4.\f\> bf4.
         a4-.->\fp r4 r R2.
         bf4.\< bf4. bf4.\f\> bf4.
@@ -3427,7 +3433,7 @@ scoreATuba = \relative c {
   \fungalBass R1 e,8-. e'-. b-. d,-. d'4-. r4 R1 e,8-. e'-. b-. d,-. d'-. a-. d,4-. R1
   \repeat unfold 2 {\fungalBass R1}
   \fixed c {e8-. e'-. b-. d-. d'-. a-. r a-. r2 a8( g f g)}
-  \fungalBass R1 \fungalBass R1
+  \fungalBass R1 \fungalBass R1\fermata R1\fermata
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
@@ -3476,7 +3482,7 @@ scoreATuba = \relative c {
   \time 7/8 bf4-.-> r bf4.-.-> \time 9/8 c4-.-> r4 c4.-.-> c4-.->
   \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
 
-  \time 2/4 R2
+  \time 2/4 r4 d4-.-^\fermata
 
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
@@ -3573,7 +3579,7 @@ scoreATimpani = \relative c {
   R1*4 \mark\default
   R1*8 \mark\default
   R1*8 \mark\default
-  R1*16
+  R1*15 R1\fermata R1\fermata
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
@@ -3609,7 +3615,7 @@ scoreATimpani = \relative c {
   \mark\default
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
-  \time 2/4 R2
+  \time 2/4 R2\fermata
 
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
@@ -3696,7 +3702,7 @@ scoreAGlockenspiel = \relative c'' {
   R1*4 \mark\default
   R1*8 \mark\default
   R1*8 \mark\default
-  R1*16
+  R1*15 R1\fermata R1\fermata
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
@@ -3732,7 +3738,7 @@ scoreAGlockenspiel = \relative c'' {
   \mark\default
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
-  \time 2/4 R2
+  \time 2/4 R2\fermata
 
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
@@ -3802,7 +3808,7 @@ scoreAXylo = \relative c' {
   e,4\mf e fs8 g fs4 r2 r4 ds e b8 a b4 r R1
   e4 e fs8 g a4 r4 r8 g fs4 b8. as16 b4 g8 fs a4 r R1 \mark\default
   R1*8 \mark\default
-  R1*16
+  R1*15 R1\fermata R1\fermata
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
@@ -3856,7 +3862,7 @@ scoreAXylo = \relative c' {
   \time 7/8 <d bf'>4-.-> q-. q-.-> q8-. \time 9/8 <e c'>4-.-> q4-. q4-.-> q8-. q4-.->
   \time 7/8 <a d,>4-.-> q-. q-.-> q8-. \time 9/8 q4-.-> q4-. q4-.-> q8-. q4-.->
 
-  \time 2/4 R2
+  \time 2/4 r4 q4-.-^\fermata
 
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
@@ -4028,8 +4034,10 @@ scoreADrum = \drummode {
   r2 \tuplet 3/2 { r8\repeat unfold 2 {wbh8}} \tuplet 3/2 {\repeat unfold 3 {wbh8}}
   wbl8. wbl16~8 wbl8~16 wbl8. wbl8. wbl16 r2 r4 wbh8. wbh16
   wbh8 wbh16 wbh~16 wbh wbh8 wbh16 wbh8 wbh16 wbh8 wbh16 wbh
-  r wbh wbh8 wbh16^"Snare roll ad lib" wbh8 wbh16
-  \tuplet 3/2 {wbl8\mf\< \repeat unfold 2 {wbl8}} \tuplet 3/2 {\repeat unfold 3 {wbl8}}
+  r wbh wbh8 wbh16 wbh8 wbh16
+  \override TextSpanner.bound-details.left.text = "poco rit."
+  \tuplet 3/2 {wbl8\mf\<\startTextSpan \repeat unfold 2 {wbl8}}
+  \tuplet 3/2 {\repeat unfold 2 {wbl8} wbl\fermata\stopTextSpan} R1\!\fermata
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
@@ -4076,7 +4084,7 @@ scoreADrum = \drummode {
   \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn16 sn sn8 sn8 sn16 sn sn8 sn16 sn sn sn sn sn
   \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn16 sn sn8 sn8 sn16 sn sn8 sn16 sn sn sn sn sn
 
-  \time 2/4 R2
+  \time 2/4 r4 sn4-^\fermata
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \time 4/4
   <<
@@ -4250,7 +4258,8 @@ scoreARight = \relative c' {
   e4->\p\> e e-> e e4->\p e8 ds~8 e->~8 ds e4-> e e-> e e4-> e e-> g
   e4-> e e-> e e4-> e e-> e8 ds e4-> b8-. a-. b4-. r e4->\p\> e e-> e
   \mark\default
-  \repeat percent 16 {e4->\p\> e e-> e <>\!}
+  \override TextSpanner.bound-details.left.text = "poco rit."
+  \repeat percent 15 {e4->\p\> e e-> e <>\!} e4->\p\> e e->\startTextSpan e\fermata\stopTextSpan R1\!\fermata
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
@@ -4304,7 +4313,7 @@ scoreARight = \relative c' {
   \time 7/8 <d bf'>4-.-> q-. q-.-> q8-. \time 9/8 <e c'>4-.-> q4-. q4-.-> q8-. q4-.->
   \time 7/8 <a d,>4-.-> q-. q-.-> q8-. \time 9/8 q4-.-> q4-. q4-.-> q8-. q4-.->
 
-  \time 2/4 q4-.-> r
+  \time 2/4 r4 q4-.-^\fermata
 
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
@@ -4451,7 +4460,7 @@ scoreALeft = \relative c, {
   \fungalBass R1 e,8-. e'-. b-. d,-. d'4-. r4 R1 e,8-. e'-. b-. d,-. d'-. a-. d,4-. R1
   \repeat unfold 2 {\fungalBass R1}
   \fixed c {e8-. e'-. b-. d-. d'-. a-. r a-. r2 a8( g f g)}
-  \fungalBass R1 \fungalBass R1
+  \fungalBass R1 \fungalBass R1\fermata R1\fermata
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
 
@@ -4500,7 +4509,7 @@ scoreALeft = \relative c, {
   \time 7/8 bf4-.-> r bf4.-.-> \time 9/8 c4-.-> r4 c4.-.-> c4-.->
   \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
 
-  \time 2/4 d4-.-> r
+  \time 2/4 r4 d4-.-^\fermata
 
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
@@ -4798,13 +4807,83 @@ scoreADrumsPart = \new DrumStaff \with {
       \scoreAPianoPart
     >>
     \layout {
-      #(layout-set-staff-size 14)
+      #(layout-set-staff-size 12)
     }
-    \midi { }
   }
   \paper {
     #(set-paper-size "a3")
     system-separator-markup = \slashSeparator
+  }
+}
+% MIDI !!
+\book {
+  \bookOutputName "Part 00 - Score"
+  \score {
+    <<
+      \new StaffGroup <<
+        \scoreAPiccoloPart
+        \new StaffGroup \with {
+          systemStartDelimiter = #'SystemStartSquare
+        } <<
+          \scoreAFluteIPart
+          \scoreAFluteIIPart
+        >>
+        \scoreAOboePart
+        \scoreABassoonPart
+      >>
+      \new StaffGroup <<
+        \scoreAEflatClarinetPart
+        \new StaffGroup \with {
+          systemStartDelimiter = #'SystemStartSquare
+        } <<
+          \scoreAClarinetIPart
+          \scoreAClarinetIIPart
+          \scoreAClarinetIIIPart
+        >>
+        \scoreABassClarinetPart
+      >>
+      \new StaffGroup <<
+        \new StaffGroup \with {
+          systemStartDelimiter = #'SystemStartSquare
+        } <<
+          \scoreAAltoSaxIPart
+          \scoreAAltoSaxIIPart
+        >>
+        \scoreATenorSaxPart
+        \scoreABaritoneSaxPart
+      >>
+      \new StaffGroup <<
+        \new StaffGroup \with {
+          systemStartDelimiter = #'SystemStartSquare
+        } <<
+          \scoreATrumpetBbIPart
+          \scoreATrumpetBbIIPart
+        >>
+        \new StaffGroup \with {
+          systemStartDelimiter = #'SystemStartSquare
+        } <<
+          \scoreAHornFIPart
+          \scoreAHornFIIPart
+        >>
+        \new StaffGroup \with {
+          systemStartDelimiter = #'SystemStartSquare
+        } <<
+          \scoreATromboneIPart
+          \scoreATromboneIIPart
+          \scoreATromboneIIIPart
+        >>
+        \scoreAEuphoniumPart
+        \scoreATubaPart
+      >>
+      \new StaffGroup <<
+        \scoreATimpaniPart
+        \scoreAGlockenspielPart
+        \scoreAXyloPart
+        \scoreADrumsPart
+      >>
+      \scoreAPianoPart
+    >>
+    \midi { }
   }
 }
 
@@ -4816,12 +4895,12 @@ scoreADrumsPart = \new DrumStaff \with {
     \compressMMRests {\scoreAPiccoloPart}
     \layout {
       \override MultiMeasureRest.expand-limit = 1
-      #(layout-set-staff-size 16)
+      #(layout-set-staff-size 15)
     }
   }
   \paper {
     #(set-paper-size "letter")
-    %page-count = #2
+    %page-count = #3
   }
 }
 \book {
@@ -4830,12 +4909,12 @@ scoreADrumsPart = \new DrumStaff \with {
     \compressMMRests {\scoreAFluteIPart}
     \layout {
       \override MultiMeasureRest.expand-limit = 1
-      #(layout-set-staff-size 16)
+      #(layout-set-staff-size 15)
     }
   }
   \paper {
     #(set-paper-size "letter")
-    %page-count = #2
+    %page-count = #3
   }
 }
 \book {
@@ -4844,12 +4923,12 @@ scoreADrumsPart = \new DrumStaff \with {
     \compressMMRests {\scoreAFluteIIPart}
     \layout {
       \override MultiMeasureRest.expand-limit = 1
-      #(layout-set-staff-size 16)
+      #(layout-set-staff-size 15)
     }
   }
   \paper {
     #(set-paper-size "letter")
-    %page-count = #2
+    %page-count = #3
   }
 }
 \book {
@@ -4858,12 +4937,12 @@ scoreADrumsPart = \new DrumStaff \with {
     \compressMMRests {\scoreAOboePart}
     \layout {
       \override MultiMeasureRest.expand-limit = 1
-      #(layout-set-staff-size 16)
+      #(layout-set-staff-size 15)
     }
   }
   \paper {
     #(set-paper-size "letter")
-    %page-count = #2
+    %page-count = #3
   }
 }
 \book {
@@ -4872,12 +4951,12 @@ scoreADrumsPart = \new DrumStaff \with {
     \compressMMRests {\scoreABassoonPart}
     \layout {
       \override MultiMeasureRest.expand-limit = 1
-      #(layout-set-staff-size 16)
+      #(layout-set-staff-size 15)
     }
   }
   \paper {
     #(set-paper-size "letter")
-    %page-count = #3
+    %page-count = #4
   }
 }
 \book {
@@ -4889,12 +4968,12 @@ scoreADrumsPart = \new DrumStaff \with {
     }
     \layout {
       \override MultiMeasureRest.expand-limit = 1
-      #(layout-set-staff-size 16)
+      #(layout-set-staff-size 15)
     }
   }
   \paper {
     #(set-paper-size "letter")
-    %page-count = #2
+    %page-count = #3
   }
 }
 \book {
@@ -4906,12 +4985,12 @@ scoreADrumsPart = \new DrumStaff \with {
     }
     \layout {
       \override MultiMeasureRest.expand-limit = 1
-      #(layout-set-staff-size 16)
+      #(layout-set-staff-size 15)
     }
   }
   \paper {
     #(set-paper-size "letter")
-    %page-count = #2
+    %page-count = #3
   }
 }
 \book {
@@ -4923,12 +5002,12 @@ scoreADrumsPart = \new DrumStaff \with {
     }
     \layout {
       \override MultiMeasureRest.expand-limit = 1
-      #(layout-set-staff-size 16)
+      #(layout-set-staff-size 15)
     }
   }
   \paper {
     #(set-paper-size "letter")
-    %page-count = #2
+    %page-count = #3
   }
 }
 \book {
@@ -4940,12 +5019,12 @@ scoreADrumsPart = \new DrumStaff \with {
     }
     \layout {
       \override MultiMeasureRest.expand-limit = 1
-      #(layout-set-staff-size 16)
+      #(layout-set-staff-size 15)
     }
   }
   \paper {
     #(set-paper-size "letter")
-    %page-count = #2
+    %page-count = #3
   }
 }
 \book {
@@ -4957,12 +5036,12 @@ scoreADrumsPart = \new DrumStaff \with {
     }
     \layout {
       \override MultiMeasureRest.expand-limit = 1
-      #(layout-set-staff-size 16)
+      #(layout-set-staff-size 15)
     }
   }
   \paper {
     #(set-paper-size "letter")
-    %page-count = #2
+    %page-count = #3
   }
 }
 \book {
@@ -4974,12 +5053,12 @@ scoreADrumsPart = \new DrumStaff \with {
     }
     \layout {
       \override MultiMeasureRest.expand-limit = 1
-      #(layout-set-staff-size 16)
+      #(layout-set-staff-size 15)
     }
   }
   \paper {
     #(set-paper-size "letter")
-    %page-count = #2
+    %page-count = #3
   }
 }
 \book {
@@ -4991,7 +5070,7 @@ scoreADrumsPart = \new DrumStaff \with {
     }
     \layout {
       \override MultiMeasureRest.expand-limit = 1
-      #(layout-set-staff-size 16)
+      #(layout-set-staff-size 15)
     }
   }
   \paper {
@@ -5008,7 +5087,7 @@ scoreADrumsPart = \new DrumStaff \with {
     }
     \layout {
       \override MultiMeasureRest.expand-limit = 1
-      #(layout-set-staff-size 16)
+      #(layout-set-staff-size 15)
     }
   }
   \paper {
@@ -5025,7 +5104,7 @@ scoreADrumsPart = \new DrumStaff \with {
     }
     \layout {
       \override MultiMeasureRest.expand-limit = 1
-      #(layout-set-staff-size 16)
+      #(layout-set-staff-size 15)
     }
   }
   \paper {
@@ -5042,7 +5121,7 @@ scoreADrumsPart = \new DrumStaff \with {
     }
     \layout {
       \override MultiMeasureRest.expand-limit = 1
-      #(layout-set-staff-size 16)
+      #(layout-set-staff-size 15)
     }
   }
   \paper {
@@ -5059,7 +5138,7 @@ scoreADrumsPart = \new DrumStaff \with {
     }
     \layout {
       \override MultiMeasureRest.expand-limit = 1
-      #(layout-set-staff-size 16)
+      #(layout-set-staff-size 15)
     }
   }
   \paper {
@@ -5076,7 +5155,7 @@ scoreADrumsPart = \new DrumStaff \with {
     }
     \layout {
       \override MultiMeasureRest.expand-limit = 1
-      #(layout-set-staff-size 16)
+      #(layout-set-staff-size 15)
     }
   }
   \paper {
@@ -5093,7 +5172,7 @@ scoreADrumsPart = \new DrumStaff \with {
     }
     \layout {
       \override MultiMeasureRest.expand-limit = 1
-      #(layout-set-staff-size 16)
+      #(layout-set-staff-size 15)
     }
   }
   \paper {
@@ -5107,7 +5186,7 @@ scoreADrumsPart = \new DrumStaff \with {
     \compressMMRests {\scoreATromboneIPart}
     \layout {
       \override MultiMeasureRest.expand-limit = 1
-      #(layout-set-staff-size 16)
+      #(layout-set-staff-size 15)
     }
   }
   \paper {
@@ -5121,7 +5200,7 @@ scoreADrumsPart = \new DrumStaff \with {
     \compressMMRests {\scoreATromboneIIPart}
     \layout {
       \override MultiMeasureRest.expand-limit = 1
-      #(layout-set-staff-size 16)
+      #(layout-set-staff-size 15)
     }
   }
   \paper {
@@ -5135,7 +5214,7 @@ scoreADrumsPart = \new DrumStaff \with {
     \compressMMRests {\scoreATromboneIIIPart}
     \layout {
       \override MultiMeasureRest.expand-limit = 1
-      #(layout-set-staff-size 16)
+      #(layout-set-staff-size 15)
     }
   }
   \paper {
@@ -5149,7 +5228,7 @@ scoreADrumsPart = \new DrumStaff \with {
     \compressMMRests {\scoreAEuphoniumPart}
     \layout {
       \override MultiMeasureRest.expand-limit = 1
-      #(layout-set-staff-size 16)
+      #(layout-set-staff-size 15)
     }
   }
   \paper {
@@ -5163,7 +5242,7 @@ scoreADrumsPart = \new DrumStaff \with {
     \compressMMRests {\scoreATubaPart}
     \layout {
       \override MultiMeasureRest.expand-limit = 1
-      #(layout-set-staff-size 16)
+      #(layout-set-staff-size 15)
     }
   }
   \paper {
@@ -5177,7 +5256,7 @@ scoreADrumsPart = \new DrumStaff \with {
     \compressMMRests {\scoreATimpaniPart}
     \layout {
       \override MultiMeasureRest.expand-limit = 1
-      #(layout-set-staff-size 16)
+      #(layout-set-staff-size 15)
     }
   }
   \paper {
@@ -5191,7 +5270,7 @@ scoreADrumsPart = \new DrumStaff \with {
     \compressMMRests {\scoreAGlockenspielPart}
     \layout {
       \override MultiMeasureRest.expand-limit = 1
-      #(layout-set-staff-size 16)
+      #(layout-set-staff-size 15)
     }
   }
   \paper {
@@ -5205,7 +5284,7 @@ scoreADrumsPart = \new DrumStaff \with {
     \compressMMRests {\scoreAXyloPart}
     \layout {
       \override MultiMeasureRest.expand-limit = 1
-      #(layout-set-staff-size 16)
+      #(layout-set-staff-size 15)
     }
   }
   \paper {
@@ -5219,7 +5298,7 @@ scoreADrumsPart = \new DrumStaff \with {
     \compressMMRests {\scoreADrumsPart}
     \layout {
       \override MultiMeasureRest.expand-limit = 1
-      #(layout-set-staff-size 16)
+      #(layout-set-staff-size 15)
     }
   }
   \paper {
@@ -5235,7 +5314,7 @@ scoreADrumsPart = \new DrumStaff \with {
     \compressMMRests {\scoreAPianoPart}
     \layout {
       \override MultiMeasureRest.expand-limit = 1
-      #(layout-set-staff-size 16)
+      #(layout-set-staff-size 15)
     }
   }
   \paper {
