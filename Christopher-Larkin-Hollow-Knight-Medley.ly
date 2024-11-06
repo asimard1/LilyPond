@@ -138,12 +138,22 @@ scoreAPiccolo = \relative c'' {
   R2. {fs16->\mp ( b, cs a b8-.) fs'16->( b, cs a b8-.)}
   R2. {b'16->\mf ( e, fs d e8-.) b'16->( e, fs d e8-.)} R2.
   \mark\default
+  \once \override Hairpin.bound-padding = #0.5
   b'2.\pp^\markup {\italic "espressivo cantabile"}\< \startTrillSpan~2.\> r4\!\stopTrillSpan b8\p\>~4.~2. r4\!
   b8\p\>~4.~2. r4\! b8\p\>~4.~2. \mark\default R2.*14\!
 
   \relative c'' {\greenPathPatternA \greenPathPatternB}
 
-  \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4
+  \section \sectionLabel "Hornet" \tempo \markup{
+    \concat {
+      "Swift "
+      (
+      \smaller \general-align #Y #DOWN \note { 4 } #UP
+      " = "
+      \smaller \general-align #Y #DOWN \note { 8 } #UP
+      )
+    }
+  } 4 = 145 \time 3/4
   \key a \minor
   \repeat volta 2 {
     a8\fp r r e r4 g4-. r4 c,8 r e r r e r4 d4-. r4 b8 r e r r e r4 g4-. r4 c,8 r
@@ -183,9 +193,13 @@ scoreAPiccolo = \relative c'' {
   R1*4 \mark\default
   R1*5 r2 r8 e4.\pp~1~1 \mark\default
   R1*8 \mark\default
-  R1*2 r2 b2\pp\<~1\> R1*6\! r2 e\pp\<~1\>~1\<~1\> R1\! R1\fermata R1\fermata
+  R1*2 r2
+  \once \override Hairpin.bound-padding = #0.5
+  b2\pp\<~1\> R1*6\! r2
+  \once \override Hairpin.bound-padding = #0.5
+  e\pp\<~1\>~1\<~1\> R1\! R1\fermata R1\fermata
 
-  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
+  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
@@ -195,21 +209,21 @@ scoreAPiccolo = \relative c'' {
   \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \mark\default
-  \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
-  \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
+  \time 7/8 d4-.->\ff a'-.-> a4.-> ~\time 9/8 2 b4-.-> c8-. b4-.->  \time 7/8 a2\> r4.\! \time 9/8 R1*9/8
+  \time 7/8 d,4-.->\ff a'-.-> g4.-> \time 9/8 f4-. e4-. d4-.-> e8-. c4-.-> \time 7/8 d2..\>-> \time 9/8 R1*9/8\!
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
   \mark\default
 
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
-  \time 7/8 d4\f( a') a8( g f) \time 3,3,3 9/8 g( f e) f( e d) e( d c)
-  \time 7/8 d4( a) a4.\>~ \time 9/8 2~4. r4\!
+  \time 7/8 d4->\f( a'-.) a8->( g f) \time 3,3,3 9/8 g->( f e) f->( e d) e->( d c)
+  \time 7/8 d4->( a-.) a4.->~ \time 9/8 2~4. r4\!
 
   \mark\default
   \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
   \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
-  \time 7/8 d4-.\mp\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. cs-.
+  \time 7/8 d4-.\mp\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. f4.-. \time 9/8 g-. a-. cs-.
 
   \time 7/8 d4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
@@ -277,7 +291,16 @@ scoreAFluteI = \relative c'' {
   R2.*13
   \relative c'' {\greenPathPatternA \greenPathPatternB}
 
-  \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo \markup{
+    \concat {
+      "Swift "
+      (
+      \smaller \general-align #Y #DOWN \note { 4 } #UP
+      " = "
+      \smaller \general-align #Y #DOWN \note { 8 } #UP
+      )
+    }
+  } 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     a8\fp-.-> e'-. e-. e-.-> e-. e-. g->( f) d( e) c->( b)
     e-.-> e-. e-. e-.-> e-. e-. d->( c) a( c) b->( g)
@@ -321,9 +344,11 @@ scoreAFluteI = \relative c'' {
   R1*4 \mark\default
   R1*6 r4 g,2.\pp~1 \mark\default
   R1 r4 fs2.~1 R1*2 r2 d\pp~1~1 \mark\default
-  e1\pp~1~1~1 R1*6 r2 b\pp\<~1\>~1\<~1\> R1\! R1\fermata R1\fermata
+  e1\pp~1~1~1 R1*6 r2
+  \once \override Hairpin.bound-padding = #0.5
+  b\pp\<~1\>~1\<~1\> R1\! R1\fermata R1\fermata
 
-  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
+  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
   \time 7/8 a4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
@@ -343,15 +368,15 @@ scoreAFluteI = \relative c'' {
 
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
-  \time 7/8 d,4(\f a') a8( g f) \time 3,3,3 9/8 g( f e) f( e d) e( d c)
-  \time 7/8 d4( a') a4.~ \time 9/8 2~4. r4
-  \time 7/8 d,4( a') a8( g f) \time 3,3,3 9/8 g( f e) f( e d) e( d c)
-  \time 7/8 d4( a) a4.~ \time 9/8 2~4. r4
+  \time 7/8 d,4->(\f a'-.) a8->( g f) \time 3,3,3 9/8 g->( f e) f->( e d) e->( d c)
+  \time 7/8 d4->( a'-.) a4.->~ \time 9/8 2~4. r4
+  \time 7/8 d,4->( a'-.) a8->( g f) \time 3,3,3 9/8 g->( f e) f->( e d) e->( d c)
+  \time 7/8 d4->( a-.) a4.->~ \time 9/8 2~4. r4
 
   \mark\default
   \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
   \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
-  \time 7/8 d8\f-.\< a-. d-. a-. e'-. f-. e-. d-. a-. d-. a-. cs-. d-. e-. d-. a-. d-. a-. e'-. f-. e-.
+  \time 7/8 d8\f-.\< a-. d-. a-. e'-. f-. e-. d-. a-. d-. a-. cs-. d-. e-. d-. a-. d-. a-. f'-. g-. f-.
   \time 3,3,3 9/8 g-. a-. g-. a-. b-. a-. b-. c-. cs-.
 
   \time 7/8 d4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
@@ -431,7 +456,16 @@ scoreAFluteII = \relative c'' {
   R2. \mark\default R2.*14
   \relative c'' {\greenPathPatternA \greenPathPatternB}
 
-  \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo \markup{
+    \concat {
+      "Swift "
+      (
+      \smaller \general-align #Y #DOWN \note { 4 } #UP
+      " = "
+      \smaller \general-align #Y #DOWN \note { 8 } #UP
+      )
+    }
+  } 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     a8\fp-.-> e-. e-. e-.-> e-. e-. g->( f) d( e) c->( b)
     e-.-> e-. e-. e-.-> e-. e-. d->( c) a( c) b->( g)
@@ -474,9 +508,11 @@ scoreAFluteII = \relative c'' {
   R1*4 \mark\default
   R1*8 \mark\default
   R1*5 r4. cs,8\pp\>~2~1\!~1 \mark\default
-  R1*2 r2 b2\pp\<~1\> R1*6\! r2 e\pp\<~1\>~1\<~1\> R1\! R1\fermata R1\fermata
+  R1*2 r2 b2\pp\<~1\> R1*6\! r2
+  \once \override Hairpin.bound-padding = #0.5
+  e\pp\<~1\>~1\<~1\> R1\! R1\fermata R1\fermata
 
-  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
+  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
   \time 7/8 g,4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
   \mark\default
@@ -495,15 +531,15 @@ scoreAFluteII = \relative c'' {
 
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
-  \time 7/8 a,4(\f e') e4 c8( \time 9/8 d4-.) b8( c4-.) a8( b4-.) g8(
-  \time 7/8 a4 e') e4.~\time 9/8 2~4. r4
-  \time 7/8 a,4( e') e4 c8( \time 9/8 d4-.) b8( c4-.) a8( b4-.) g8(
-  \time 7/8 a4 e) e4.~\time 9/8 2~4. r4
+  \time 7/8 a,4(\f e'-.) e4 c8( \time 9/8 d4-.) b8( c4-.) a8( b4-.) g8(
+  \time 7/8 a4 e'-.) e4.~\time 9/8 2~4. r4
+  \time 7/8 a,4( e'-.) e4 c8( \time 9/8 d4-.) b8( c4-.) a8( b4-.) g8(
+  \time 7/8 a4 e-.) e4.~\time 9/8 2~4. r4
 
   \mark\default
   \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
   \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
-  \time 7/8 d'8\f-.\< a-. d-. a-. e'-. f-. e-. d-. a-. d-. a-. cs-. d-. e-. d-. a-. d-. a-. e'-. f-. e-.
+  \time 7/8 d'8\f-.\< a-. d-. a-. e'-. f-. e-. d-. a-. d-. a-. cs-. d-. e-. d-. a-. d-. a-. f'-. g-. f-.
   \time 3,3,3 9/8 g-. a-. g-. a-. b-. a-. b-. c-. cs-.
 
   \time 7/8 d4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
@@ -580,7 +616,16 @@ scoreAOboe = \relative c'' {
   {fs-.\mp\< e-. d-. b-. b-. a-. \mark\default e4.-.\! r4.} R2.*13
   \relative c' {\greenPathPatternA \greenPathPatternB}
 
-  \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo \markup{
+    \concat {
+      "Swift "
+      (
+      \smaller \general-align #Y #DOWN \note { 4 } #UP
+      " = "
+      \smaller \general-align #Y #DOWN \note { 8 } #UP
+      )
+    }
+  } 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     a8\fp r r e r4 g4-. r4 c8->( b) e, r r e r4 d4-. r4 b'8 r a r r e r4 g4-. r4 c8->( d)
     e-.->\< e-. e-. f-.-> f-. f-. g-.-> g-. g-. a->-. a-. a-.
@@ -613,12 +658,14 @@ scoreAOboe = \relative c'' {
   \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
   \key a \minor
 
-  R1*2 r2 r8 b'4.\p\<~1\> \mark\default
+  R1*2 r2 r8
+  \once \override Hairpin.bound-padding = #0.5
+  b'4.\p\<~1\> \mark\default
   R1*5\! r4 g2.\p\>~1~1 \mark\default
   R1*5\! r4 b,2.\pp~1~1 \mark\default
   e1\pp\<~1\>~1\<~1\> R1*4\! r2 e~1~2 r R1*3 r2 r4 as,\pp\>~1\fermata R1\!\fermata
 
-  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
+  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
   \time 7/8 d4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
@@ -633,19 +680,18 @@ scoreAOboe = \relative c'' {
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
   \mark\default
 
-  \time 7/8 d4\f( a') a8( g f) \time 3,3,3 9/8 g( f e) f( e d) e( d c)
-  \time 7/8 d4( a') a4.~ \time 9/8 2~4. r4
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
-  \time 7/8 d,4( a') a8( g f) \time 3,3,3 9/8 g( f e) f( e d) e( d c)
-  \time 7/8 d4( a') a4.~ \time 9/8 2~4. r4
-  \time 7/8 d,4( a') a8( g f) \time 3,3,3 9/8 g( f e) f( e d) e( d c)
-  \time 7/8 d4( a) a4.~ \time 9/8 2~4. r4
+  \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
+  \time 7/8 d4->\mp( a'-.) a8->( g f) \time 3,3,3 9/8 g->( f e) f->( e d) e->( d c)
+  \time 7/8 d4->( a'-.) a4.->~ \time 9/8 2~4. r4
+  \time 7/8 d,4->( a'-.) a8->( g f) \time 3,3,3 9/8 g->( f e) f->( e d) e->( d c)
+  \time 7/8 d4->( a-.) a4.->~ \time 9/8 2~4. r4
 
   \mark\default
   \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
   \time 7/8 d8\f-. a-. d-. a-. e'-. f-. e-. d-. a-. d-. a-. c-. d-. e-. d-. a-. d-. a-. e'-. f-. e-.
   \time 3,3,3 9/8 f-. e-. d-. e-. d-. c-. d-. c-. d-.
-  \time 7/8 d4-.\mp\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. cs-.
+  \time 7/8 d4-.\mp\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. f4.-. \time 9/8 g-. a-. cs-.
 
   \time 7/8 d4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
@@ -727,14 +773,24 @@ scoreABassoon = \relative c' {
   \mark\default \greenPathBassA \mark\default R2.*8
   \greenPathBassB
 
-  \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo \markup{
+    \concat {
+      "Swift "
+      (
+      \smaller \general-align #Y #DOWN \note { 4 } #UP
+      " = "
+      \smaller \general-align #Y #DOWN \note { 8 } #UP
+      )
+    }
+  } 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     a8\fp-.-> a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-.-> a-.
     a-.-> a-. a-. a-.-> a-. a-. f-.-> f-. f-. f-. g-.-> r
     a-.-> a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-.-> a-.
     a-.->\< a-. a-. a-.-> a-. a-. g-.-> g-. g-. g-.-> g-. g-.
     \time 4/4 f-.-> f-. f-. f-. f-.-> f-. f-. f-. \time 3/4
-    \mark\default d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. bf-.-> bf-. bf-. bf-.-> bf-. bf-. bf2.\f\>
+    \mark\default d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. bf-.-> bf-. bf-. bf-.-> bf-. bf-.
+    \once \override Hairpin.bound-padding = #0.5 bf2.\f\>
     \mark\default a4-.->\p r r g'8->\mf( f d e) c->( b) e4-.-> r4 r R2.*2 e8->( d b c) a->( b)
 
     \alternative {
@@ -783,7 +839,7 @@ scoreABassoon = \relative c' {
   b8\f d b d e2~4 b8 d b d e fs g4. fs8 e2\>
   r4\! r8 d8\mf\< e c b a b1\f\> \grace {b16( a g} fs2)~8 e\mp( a4) a4. g16 fs e4 ds~1\>\fermata R1\!\fermata
 
-  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
+  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
   \time 7/8 R1*7/8\! \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
@@ -798,19 +854,19 @@ scoreABassoon = \relative c' {
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
   \mark\default
 
-  \time 7/8 a'4\f( e') e4 c8( \time 9/8 d4-.) b8( c4-.) a8( b4-.) g8(
-  \time 7/8 a4 e') e4.~\time 9/8 2~4. r4
-  \time 7/8 a,4( e') e4 c8( \time 9/8 d4-.) b8( c4-.) a8( b4-.) g8(
-  \time 7/8 a4 e) e4.~\time 9/8 2~4. r4
-  \time 7/8 a4( e') e4 c8( \time 9/8 d4-.) b8( c4-.) a8( b4-.) g8(
-  \time 7/8 a4 e') e4.~\time 9/8 2~4. r4
-  \time 7/8 a,4( e') e4 c8( \time 9/8 d4-.) b8( c4-.) a8( b4-.) g8(
-  \time 7/8 a4 e) e4.~\time 9/8 2~4. r4
+  \time 7/8 a'4\f->( e'-.) e4-> c8( \time 9/8 d4-.) b8( c4-.) a8( b4-.) g8(
+  \time 7/8 a4 e'-.) e4.->~\time 9/8 2~4. r4
+  \time 7/8 a,4->( e'-.) e4-> c8( \time 9/8 d4-.) b8( c4-.) a8( b4-.) g8(
+  \time 7/8 a4 e-.) e4.->~\time 9/8 2~4. r4
+  \time 7/8 a4->( e'-.) e4-> c8( \time 9/8 d4-.) b8( c4-.) a8( b4-.) g8(
+  \time 7/8 a4 e'-.) e4.->~\time 9/8 2~4. r4
+  \time 7/8 a,4->( e'-.) e4-> c8( \time 9/8 d4-.) b8( c4-.) a8( b4-.) g8(
+  \time 7/8 a4 e-.) e4.->~\time 9/8 2~4. r4
 
   \mark\default
   \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
   \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
-  \time 7/8 d4-.\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. a-.
+  \time 7/8 d4-.\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. f4.-. \time 9/8 g-. a-. a-.
 
   \time 7/8 a4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
@@ -876,7 +932,16 @@ scoreAEflatClarinet = \relative c'' {
   R2.*13
   \relative c'' {\greenPathPatternA \greenPathPatternB}
 
-  \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo \markup{
+    \concat {
+      "Swift "
+      (
+      \smaller \general-align #Y #DOWN \note { 4 } #UP
+      " = "
+      \smaller \general-align #Y #DOWN \note { 8 } #UP
+      )
+    }
+  } 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     a'8\fp-.-> e-. e-. e-.-> e-. e-. g->( f) d( e) c->( b)
     e-.-> e-. e-. e-.-> e-. e-. d->( c) a( c) b->( g)
@@ -912,12 +977,13 @@ scoreAEflatClarinet = \relative c'' {
   \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
   \key a \minor
 
-  R1*2 r2 r8 fs4.\p\<~1\> \mark\default
+  R1*2 r2 r8 \once \override Hairpin.bound-padding = #0.5
+  fs4.\p\<~1\> \mark\default
   R1*8\! \mark\default
   R1*8 \mark\default
   R1*15 R1\fermata R1\fermata
 
-  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
+  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
   \time 7/8 d4-.->\mp d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.-> \mark\default
@@ -950,7 +1016,7 @@ scoreAEflatClarinet = \relative c'' {
   \time 7/8 d8\f-. a-. d-. a-. e'-. f-. e-. d-. a-. d-. a-. c-. d-. e-. d-. a-. d-. a-. e'-. f-. e-.
   \time 3,3,3 9/8 f-. e-. d-. e-. d-. c-. d-. c-. d-.
   \time 7/8 d4-.\mp d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
-  \time 7/8 d4-.\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. e-.
+  \time 7/8 d4-.\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. f4.-. \time 9/8 g-. a-. f-.
 
   \time 7/8 d4-.->\mp d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
@@ -1009,7 +1075,7 @@ scoreAClarinetI = \relative c'' {
   R2.*4 \mark\default R2.*16
 
   \time 6/8 \mark\default
-  R2.*7 r4. a'16\p\<(e fs b, cs ds e4.\mf~8 fs8 g fs2.) e4.~8 b4( cs2.) d4.~8 b4(a4.~8 b8 c b4.)~8 g4(a2.)
+  R2.*7 r4. a'16\p\<(e fs b, cs ds e4.\mf~8 fs8 g fs2.) e4.~8 b4( cs2.) d4.~8 b4(a4.)~8 b8( c b4.)~8 g4(a2.)
   \mark\default b8-.\pp r r b-. r r fs'-. r r fs-. r r e-. r r e-. r r c-. r r c-. r r
   b-. r r b-. r r cs-. r r cs-. r r e-. r r b-. r r cs-. r b-. fs'-. r r
   \mark\default c-. r r c-. r r b-. r r b-. r r e-. r r e-. r r c-. r r c-. r r
@@ -1017,7 +1083,16 @@ scoreAClarinetI = \relative c'' {
 
   \greenPathPatternA \greenPathPatternB
 
-  \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo \markup{
+    \concat {
+      "Swift "
+      (
+      \smaller \general-align #Y #DOWN \note { 4 } #UP
+      " = "
+      \smaller \general-align #Y #DOWN \note { 8 } #UP
+      )
+    }
+  } 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     a8\fp-.-> e-. e-. e-.-> e-. e-. g->( f) d( e) c->( b)
     e-.-> e-. e-. e-.-> e-. e-. d->( c) a( c) b->( g)
@@ -1065,7 +1140,7 @@ scoreAClarinetI = \relative c'' {
   b2. a8 b g4 fs8 g e2 ~1\> ~1\! \mark\default
   R1*15 R1\fermata R1\fermata
 
-  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
+  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
   \time 7/8 a4-.->\mp a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.-> \mark\default
@@ -1084,20 +1159,20 @@ scoreAClarinetI = \relative c'' {
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.-> \mark\default
 
-  \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 b4-.-> b8-. a4-.-> a8-. g4-.-> g8-.
-  \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
-  \time 7/8 d,4(\f a') a8( g f) \time 3,3,3 9/8 g( f e) f( e d) e( d c)
-  \time 7/8 d4( a) a4. ~ \time 9/8 2~4. r4
-  \time 7/8 a'4-.->\mp a-. a-.-> a8-. \time 9/8 b4-.-> b8-. a4-.-> a8-. g4-.-> g8-.
+  \time 7/8 d,4->(\f a'-.) a8->( g f) \time 3,3,3 9/8 g->( f e) f->( e d) e->( d c)
+  \time 7/8 d4->( a'-.) a4.-> ~ \time 9/8 2~4. r4
+  \time 7/8 a4-.->\mp a-. a-.-> a8-. \time 9/8 b4-.-> b8-. a4-.-> a8-. g4-.-> g8-.
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 b4-.-> b8-. a4-.-> a8-. g4-.-> g8-.
-  \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
+  \time 7/8 f2..\f-> \time 9/8 e2->~4.~4
+  \time 7/8 f2..-> \time 9/8 g4.-> f-> g->
+  \time 7/8 a4-.->\mp a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
 
   \mark\default
-  \time 7/8 a4-. a-. b4.-. a4-. a-. gs4.-. a4-. a-. b4.-. \time 9/8 c-. b-. r
+  \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
   \time 7/8 d8\f-. a-. d-. a-. e'-. f-. e-. d-. a-. d-. a-. c-. d-. e-. d-. a-. d-. a-. e'-. f-. e-.
   \time 3,3,3 9/8 f-. e-. d-. e-. d-. c-. d-. c-. d-.
-  \time 7/8 d4-.\mp\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. e-.
+  \time 7/8 d4-.\mp\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. f4.-. \time 9/8 g-. a-. f-.
 
   \time 7/8 a,4-.->\mp a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
@@ -1167,7 +1242,16 @@ scoreAClarinetII = \relative c'' {
 
   \relative c' {\greenPathPatternA  \greenPathPatternB}
 
-  \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo \markup{
+    \concat {
+      "Swift "
+      (
+      \smaller \general-align #Y #DOWN \note { 4 } #UP
+      " = "
+      \smaller \general-align #Y #DOWN \note { 8 } #UP
+      )
+    }
+  } 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     a8\fp r r e r4 g4-. r4 c,8 r e r r e r4 d4-. r4 b8 r b r r e r4 g4-. r4 c,8 r
     e4-. r4 r R2. \time 4/4 R1 \time 3/4
@@ -1209,17 +1293,17 @@ scoreAClarinetII = \relative c'' {
 
   R1*4 \mark\default
   e,4\mf-.^\markup {\italic "quasi pizz."} e-. fs8-. g-. fs4-. r2 r4
-  \once \override Hairpin.bound-padding = #0.25
+  \once \override Hairpin.bound-padding = #0.5
   ds\p\< e\mf-. b8-. a-. b4-. r R1
   e4-. e-. fs8-. g-. a4-. r4 r8 g-. fs4-. b8.-. as16-. b4-. g8-. fs-. a4-. r R1 \mark\default
   e4->\p\> e e-> e e4->\p e8 ds~8 e->~8 ds e4-> e e-> e e4-> e e-> g
   e4-> e e-> e e4-> e e-> e8 ds e4-> b8-. a-. b4-. r e4->\p\> e e-> e \mark\default
   R1*15\! R1\fermata R1\fermata
 
-  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
+  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
-  \time 7/8 g4-.->\mp g-. g-.-> g8-. \time 9/8 g4-.-> g4-. g4-.-> g8-. g4-.->
-  \time 7/8 g4-.-> g-. g-.-> g8-. \time 9/8 g4-.-> g4-. g4-.-> g8-. g4-.-> \mark\default
+  \time 7/8 a4-.->\mp a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
+  \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.-> \mark\default
 
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 b4-.-> b4-. b4-.-> b8-. b4-.->
   \time 7/8 c4-.-> c-. b-.-> b8-. \time 9/8 af4-.-> af4-. a4-.-> a8-. a4-.->
@@ -1246,9 +1330,9 @@ scoreAClarinetII = \relative c'' {
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
 
   \mark\default
-  \time 7/8 a4-. a-. b4.-. a4-. a-. gs4.-. a4-. a-. b4.-. \time 9/8 c-. b-. r
-  \time 7/8 a4-. a-. b4.-. a4-. a-. gs4.-. a4-. a-. b4.-. \time 9/8 c-. b-. r
-  \time 7/8 d4-.\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. cs,-.
+  \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
+  \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
+  \time 7/8 d4-.\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. f4.-. \time 9/8 g-. a-. cs,-.
 
   \time 7/8 a4-.->\mp a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
@@ -1321,7 +1405,16 @@ scoreAClarinetIII = \relative c'' {
 
   \relative c' {\greenPathPatternA  \greenPathPatternB}
 
-  \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo \markup{
+    \concat {
+      "Swift "
+      (
+      \smaller \general-align #Y #DOWN \note { 4 } #UP
+      " = "
+      \smaller \general-align #Y #DOWN \note { 8 } #UP
+      )
+    }
+  } 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     a,8\fp r r e r4 g4-. r4 c8->( b) e, r r e r4 d4-. r4 b'8 r a r r e r4 g4-. r4 c8->( b)
     e4-. r4 r R2. \time 4/4 R1 \time 3/4
@@ -1365,14 +1458,14 @@ scoreAClarinetIII = \relative c'' {
 
   R1*4 \mark\default
   e,4\mf-.^\markup {\italic "quasi pizz."} e-. fs8-. e-. fs4-. r2 r4
-  \once \override Hairpin.bound-padding = #0.25
+  \once \override Hairpin.bound-padding = #0.5
   b,\p\< e\mf-. b8-. a-. b4-. r R1
   e4-. e-. fs8-. e-. a4-. r4 r8 g-. fs4-. g8.-. fs16-. e4-. g8-. fs-. e4-. r R1 \mark\default
   e4->\p\> e e-> e e4->\p e8 ds~8 e->~8 ds e4-> e e-> e e4-> e e-> g
   e4-> e e-> e e4-> e e-> e8 ds e4-> b8-. a-. b4-. r e4->\p\> e e-> e \mark\default
   R1*15\! R1\fermata R1\fermata
 
-  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
+  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
   \time 7/8 d4-.->\mp d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.-> \mark\default
@@ -1404,7 +1497,7 @@ scoreAClarinetIII = \relative c'' {
   \mark\default
   \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
   \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
-  \time 7/8 d4-.\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. a
+  \time 7/8 d4-.\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. f4.-. \time 9/8 g-. a-. a
 
   \time 7/8 d,4-.->\mp d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
@@ -1472,7 +1565,16 @@ scoreABassClarinet = \relative c'' {
 
   \mark\default \greenPathBassA \mark\default \greenPathBassPreB \greenPathBassB
 
-  \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo \markup{
+    \concat {
+      "Swift "
+      (
+      \smaller \general-align #Y #DOWN \note { 4 } #UP
+      " = "
+      \smaller \general-align #Y #DOWN \note { 8 } #UP
+      )
+    }
+  } 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     a8\fp-.-> a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-.-> a-.
     a-.-> a-. a-. a-.-> a-. a-. f-.-> f-. f-. f-. g-.-> r
@@ -1480,7 +1582,7 @@ scoreABassClarinet = \relative c'' {
     a-.->\< a-. a-. a-.-> a-. a-. g-.-> g-. g-. g-. g-.-> g-.
     \time 4/4 f-.-> f-. f-. f-. f-.-> f-. f-. f-. \time 3/4
     \mark\default d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-.
-    bf-.-> bf-. bf-. bf-.-> bf-. bf-. bf2.\f\>
+    bf-.-> bf-. bf-. bf-.-> bf-. bf-. \once \override Hairpin.bound-padding = #0.5 bf2.\f\>
     \mark\default e8-.\p e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-.
     e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-.
     c-. c-. c-. c-. c-. c-. c-. c-. c-. c-. c-. c-.
@@ -1504,7 +1606,8 @@ scoreABassClarinet = \relative c'' {
         a-. a-. a-. a-. a-. a-. b-.-> b-. a-.-> a-. g-.-> g-.
         f-.-> f-. r f-. f-. f-. f-. f-. r f-. f-. f-.
         f-. f-. r f-. f-. f-. f-. f-. r f-. d-.\< d-.
-        d2\f\> e8-.\p\< e-. e2\f d8-.\> d-. a'-.\p\< a-. b-. b-. c-. c-. b-. b-. c-. c-. d-. d-.
+        \once \override Hairpin.bound-padding = #0.5 d2\f\> \once \override Hairpin.bound-padding = #0.5
+        e8-.\p\< e-. e2\f d8-.\> d-. a'-.\p\< a-. b-. b-. c-. c-. b-. b-. c-. c-. d-. d-.
       }
       \volta 2 {
 
@@ -1531,7 +1634,7 @@ scoreABassClarinet = \relative c'' {
   R1*8 \mark\default
   R1*15 R1\fermata R1\fermata
 
-  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
+  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
   \time 7/8 d'4-.->\mp d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.-> \mark\default
@@ -1563,7 +1666,7 @@ scoreABassClarinet = \relative c'' {
   \mark\default
   \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
   \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
-  \time 7/8 d4-.\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. e-.
+  \time 7/8 d4-.\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. f4.-. \time 9/8 g-. a-. f-.
 
   \time 7/8 d4-.->\mp d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
@@ -1641,7 +1744,16 @@ scoreAAltoSaxI = \relative c'' {
     \override TextSpanner.bound-details.left.text = "poco rit." a2.\startTextSpan a4. c\stopTextSpan
   }
 
-  \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo \markup{
+    \concat {
+      "Swift "
+      (
+      \smaller \general-align #Y #DOWN \note { 4 } #UP
+      " = "
+      \smaller \general-align #Y #DOWN \note { 8 } #UP
+      )
+    }
+  } 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     e,8\fp-.-> e-. e-. e-.-> e-. e-. g4-.-> r4 r e8-.-> e-. e-. e-.-> e-. e-. d4-.-> r4 r
     e8-.-> e-. e-. e-.-> e-. e-. g4-.-> r4 r e4-. r4 r R2. \time 4/4 R1 \time 3/4
@@ -1690,7 +1802,7 @@ scoreAAltoSaxI = \relative c'' {
   R1*8\! \mark\default
   R1*15 R1\fermata R1\fermata
 
-  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
+  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
   \time 7/8 d,4-.->\mp d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.-> \mark\default
@@ -1712,9 +1824,9 @@ scoreAAltoSaxI = \relative c'' {
 
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d8-. d4-.-> d8-. d4-.-> d8-.
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
-  \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d8-. d4-.-> d8-. d4-.-> d8-.
-  \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
-  \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d8-. d4-.-> d8-. d4-.-> d8-.
+  \time 7/8 d4->(\f a'-.) a8->( g f) \time 3,3,3 9/8 g->( f e) f->( e d) e->( d c)
+  \time 7/8 d4->( a-.) a4.-> ~ \time 9/8 2~4. r4
+  \time 7/8 d4-.->\mp d-. d-.-> d8-. \time 9/8 d4-.-> d8-. d4-.-> d8-. d4-.-> d8-.
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 e4-.-> e4-. e4-.-> e8-. e4-.->
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 e4-.-> e8-. d4-.-> d8-. c4-.-> c8-.
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
@@ -1723,7 +1835,7 @@ scoreAAltoSaxI = \relative c'' {
   \time 7/8 d8\f-. a-. d-. a-. e'-. f-. e-. d-. a-. d-. a-. c-. d-. e-. d-. a-. d-. a-. e'-. f-. e-.
   \time 3,3,3 9/8 f-. e-. d-. e-. d-. c-. d-. c-. d-.
   \time 7/8 d4-.\mp d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
-  \time 7/8 d4-.\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. cs,-.
+  \time 7/8 d4-.\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. f4.-. \time 9/8 g-. e-. cs-.
 
   \time 7/8 d4-.->\mp d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
@@ -1800,7 +1912,16 @@ scoreAAltoSaxII = \relative c'' {
   \mark\default fs,2.\f~4. \tuplet 2/3 {g8 a} fs4.~8 b,4 cs2. e2.~4. \tuplet 2/3 {fs8 g}
   \override TextSpanner.bound-details.left.text = "poco rit." e2.\startTextSpan\< c4. a\stopTextSpan
 
-  \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo \markup{
+    \concat {
+      "Swift "
+      (
+      \smaller \general-align #Y #DOWN \note { 4 } #UP
+      " = "
+      \smaller \general-align #Y #DOWN \note { 8 } #UP
+      )
+    }
+  } 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     e'8\fp-.-> e-. e-. e-.-> e-. e-. g4-.-> r4 r e8-.-> e-. e-. e-.-> e-. e-. d4-.-> r4 r
     e8-.-> e-. e-. e-.-> e-. e-. g4-.-> r4 r e4-. r4 r R2. \time 4/4 R1 \time 3/4
@@ -1847,7 +1968,7 @@ scoreAAltoSaxII = \relative c'' {
   R1*8\! \mark\default
   R1*15 R1\fermata R1\fermata
 
-  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
+  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
   \time 7/8 a,4-.->\mp a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.-> \mark\default
@@ -1877,9 +1998,9 @@ scoreAAltoSaxII = \relative c'' {
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
 
   \mark\default
-  \time 7/8 a4-. a-. b4.-. a4-. a-. gs4.-. a4-. a-. b4.-. \time 9/8 c-. b-. r
-  \time 7/8 a4-. a-. b4.-. a4-. a-. gs4.-. a4-. a-. b4.-. \time 9/8 c-. b-. r
-  \time 7/8 a4-.\< a-. b4.-. a4-. a-. gs4.-. a4-. a-. b4.-. \time 9/8 e-. d-. cs-.
+  \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
+  \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
+  \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. d4.-. \time 9/8 d-. c-. cs-.
 
   \time 7/8 a4-.->\mp a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
@@ -1945,7 +2066,16 @@ scoreATenorSax = \relative c'' {
   R2.*16 \mark\default e,4.\mp e e e e e fs g e e e e e e fs\< g \mark\default
   \relative c' \greenPathBassA \mark\default \relative c'' {\greenPathBassPreB \greenPathBassB}
 
-  \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo \markup{
+    \concat {
+      "Swift "
+      (
+      \smaller \general-align #Y #DOWN \note { 4 } #UP
+      " = "
+      \smaller \general-align #Y #DOWN \note { 8 } #UP
+      )
+    }
+  } 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     a8\fp r r e r4 g4-. r4 c8->( b) e, r r e r4 d4-. r4 b'8 r a r r e r4 g4-. r4 c8->( b)
     a-.->\< a-. a-. a-.-> a-. a-. g-.-> g-. g-. g-. g-.-> g-.
@@ -1984,12 +2114,12 @@ scoreATenorSax = \relative c'' {
   R1*8 \mark\default
   R1*15 R1\fermata R1\fermata
 
-  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
+  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
-  \time 7/8 g,4-.->\mp g-. g-.-> g8-. \time 9/8 g4-.-> g4-. g4-.-> g8-. g4-.->
-  \time 7/8 g4-.-> g-. g-.-> g8-. \time 9/8 g4-.-> g4-. g4-.-> g8-. g4-.-> \mark\default
+  \time 7/8 a,4-.->\mp a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
+  \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.-> \mark\default
 
-  \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
+  \time 7/8 d,4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
@@ -2015,7 +2145,7 @@ scoreATenorSax = \relative c'' {
   \mark\default
   \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
   \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
-  \time 7/8 d4-.\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. a-.
+  \time 7/8 d4-.\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. f4.-. \time 9/8 g-. a-. f-.
 
   \time 7/8 a4-.->\mp a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
@@ -2067,7 +2197,8 @@ scoreATenorSax = \relative c'' {
   c4-.-^ c-.-^ c-.-^ c-.-^ \tuplet 6/4 {b,16\mf\<( c cs d ds e}
   \tuplet 6/4 {fs g gs a as b)} r2\f
 
-  r2 g\fp\< g8-^\ff g-^ r g-^ g4-^ c8-^ c-^ c4-^ r r2 \fine
+  r2 \once \override Hairpin.bound-padding = #0.5
+  g\fp\< g8-^\ff g-^ r g-^ g4-^ c8-^ c-^ c4-^ r r2 \fine
 }
 
 scoreABaritoneSax = \relative c'' {
@@ -2086,7 +2217,16 @@ scoreABaritoneSax = \relative c'' {
   fs4.\p\< g \mark\default \relative c' \greenPathBassA
   \mark\default \relative c'' {\greenPathBassPreB \greenPathBassB}
 
-  \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo \markup{
+    \concat {
+      "Swift "
+      (
+      \smaller \general-align #Y #DOWN \note { 4 } #UP
+      " = "
+      \smaller \general-align #Y #DOWN \note { 8 } #UP
+      )
+    }
+  } 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     a8\fp-.-> a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-.-> a-.
     a-.-> a-. a-. a-.-> a-. a-. f-.-> f-. f-. f-. g-.-> r
@@ -2144,7 +2284,7 @@ scoreABaritoneSax = \relative c'' {
   R1*8 \mark\default
   R1*15 R1\fermata R1\fermata
 
-  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
+  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
   \time 7/8 d,4-.->\mp d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.-> \mark\default
@@ -2176,7 +2316,7 @@ scoreABaritoneSax = \relative c'' {
   \mark\default
   \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
   \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
-  \time 7/8 d4-.\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 g-. a-. e-.
+  \time 7/8 d4-.\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. f4.-. \time 9/8 g-. c,-. cs-.
 
   \time 7/8 d4-.->\mp d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> d4-. d4-.-> d8-. d4-.->
@@ -2256,11 +2396,20 @@ scoreATrumpetBbI = \relative c'' {
     a2.\startTextSpan \< a'4. c\stopTextSpan
   }
 
-  \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo \markup{
+    \concat {
+      "Swift "
+      (
+      \smaller \general-align #Y #DOWN \note { 4 } #UP
+      " = "
+      \smaller \general-align #Y #DOWN \note { 8 } #UP
+      )
+    }
+  } 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2
   {
     a'4\fp-.-> r4 r R2.*2 r2
-    \once \override Hairpin.bound-padding = #0.25
+    \once \override Hairpin.bound-padding = #0.5
     b,4\p\< e4\fp-.-> r4 r R2.*3 \time 4/4 R1 \time 3/4 \mark\default R2.*3
     \tuplet 3/2 {d8-.->\f c-. bf-.} \tuplet 3/2 {bf-.-> a-. g-.} \tuplet 3/2 {f-.-> e-. d-.}
     \mark\default a4-.-> r r R2.*5
@@ -2271,7 +2420,11 @@ scoreATrumpetBbI = \relative c'' {
         a\f e'->~2. g4(->\< f d) e( c b) \mark\default a4->-.\! r4 r R2.
         e'8\ff e-. r e-. r4 ef8 ef-. r ef-. r4 R2.*2 e8\ff e-. r e-. r4 ef8 ef-. r ef-. r4 R2.*4
         cs4.(\mf\< fs e ds) e2.\f~2. \mark\default a4-.->\fp r4 r R2.
-        bf,2.\<~2.\f\> a4-.\p r4 r R2. bf2.\<~2.\f\> \mark\default a4-.\p r4 r
+        bf,2.\<~
+        \once \override Hairpin.bound-padding = #0.5
+        2.\f\> a4-.\p r4 r R2. bf2.\<~
+        \once \override Hairpin.bound-padding = #0.5
+        2.\f\> \mark\default a4-.\p r4 r
         R2.*2 r4 r8 a16-.\f a-. a-. a-. a-. a-. a4-. r4 r R2.*2
         b16-. b-. b-. b-. a-. a-. a-. a-. g-. g-. g-. g-.
         f4-. r4 r R2.*2 r4 r8 a16-. a-. a-. a-. a-. a-. a4-. r8b16-. b-. b-. b-. b-. b-. b4-. r8
@@ -2294,9 +2447,11 @@ scoreATrumpetBbI = \relative c'' {
   R1*4 \mark\default
   R1*8 \mark\default
   R1*8 \mark\default
-  R1*4 r2 b,2\pp\<~1\> R1\! r2 e,2\pp\<~1\> R1*6\! R1\fermata R1\fermata
+  R1*4 r2 \once \override Hairpin.bound-padding = #0.5
+  b,2\pp\<~1\> R1\! r2 \once \override Hairpin.bound-padding = #0.5
+  e,2\pp\<~1\> R1*6\! R1\fermata R1\fermata
 
-  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
+  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
   \time 7/8 d'4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
@@ -2306,12 +2461,11 @@ scoreATrumpetBbI = \relative c'' {
   \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \mark\default
-  \time 7/8 a4(\ff d) d4.->~ \time 9/8 2\> r4.\! r4 \time 7/8 r4. a8\f b(-> c b) \time 9/8 a2->\> r4.\! r4
-  \time 7/8 g4(\ff d') c4.\> \time 9/8 R1*9/8\!
-  \time 7/8 R1*7/8 \time 9/8 R1*9/8
+  \time 7/8 d,4-.->\ff a'-.-> a4.-> ~\time 9/8 2 b4-.-> c8-. b4-.->  \time 7/8 a2\> r4.\! \time 9/8 R1*9/8
+  \time 7/8 d,4-.->\ff a'-.-> g4.-> \time 9/8 f4-. e4-. d4-.-> e8-. c4-.-> \time 7/8 d2..\>-> \time 9/8 R1*9/8\!
 
-  \time 7/8 a4-.->\mf a-. a-.-> a8-. \time 9/8 a4-.-> r r4. r4
-  \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> r r4. r4
+  \time 7/8 a'4-.->\mf a-. a4.-.-> \time 9/8 a4-.-> r r4. r4
+  \time 7/8 a4-.-> a-. a4.-.-> \time 9/8 a4-.-> r r4. r4
 
   \mark\default
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
@@ -2322,19 +2476,19 @@ scoreATrumpetBbI = \relative c'' {
   \mark\default
   \time 7/8 a4\ff-. r r4. R1*7/8*2 \time 9/8 R1*9/8
   \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
-  \time 7/8 d,4\f-. d-. e8-. f-. e-. d4-. d-. cs8-. d-. e-. d4-. d-. e8-. f-. e-.
+  \time 7/8 d,4\f-. d-. e8-. f-. e-. d4-. d-. cs8-. d-. e-. d4-. d-. f8-. g-. f-.
   \time 3,3,3 9/8 g-. a-. g-. a-. b-. a-. b-. c-. cs-.
 
-  \time 7/8 d4\ff -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
+  \time 7/8 d4 -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \mark\default
-  \time 7/8 a4(\ff d) d4.->~ \time 9/8 2\> r4.\! r4 \time 7/8 r4. a8\f b(-> c b) \time 9/8 a2->\> r4.\! r4
-  \time 7/8 g4(\ff d') c4.\> \time 9/8 R1*9/8\!
+  \time 7/8 d,4-.->\ff a'-.-> a4.-> ~\time 9/8 2 b4-.-> c8-. b4-.->  \time 7/8 a2\> r4.\! \time 9/8 R1*9/8
+  \time 7/8 d,4-.->\ff a'-.-> g4.-> \time 9/8 f4-. e4-. d4-.-> e8-. c4-.->
 
   \mark\default
-  \time 7/8 g4(\ff d') c4. \time 9/8 bf4 a4 g4 a8 f4->
-  \time 7/8 d'4(\ff a') g4. \time 9/8 f4 e4 d4 e8 c4->
-  \time 7/8 d2..\> \time 9/8 R1*9/8\!
+  \time 7/8 g'4-.->\ff d'-.-> c4.-> \time 9/8 bf4-. a4-. g4-.-> a8-. f4-.->
+  \time 7/8 d'4-.->\ff a'-.-> g4.-> \time 9/8 f4-. e4-. d4-.-> e8-. c4-.->
+  \time 7/8 d2..\>-> \time 9/8 R1*9/8\!
 
   \time 2/4 r4 a'4-.-^\fermata
 
@@ -2397,11 +2551,20 @@ scoreATrumpetBbII = \relative c'' {
   }
   \relative c' {\greenPathPatternA \greenPathPatternB}
 
-  \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo \markup{
+    \concat {
+      "Swift "
+      (
+      \smaller \general-align #Y #DOWN \note { 4 } #UP
+      " = "
+      \smaller \general-align #Y #DOWN \note { 8 } #UP
+      )
+    }
+  } 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2
   {
     a4\fp-.-> r4 r R2.*2 r2
-    \once \override Hairpin.bound-padding = #0.25
+    \once \override Hairpin.bound-padding = #0.5
     b4\p\< a4\fp-.-> r4 r R2.*3 \time 4/4 R1 \time 3/4 \mark\default R2.*3
     d4-.\f bf-. f-.
     \mark\default a,4-.-> r r R2.*5
@@ -2436,7 +2599,7 @@ scoreATrumpetBbII = \relative c'' {
   R1*8 \mark\default
   R1*10 r2 e,2\pp\<~1\>~1~1 R1\! R1\fermata R1\fermata
 
-  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
+  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
   \time 7/8 a4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
@@ -2446,11 +2609,13 @@ scoreATrumpetBbII = \relative c'' {
   \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \mark\default
-  \time 7/8 d,4(\ff a') a4.->~ \time 9/8 2 b4 c8(b4-> ) \time 7/8 a2..\> \time 9/8 R1*9/8\!
-  \time 7/8 d,4(\ff a') g4. \time 9/8 f4 e4 d4 e8 c4-> \time 7/8 d2..\>-> \time 9/8 R1*9/8\!
+  \time 7/8 d,4-.->\ff a'-.-> a4.-> ~\time 9/8 2 b4-.-> c8-. b4-.->  \time 7/8 a2\> r4.\! \time 9/8 R1*9/8
+  \time 7/8 d,4-.->\ff a'-.-> g4.-> \time 9/8 f4-. e4-. d4-.-> e8-. c4-.-> \time 7/8 d2..\>-> \time 9/8 R1*9/8\!
 
-  \time 7/8 d4\mf-.-> d-. d-.-> d8-. \time 9/8 d4-.-> r4 r4. r4
-  \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 d4-.-> r4 r4. r4
+
+  \time 7/8 d4-.->\mf d-. d4.-.-> \time 9/8 d4-.-> r r4. r4
+  \time 7/8 d4-.-> d-. d4.-.-> \time 9/8 d4-.-> r r4. r4
+
   \mark\default
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
@@ -2460,19 +2625,19 @@ scoreATrumpetBbII = \relative c'' {
   \mark\default
   \time 7/8 d4\ff-. r r4. R1*7/8*2 \time 9/8 R1*9/8
   \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
-  \time 7/8 d4\f-. d-. e8-. f-. e-. d4-. d-. cs8-. d-. e-. d4-. d-. e8-. f-. e-.
+  \time 7/8 d4\f-. d-. e8-. f-. e-. d4-. d-. cs8-. d-. e-. d4-. d-. f8-. g-. f-.
   \time 3,3,3 9/8 g-. a-. g-. a-. b-. a-. b-. c-. cs-.
 
-  \time 7/8 d4\ff -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
+  \time 7/8 d4 -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \mark\default
-  \time 7/8 d,4(\ff a') a4.->~ \time 9/8 2 b4 c8(b4-> ) \time 7/8 a2..\> \time 9/8 R1*9/8\!
-  \time 7/8 d,4(\ff a') g4. \time 9/8 f4 e4 d4 e8 c4->
+  \time 7/8 d,4-.->\ff a'-.-> a4.-> ~\time 9/8 2 b4-.-> c8-. b4-.->  \time 7/8 a2\> r4.\! \time 9/8 R1*9/8
+  \time 7/8 d,4-.->\ff a'-.-> g4.-> \time 9/8 f4-. e4-. d4-.-> e8-. c4-.->
 
   \mark\default
-  \time 7/8 g'4(\ff d') c4. \time 9/8 bf4 a4 g4 a8 f4->
-  \time 7/8 d4(\ff a') g4. \time 9/8 f4 e4 d4 e8 c4->
-  \time 7/8 d2..\> \time 9/8 R1*9/8\!
+  \time 7/8 g'4-.->\ff d'-.-> c4.-> \time 9/8 bf4-. a4-. g4-.-> a8-. f4-.->
+  \time 7/8 d4-.->\ff a'-.-> g4.-> \time 9/8 f4-. e4-. d4-.-> e8-. c4-.->
+  \time 7/8 d2..\>-> \time 9/8 R1*9/8\!
 
   \time 2/4 r4 d'4-.-^\fermata
 
@@ -2523,10 +2688,19 @@ scoreAHornFI = \relative c' {
   \mark\default b2.~4.~8 e4 b2. e d4. cs d b \override TextSpanner.bound-details.left.text = "poco rit."
   a2.\startTextSpan \< a4. c\stopTextSpan
 
-  \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo \markup{
+    \concat {
+      "Swift "
+      (
+      \smaller \general-align #Y #DOWN \note { 4 } #UP
+      " = "
+      \smaller \general-align #Y #DOWN \note { 8 } #UP
+      )
+    }
+  } 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     a'4\fp-.-> r4 r R2.*2 r2
-    \once \override Hairpin.bound-padding = #0.25
+    \once \override Hairpin.bound-padding = #0.5
     b,4\p\< a4\fp-.-> r4 r R2.*3 \time 4/4 R1 \time 3/4
     \mark\default d8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g'->( f e) f->( e d)
     \tuplet 3/2 {d-.->\f c-. bf-.} \tuplet 3/2 {bf-.-> a-. g-.} \tuplet 3/2 {f-.-> e-. d-.}
@@ -2566,18 +2740,18 @@ scoreAHornFI = \relative c' {
   R1*8 \mark\default
   R1*15 R1\fermata R1\fermata
 
-  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
+  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
   \time 7/8 d4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \mark\default
-  \time 7/8 d4(\ff a') a4.->~ \time 9/8 2 b4 c8(b4-> ) \time 7/8 a2..\> \time 9/8 R1*9/8\!
-  \time 7/8 d,4(\ff a') a4.->~ \time 9/8 2 g4 a8(g4-> ) \time 7/8 f2 e8 f e \time 9/8 d2->\>~4. r4\!
+  \time 7/8 d4-.->\ff a'-.-> a4.-> ~\time 9/8 2 b4-.-> c8-. b4-.->  \time 7/8 a2\> r4.\! \time 9/8 R1*9/8
+  \time 7/8 d,4-.->\ff a'-.-> a4.-> ~\time 9/8 2 g4-.-> a8-. g4-.->  \time 7/8 f2-> e8 f e \time 9/8 d2->\> r4.\! r4
   \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \mark\default
-  \time 7/8 d4(\ff a') a4.->~ \time 9/8 2 b4 c8(b4-> ) \time 7/8 a2..\> \time 9/8 R1*9/8\!
-  \time 7/8 d,4(\ff a') g4. \time 9/8 f4 e4 d4 e8 c4-> \time 7/8 d2..->\> \time 9/8 R1*9/8\!
+  \time 7/8 d4-.->\ff a'-.-> a4.-> ~\time 9/8 2 b4-.-> c8-. b4-.->  \time 7/8 a2\> r4.\! \time 9/8 R1*9/8
+  \time 7/8 d,4-.->\ff a'-.-> g4.-> \time 9/8 f4-. e4-. d4-.-> e8-. c4-.-> \time 7/8 d2..\>-> \time 9/8 R1*9/8\!
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \mark\default
@@ -2585,24 +2759,24 @@ scoreAHornFI = \relative c' {
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
   \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
-  \time 7/8 f2\f~4. \time 9/8 g2~4.~4
-  \time 7/8 f2~4. \time 9/8 g4.\< f4. g4. \time 7/8 a2~4.~ \time 9/8 2~4.~4
+  \time 7/8 d2\f~4. \time 9/8 e2~4.~4
+  \time 7/8 f2~4. \time 9/8 e4.\< f4. g4. \time 7/8 a2~4.~ \time 9/8 2~4.~4
 
   \mark\default
   \time 7/8 R1*7/8*3\! \time 9/8 R1*9/8
   \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
-  \time 7/8 d,2..\< e g \time 9/8 g4.-.\ff a-. cs-.
+  \time 7/8 d,2..\< f g \time 9/8 g4.-.\ff c-. cs-.
 
-  \time 7/8 a4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
-
-  \mark\default
-  \time 7/8 d,4(\ff a') a4.->~ \time 9/8 2 b4 c8(b4-> ) \time 7/8 a2..\> \time 9/8 R1*9/8\!
-  \time 7/8 d,4(\ff a') g4. \time 9/8 f4 e4 d4 e8 c4->
+  \time 7/8 d4 -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \mark\default
-  \time 7/8 g4(\ff d') c4. \time 9/8 bf4 a4 g4 a8 f4->
-  \time 7/8 d'4(\ff a') g4. \time 9/8 f4 e4 d4 e8 c4->
-  \time 7/8 d2..\> \time 9/8 R1*9/8\!
+  \time 7/8 d,4-.->\ff a'-.-> a4.-> ~\time 9/8 2 b4-.-> c8-. b4-.->  \time 7/8 a2\> r4.\! \time 9/8 R1*9/8
+  \time 7/8 d,4-.->\ff a'-.-> g4.-> \time 9/8 f4-. e4-. d4-.-> e8-. c4-.->
+
+  \mark\default
+  \time 7/8 g4-.->\ff d'-.-> c4.-> \time 9/8 bf4-. a4-. g4-.-> a8-. f4-.->
+  \time 7/8 d'4-.->\ff a'-.-> g4.-> \time 9/8 f4-. e4-. d4-.-> e8-. c4-.->
+  \time 7/8 d2..\>-> \time 9/8 R1*9/8\!
 
   \time 2/4 r4 d4-.-^\fermata
 
@@ -2673,10 +2847,19 @@ scoreAHornFII = \relative c' {
     {fs8-. fs16-. fs-. r fs-. fs8.-. fs16-. fs-. fs-.\stopTextSpan}
   }
 
-  \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo \markup{
+    \concat {
+      "Swift "
+      (
+      \smaller \general-align #Y #DOWN \note { 4 } #UP
+      " = "
+      \smaller \general-align #Y #DOWN \note { 8 } #UP
+      )
+    }
+  } 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     a4\fp-.-> r4 r R2.*2 r4 r
-    \once \override Hairpin.bound-padding = #0.25
+    \once \override Hairpin.bound-padding = #0.5
     b4\p\< a4\fp-.-> r4 r R2.*3 \time 4/4 R1 \time 3/4
     \mark\default d8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g'->( f e) f->( e d)
     d4-.\f bf f
@@ -2714,18 +2897,18 @@ scoreAHornFII = \relative c' {
   R1*8 \mark\default
   R1*15 R1\fermata R1\fermata
 
-  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
+  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
   \time 7/8 a4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \mark\default
-  \time 7/8 d4(\ff a') a4.->~ \time 9/8 2 b4 c8(b4-> ) \time 7/8 a2..\> \time 9/8 R1*9/8\!
-  \time 7/8 d,4(\ff a') a4.->~ \time 9/8 2 g4 a8(g4-> ) \time 7/8 f2 e8 f e \time 9/8 d2->\>~4. r4\!
+  \time 7/8 d4-.->\ff a'-.-> a4.-> ~\time 9/8 2 b4-.-> c8-. b4-.->  \time 7/8 a2\> r4.\! \time 9/8 R1*9/8
+  \time 7/8 d,4-.->\ff a'-.-> a4.-> ~\time 9/8 2 g4-.-> a8-. g4-.->  \time 7/8 f2-> e8 f e \time 9/8 d2->\> r4.\! r4
   \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \mark\default
-  \time 7/8 d4(\ff a') a4.->~ \time 9/8 2 b4 c8(b4-> ) \time 7/8 a2..\> \time 9/8 R1*9/8\!
-  \time 7/8 d,4(\ff a') g4. \time 9/8 f4 e4 d4 e8 c4-> \time 7/8 d2..->\> \time 9/8 R1*9/8\!
+  \time 7/8 d4-.->\ff a'-.-> a4.-> ~\time 9/8 2 b4-.-> c8-. b4-.->  \time 7/8 a2\> r4.\! \time 9/8 R1*9/8
+  \time 7/8 d,4-.->\ff a'-.-> g4.-> \time 9/8 f4-. e4-. d4-.-> e8-. c4-.-> \time 7/8 d2..\>-> \time 9/8 R1*9/8\!
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \mark\default \time 7/8 R1*7/8 \time 9/8 R1*9/8
@@ -2733,23 +2916,23 @@ scoreAHornFII = \relative c' {
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \time 7/8 d2\f~4. \time 9/8 e2~4.~4
-  \time 7/8 a2~4. \time 9/8 g4.\< f4. e4. \time 7/8 d2~4.~ \time 9/8 2~4.~4
+  \time 7/8 d2~4. \time 9/8 e4.\< f4. e4. \time 7/8 d2~4.~ \time 9/8 2~4.~4
 
   \mark\default
   \time 7/8 R1*7/8*3\! \time 9/8 R1*9/8
   \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
-  \time 7/8 d2..\<~2..~2.. \time 9/8 e4.-.\ff f-. g-.
+  \time 7/8 d2..\<~2..~2.. \time 9/8 d4.-.\ff e-. cs-.
 
-  \time 7/8 a,4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
-
-  \mark\default
-  \time 7/8 d4(\ff a') a4.->~ \time 9/8 2 b4 c8(b4-> ) \time 7/8 a2..\> \time 9/8 R1*9/8\!
-  \time 7/8 d,4(\ff a') g4. \time 9/8 f4 e4 d4 e8 c4->
+  \time 7/8 a4 -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \mark\default
-  \time 7/8 g4(\ff d') c4. \time 9/8 bf4 a4 g4 a8 f4->
-  \time 7/8 d'4(\ff a') g4. \time 9/8 f4 e4 d4 e8 c4->
-  \time 7/8 d2..\> \time 9/8 R1*9/8\!
+  \time 7/8 d4-.->\ff a'-.-> a4.-> ~\time 9/8 2 b4-.-> c8-. b4-.->  \time 7/8 a2\> r4.\! \time 9/8 R1*9/8
+  \time 7/8 d,4-.->\ff a'-.-> g4.-> \time 9/8 f4-. e4-. d4-.-> e8-. c4-.->
+
+  \mark\default
+  \time 7/8 g4-.->\ff d'-.-> c4.-> \time 9/8 bf4-. a4-. g4-.-> a8-. f4-.->
+  \time 7/8 d'4-.->\ff a'-.-> g4.-> \time 9/8 f4-. e4-. d4-.-> e8-. c4-.->
+  \time 7/8 d2..\>-> \time 9/8 R1*9/8\!
 
   \time 2/4 r4 a4-.-^\fermata
 
@@ -2808,10 +2991,19 @@ scoreATromboneI = \relative c {
   R2.*7 \mark\default
   \relative c' {\greenPathBassPreB \greenPathBassB}
 
-  \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo \markup{
+    \concat {
+      "Swift "
+      (
+      \smaller \general-align #Y #DOWN \note { 4 } #UP
+      " = "
+      \smaller \general-align #Y #DOWN \note { 8 } #UP
+      )
+    }
+  } 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     a,4\fp-.-> r4 r R2.*2 r2
-    \once \override Hairpin.bound-padding = #0.25
+    \once \override Hairpin.bound-padding = #0.5
     b4\p\< a4\fp-.-> r4 r R2.*3 \time 4/4 R1 \time 3/4
     \mark\default d8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g->( f e) f->( e d)
     d'4-.\f bf f
@@ -2858,7 +3050,7 @@ scoreATromboneI = \relative c {
   } f2\fermata->
 
 
-  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
+  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
   \time 7/8 d4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
@@ -2869,21 +3061,22 @@ scoreATromboneI = \relative c {
 
   \mark\default
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
-  \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 c,2->\<~4. \time 9/8 b2 b'4.~4
+  \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 c2->\<~4. \time 9/8 b2 b'4.~4
   \time 7/8 d4-.-^\ff r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \mark\default \time 7/8 R1*7/8 \time 9/8 R1*9/8
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
-  \time 7/8 d2\f~4. \time 9/8 e2~4.~4 \time 7/8 f2~4. \time 9/8 g4.\< f4. g4. \time 7/8 a2~4.~\time 9/8 2~4.~4
+  \time 7/8 d2\f~4. \time 9/8 e2~4.~4
+  \time 7/8 d2~4. \time 9/8 e4.\< f4. e4. \time 7/8 d2~4.~ \time 9/8 2~4.~4
 
   \mark\default
   \time 7/8 R1*7/8*3\! \time 9/8 R1*9/8
   \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
-  \time 7/8 d,2..\< e g \time 9/8 g4.-.\ff a-. e-.
+  \time 7/8 d2..\< f g \time 9/8 g4.-.\ff a-. a-.
 
-  \time 7/8 a4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
+  \time 7/8 a4 -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \mark\default
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
@@ -2944,10 +3137,19 @@ scoreATromboneII = \relative c {
   \time 6/8 \mark\default
   R2.*16 \mark\default  R2.*8 \mark\default R2.*8 \mark\default R2.*8 \relative c' {\greenPathBassC}
 
-  \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo \markup{
+    \concat {
+      "Swift "
+      (
+      \smaller \general-align #Y #DOWN \note { 4 } #UP
+      " = "
+      \smaller \general-align #Y #DOWN \note { 8 } #UP
+      )
+    }
+  } 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     e4\fp-.-> r4 r R2.*2 r2
-    \once \override Hairpin.bound-padding = #0.25
+    \once \override Hairpin.bound-padding = #0.5
     b4\p\< e4\fp-.-> r4 r R2.*3 \time 4/4 R1 \time 3/4
     \mark\default d8-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. bf-.-> bf-. bf-. bf-.-> bf-. bf-. bf2.\f\>
     \mark\default a4-.\p r r R2.*5
@@ -2992,7 +3194,7 @@ scoreATromboneII = \relative c {
   R1*15 R1\fermata
   \grace{a'8\glissando\mf^\markup{\italic "flz."}} b2\glissando a2\fermata
 
-  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
+  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
   \time 7/8 a4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
@@ -3009,14 +3211,15 @@ scoreATromboneII = \relative c {
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
-  \time 7/8 f2\f~4. \time 9/8 g2~4.~4 \time 7/8 a2~4. \time 9/8 g4.\< f4. e4. \time 7/8 d2~4.~\time 9/8 2~4.~4
+  \time 7/8 d,2\f~4. \time 9/8 e2~4.~4
+  \time 7/8 f2~4. \time 9/8 e4.\< f4. g4. \time 7/8 a2~4.~ \time 9/8 2~4.~4
 
   \mark\default
   \time 7/8 R1*7/8*3\! \time 9/8 R1*9/8
   \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
-  \time 7/8 d'2..\<~2..~2.. \time 9/8 e4.-.\ff d-. cs-.
+  \time 7/8 d2..\<~2..~2.. \time 9/8 d4.-.\ff e-. cs-.
 
-  \time 7/8 d4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
+  \time 7/8 d4 -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \mark\default
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
@@ -3077,10 +3280,19 @@ scoreATromboneIII = \relative c {
   \time 6/8 \mark\default
   R2.*16 \mark\default  R2.*8 \mark\default R2.*8 \mark\default R2.*8 \relative c {\greenPathBassC}
 
-  \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo \markup{
+    \concat {
+      "Swift "
+      (
+      \smaller \general-align #Y #DOWN \note { 4 } #UP
+      " = "
+      \smaller \general-align #Y #DOWN \note { 8 } #UP
+      )
+    }
+  } 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     e4\fp-.-> r4 r R2.*2 r2
-    \once \override Hairpin.bound-padding = #0.25
+    \once \override Hairpin.bound-padding = #0.5
     b4\p\< e4\fp-.-> r4 r R2.*3 \time 4/4 R1 \time 3/4
     \mark\default d8-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. bf-.-> bf-. bf-. bf-.-> bf-. bf-. bf2.\f\>
     \mark\default a4-.\p r r R2.*5
@@ -3123,7 +3335,7 @@ scoreATromboneIII = \relative c {
   R1*8 \mark\default
   R1*15 R1\fermata R1\fermata
 
-  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
+  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
   \time 7/8 g,4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
@@ -3140,14 +3352,15 @@ scoreATromboneIII = \relative c {
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
-  \time 7/8 d2\f~4. \time 9/8 d2~4.~4 \time 7/8 d2~4. \time 9/8 d4.\< d4. d4. \time 7/8 d2~4.~\time 9/8 2~4.~4
+  \time 7/8 d2\f~4. \time 9/8 e2~4.~4
+  \time 7/8 d2~4. \time 9/8 e4.\< f4. e4. \time 7/8 d2~4.~ \time 9/8 2~4.~4
 
   \mark\default
   \time 7/8 R1*7/8*3\! \time 9/8 R1*9/8
   \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
-  \time 7/8 d2..\<~2..~2.. \time 9/8 e4.-.\ff f-. g-.
+  \time 7/8 d2..\<~2..~2.. \time 9/8 g,4.-.\ff c-. cs-.
 
-  \time 7/8 g4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
+  \time 7/8 d4 -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \mark\default
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
@@ -3229,7 +3442,16 @@ scoreAEuphonium = \relative c {
   \mark\default b2.~4.~8 e4 b2. e d4. cs d b \override TextSpanner.bound-details.left.text = "poco rit."
   a2.\startTextSpan \< a4. c\stopTextSpan
 
-  \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo \markup{
+    \concat {
+      "Swift "
+      (
+      \smaller \general-align #Y #DOWN \note { 4 } #UP
+      " = "
+      \smaller \general-align #Y #DOWN \note { 8 } #UP
+      )
+    }
+  } 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     a4->\fp a8 \repeat unfold 5 {a4-> a8} f4 f g,\< a->\fp a'8 \repeat unfold 3 {a4-> a8}
     a4->\< a8 a4-> a8 g4-> g8 g4-> g8 \time 4/4 f4-> f f f \time 3/4 \mark\default d( d' a) f( a c)
@@ -3281,7 +3503,7 @@ scoreAEuphonium = \relative c {
   \fixed c {e8-. e'-. b-. d-. d'-. a-. r a-. r2 a8( g f g)}
   \fungalBass R1 \fungalBass R1\fermata R1\fermata
 
-  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
+  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
   \time 7/8 a4-.->\mp a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.-> \mark\default
@@ -3306,14 +3528,14 @@ scoreAEuphonium = \relative c {
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 b4-.-> b8-. a4-.-> a8-. g4-.-> g8-.
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
   \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 b4-.-> b8-. a4-.-> a8-. g4-.-> g8-.
-  \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
-  \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 b4-.-> b8-. a4-.-> a8-. g4-.-> g8-.
-  \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
+  \time 7/8 f2..\f-> \time 9/8 e2->~4.~4
+  \time 7/8 f2..-> \time 9/8 g4.-> f-> g->
+  \time 7/8 a4-.->\mp a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
 
   \mark\default
-  \time 7/8 a4-. a-. b4.-. a4-. a-. gs4.-. a4-. a-. b4.-. \time 9/8 c-. b-. r
-  \time 7/8 a4-. a-. b4.-. a4-. a-. gs4.-. a4-. a-. b4.-. \time 9/8 c-. b-. r
-  \time 7/8 d,4\f-. d-. e8-. f-. e-. d4-. d-. cs8-. d-. e-. d4-. d-. e8-. f-. e-.
+  \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
+  \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
+  \time 7/8 d4\f-. d-. e8-. f-. e-. d4-. d-. cs8-. d-. e-. d4-. d-. f8-. g-. f-.
   \time 3,3,3 9/8 g-. a-. g-. a-. b-. a-. b-. c-. cs-.
 
   \time 7/8 a4-.->\mp a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
@@ -3327,7 +3549,7 @@ scoreAEuphonium = \relative c {
   \mark\default
   \time 7/8 ef4-.-> ef-. ef-.-> ef8-. \time 9/8 f4-.-> f4-. f4-.-> f8-. f4-.->
   \time 7/8 d4-.-> d-. d-.-> d8-. \time 9/8 e4-.-> e4-. e4-.-> e8-. e4-.->
-  \time 7/8 a4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
+  \time 7/8 a,4-.-> a-. a-.-> a8-. \time 9/8 a4-.-> a4-. a4-.-> a8-. a4-.->
 
   \time 2/4 r4 a4-.-^\fermata
 
@@ -3387,7 +3609,16 @@ scoreATuba = \relative c {
   \relative c {\greenPathBassA} \mark\default
   \relative c {\greenPathBassPreB \greenPathBassB}
 
-  \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo \markup{
+    \concat {
+      "Swift "
+      (
+      \smaller \general-align #Y #DOWN \note { 4 } #UP
+      " = "
+      \smaller \general-align #Y #DOWN \note { 8 } #UP
+      )
+    }
+  } 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     a,8\fp-.-> a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-.-> a-.
     a-.-> a-. a-. a-.-> a-. a-. f-.-> f-. f-. f-. g4\<
@@ -3448,7 +3679,7 @@ scoreATuba = \relative c {
   \fixed c {e8-. e'-. b-. d-. d'-. a-. r a-. r2 a8( g f g)}
   \fungalBass R1 \fungalBass R1\fermata R1\fermata
 
-  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
+  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
   \time 7/8 d4-.->\mf r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
   \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.-> \mark\default
@@ -3480,7 +3711,7 @@ scoreATuba = \relative c {
   \mark\default
   \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
   \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
-  \time 7/8 d4-.\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 e-. d-. cs-.
+  \time 7/8 d4-.\< d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 d-. e-. cs-.
 
   \time 7/8 d4-.->\mf r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
   \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
@@ -3553,7 +3784,16 @@ scoreATimpani = \relative c {
   b8. b b8 b b b8. b b8 b b \override TextSpanner.bound-details.left.text = "poco rit."
   a8.\startTextSpan a a8 a a c8. c c c16 c c\stopTextSpan
 
-  \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo \markup{
+    \concat {
+      "Swift "
+      (
+      \smaller \general-align #Y #DOWN \note { 4 } #UP
+      " = "
+      \smaller \general-align #Y #DOWN \note { 8 } #UP
+      )
+    }
+  } 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     a4->\fp a8 \repeat unfold 5 {a4-> a8} a4-> a e':32\<
     a,->\fp a8 a4-> a8 a4-> a8 a4-> a8 a4->\< a8 a4-> a8 \repeat unfold 2 {e'4-> e8}
@@ -3594,7 +3834,7 @@ scoreATimpani = \relative c {
   R1*8 \mark\default
   R1*15 R1\fermata R1\fermata
 
-  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
+  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
@@ -3683,7 +3923,16 @@ scoreAGlockenspiel = \relative c'' {
   {fs16-> ( b, cs a b8-.) fs'16->( b, cs a b8-.)} R2.
   {b'16->(e, fs d e8-.) b'16->(e, fs d e8-.)} R2. \mark\default R2.*16 \mark\default R2.*8
 
-  \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo \markup{
+    \concat {
+      "Swift "
+      (
+      \smaller \general-align #Y #DOWN \note { 4 } #UP
+      " = "
+      \smaller \general-align #Y #DOWN \note { 8 } #UP
+      )
+    }
+  } 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     e4\fp r4 r g4-. r4 c,8 r e4 r4 r d4-. r4 b8 r e4 r4 r g4-. r4 c,8 r a'2.\< g \time 4/4 f2 f \time 3/4
     \mark\default d4 d, f f' a, d bf4. bf bf2.\f
@@ -3717,7 +3966,7 @@ scoreAGlockenspiel = \relative c'' {
   R1*8 \mark\default
   R1*15 R1\fermata R1\fermata
 
-  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
+  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
@@ -3727,8 +3976,8 @@ scoreAGlockenspiel = \relative c'' {
   \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \mark\default
-  \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
-  \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
+  \time 7/8 d4-.->\ff a'-.-> a4.-> ~\time 9/8 2 b4-.-> c8-. b4-.->  \time 7/8 a2\> r4.\! \time 9/8 R1*9/8
+  \time 7/8 d,4-.->\ff a'-.-> g4.-> \time 9/8 f4-. e4-. d4-.-> e8-. c4-.-> \time 7/8 d2..\>-> \time 9/8 R1*9/8\!
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
   \mark\default
 
@@ -3798,7 +4047,16 @@ scoreAXylo = \relative c' {
   fs,,16 (b cs fs e fs cs' b cs fs e fs) R2.*3 fs,,16 (b cs fs e fs cs' b cs fs e fs)
   R2.*2 \mark\default R2.*16 \mark\default R2.*8
 
-  \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo \markup{
+    \concat {
+      "Swift "
+      (
+      \smaller \general-align #Y #DOWN \note { 4 } #UP
+      " = "
+      \smaller \general-align #Y #DOWN \note { 8 } #UP
+      )
+    }
+  } 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     R2.*8 \time 4/4 R1 \time 3/4 \mark\default R2.*4 \mark\default R2.*6
 
@@ -3823,10 +4081,10 @@ scoreAXylo = \relative c' {
   R1*8 \mark\default
   R1*15 R1\fermata R1\fermata
 
-  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
+  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
   \time 7/8
-  <a d,>4-.->\mf q-. q-.-> q8-. \time 9/8 q4-.-> q4-. q4-.-> q8-. q4-.->
+  <a d,>4-.->\mp q-. q-.-> q8-. \time 9/8 q4-.-> q4-. q4-.-> q8-. q4-.->
   \time 7/8 q4-.-> q-. q-.-> q8-. \time 9/8 q4-.-> q4-. q4-.-> q8-. q4-.-> \mark\default
 
   \time 7/8 q4-.-> q-. q-.-> q8-. \time 9/8 <b d,>4-.-> q4-. q-.-> q8-. q4-.->
@@ -3854,12 +4112,12 @@ scoreAXylo = \relative c' {
   \time 7/8 <a d,>4-.-> q-. q-.-> q8-. \time 9/8 q4-.-> q4-. q4-.-> q8-. q4-.->
 
   \mark\default
-  \time 7/8 <a d,>4-. q-. <b e,>4.-. <a d,>4-. q-. <gs c,>4.-.
-  <a d,>4-. q-. <b e,>4.-. \time 9/8 <c f,>-. <b e,>-. r
-  \time 7/8 <a d,>4-. q-. <b e,>4.-. <a d,>4-. q-. <gs c,>4.-.
-  <a d,>4-. q-. <b e,>4.-. \time 9/8 <c f,>-. <b e,>-. r
-  \time 7/8 <a d,>4-.\< q-. <b e,>4.-. <a d,>4-. q-. <gs cs,>4.-.
-  <a d,>4-. q-. <b e,>4.-. \time 9/8 <g e>-. <a d,>-. <a cs,>-.
+  \time 7/8 d8\f-. a-. d-. a-. e'-. f-. e-. d-. a-. d-. a-. c-. d-. e-. d-. a-. d-. a-. e'-. f-. e-.
+  \time 3,3,3 9/8 f-. e-. d-. e-. d-. c-. d-. c-. d-.
+  \time 7/8 d8\f-. a-. d-. a-. e'-. f-. e-. d-. a-. d-. a-. c-. d-. e-. d-. a-. d-. a-. e'-. f-. e-.
+  \time 3,3,3 9/8 f-. e-. d-. e-. d-. c-. d-. c-. d-.
+  \time 7/8 d8\f-.\< a-. d-. a-. e'-. f-. e-. d-. a-. d-. a-. cs-. d-. e-. d-. a-. d-. a-. f-. g-. f-.
+  \time 3,3,3 9/8 g-. a-. g-. a-. b-. a-. b-. c-. cs-.
 
   \time 7/8
   <a d,>4-.->\mf q-. q-.-> q8-. \time 9/8 q4-.-> q4-. q4-.-> q8-. q4-.->
@@ -3949,7 +4207,16 @@ scoreADrum = \drummode {
     } \\ {tomfh4 tomfh tomfh 8 tomfl tomfh4 tomfh tomfh 8 tomfl}
   >>
 
-  \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4
+  \section \sectionLabel "Hornet" \tempo \markup{
+    \concat {
+      "Swift "
+      (
+      \smaller \general-align #Y #DOWN \note { 4 } #UP
+      " = "
+      \smaller \general-align #Y #DOWN \note { 8 } #UP
+      )
+    }
+  } 4 = 145 \time 3/4
   \repeat volta 2 {
     sn8^\markup {\italic "siempre piano"} \fp-> sn sn sn sn sn sn sn sn sn sn16 sn sn sn
     sn8 sn sn sn sn sn sn sn sn sn sn4:32\p\<
@@ -4058,44 +4325,51 @@ scoreADrum = \drummode {
   \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn sn sn sn-> sn16 sn sn8 sn-> sn \mark\default
 
   \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn sn sn sn-> sn16 sn sn8 sn-> sn
-  \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn16 sn sn8 sn8 sn16 sn sn8 sn16 sn sn sn sn sn
+  \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn16 sn sn8 sn8-> sn16 sn sn8 sn16 sn sn sn sn sn
   \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn sn sn sn-> sn16 sn sn8 sn-> sn
-  \time 7/8 sn8-> sn sn sn sn16 sn sn sn sn sn \time 9/8 sn8-> sn8 sn sn sn-> sn16 sn-> sn8 sn-> sn
-  \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn sn sn sn-> sn16 sn sn8 sn-> sn
-
-  \mark\default
-  \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn sn sn sn-> sn16 sn sn8 sn-> sn
-  \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn16 sn sn8 sn8 sn16 sn sn8 sn16 sn sn sn sn sn
-  \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn sn sn sn-> sn16 sn sn8 sn-> sn
-  \time 7/8 sn8-> sn sn sn sn16 sn sn sn sn sn \time 9/8 sn8-> sn8 sn sn sn-> sn16 sn-> sn8 sn-> sn
-
-  \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn sn sn sn-> sn16 sn sn8 sn-> sn
-  \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn16 sn sn8 sn8 sn16 sn sn8 sn16 sn sn sn sn sn
-
-  \mark\default
-
-  \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
-  \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
-  \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
-  \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
-
-  \mark\default
-  \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
-  \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
-  \time 7/8 R1*7/8*3 \time 9/8 R1*9/8
-
-  \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn sn sn sn-> sn16 sn sn8 sn-> sn
+  \time 7/8 sn8-> sn sn sn sn16-> sn sn sn sn sn \time 9/8 sn8-> sn8 sn sn sn-> sn16 sn-> sn8 sn-> sn
   \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn sn sn sn-> sn16 sn sn8 sn-> sn
 
   \mark\default
+  \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn sn-> sn sn sn16 sn sn8 sn-> sn
+  \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn16 sn-> sn8 sn8 sn16 sn sn8 sn8 sn16 sn sn8
+  \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn sn sn sn-> sn16 sn sn8 sn-> sn
+  \time 7/8 sn8-> sn sn sn sn8 sn16 sn sn8 \time 9/8 sn8-> sn16 sn sn8 sn-> \repeat unfold 10 {sn16}
+
   \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn sn sn sn-> sn16 sn sn8 sn-> sn
   \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn16 sn sn8 sn8 sn16 sn sn8 sn16 sn sn sn sn sn
-  \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn sn sn sn-> sn16 sn sn8 sn-> sn
 
   \mark\default
-  \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn16 sn sn8 sn8 sn16 sn sn8 sn16 sn sn sn sn sn
-  \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn16 sn sn8 sn8 sn16 sn sn8 sn16 sn sn sn sn sn
-  \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn16 sn sn8 sn8 sn16 sn sn8 sn16 sn sn sn sn sn
+
+  \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 3,3,3 9/8 sn-> sn16 sn sn8 sn-> sn16 sn-> sn8 sn-> sn16 sn sn sn
+  \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn sn-> sn sn-> sn16 sn-> sn8 sn-> sn
+  \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 3,3,3 9/8 sn-> sn16 sn sn8 sn-> sn16 sn-> sn8 sn-> sn16 sn sn sn
+  \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn sn-> sn sn-> sn16 sn-> sn8 sn-> sn
+  \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 3,3,3 9/8 sn-> sn16 sn sn8 sn-> sn16 sn sn8 sn-> sn sn->
+  \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn16 sn-> sn8 sn-> sn sn sn16 sn sn sn sn sn
+  \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 3,3,3 9/8 sn-> sn16 sn sn8 sn-> sn16 sn sn8 sn-> sn16 sn sn8
+  \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn sn-> sn \repeat unfold 10 {sn16}
+
+  \mark\default
+  \time 7/8 \repeat unfold 3 {sn8-> sn sn-> \tuplet 3/2 {sn16 sn sn} sn4.}
+  \time 9/8 sn8-> sn sn sn \repeat unfold 10 {sn16}
+  \time 7/8 \repeat unfold 3 {sn8-> sn sn-> \tuplet 3/2 {sn16 sn sn} sn4.}
+  \time 9/8 sn8-> sn sn sn \repeat unfold 10 {sn16}
+  \time 7/8 \repeat unfold 3 {sn8-> sn sn-> sn sn-> sn16 sn-> sn8}
+  \time 9/8 sn-> sn16 sn sn8 sn-> \repeat unfold 10 {sn16}
+
+  \time 7/8 sn8-> sn sn sn sn-> sn16 sn-> sn8 \time 9/8 sn-> sn sn sn sn-> sn16 sn-> sn8 sn-> sn
+  \time 7/8 sn8-> sn sn sn sn-> sn16 sn-> sn8 \time 9/8 sn-> sn sn sn sn-> sn16 sn-> sn8 sn-> sn
+
+  \mark\default
+  \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn sn sn sn-> sn16 sn sn8 sn-> sn
+  \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn16 sn sn8 sn8 sn16 sn sn8 sn8 sn16 sn sn8
+  \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn sn sn sn-> sn16 sn-> sn8 sn-> sn
+
+  \mark\default
+  \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn sn sn sn-> sn16 sn-> sn8 sn-> sn
+  \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn sn8 sn8 sn8 sn16 sn sn8 sn sn
+  \time 7/8 sn8-> sn sn sn sn-> sn16 sn sn8 \time 9/8 sn-> sn16 sn sn8 sn8 sn16 sn sn16 sn sn16 sn sn sn sn sn
 
   \time 2/4 r4 sn4-^\fermata
 
@@ -4192,7 +4466,10 @@ scoreARight = \relative c' {
   \global
   % Music goes here
   \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
-  R1 {fs1\mp\(~ 2 \tuplet 3/2 {fs4 g a} fs2.. b,8 cs1\) fs\(~ 2 \tuplet 3/2 {fs4 g a} e2.. g16 fs g1\)}
+  R1 {
+    fs1\mp^\markup{\italic "solo"}
+    \(~ 2 \tuplet 3/2 {fs4 g a} fs2.. b,8 cs1\) fs\(~ 2 \tuplet 3/2 {fs4 g a} e2.. g16 fs g1\)
+  }
   {\mark \default fs'1\(~ 2 \tuplet 3/2 {fs4 g a} fs2. b,4 cs1\) e\(fs2 g4 a b2.. c8 b2 g\)}
   {fs,16( fs'8 fs16 fs'4) r8. fs16( fs,8 fs,~) 2 \tuplet 3/2 {fs4( g a} fs16 fs'8 fs16 fs'4~) fs4.	 b,8( cs2 e e1)}
   {fs,,2( \tuplet 3/2 {fs4 g a} fs2 d e1)}
@@ -4226,7 +4503,16 @@ scoreARight = \relative c' {
 
   \greenPathPatternB
 
-  \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo \markup{
+    \concat {
+      "Swift "
+      (
+      \smaller \general-align #Y #DOWN \note { 4 } #UP
+      " = "
+      \smaller \general-align #Y #DOWN \note { 8 } #UP
+      )
+    }
+  } 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     <a' e a,>8\fp r r  e, r4 g4 r4 e8 r q r r e r4 d'8 c a c b g
     q r r e r4 g4 r4 e8 r e\< e e <d f> q q <d e g> q q <d f a> q q
@@ -4273,7 +4559,7 @@ scoreARight = \relative c' {
   \override TextSpanner.bound-details.left.text = "poco rit."
   \repeat percent 15 {e4->\p\> e e-> e <>\!} e4->\p\> e e->\startTextSpan e\fermata\stopTextSpan R1\!\fermata
 
-  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
+  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
   \time 7/8
   <a d,>4-.->\mp q-. q-.-> q8-. \time 9/8 q4-.-> q4-. q4-.-> q8-. q4-.->
@@ -4304,12 +4590,12 @@ scoreARight = \relative c' {
   \time 7/8 <a d,>4-.-> q-. q-.-> q8-. \time 9/8 q4-.-> q4-. q4-.-> q8-. q4-.->
 
   \mark\default
-  \time 7/8 <a d,>4-. q-. <b e,>4.-. <a d,>4-. q-. <gs c,>4.-.
-  <a d,>4-. q-. <b e,>4.-. \time 9/8 <c f,>-. <b e,>-. r
-  \time 7/8 <a d,>4-. q-. <b e,>4.-. <a d,>4-. q-. <gs c,>4.-.
-  <a d,>4-. q-. <b e,>4.-. \time 9/8 <c f,>-. <b e,>-. r
-  \time 7/8 <a d,>4-. q-. <b e,>4.-. <a d,>4-. q-. <gs cs,>4.-.
-  <a d,>4-. q-. <b e,>4.-.\time 9/8 <g e>-. <a d,>-. <a cs,>-.
+  \time 7/8 d8\f-. a-. d-. a-. e'-. f-. e-. d-. a-. d-. a-. c-. d-. e-. d-. a-. d-. a-. e'-. f-. e-.
+  \time 3,3,3 9/8 f-. e-. d-. e-. d-. c-. d-. c-. d-.
+  \time 7/8 d8\f-. a-. d-. a-. e'-. f-. e-. d-. a-. d-. a-. c-. d-. e-. d-. a-. d-. a-. e'-. f-. e-.
+  \time 3,3,3 9/8 f-. e-. d-. e-. d-. c-. d-. c-. d-.
+  \time 7/8 d8\f-.\< a-. d-. a-. e'-. f-. e-. d-. a-. d-. a-. cs-. d-. e-. d-. a-. d-. a-. f-. g-. f-.
+  \time 3,3,3 9/8 g-. a-. g-. a-. b-. a-. b-. c-. cs-.
 
   \time 7/8
   <a d,>4-.->\mf q-. q-.-> q8-. \time 9/8 q4-.-> q4-. q4-.-> q8-. q4-.->
@@ -4424,7 +4710,16 @@ scoreALeft = \relative c, {
 
   \repeat unfold 3 {\greenPathLeftHandB}
 
-  \section \sectionLabel "Hornet" \tempo "Swift" 4 = 145 \time 3/4 \key a \minor
+  \section \sectionLabel "Hornet" \tempo \markup{
+    \concat {
+      "Swift "
+      (
+      \smaller \general-align #Y #DOWN \note { 4 } #UP
+      " = "
+      \smaller \general-align #Y #DOWN \note { 8 } #UP
+      )
+    }
+  } 4 = 145 \time 3/4 \key a \minor
   \repeat volta 2 {
     <a, a,>4-> a'8 \repeat unfold 5 {a4 a8} f4 f g,
     q4-> a'8 \repeat unfold 5 {a4 a8} \repeat unfold 2 {g4 g8}
@@ -4474,7 +4769,7 @@ scoreALeft = \relative c, {
   \fixed c {e8-. e'-. b-. d-. d'-. a-. r a-. r2 a8( g f g)}
   \fungalBass R1 \fungalBass R1\fermata R1\fermata
 
-  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150 \key d \minor
+  \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
   \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
   \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.-> \mark\default
@@ -4506,9 +4801,9 @@ scoreALeft = \relative c, {
   \mark\default
   \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
   \time 7/8 d4-. d-. e4.-. d4-. d-. c4.-. d4-. d-. e4.-. \time 9/8 f-. e-. r
-  \time 7/8 d4-. d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 e-. d-. cs-.
+  \time 7/8 d4-. d-. e4.-. d4-. d-. cs4.-. d4-. d-. e4.-. \time 9/8 d-. e-. cs-.
 
-  \time 7/8 d4-.->\mf r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
+  \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
   \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
 
   \mark\default
@@ -5304,6 +5599,7 @@ scoreADrumsPart = \new DrumStaff \with {
     %page-count = #2
   }
 }
+%}
 \book {
   \bookOutputName "Part 27 - Drums"
   \score {
