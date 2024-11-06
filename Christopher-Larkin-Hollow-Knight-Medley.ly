@@ -2425,11 +2425,11 @@ scoreATrumpetBbI = \relative c'' {
         2.\f\> a4-.\p r4 r R2. bf2.\<~
         \once \override Hairpin.bound-padding = #0.5
         2.\f\> \mark\default a4-.\p r4 r
-        R2.*2 r4 r8 a16-.\f a-. a-. a-. a-. a-. a4-. r4 r R2.*2
-        b16-. b-. b-. b-. a-. a-. a-. a-. g-. g-. g-. g-.
-        f4-. r4 r R2.*2 r4 r8 a16-. a-. a-. a-. a-. a-. a4-. r8b16-. b-. b-. b-. b-. b-. b4-. r8
-        a16-.\> a-. a-. a-. a-. a-. a-.\p\< a-. a-. a-. b-. b-. b-. b-. c-. c-. c-. c-.
-        b-. b-. b-. b-. c-. c-. c-. c-. e-. e-. gs-. gs-.
+        R2.*2 r4 r8 a16-.\f a-. a8-. a16-. a-. a4-. r4 r R2.*2
+        b16-. b-. b8-. a16-. a-. a8-. g16-. g-. g8-.
+        f4-. r4 r R2.*2 r4 r8 a16-. a-. a8-. a16-. a-. a4-. r8 b16-. b-. b8-. b16-. b-. b4-. r8
+        a16-.\> a-. a8-. a16-. a-. a16-.\p\< a-. a8-. b16-. b-. b8-. c16-. c-. c8-.
+        b16-. b-. b8-. c16-. c-. c8-. e16-. e-. gs8-.
       }
       \volta 2 {
         R2.*8\! \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
@@ -2576,10 +2576,10 @@ scoreATrumpetBbII = \relative c'' {
         e8\ff e-. r e-. r4 ef8 ef-. r ef-. r4 R2.*2 e8\ff e-. r e-. r4 ef8 ef-. r ef-. r4 R2.*4
         bf8-.->\mf\< bf-. bf-. bf-.-> bf-. bf-. a-.-> a-. a-. a-.-> a-. a-.
         e'2.\f~2. \mark\default a4-.->\fp r4 r R2.*7 \mark\default R2.*3 r4 r8
-        c,16-.\f c-. c-. c-. c-. c-. c4-. r4 r R2.*2 b'16-. b-. b-. b-. a-. a-. a-. a-. g-. g-. g-. g-.
-        f4-. r4 r R2.*2 r4 r8 d16-. d-. d-. d-. d-. d-. d4-. r8e16-. e-. e-. e-. e-. e-. e4-. r8
-        e16-.\> e-. e-. e-. e-. e-. a-.\p\< a-. a-. a-. b-. b-. b-. b-. c-. c-. c-. c-.
-        b-. b-. b-. b-. c-. c-. c-. c-. e-. e-. e-. e-.
+        c,16-.\f c-. c8-. c16-. c-. c4-. r4 r R2.*2 b'8-. b16-. b-. a8-. a16-. a-. g8-. g16-. g-.
+        f4-. r4 r R2.*2 r4 r8 d16-. d-. d8-. d16-. d-. d4-. r8 e16-. e-. e8-. e16-. e-. e4-. r8
+        e16-.\> e-. e8-. e16-. e-. a8-.\p\< a16-. a-. b8-. b16-. b-. c8-. c16-. c-.
+        b8-. b16-. b-. c8-. c16-. c-. e8-. e16-. e-.
       }
       \volta 2 {
         R2.*8\! \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
@@ -2714,12 +2714,12 @@ scoreAHornFI = \relative c' {
         cs4.(\mf\< fs e ds) a8-.->\fp\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-.
         \mark\default a'4-.->\fp r4 r R2. bf,2.\<~2.\f\> a4-.\p r4 r R2. bf2.\<~2.\f\>
         \mark\default a4-.\p r4 r
-        R2.*2 r4 r8 e'16-.\f e-. e-. e-. e-. e-. e4-. r4 r R2.*2
+        R2.*2 r4 r8 e'8-.\f e16-. e-. e8-. e4-. r4 r R2.*2
         % b4:16-. a:16-. g:16-.
-        b16-. b-. b-. b-. a-. a-. a-. a-. g-. g-. g-. g-.
-        f4-. r4 r R2.*2 r4 r8 a16-. a-. a-. a-. a-. a-. a4-. r8b16-. b-. b-. b-. b-. b-. b4-. r8
-        a16-.\> a-. a-. a-. a-. a-. a-.\p\< a-. a-. a-. b-. b-. b-. b-. c-. c-. c-. c-.
-        b-. b-. b-. b-. c-. c-. c-. c-. e-. e-. gs-. gs-.
+        b16-. b-. b8-. a16-. a-. a8-. g16-. g-. g8-.
+        f4-. r4 r R2.*2 r4 r8 a8-. a16-. a-. a8-. a4-. r8 b8-. b16-. b-. b8-. b4-. r8
+        a8-.\> a16-. a-. a8-. a16-.\p\< a-. a8-. b16-. b-. b8-. c16-. c-. c8-.
+        b16-. b-. b8-. c16-. c-. c8-. e16-. e-. e8-.
       }
       \volta 2 {
         R2.*8\! \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
@@ -2873,11 +2873,11 @@ scoreAHornFII = \relative c' {
         bf8-.->\mf\< bf-. bf-. bf-.-> bf-. bf-. a-.-> a-. a-. a-.-> a-. a-.
         f'8-.->\fp\< f-. f-. f-.-> f-. f-. f-.-> f-. f-. f-.-> f-. f-.
         \mark\default a4-.->\fp r4 r R2.*7 \mark\default R2.*3
-        r4 r8 c,16-.\f c-. c-. c-. c-. c-. c4-. r4 r R2.*2
-        b16-. b-. b-. b-. a-. a-. a-. a-. g-. g-. g-. g-.
-        f4-. r4 r R2.*2 r4 r8 d16-. d-. d-. d-. d-. d-. d4-. r8e16-. e-. e-. e-. e-. e-. e4-. r8
-        e16-.\> e-. e-. e-. e-. e-. a-.\p\< a-. a-. a-. b-. b-. b-. b-. c-. c-. c-. c-.
-        b-. b-. b-. b-. c-. c-. c-. c-. e-. e-. e-. e-.
+        r4 r8 c,8-.\f c16-. c-. c8-. c4-. r4 r R2.*2
+        b8-. b16-. b-. a8-. a16-. a-. g8-. g16-. g-.
+        f4-. r4 r R2.*2 r4 r8 d8-. d16-. d-. d8-. d4-. r8 e8-. e16-. e-. e8-. e4-. r8
+        e8-.\> e16-. e-. e8-. a8-.\p\< a16-. a-. b8-. b16-. b-. c8-. c16-. c-.
+        b8-. b16-. b-. c8-. c16-. c-. e8-. e16-. e-.
       }
       \volta 2 {
         R2.*8\! \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
@@ -2987,7 +2987,7 @@ scoreATromboneI = \relative c {
 
   \time 6/8 \mark\default
   R2.*16 \mark\default R2.*7
-  {e16\<-.-> fs-. b-. fs-. b-. cs-. cs-. cs-. e-. cs-. e-. fs-.} \mark\default g8-. r8 r2
+  {e16\<-.-> fs-. b-. fs-. b-. cs-. cs-. cs-. e-. cs-. e-. fs-.} \mark\default g8-.\! r8 r2
   R2.*7 \mark\default
   \relative c' {\greenPathBassPreB \greenPathBassB}
 
@@ -3021,11 +3021,11 @@ scoreATromboneI = \relative c {
         cs4.(\mf\< fs e ds) a8-.->\fp\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-.
         \mark\default a4-.->\fp r4 r R2.
         bf2.\<~2.\f\> a4-.\p r4 r R2. bf2.\<~2.\f\> \mark\default a4-.\p r4 r
-        R2.*2 r4 r8 e'16-.\f e-. e-. e-. e-. e-. e4-. r4 r R2.*2
-        b16-. b-. b-. b-. a-. a-. a-. a-. g-. g-. g-. g-.
-        f4-. r4 r R2.*2 r4 r8 a16-. a-. a-. a-. a-. a-. a4-. r8b16-. b-. b-. b-. b-. b-. b4-. r8
-        a16-.\> a-. a-. a-. a-. a-. a-.\p\< a-. a-. a-. b-. b-. b-. b-. c-. c-. c-. c-.
-        b-. b-. b-. b-. c-. c-. c-. c-. e-. e-. e-. e-.
+        R2.*2 r4 r8 e'8-.\f e16-. e-. e8-. e4-. r4 r R2.*2
+        b16-. b-. b8-. a16-. a-. a8-. g16-. g-. g8-.
+        f4-. r4 r R2.*2 r4 r8 d'16-. d-. d8-. d16-. d-. d4-. r8 e16-. e-. e8-. e16-. e-. e4-. r8
+        e16-.\> e-. e8-. e16-. e-. e8-.\p\< a,16-. a-. b8-. b16-. b-. c8-. c16-. c-.
+        b8-. b16-. b-. c8-. c16-. c-. e8-. gs16-. gs-.
       }
       \volta 2 {
         R2.*8\! \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
@@ -3123,6 +3123,7 @@ scoreATromboneI = \relative c {
   R1*4 \mark\default c,4-.-^\ff c-.-^ c-.-^ c-.-^ c8-.-^ c-.-^ r c-.-^ c4-.-^ c8-.-^ c-.-^
   c4-.-^ c-.-^ c-.-^ c-.-^ af8-.-^ af-.-^ r f-.-^ f4-.-^ f8-.-^ f-.-^
 
+  \once \override Hairpin.bound-padding = #0.5
   r2 g'\fp\< g8-^\ff g-^ r g-^ g4-^ g8-^ g-^ g4-^ r r2 \fine
 }
 
@@ -3164,11 +3165,11 @@ scoreATromboneII = \relative c {
         bf8-.->\mf\< bf-. bf-. bf-.-> bf-. bf-. a-.-> a-. a-. a-.-> a-. a-.
         f8-.->\fp\< f-. f-. f-.-> f-. f-. f-.-> f-. f-. f-.-> f-. f-.
         \mark\default a4-.->\fp r4 r R2.*7 \mark\default R2.*3
-        r4 r8 c16-.\f c-. c-. c-. c-. c-. c4-. r4 r R2.*2
-        b16-. b-. b-. b-. a-. a-. a-. a-. g-. g-. g-. g-.
-        f4-. r4 r R2.*2 r4 r8 d'16-. d-. d-. d-. d-. d-. d4-. r8e16-. e-. e-. e-. e-. e-. e4-. r8
-        e16-.\> e-. e-. e-. e-. e-. a,-.\p\< a-. a-. a-. b-. b-. b-. b-. c-. c-. c-. c-.
-        b-. b-. b-. b-. c-. c-. c-. c-. e-. e-. e-. e-.
+        r4 r8 c16-.\f c-. c8-. c16-. c-. c4-. r4 r R2.*2
+        b8-. b16-. b-. a8-. a16-. a-. g8-. g16-. g-.
+        f4-. r4 r R2.*2 r4 r8 a8-. a16-. a-. a8-. a4-. r8 b8-. b16-. b-. b8-. b4-. r8
+        a8-.\> a16-. a-. a8-. a16-.\p\< a-. a8-. b16-. b-. b8-. c16-. c-. c8-.
+        b16-. b-. b8-. c16-. c-. c8-. e16-. e-. e8-.
       }
       \volta 2 {
         a,8-.->\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. b-.-> b-. b-.
@@ -3307,11 +3308,11 @@ scoreATromboneIII = \relative c {
         bf8-.->\mf\< bf-. bf-. bf-.-> bf-. bf-. a-.-> a-. a-. a-.-> a-. a-.
         f8-.->\fp\< f-. f-. f-.-> f-. f-. f-.-> f-. f-. f-.-> f-. f-.
         \mark\default a4-.->\fp r4 r R2.*7 \mark\default R2.*3
-        r4 r8 c16-.\f c-. c-. c-. c-. c-. c4-. r4 r R2.*2
-        b16-. b-. b-. b-. a-. a-. a-. a-. g-. g-. g-. g-.
-        f4-. r4 r R2.*2 r4 r8 d'16-. d-. d-. d-. d-. d-. d4-. r8e16-. e-. e-. e-. e-. e-. e4-. r8
-        e16-.\> e-. e-. e-. e-. e-. a,-.\p\< a-. a-. a-. b-. b-. b-. b-. c-. c-. c-. c-.
-        b-. b-. b-. b-. c-. c-. c-. c-. e-. e-. e-. e-.
+        r4 r8 c8-.\f c16-. c-. c8-. c4-. r4 r R2.*2
+        b8-. b16-. b-. a8-. a16-. a-. g8-. g16-. g-.
+        f4-. r4 r R2.*2 r4 r8 d'8-. d16-. d-. d8-. d4-. r8e8-. e16-. e-. e8-. e4-. r8
+        e8-.\> e16-. e-. e8-. a,8-.\p\< a16-. a-. b8-. b16-. b-. c8-. c16-. c-.
+        b8-. b16-. b-. c8-. c16-. c-. e8-. e16-. e-.
       }
       \volta 2 {
         a,8-.->\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. b-.-> b-. b-.
@@ -3470,11 +3471,11 @@ scoreAEuphonium = \relative c {
         a8-.->\fp\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-. \mark\default a4-.->\fp r4 r R2.
         e8\<-> e e e-> e e e-> e e e e-> e a4\fp-.-> r4 r R2.
         e8\<-> e e e-> e e e-> e e e e-> e \mark\default a4\fp-.-> r4 r R2.*2
-        r4 r8 a16-.\f a-. a-. a-. a-. a-. a4-. r4 r R2.
-        d8\mp c->( b) c->( b a) b->\ff b a-> a g-> g f4-.\fp r4 r R2.*2
-        r4 r8 a16-. a-. a-. a-. a-. a-. a4-. r8b16-. b-. b-. b-. b-. b-. b4-. r8
-        a16-.\> a-. a-. a-. a-. a-. a-.\p\< a-. a-. a-. b-. b-. b-. b-. c-. c-. c-. c-.
-        b-. b-. b-. b-. c-. c-. c-. c-. e-. e-. gs-. gs-.
+        r4 r8 a8-.\f a16-. a-. a8 a4-. r4 r R2.*2
+        b16-. b-. b8-. a16-. a-. a8-. g16-. g-. g8-. f4-. r4 r R2.*2
+        r4 r8 a8-. a16-. a-. a8-. a4-. r8 b8-. b16-. b-. b8-. b4-. r8
+        a8-.\> a16-. a-. a8-. a16-.\p\< a-. a8-. b16-. b-. b8-. c16-. c-. c8-.
+        b16-. b-. b8-. c16-. c-. c8-. e16-. e-. e8-.
       }
       \volta 2 {
         d4.\< d, e' e, \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
@@ -3809,7 +3810,7 @@ scoreATimpani = \relative c {
         a8\f a a a a a a a a a a a a\fp\< a a a a a b2.:32 a8\f a a a a a a a a a a a R2.*6
         a8\fp\< a a a a a f f f f f f \mark\default
         a4\fp r4 r R2. bf2.:32\< ~2.:32\f\> R2.*2\! bf2.:32\< ~2.:32\f\>
-        \mark\default R2.*3\! r4 r8 a16\f a a a a a a4 r4 r R2.*2 a8 a a a a a a4 r4 r R2.*2
+        \mark\default R2.*3\! r4 r8 a16\f a a a a a a4 r4 r R2.*2 \repeat unfold 12 {a16} a4 r4 r R2.*2
         r4 r8 a16 a a a a a a8 r r e'16 e e e e e e8 r r e16 e e e e e e2.:32\p\< ~2.:32
       }
       \volta 2 {
@@ -4277,8 +4278,8 @@ scoreADrum = \drummode {
   \section \sectionLabel "Fungal Wastes" \tempo "Gloomy" 4 = 80 \time 4/4
 
   r2\!\stopTrillSpan r4 r8 wbh^"Woodblocks"\pp\> wbh16 wbh8 wbh16 wbh8 wbh16 wbh~16 wbh wbh8 wbh16 wbh8 wbh16
-  wbh4\! r r2
-  r2 r4 cymc4:32^"Susp. cymbal" \pp\<\laissezVibrer \mark\default
+  wbh4\! r r2 r2 r4
+  \once \override Hairpin.bound-padding = #0.5 cymc4:32^"Susp. cymbal" \pp\<\laissezVibrer \mark\default
   r2\! r4 r8 wbl16\pp\< wbl wbl-> wbl wbl wbl-> wbl wbl wbl-> wbl wbl wbl-> wbl wbl wbl8-> wbh16-> wbh
   wbh8->\> wbh16 wbh16->~16 wbh16 wbh8-> wbh16 wbh8-> wbh16 wbh8-> wbh16 wbh-> r2\! r4 r8 wbh\p\>
   wbh8-> wbh16 wbh16->~16 wbh16 wbh8-> wbh16 wbh8-> wbh16 wbh8-> wbh16 wbh->
