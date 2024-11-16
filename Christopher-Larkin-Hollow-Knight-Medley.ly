@@ -5,7 +5,7 @@
   title = "Hollow Knight — Medley"
   subtitle = "Higher beings, these words are for you alone."
   composer = "Christopher Larkin"
-  arranger = "arr. Alexandre Simard"
+  arranger = "arr. A. Simard"
   % Remove default LilyPond tagline
   tagline = ##f
 }
@@ -164,8 +164,9 @@ scoreAPiccolo = \relative c'' {
     R2.*5
     \alternative {
       \volta 1 {
-        R2.*2 \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        R2.*2
         a,4-.\p a-. a-. a-. a-. a-. a-.\< b-. c-. d-. e-. g-.
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a4.(\f d c b) a4-. r4 r R2. a4.( d c b) a4-. r4 r R2.*5
         cs,4.(\mf\< fs e ds) a'8\fp\<-.-> a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-.
         \mark\default a4-.->\fp r r R2.
@@ -176,8 +177,9 @@ scoreAPiccolo = \relative c'' {
         a16\f( c d8--) r a\p r4 a16\f ( d e8--) r4 r
       }
       \volta 2 {
-        R2.*2 \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        R2.*2
         a,4.\mf e'->~2. g4(-> f d) e(-> c b) a4.( d c b
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a4-.->) r4 r R2.*9
         \override TextSpanner.bound-details.left.text = "rall."
         \mark\default cs4.(\f fs e ds e2.\>\startTextSpan~2.)
@@ -329,9 +331,10 @@ scoreAFluteI = \relative c'' {
 
     \alternative {
       \volta 1 {
-        a4-.-> r4 r R2.  \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        a4-.-> r4 r R2.
         a16\fp( e f gs a e f gs a16 e f gs a e f gs a16 e f gs a e f gs
         a16\< f gs a b gs a b c16 a b c d b c d e16 d e f g e f g)
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a4.\f( d c b) a4-> r4 r R2. a4.( d c b) a4-> r4 r R2.
         a4.\p\<( d c b) R2.*2\! cs4.\mf\<( fs e ds) a8->-.\fp\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-.
         \mark\default a4-.->\fp r r R2.*3
@@ -343,8 +346,9 @@ scoreAFluteI = \relative c'' {
         a c->( b a b c) a c->( b a b c) d4-> r4 r e4-> r4 r
       }
       \volta 2 {
-        R2.*2 \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        R2.*2
         a,4.\mf e'->~2. g4(-> f d) e->( c b) a4.( d c b)
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default f,16\mp\<( g a b g a b c a16 b c d b c d e c16 d e f d e f g)
         a4.\mf( d c b a4-.) r4 r R2. a4.\mf\<( d-> c b)->\f R2.*2
         \override TextSpanner.bound-details.left.text = "rall."
@@ -527,9 +531,10 @@ scoreAFluteII = \relative c'' {
 
     \alternative {
       \volta 1 {
-        R2.*2  \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        R2.*2
         a16\fp( e f gs a e f gs a16 e f gs a e f gs a16 e f gs a e f gs
         a16\< f gs a b gs a b c16 a b c d b c d e16 d e f g e f g)
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a4.(\f d, c b) a4-.-> r4 r R2. a'4.( d, c b) a4-.-> r4 r R2.
         a'4.(\p\< d, c b) R2.*2\! cs4.(\mf\< fs e ds) a8->-.\fp\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-.
         \mark\default a'4-.->\fp r r R2.*3
@@ -541,8 +546,9 @@ scoreAFluteII = \relative c'' {
         a c->( b a b c) a c->( b a b c) d4-> r4 r e4-> r4 r
       }
       \volta 2 {
-        R2.*2 \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        R2.*2
         a,,4.\mf e'->~2. g4(-> f d) e(-> c b) a4.( d c b)
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default f16\mp\<( g a b g a b c a16 b c d b c d e c16 d e f d e f g)
         a4.(\mf d c b a4-.) r4 r R2.*5
         \override TextSpanner.bound-details.left.text = "rall."
@@ -683,7 +689,7 @@ scoreAOboe = \relative c'' {
   \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
   R1*9 \mark \default R1*16 \mark\default R1*15
   \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
-  R2.*4 \mark\default R2.*6 {r2 g4(\mf a4.c b2.~2 e4) b2.( e) d4.( cs d b) a2. a4. c->(}
+  R2.*4 \mark\default R2.*6 {r2 g4^\markup{\italic "solo"}(\mf a4.c b2.~2 e4) b2.( e) d4.( cs d b) a2. a4. c->(}
 
   \time 6/8 \mark\default
   b2.)\> R2.*15\! \mark\default R2.*4
@@ -716,8 +722,9 @@ scoreAOboe = \relative c'' {
 
     \alternative {
       \volta 1 {
-        a4) r r R2. \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        a4) r r R2.
         a4-.\p a-. a-. a-. a-. a-. a-.\< b-. c-. d-. e-. g-.
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a4.(\f d c b) a4-.-> r4 r R2. a4.( d c b) a4-. r4 r R2.
         a4.\p\<( d c b) R2.*2\! cs,4.(\mf\< fs e ds) e2.\f~2.
         \mark\default a,4-.\fp r8 e r4 g4-. r4 c8( b) bf4-.\< r8 bf r4 bf4-. r4 r4
@@ -726,8 +733,9 @@ scoreAOboe = \relative c'' {
         a4-. r8 a r4 a-.\< b-. a-. a16\f( c d8--) r a\p r4 a16\f( d e8--) r4 r
       }
       \volta 2 {
-        R2.*3 \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        R2.*3
         g8-.->\mf f-. d-. e-. c-.-> b-. g'4(-> f d) e(-> c b) a4.( d c b)
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a4-.-> r4 r R2. a4.(\mf d c b a4-.) r4 r R2.*3
         b4.(\f e-> d b)-> \override TextSpanner.bound-details.left.text = "rall."
         \mark\default cs,4.( fs e gs) a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
@@ -895,8 +903,9 @@ scoreABassoon = \relative c' {
 
     \alternative {
       \volta 1 {
-        a4-.-> r4 r R2. \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        a4-.-> r4 r R2.
         a4.\f e'->~2. g4(->\< f d) e( c b)
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a8-.->\fp\< a-. a-. a-.-> a-. a-. g-.-> g-. g-. g-.-> g-. g-. e4-.->\f r4 r R2.
         a8-.->\fp\< a-. a-. a-.-> a-. a-. g-.-> g-. g-. g-.-> g-. g-. e4-.->\f r4 r R2.
         fs8-.->\< fs-. fs-. fs-.-> fs-. fs-. f?-.-> f-. f-. f-.-> f-. f-.
@@ -914,10 +923,11 @@ scoreABassoon = \relative c' {
         d2\f\> e8-.\p\< e-. e2\f d8-.\> d-. a'-.\p\< a-. b-. b-. c-. c-. b-. b-. c-. c-. d-. d-.
       }
       \volta 2 {
-        a4-.->\! r4 r R2. \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        a4-.->\! r4 r R2.
         a8-.->\mf a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-. a-.
         ef'-.-> ef-. ef-. ef-.-> ef-. ef-. d-.-> d-. d-. d-. d-. d-.
         a8-.->\< a-. a-. a-.-> r4 g8-.-> g-. g-. g-.-> r4
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default e4-.\fp r4 r R2. a8-.->\< a-. a-. a-. a-. a-. g-. g-. g-. g-. g-. g-. e4-.\fp r4 r R2.
         fs8-.->\<\p fs-. fs-. fs-.-> fs-. fs-. f?-.->\mf\> f-. f-. f-.-> f-. f-.
         gs-.->\mp\< gs-. gs-. gs-.-> gs-. gs-. g?-.->\f\> g-. g-. g-.-> g-. g-.
@@ -1052,8 +1062,9 @@ scoreAEflatClarinet = \relative c'' {
 
     \alternative {
       \volta 1 {
-        f4-.) g-. a-. b-. c-. d-. \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        f4-.) g-. a-. b-. c-. d-.
         a-.\p a-. a-. a-. a-. a-. a-.\< b-. c-. d-. e-. g-.
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a4.(\f d c b) a4-.-> r4 r R2.
         a4.( d c b) a4-. r4 r R2. a4.(\p\< d c b) R2.*2\! cs4.(\mf\< fs e ds)
         a8-.->\fp\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-.
@@ -1064,8 +1075,9 @@ scoreAEflatClarinet = \relative c'' {
         a4-. r8 a r4 a-.\< b-. a-. a16\f( c d8--) r a\p r4 a16\f( d e8--) r4 r
       }
       \volta 2 {
-        f,4-. g-. a-. b-. c-. d-. \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        f,4-. g-. a-. b-. c-. d-.
         e4.\mf e->~2. g4(-> f d) e(-> c b) a4.( d c b)
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default f4-. g-. a-. b-. c-. d-. a4.(\mf d c b a4-.) r4 r R2.*3 b4.(\f e-> d b)->
         \override TextSpanner.bound-details.left.text = "rall."
         \mark\default cs,4.( fs e gs) a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
@@ -1206,9 +1218,9 @@ scoreAClarinetI = \relative c'' {
     \alternative {
       \volta 1 {
         f16\mp\<( g a b g a b c a16 b c d b c d e c16 d e f d e f g)
-        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a,16\fp( e f gs a e f gs a16 e f gs a e f gs a16 e f gs a e f gs
         a16\< f gs a b gs a b c16 a b c d b c d e16 d e f g e f g)
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a4.(\f d, c b) a4-.-> r4 r R2. a'4.( d, c b) a4-.-> r4 r R2.*3
         b4.(\mp\< e d b) cs4.( fs e ds) a8->-.\fp\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-.
         \mark\default a-.->\fp e-. e-. e-.-> e-. e-. g->( f) d( e) c->( b) e->\< e e e-> e e e-> e e e e-> e
@@ -1221,8 +1233,8 @@ scoreAClarinetI = \relative c'' {
       }
       \volta 2 {
         f,16\mp\<( g a b g a b c a16 b c d b c d e c16 d e f d e f g)
-        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a4.\mf e->~2. g4(-> f d) e(-> c b) a4.( d c b)
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default f16\mp\<( g a b g a b c a16 b c d b c d e c16 d e f d e f g)
         a4.(\mf d, c b a4-.) r4 r R2. a4.(\mf\< d-> c b)->\f R2.*2
         \override TextSpanner.bound-details.left.text = "rall."
@@ -1363,11 +1375,10 @@ scoreAClarinetII = \relative c'' {
     \alternative {
       \volta 1 {
         f16\mp\<( g a b g a b c a16 b c d b c d e c16 d e f d e f g)
-        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a,16\fp( e f gs a e f gs a16 e f gs a e f gs a16 e f gs a e f gs
         a16\< f gs a b gs a b c16 a b c d b c d e16 d e f g e f g)
 
-
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a4.(\f d, c b) a4-.-> r4 r R2. a'4.( d, c b) a4-.-> r4 r R2.*3
         b4.(\mp\< e d b) cs4.( fs e ds) e2.\f~2.
         \mark\default a,4-.\fp r8 e r4 g4-. r4 c8( b) bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-.
@@ -1378,8 +1389,8 @@ scoreAClarinetII = \relative c'' {
       }
       \volta 2 {
         f,16\mp\<( g a b g a b c a16 b c d b c d e c16 d e f d e f g)
-        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a4.\mf e->~2. g4(-> f d) e(-> c b) a4.( d c b)
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default f16\mp\<( g a b g a b c a16 b c d b c d e c16 d e f d e f g)
         a4.(\mf d, c b a4-.) r4 r R2.*3 b4.(\f e-> d b)->
         \override TextSpanner.bound-details.left.text = "rall."
@@ -1528,11 +1539,10 @@ scoreAClarinetIII = \relative c'' {
     \alternative {
       \volta 1 {
         f16\mp\<( g a b g a b c a16 b c d b c d e c16 d e f d e f g)
-        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a,16\fp( e f gs a e f gs a16 e f gs a e f gs a16 e f gs a e f gs
         a16\< f gs a b gs a b c16 a b c d b c d e16 d e f g e f g)
 
-
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a4.(\f d, c b) a4-.-> r4 r R2. a'4.( d, c b) a4-.-> r4 r R2.*3
         b,4.(\mp\< e d b) cs4.( fs e ds) e2.\f~2.
         \mark\default a4-.\fp r8 e r4 g4-. r4 c,8( b) bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-.
@@ -1543,8 +1553,8 @@ scoreAClarinetIII = \relative c'' {
       }
       \volta 2 {
         f16\mp\<( g a b g a b c a16 b c d b c d e c16 d e f d e f g)
-        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a4.\mf e->~2. g4(-> f d) e(-> c b) a4.( d c b)
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default f16\mp\<( g a b g a b c a16 b c d b c d e c16 d e f d e f g)
         a4.(\mf d, c b a4-.) r4 r R2.*3 b4.(\f e-> d b)->
         \override TextSpanner.bound-details.left.text = "rall."
@@ -1694,8 +1704,8 @@ scoreABassClarinet = \relative c'' {
     \alternative {
       \volta 1 {
         a-.\< a-. a-. a-. a-. a-. b-. b-. b-. b-. b-. b-.
-        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a4-.\f r4 r r8 e'16 e e4( c) a\<-> a8 b->~8 b c->( b) e->( f) g->( af)
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a?->-.\fp\< a-. a-. a-.-> a-. a-. g-.-> g-. g-. g-.-> g-. g-. e4-.->\f r4 r R2.
         a8->-.\fp\< a-. a-. a-.-> a-. a-. g-.-> g-. g-. g-.-> g-. g-. e4-.->\f r4 r R2.
         fs,8-.->\< fs-. fs-. fs-.-> fs-. fs-. f?-.-> f-. f-. f-.-> f-. f-.
@@ -1716,10 +1726,10 @@ scoreABassClarinet = \relative c'' {
       \volta 2 {
 
         a-.\< a-. a-. a-. a-. a-. b-. b-. b-. b-. b-. b-.
-        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a-.->\mf a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-. a-.
         ef'-.-> ef-. ef-. ef-.-> ef-. ef-. d-.-> d-. d-. d-. d-. d-.
         a8-.->\< a-. a-. a-.-> r4 g8-.-> g-. g-. g-.-> r4
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default e4-.\fp r4 r R2. a8-.->\< a-. a-. a-. a-. a-. g-. g-. g-. g-. g-. g-. e4-.\fp r4 r R2.
         fs8-.->\<\p fs-. fs-. fs-.-> fs-. fs-. f?-.->\mf\> f-. f-. f-.-> f-. f-.
         gs-.->\mp\< gs-. gs-. gs-.-> gs-. gs-. g?-.->\f\> g-. g-. g-.-> g-. g-.
@@ -1874,9 +1884,9 @@ scoreAAltoSaxI = \relative c'' {
     \alternative {
       \volta 1 {
         f16\mp\<( g a b g a b c a16 b c d b c d e c16 d e f d e f g)
-        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a16\fp( e f gs a e f gs a16 e f gs a e f gs a16 e f gs a e f gs
         a16\< f gs a b gs a b c16 a b c d b c d e16 d e f g e f g)
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a4.(\f d, c b) a4-> r4 r R2. a4.( d c b) a4-> r4 r R2.
         a,4.(\p\< d c b) b( e d b) cs( fs e ds)
         a8-.->\fp\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-.
@@ -1892,8 +1902,8 @@ scoreAAltoSaxI = \relative c'' {
       }
       \volta 2 {
         f,,16\mp\<( g a b g a b c a16 b c d b c d e c16 d e f d e f g)
-        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a4.\mf e'->~2. g4(-> f d) e(-> c b) a4.( d c b)
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default f16\mp\<( g a b g a b c a16 b c d b c d e c16 d e f d e f g)
         a4.(\mf d, c b a4-.) r4 r R2. a,4.(\mf\< d-> c b)->\f R2.*2
         \override TextSpanner.bound-details.left.text = "rall."
@@ -2004,7 +2014,7 @@ scoreAAltoSaxII = \relative c'' {
   \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
   R1*9 \mark \default R1*16 \mark\default R1*15
   \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
-  R2.*4 \mark\default R2.*8 b,2.\p~2. e2.~2. b g a~4. c( \time 6/8 \mark\default b2.\>)
+  R2.*4 \mark\default R2.*8 b,2.\p^\markup{\italic "solo"}~2. e2.~2. b g a~4. c( \time 6/8 \mark\default b2.\>)
 
   {
     R2.*15\! \mark\default e4-.\pp e8-. r e4-. fs-. fs8-. fs-. b (e-.)
@@ -2040,9 +2050,9 @@ scoreAAltoSaxII = \relative c'' {
     \alternative {
       \volta 1 {
         f16\mp\<( g a b g a b c a16 b c d b c d e c16 d e f d e f g)
-        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a16\fp( e f gs a e f gs a16 e f gs a e f gs a16 e f gs a e f gs
         a16\< f gs a b gs a b c16 a b c d b c d e16 d e f g e f g)
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a4.(\f d, c b) a4-.-> r4 r R2. a4.( d c b) a4-.-> r4 r R2.
         a,4.(\p\< d c b) b( e d b) cs( fs e ds)
         a8-.->\fp\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-.
@@ -2058,8 +2068,8 @@ scoreAAltoSaxII = \relative c'' {
       }
       \volta 2 {
         f,,16\mp\<( g a b g a b c a16 b c d b c d e c16 d e f d e f g)
-        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a4.\mf a->~2. ef4-> ef8 ef4-> ef8 d4 d d a'8-.->\< a-. a-. a-.-> r4 g8-.-> g-. g-. g-.-> r4
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default f16\mp\<( g a b g a b c a16 b c d b c d e c16 d e f d e f g)
         a4.(\mf d, c b a4-.) r4 r R2.*3 b,4.(\f e-> d b)->
         \override TextSpanner.bound-details.left.text = "rall."
@@ -2194,8 +2204,9 @@ scoreATenorSax = \relative c'' {
 
     \alternative {
       \volta 1 {
-        a4-.-> r4 r R2. \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        a4-.-> r4 r R2.
         a4.\f e'->~2. g4(->\< f d) e( c b)
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a8-.->\fp\< a-. a-. a-.-> a-. a-. g-.-> g-. g-. g-.-> g-. g-. e4-.->\f r4 r R2.
         a8-.->\fp\< a-. a-. a-.-> a-. a-. g-.-> g-. g-. g-.-> g-. g-. e4-.->\f r4 r R2.*3
         b4.(\mp\< e d b) cs4.( fs e ds) e2.\fp\<~2. \mark\default a4-.\fp r8 e r4 g4-. r4 c8( b) bf2.\<~2.\f\>
@@ -2204,8 +2215,9 @@ scoreATenorSax = \relative c'' {
         a4-. r8 a r4 a-.\< b-. a-. a16\f( c d8--) r a\p r4 a16\f( d e8--) r4 r
       }
       \volta 2 {
-        a,4-.-> r4 r R2.*2 \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        a,4-.-> r4 r R2.*2
         g'8-.->\mf f-. d-. e-. c-.-> b-. g'4(-> f d) e(-> c b) a4.( d c b)
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a4-.-> r4 r R2.*5 a4.(\mf\< d-> c b)-> b4.( e-> d b)->
         \override TextSpanner.bound-details.left.text = "rall."
         \mark\default cs4.(\f fs, e gs) a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
@@ -2348,8 +2360,8 @@ scoreABaritoneSax = \relative c'' {
     \alternative {
       \volta 1 {
         a-.\< a-. a-. a-. a-. a-. b-. b-. b-. b-. b-. b-.
-        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a4-.\f r4 r r8 e'16 e e4-> c a\<-> a8 b->~8 b c->( b) e->( f) g->( af)
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a?->-.\fp\< a,-. a-. a-.-> a-. a-. g-.-> g-. g-. g-.-> g-. g-. e4-.->\f r4 r R2.
         a8->-.\fp\< a-. a-. a-.-> a-. a-. g-.-> g-. g-. g-.-> g-. g-. e4-.->\f r4 r R2.
         fs8-.->\< fs-. fs-. fs-.-> fs-. fs-. f?-.-> f-. f-. f-.-> f-. f-.
@@ -2369,10 +2381,10 @@ scoreABaritoneSax = \relative c'' {
       \volta 2 {
 
         a-.\< a-. a-. a-. a-. a-. b-. b-. b-. b-. b-. b-.
-        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a-.->\mf a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-. a-.
         ef'-.-> ef-. ef-. ef-.-> ef-. ef-. d-.-> d-. d-. d-. d-. d-.
         a'8-.->\< a-. a-. a-.-> r4 g8-.-> g-. g-. g-.-> r4
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default e4-.\fp r4 r R2. a8-.->\< a-. a-. a-. a-. a-. g-. g-. g-. g-. g-. g-. e4-.\fp r4 r R2.
         fs8-.->\<\p fs-. fs-. fs-.-> fs-. fs-. f?-.->\mf\> f-. f-. f-.-> f-. f-.
         gs-.->\mp\< gs-. gs-. gs-.-> gs-. gs-. g?-.->\f\> g-. g-. g-.-> g-. g-.
@@ -2531,8 +2543,10 @@ scoreATrumpetBbI = \relative c'' {
 
     \alternative {
       \volta 1 {
-        d'4.\p\< d, e' e, \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        a\f e'->~2. g4(->\< f d) e( c b) \mark\default a4->-.\! r4 r R2.
+        d'4.\p\< d, e' e,
+        a\f e'->~2. g4(->\< f d) e( c b)
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        \mark\default a4->-.\! r4 r R2.
         e'8\ff e-. r e-. r4 ef8 ef-. r ef-. r4 R2.*2 e8\ff e-. r e-. r4 ef8 ef-. r ef-. r4 R2.*4
         cs4.(\mf\< fs e ds) e2.\f~2. \mark\default a4-.->\fp r4 r R2.
         bf,2.\<~
@@ -2547,10 +2561,11 @@ scoreATrumpetBbI = \relative c'' {
         b-. b-. b-. b-. c-. c-. c-. c-. e-. e-. gs-. gs-.
       }
       \volta 2 {
-        R2.*8\! \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        \mark\default R2.*10
+        d4.\p\< d, e' e, a4.\mf e'->~2. g4(-> f d) e(-> c b) a4.( d c b
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        \mark\default a4-.->) r4 r R2.*9
         \override TextSpanner.bound-details.left.text = "rall."
-        \mark\default cs,4.(\f fs e cs) a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        \mark\default cs4.(\f fs e cs) a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
         c-.-> c-. c-. c-. c-. c-. g'-.->\ff g-. g-. gs-.-^ gs-.-^ gs-.-^ R2.\fermata\stopTextSpan
       }
     }
@@ -2686,8 +2701,10 @@ scoreATrumpetBbII = \relative c'' {
 
     \alternative {
       \volta 1 {
-        d'4.\p\< d, e' e, \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        R2.\! r8 e16\f e e4-> c a\<-> a8 b->~8 b c->( b) e->( f) g->( af) \mark\default a?4->-.\! r4 r R2.
+        d'4.\p\< d, e' e,
+        R2.\! r8 e16\f e e4-> c a\<-> a8 b->~8 b c->( b) e->( f) g->( af)
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        \mark\default a?4->-.\! r4 r R2.
         e8\ff e-. r e-. r4 ef8 ef-. r ef-. r4 R2.*2 e8\ff e-. r e-. r4 ef8 ef-. r ef-. r4 R2.*4
         bf8-.->\mf\< bf-. bf-. bf-.-> bf-. bf-. a-.-> a-. a-. a-.-> a-. a-.
         e'2.\f~2. \mark\default a4-.->\fp r4 r R2.*7 \mark\default R2.*3 r4 r8
@@ -2697,10 +2714,11 @@ scoreATrumpetBbII = \relative c'' {
         b-. b-. b-. b-. c-. c-. c-. c-. e-. e-. e-. e-.
       }
       \volta 2 {
-        R2.*8\! \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        \mark\default R2.*10
+        d4.\p\< d, e' e, a,4.\mf e'->~2. g4(-> f d) e(-> c b) a4.( d c b
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        \mark\default a4-.->) r4 r R2.*9
         \override TextSpanner.bound-details.left.text = "rall."
-        \mark\default cs,4.(\f fs e gs) a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        \mark\default cs4.(\f fs e gs) a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
         c-.-> c-. c-. c-. c-. c-. c-.->\ff c-. c-. c-.-^ c-.-^ c-.-^ R2.\fermata\stopTextSpan
       }
     }
@@ -2823,8 +2841,10 @@ scoreAHornFI = \relative c' {
 
     \alternative {
       \volta 1 {
-        R2.*2 \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        a4.\f e'->~2. g4(->\< f d) e( c b) \mark\default a4.->-.\ff fs g g
+        R2.*2
+        a4.\f e'->~2. g4(->\< f d) e( c b)
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        \mark\default a4.->-.\ff fs g g
         a8 a-. r a-. r4 c8 c-. r c-. r4 R2.*2 a8\ff a-. r a-. r4 c8 c-. r c-. r4 R2.*4
         cs4.(\mf\< fs e ds) a8-.->\fp\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-.
         \mark\default a'4-.->\fp r4 r R2. bf,2.\<~2.\f\> a4-.\p r4 r R2. bf2.\<~2.\f\>
@@ -2982,8 +3002,10 @@ scoreAHornFII = \relative c' {
 
     \alternative {
       \volta 1 {
-        R2.*3\! \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        r8 e16\f e e4-> c a\<-> a8 b->~8 b c->( b) e->( f) g->( af) \mark\default a?4->-.\! r4 r R2.
+        R2.*3\!
+        r8 e16\f e e4-> c a\<-> a8 b->~8 b c->( b) e->( f) g->( af)
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        \mark\default a?4->-.\! r4 r R2.
         e8\ff e-. r e-. r4 ef8 ef-. r ef-. r4 R2.*2 e8\ff e-. r e-. r4 ef8 ef-. r ef-. r4 R2.*4
         bf'8-.->\mf\< bf-. bf-. bf-.-> bf-. bf-. a-.-> a-. a-. a-.-> a-. a-.
         f8-.->\fp\< f-. f-. f-.-> f-. f-. f-.-> f-. f-. f-.-> f-. f-.
@@ -3097,13 +3119,13 @@ scoreATromboneI = \relative c {
   % Music goes here
   \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
   R1*9 \mark \default R1*16 \mark\default R1*8
-  f1\p\< g f bf g\f\> R1*2\!
+  e'1\p\<~1 f1~1 e1\f\> R1*2\!
   \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
   R2.*4 \mark\default R2.*16
 
   \time 6/8 \mark\default
   R2.*16 \mark\default R2.*7
-  {e16\<-.-> fs-. b-. fs-. b-. cs-. cs-. cs-. e-. cs-. e-. fs-.} \mark\default g8-.\! r8 r2
+  {e,16\<-.-> fs-. b-. fs-. b-. cs-. cs-. cs-. e-. cs-. e-. fs-.} \mark\default g8-.\! r8 r2
   R2.*7 \time 3/4 \mark\default
   \relative c' {\greenPathBassPreB \greenPathBassB}
 
@@ -3118,9 +3140,9 @@ scoreATromboneI = \relative c {
     }
   } 4 = 145 \key a \minor
   \repeat volta 2 {
-    a,4\fp-.-> r4 r R2.*2 r2
+    e4\fp-.-> r4 r R2.*2 r2
     \once \override Hairpin.bound-padding = #0.5
-    b4\p\< a4\fp-.-> r4 r R2.*3 \time 4/4 R1 \time 3/4
+    b4\p\< e4\fp-.-> r4 r R2.*3 \time 4/4 R1 \time 3/4
     \mark\default d8->\mf\<( c b) c->( b a) d->( c b) c->( b a) g->( f e) f->( e d)
     d'4-.\f bf f
     \mark\default e'8-.\p e-. e-. e-. e-. e-. e-. e-. e-. e-. e-. e-.
@@ -3130,8 +3152,8 @@ scoreATromboneI = \relative c {
     \alternative {
       \volta 1 {
         a-.\< a-. a-. a-. a-. a-. b-. b-. b-. b-. b-. b-.
-        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a4.\f e'->~2. g4(->\< f d) e( c b)
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a4\!-.-> r4 r R2.
         e'8\ff e-. r e-. r4 ef8 ef-. r ef-. r4 R2.*2 e8\ff e-. r e-. r4 ef8 ef-. r ef-. r4 R2.*4
         cs4.(\mf\< fs e ds) a8-.->\fp\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-.
@@ -3144,11 +3166,14 @@ scoreATromboneI = \relative c {
         b-. b-. b-. b-. c-. c-. c-. c-. e-. e-. gs-. gs-.
       }
       \volta 2 {
-        R2.*8\! \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        \mark\default e8-.->\p\< e-. e-. e-.-> e-. e-. ef-.-> ef-. ef-. ef-.-> ef-. ef-. d4-.->\mf r4 r R2.*7
+        a,8-.\< a-. a-. a-. a-. a-. b-. b-. b-. b-. b-. b-.
+        a4.\mf e'->~2. g4(-> f d) e(-> c b) a4.( d c b)
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        \mark\default e8-.->\p\< e-. e-. e-.-> r4 ef8-.-> ef-. ef-. ef-.-> r4 d4-.->\mf r4 r R2.
+        e8-.->\p\< e-. e-. e-.-> r4 ef8-.-> ef-. ef-. ef-.-> r4 d4-.->\mf r4 r R2.*3
         \override TextSpanner.bound-details.left.text = "rall."
         \mark\default cs4.(\f fs e ds) e2.\<\startTextSpan ~2.
-        c8-.->\mf\< c-. c-. c-. c-. c-. g-.->\ff g-. g-. gs-.-^ gs-.-^ gs-.-^ R2.\fermata\stopTextSpan
+        c8-.->\mf\< c-. c-. c-. c-. c-. g'-.->\ff g-. g-. gs-.-^ gs-.-^ gs-.-^ R2.\fermata\stopTextSpan
       }
     }
   }
@@ -3163,7 +3188,7 @@ scoreATromboneI = \relative c {
   \tuplet 3/2 {
     f2\ff^\markup{\italic "solo"}^"Out of pitch"^"Goofy war shout"
     \glissando af4-^
-  } f2\fermata->
+  } fs2\fermata->
 
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
@@ -3177,7 +3202,7 @@ scoreATromboneI = \relative c {
 
   \mark\default
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
-  \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 c2->\<~4. \time 9/8 b2 b'4.~4
+  \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 c,2->\<~4. \time 9/8 b2 b'4.~4
   \time 7/8 d4-.-^\ff r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \mark\default \time 7/8 R1*7/8 \time 9/8 R1*9/8
@@ -3239,15 +3264,15 @@ scoreATromboneI = \relative c {
   R1*4 \mark\default c,4-.-^\ff c-.-^ c-.-^ c-.-^ c8-.-^ c-.-^ r c-.-^ c4-.-^ c8-.-^ c-.-^
   c4-.-^ c-.-^ c-.-^ c-.-^ af8-.-^ af-.-^ r f-.-^ f4-.-^ f8-.-^ f-.-^
 
-  \once \override Hairpin.bound-padding = #0.5
-  r2 g'\fp\< g8-^\ff g-^ r g-^ g4-^ g8-^ g-^ g4-^ r r2 \fine
+  r2 \once \override Hairpin.bound-padding = #0.5
+  g'\fp\< g8-^\ff g-^ r g-^ g4-^ g8-^ g-^ g4-^ r r2 \fine
 }
 
 scoreATromboneII = \relative c {
   \global
   % Music goes here
   \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
-  R1*9 \mark \default R1*16 \mark\default R1*8 e'1\p\<~1 f1~1 e1\f\> R1*2\!
+  R1*9 \mark \default R1*16 \mark\default R1*8 f1\p\< g f bf g\f\> R1*2\!
   \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
   R2.*4 \mark\default R2.*16
 
@@ -3265,17 +3290,18 @@ scoreATromboneII = \relative c {
     }
   } 4 = 145 \key a \minor
   \repeat volta 2 {
-    e4\fp-.-> r4 r R2.*2 r2
+    a4\fp-.-> r4 r R2.*2 r2
     \once \override Hairpin.bound-padding = #0.5
-    b4\p\< e4\fp-.-> r4 r R2.*3 \time 4/4 R1 \time 3/4
+    b4\p\< a4\fp-.-> r4 r R2.*3 \time 4/4 R1 \time 3/4
     \mark\default d8-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. d-.-> d-. d-. bf-.-> bf-. bf-. bf-.-> bf-. bf-. bf2.\f\>
     \mark\default a4-.\p r r R2.*5
 
     \alternative {
       \volta 1 {
         a8-.\< a-. a-. a-. a-. a-. b-. b-. b-. b-. b-. b-. a4-.\f r4 r
+        r8 e'16\f e e4-> c a\<-> a8 b->~8 b c->( b) e,->( f) g->( af)
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        r8 e'16\f e e4-> c a\<-> a8 b->~8 b c->( b) e,->( f) g->( af) \mark\default a?4->-.\! r4 r R2.
+        \mark\default a?4->-.\! r4 r R2.
         e'8->\ff e e e-> e e ef-> ef ef ef-> ef ef d4-.-> r4 r R2.
         e8->\ff e e e-> e e ef-> ef ef ef-> ef ef d4-.-> r4 r R2.*3
         bf8-.->\mf\< bf-. bf-. bf-.-> bf-. bf-. a-.-> a-. a-. a-.-> a-. a-.
@@ -3289,14 +3315,14 @@ scoreATromboneII = \relative c {
       }
       \volta 2 {
         a,8-.->\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. b-.-> b-. b-.
-        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a-.->\mf a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-.-> a-. a-.
         ef'-.-> ef-. ef-. ef-.-> ef-. ef-. d-.-> d-. d-. d-. d-. d-. a4-.-> r4 r R2.
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default e'8-.->\p\< e-. e-. e-.-> e-. e-. ef-.-> ef-. ef-. ef-.-> ef-. ef-. d4-.->\mf r4 r R2.
         e8-.->\p\< e-. e-. e-.-> e-. e-. ef-.-> ef-. ef-. ef-.-> ef-. ef-. d4-.->\mf r4 r R2.*3
         \mark\default bf8-.->\mf\< bf-. bf-. bf-.-> bf-. bf-. a-.->\f\> a-. a-. a-.-> a-. a-.
         \override TextSpanner.bound-details.left.text = "rall."
-        a,8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
+        a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
         c-.-> c-. c-. c-. c-. c-. c-.->\ff c-. c-. c-.-^ c-.-^ c-.-^ R2.\fermata\stopTextSpan
       }
     }
@@ -3309,7 +3335,7 @@ scoreATromboneII = \relative c {
   R1*8 \mark\default
   R1*8 \mark\default
   R1*15 R1\fermata
-  \grace{a'8\glissando\mf^\markup{\italic "flz."}} b2\glissando a2\fermata
+  \grace{a8\glissando\mf\>^\markup{\italic "flz."}^\markup{\italic "solo"}^"Out of pitch"} b2\glissando af2\fermata
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
@@ -3417,8 +3443,9 @@ scoreATromboneIII = \relative c {
     \alternative {
       \volta 1 {
         a8-.\< a-. a-. a-. a-. a-. b-. b-. b-. b-. b-. b-. a4-.\f r4 r
+        r8 e'16\f e e4-> c a\<-> a8 b->~8 b c->( b) e,->( f) g->( af)
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        r8 e'16\f e e4-> c a\<-> a8 b->~8 b c->( b) e,->( f) g->( af) \mark\default a?4->-.\! r4 r R2.
+        \mark\default a?4->-.\! r4 r R2.
         e'8->\ff e e e-> e e ef-> ef ef ef-> ef ef d4-.-> r4 r R2.
         e8->\ff e e e-> e e ef-> ef ef ef-> ef ef d4-.-> r4 r R2.*3
         bf8-.->\mf\< bf-. bf-. bf-.-> bf-. bf-. a-.-> a-. a-. a-.-> a-. a-.
@@ -3432,9 +3459,9 @@ scoreATromboneIII = \relative c {
       }
       \volta 2 {
         a,8-.->\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. b-.-> b-. b-.
-        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a-.->\mf a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-.-> a-. a-.
         ef'-.-> ef-. ef-. ef-.-> ef-. ef-. d-.-> d-. d-. d-. d-. d-. a4-.-> r4 r R2.
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default e'8-.->\p\< e-. e-. e-.-> e-. e-. ef-.-> ef-. ef-. ef-.-> ef-. ef-. d4-.->\mf r4 r R2.
         e8-.->\p\< e-. e-. e-.-> e-. e-. ef-.-> ef-. ef-. ef-.-> ef-. ef-. d4-.->\mf r4 r R2.*3
         \mark\default bf8-.->\mf\< bf-. bf-. bf-.-> bf-. bf-. a-.->\f\> a-. a-. a-.-> a-. a-.
@@ -3454,7 +3481,7 @@ scoreATromboneIII = \relative c {
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
-  \time 7/8 g,4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
+  \time 7/8 a,4\mf -.-> r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \mark\default
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
@@ -3462,8 +3489,8 @@ scoreATromboneIII = \relative c {
   \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \mark\default \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
-  \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 d'2->\<~4. \time 9/8 d2 d4.~4
-  \time 7/8 g4-.-^\ff r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
+  \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 d2->\<~4. \time 9/8 d2 d4.~4
+  \time 7/8 d4-.-^\ff r r4. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
 
   \mark\default \time 7/8 R1*7/8 \time 9/8 R1*9/8
   \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 9/8 R1*9/8
@@ -3581,8 +3608,10 @@ scoreAEuphonium = \relative c {
     \alternative {
       \volta 1 {
         a-.\< a-. a-. a-. a-. a-. b-. b-. b-. b-. b-. b-.
-        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1) a4-.\f r4 r
-        r8 e16\f e e4-> c a\<-> a8 b->~8 b c->( b) e->( f) g->( af) \mark\default a?4.->-.\ff fs g g
+        a4-.\f r4 r
+        r8 e16\f e e4-> c a\<-> a8 b->~8 b c->( b) e->( f) g->( af)
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        \mark\default a?4.->-.\ff fs g g
         a8 a-. r a-. r4 a8 a-. r a-. r4 a4.->-. fs g g
         a8 a-. r a-. r4 a8 a-. r a-. r4 R2.*6
         a8-.->\fp\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-. \mark\default a4-.->\fp r4 r R2.
@@ -3595,9 +3624,10 @@ scoreAEuphonium = \relative c {
         b-. b-. b-. b-. c-. c-. c-. c-. e-. e-. e-. e-.
       }
       \volta 2 {
-        d4.\< d, e' e, \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        d4.\< d, e' e,
         a4\mf-> a8 a4-> a8 g8-.-> f-. d-. e-. c-.-> b-.
         ef4-> ef8 ef4-> ef8 d4 d d a8-.->\< a-. a-. a-.-> r4 g8-.-> g-. g-. g-.-> r4
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a4.(\f d c b) R2.*2 a4.\ff( d c b) R2.*2 b4.(\f e-> d b)->
         \override TextSpanner.bound-details.left.text = "rall."
         \mark\default cs4.( fs e gs) a8\<-.->\fp\startTextSpan a-. a-. a-. a-. a-. b-.-> b-. b-. b-. b-. b-.
@@ -3751,8 +3781,8 @@ scoreATuba = \relative c {
     \alternative {
       \volta 1 {
         a-.\< a-. a-. a-. a-. a-. b-. b-. b-. b-. b-. b-.
-        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a4\f-> a8 a4-> a8 a4-> a8 a4-> a8 a,4\< a8 b~8 b c->( b) e->( f) g->( af)
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a?->-.\fp\< a-. a-. a-.-> a-. a-. g-.-> g-. g-. g-.-> g-. g-.
         e-.->\f e-. e-. e-.-> e-. e-. ef-.-> ef-. ef-. ef-.-> ef-. ef-.
         a8->-.\fp\< a-. a-. a-.-> a-. a-. g-.-> g-. g-. g-.-> g-. g-.
@@ -3770,10 +3800,10 @@ scoreATuba = \relative c {
       \volta 2 {
 
         a8-.\< a-. a-. a-. a-. a-. b-. b-. b-. b-. b-. b-.
-        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         a-.->\mf a-. a-. a-.-> a-. a-. a-.-> a-. a-. a-. a-. a-.
         ef'-.-> ef-. ef-. ef-.-> ef-. ef-. d-.-> d-. d-. d-. d-. d-.
         a8-.->\< a-. a-. a-.-> r4 g8-.-> g-. g-. g-.-> r4
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default e'8-.->\fp\< e-. e-. e-.-> e-. e-. ef-.-> ef-. ef-. ef-.-> ef-. ef-. d4-.->\mf r4 r R2.
         a4.\ff( d c b) R2.*4
         \mark\default bf8-.->\mf\< bf-. bf-. bf-.-> bf-. bf-. a-.->\f\> a-. a-. a-.-> a-. a-.
@@ -3926,8 +3956,10 @@ scoreATimpani = \relative c {
 
     \alternative {
       \volta 1 {
-        a2.:32\< b:32 \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        a4.\f e' r8 e16 e e4-> c a4->\< a8 b4-> b8 c2.:32-> \mark\default a8\fp\< a a a a a b2.:32
+        a2.:32\< b:32
+        a4.\f e' r8 e16 e e4-> c a4->\< a8 b4-> b8 c2.:32->
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        \mark\default a8\fp\< a a a a a b2.:32
         a8\f a a a a a a a a a a a a\fp\< a a a a a b2.:32 a8\f a a a a a a a a a a a R2.*6
         a8\fp\< a a a a a f f f f f f \mark\default
         a4^"F A BF C E"\fp r4 r R2. bf2.:32\< ~2.:32\f\> R2.*2\! bf2.:32\< ~2.:32\f\>
@@ -3935,9 +3967,10 @@ scoreATimpani = \relative c {
         r4 r8 a16 a a a a a a4 r8 e'16 e e e e e e4 r8 e16 e e e e e e2.:32\p\< ~2.:32
       }
       \volta 2 {
-        a,2.:32\< b2.:32 \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        a,2.:32\< b2.:32
         a4^"F A B C EF"\mf-> a8 \repeat unfold 3 {a4-> a8} \repeat unfold 2 {ef'4-> ef8} a,4-> a8 a a4:32->
         a8\fp\< a a a4. c2.:32
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default e8\!->\f e e e-> e e b-> b b b-> b b a->\fp\< a a a a a c2.:32
         e8->\f e e e-> e e b-> b b b-> b b a4^"F A BF C EF"-> r4 r R2.*2 e'2.:32\p\<
         \override TextSpanner.bound-details.left.text = "rall."
@@ -4049,7 +4082,7 @@ scoreAGlockenspiel = \relative c'' {
   {e8 b e2 b8 fs cs'2 c8 g d'2 a8 e b'2 b8 fs cs'2 g8 d a'2 a8 e b'2 c8 g e'2}
 
   \time 6/8 \mark\default
-  R2. {fs16->\p^\markup {\italic "solo" } (b, cs a b8-.) fs'16->(b, cs a b8-.)}
+  R2. {fs16->\p (b, cs a b8-.) fs'16->(b, cs a b8-.)}
   R2. {b'16->(e, fs d e8-.) b'16->(e, fs d e8-.)}
   R2.*3 {fs16->(\p b, cs a b g a e fs b, cs ds e2.)} R2.*7
   {\mark\default fs'16->\mp ( b, cs a b8-.) fs'16->( b, cs a b8-.)} R2.
@@ -4079,7 +4112,9 @@ scoreAGlockenspiel = \relative c'' {
 
     \alternative {
       \volta 1 {
-        a4-.)-> r4 r R2.*5 \once \set Score.voltaSpannerDuration = #(ly:make-moment 1) \mark\default R2.*2
+        a4-.)-> r4 r R2.*5
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        \mark\default R2.*2
         <a e'>8\ff q r q-. r4 <a ef'>8 q r q-. r4 R2.*2 <a e'>8 q r q-. r4 <a ef'>8 q r q-. r4 R2.*8
         \mark\default R2.*2
         <bf e>4.\p\< q q2.\> <a e'>4-.\p r4 r R2. <bf e>4.\< q q\> q \mark\default <a e'>4-.\p r4 r R2.*7
@@ -4087,8 +4122,10 @@ scoreAGlockenspiel = \relative c'' {
         a4 r8 a r4 a-.\< b-. a-. a16\f( c d8--) r a\p r4 a16\f( d e8--) r4 r
       }
       \volta 2 {
-        a,4-.-> r4 r R2.*2 \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        g'8\mf f d e c b ef4-. r r R2. a,4. d c b \mark\default R2.*2
+        a,4-.-> r4 r R2.*2
+        g'8\mf f d e c b ef4-. r r R2. a,4. d c b
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        \mark\default R2.*2
         a4. d c b R2.*2 a4.\mp\< d c b b e d b \mark\default cs\f fs e <gs gs,>
         \override TextSpanner.bound-details.left.text = "rall."
         a,8\fp\< \startTextSpan a a a a a b b b b b b
@@ -4372,9 +4409,9 @@ scoreADrum = \drummode {
     \alternative {
       \volta 1 {
         sn8-> sn sn sn-> sn sn sn-> sn sn sn-> sn sn
-        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         sn8 sn sn sn sn8 sn sn sn16 sn sn8 sn sn8 sn
         sn\<-> sn sn sn-> sn8 sn sn-> sn sn-> sn sn4:32
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default sn8\fp\< sn sn sn sn sn sn sn sn sn sn4:32
         sn8\ff sn r sn4.:32\p\< sn8\ff sn r sn4.:32\p\<
         sn8\fp\< sn sn sn sn sn sn sn sn sn sn4:32
@@ -4398,10 +4435,10 @@ scoreADrum = \drummode {
       }
       \volta 2 {
         sn8\!-> sn sn sn-> sn8 sn sn2.:32\<
-        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         sn8\mf sn sn sn sn8 sn sn sn sn sn sn8 sn
         sn sn sn sn sn8 sn sn sn sn sn16 sn sn4:32
         sn8\fp\< sn sn sn sn sn sn sn sn sn sn16 sn sn sn
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default sn8\fp\<-> sn sn sn-> sn sn sn-> sn sn sn sn16 sn sn sn
         sn8\fp\< sn sn sn sn sn sn sn sn sn sn16 sn sn sn
         sn8\fp\< sn sn sn sn sn sn sn sn sn sn16 sn sn sn
@@ -4519,11 +4556,13 @@ scoreADrum = \drummode {
       \time 2/4 r4 sn4-^\fermata
     }
     \\
-    {\repeat unfold 13 {bd2 bd4. bd2 bd4. bd4}
-    \repeat unfold 4 {bd2 bd4. bd4. bd bd bd2 bd4. bd2 bd4. bd4}
-    \repeat unfold 3{\repeat unfold 3 {bd2 bd4.} bd4. bd bd}
-    \repeat unfold 8 {bd2 bd4. bd2 bd4. bd4}
-    r4 bd4-^\fermata}
+    {
+      \repeat unfold 13 {bd2 bd4. bd2 bd4. bd4}
+      \repeat unfold 4 {bd2 bd4. bd4. bd bd bd2 bd4. bd2 bd4. bd4}
+      \repeat unfold 3{\repeat unfold 3 {bd2 bd4.} bd4. bd bd}
+      \repeat unfold 8 {bd2 bd4. bd2 bd4. bd4}
+      r4 bd4-^\fermata
+    }
   >>
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \time 4/4
@@ -4624,7 +4663,7 @@ scoreARight = \relative c' {
   % Music goes here
   \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
   R1\fermata {
-    fs1\mp^\markup{\italic "solo"}
+    fs1\mp
     \(~ 2 \tuplet 3/2 {fs4 g a} fs2.. b,8 cs1\) fs\(~ 2 \tuplet 3/2 {fs4 g a}
     e2.. g16 fs g1^\markup{\italic "poco rit."}\)
   }
@@ -4680,8 +4719,10 @@ scoreARight = \relative c' {
 
     \alternative {
       \volta 1 {
-        d\p\< d, e' e, \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        a\f e'->~2. g4\< f d e c b \mark\default a4. d c b
+        d\p\< d, e' e,
+        a\f e'->~2. g4\< f d e c b
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        \mark\default a4. d c b
         <a e a,>8\ff q r q r4 <a ef a,>8 q r q r4
         a4. d  c b
         <a e a,>8\ff q r q r4 <a ef a,>8 q r q r4
@@ -4694,8 +4735,9 @@ scoreARight = \relative c' {
         q4. q4 q8 q4 q q q4. q4 q8 q4 q q
       }
       \volta 2 {
-        d,4. d, e' e, \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
+        d,4. d, e' e,
         a e'->~2. g4 f d e c b a4.\< d c b
+        \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a4 r4 r R2.
         a4.\! d c b a4 r4 r R2.
         a'4.\p\< d-> c\mf\> b-> b,\mp\< e-> d\f\> b-> \mark\default cs,\mf\< fs-> e\f\> ds'->
@@ -5368,6 +5410,7 @@ scoreADrumsPart = \new DrumStaff \with {
     %page-count = #3
   }
 }
+%
 \book {
   \bookOutputName "Part 02 - FluteI"
   \score {
