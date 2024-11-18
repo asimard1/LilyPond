@@ -174,11 +174,11 @@ scoreAPiccolo = \relative c'' {
         bf4-.\< r8 bf r4 bf4-. r8 bf r4 \mark\default a4\!\fp r4 r R2.*5
         d8 c->( b) c->( b a) c->( b a) g->( f e) e4-. r8 a r4 a-.\< b-. a-.
         a16\f( b c8--) r a\p r4 a-. a-. a-. a4-. r8 a r4 a-.\< b-. a-.
-        a16\f( c d8--) r a\p r4 a16\f ( d e8--) r4 r
+        a16\f( c d8--) r a\p r4 a16\f ( d e8--) r8 a,\p r4
       }
       \volta 2 {
         R2.*2
-        a,4.\mf e'->~2. g4(-> f d) e(-> c b) a4.( d c b
+        a4.\f e'->~2. g4(-> f d) e(-> c b) a4.( d c b
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a4-.->) r4 r R2.*9
         \override TextSpanner.bound-details.left.text = "rall."
@@ -300,8 +300,8 @@ scoreAFluteI = \relative c'' {
   R2.*4 \mark\default e2.\pp~2. R2.*2 \repeat unfold 3 {e2.~2. R2.*2}
 
   \time 6/8 \mark\default
-  R2. {fs'16->\pp ( b, cs a b8-.) fs'16->( b, cs a b8-.)}
-  R2.*5 fs'16\p(b, cs a b g a e fs b, cs ds e4.) r
+  R2. {fs'16->\pp^\markup{\italic "solo ad lib"} ( b, cs a b8-.) fs'16->( b, cs a b8-.)}
+  R2.*5 fs'16^\markup{\italic "tutti"}\p(b, cs a b g a e fs b, cs ds e4.) r
   R2.*7 {\mark\default fs'16->\mp ( b, cs a b8-.) fs'16->( b, cs a b8-.)}
   R2.*3 {fs16-> ( b, cs a b8-.) fs'16->( b, cs a b8-.)}
   R2. {b'16->\mf ( e, fs d e8-.) b'16->( e, fs d e8-.)} R2. \mark\default R2.
@@ -335,7 +335,7 @@ scoreAFluteI = \relative c'' {
         a16\fp( e f gs a e f gs a16 e f gs a e f gs a16 e f gs a e f gs
         a16\< f gs a b gs a b c16 a b c d b c d e16 d e f g e f g)
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
-        \mark\default a4.\f( d c b) a4-> r4 r R2. a4.( d c b) a4-> r4 r R2.
+        \mark\default a4.\f( d c4. b) a4-> r4 r R2. a4.( d c b) a4-> r4 r R2.
         a4.\p\<( d c b) R2.*2\! cs4.\mf\<( fs e ds) a8->-.\fp\< a-. a-. a-.-> a-. a-. b-.-> b-. b-. c-.-> c-. c-.
         \mark\default a4-.->\fp r r R2.*3
         a8-.->\fp e-. e-. e-.-> e-. e-. g->( f) d( e) c->( b) e->\< e e f-> f f g-> g g gs-> gs gs
@@ -469,7 +469,7 @@ scoreAFluteI = \relative c'' {
   c?8.-. c16-.~8 c-.~16 c8.-. c4-.
   \tuplet 6/4 {ef16( ff ef df ef df} \tuplet 6/4 {cf df cf bf cf bf}
   \tuplet 6/4 {df ef df cf df cf} \tuplet 6/4 {bf cf bf a bf a)}
-  af8.-. af16-.~8 af-.~16 af8.-. af4-. \mark\default R1*3
+  af?8.-. af16-.~8 af-.~16 af8.-. af4-. \mark\default R1*3
   \tuplet 6/4 {g'16\p\<( fs e ef e fs} \tuplet 6/4 {g gs a bf b c}
   \tuplet 6/4 {ef, e f g gs a} \tuplet 6/4 {bf b c cs d ef}
 
@@ -689,7 +689,7 @@ scoreAOboe = \relative c'' {
   \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
   R1*9 \mark \default R1*16 \mark\default R1*15
   \section \sectionLabel "Greenpath" \tempo "Mossy" 4 = 83 \time 3/4
-  R2.*4 \mark\default R2.*6 {r2 g4^\markup{\italic "solo"}(\mf a4.c b2.~2 e4) b2.( e) d4.( cs d b) a2. a4. c->(}
+  R2.*4 \mark\default R2.*6 {r2 g4^\markup{\italic "solo"}(\mf a4.c b2.~2 e4) b2.( e) d4.( cs d b a2.) a4.( c->}
 
   \time 6/8 \mark\default
   b2.)\> R2.*15\! \mark\default R2.*4
@@ -730,11 +730,11 @@ scoreAOboe = \relative c'' {
         \mark\default a,4-.\fp r8 e r4 g4-. r4 c8( b) bf4-.\< r8 bf r4 bf4-. r4 r4
         a4-.\fp r8 e r4 g4-. r4 c8( b) bf4-.\< r8 bf r4 bf4-. r8 bf r4 \mark\default a4-.\fp r4 r R2.*5
         f'8 e->( d) e->( d c) e->( d c) b->( a gs) a4-. r8 a r4 a-.\< b-. a-. a16\f(b c8--) r a\p r4 a-. a-. a-.
-        a4-. r8 a r4 a-.\< b-. a-. a16\f( c d8--) r a\p r4 a16\f( d e8--) r4 r
+        a4-. r8 a r4 a-.\< b-. a-. a16\f( c d8--) r a\p r4 a16\f( d e8--) r8 a,\p r4
       }
       \volta 2 {
         R2.*3
-        g8-.->\mf f-. d-. e-. c-.-> b-. g'4(-> f d) e(-> c b) a4.( d c b)
+        g'8-.->\mf f-. d-. e-. c-.-> b-. g'4(-> f d) e(-> c b) a4.( d c b)
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a4-.-> r4 r R2. a4.(\mf d c b a4-.) r4 r R2.*3
         b4.(\f e-> d b)-> \override TextSpanner.bound-details.left.text = "rall."
@@ -1010,7 +1010,7 @@ scoreABassoon = \relative c' {
   af'8-.\mf\< g-. f-. ef-. f-. ef-. d-. df-.
   c4-.\f c-. c-. c-.
   ef8-.\mf\< df-. cf-. bf-. df-. cf-. bf-. a-.
-  af4-.\f af-. af-. af-. \mark\default R1*4 \mark\default
+  af?4-.\f af-. af-. af-. \mark\default R1*4 \mark\default
 
   c8-.\f \repeat unfold 23 {c8-.} \tuplet 3/2 {f,4-. f'-. f,-.} \tuplet 3/2 {f-. f'-. f,-.}
   \repeat unfold 16 {c'8-.} \tuplet 3/2 {gf4-. gf'-. gf,-.} \tuplet 3/2 {gf-. gf'-. gf,-.}
@@ -1072,10 +1072,10 @@ scoreAEflatClarinet = \relative c'' {
         a4-.\fp r8 e r4 g4-. r4 c,8 r bf'4-.\< r8 bf r4 bf4-. r8 bf r4
         \mark\default a4-.->\fp r4 r R2.*5 f8 e->( d) e->( d c) e->( d c) b->( a gs)
         a4-. r8 a r4 a-.\< b-. a-. a16\f(b c8--) r a\p r4 a-. a-. a-.
-        a4-. r8 a r4 a-.\< b-. a-. a16\f( c d8--) r a\p r4 a16\f( d e8--) r4 r
+        a4-. r8 a r4 a-.\< b-. a-. a16\f( c d8--) r a\p r4 a16\f( d e8--) r8 a,\p r4
       }
       \volta 2 {
-        f,4-. g-. a-. b-. c-. d-.
+        f4-. g-. a-. b-. c-. d-.
         e4.\mf e->~2. g4(-> f d) e(-> c b) a4.( d c b)
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default f4-. g-. a-. b-. c-. d-. a4.(\mf d c b a4-.) r4 r R2.*3 b4.(\f e-> d b)->
@@ -1385,10 +1385,10 @@ scoreAClarinetII = \relative c'' {
         a4-.\fp r8 e r4 g4-. r4 c8( b) bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-.
         \mark\default a4-.->\fp r4 r R2.*5
         d8 c->( b) c->( b a) c->( b a) g->( f e) a4-. r8 a r4 a-.\< b-. a-. a16\f(b c8--) r a\p r4 a-. a-. a-.
-        a4-. r8 a r4 a-.\< b-. a-. a16\f( c d8--) r a\p r4 a16\f( d e8--) r4 r
+        a4-. r8 a r4 a-.\< b-. a-. a16\f( c d8--) r a\p r4 a16\f( d e8--) r8 a,\p r4
       }
       \volta 2 {
-        f,16\mp\<( g a b g a b c a16 b c d b c d e c16 d e f d e f g)
+        f16\mp\<( g a b g a b c a16 b c d b c d e c16 d e f d e f g)
         a4.\mf e->~2. g4(-> f d) e(-> c b) a4.( d c b)
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default f16\mp\<( g a b g a b c a16 b c d b c d e c16 d e f d e f g)
@@ -1549,10 +1549,10 @@ scoreAClarinetIII = \relative c'' {
         a'4-.\fp r8 e r4 g4-. r4 c,8( b) bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-. bf-.
         \mark\default a4-.->\fp r4 r R2.*5
         d8 c->( b) c->( b a) c->( b a) g->( f e) a4-. r8 a r4 a-.\< b-. a-. a16\f(b c8--) r a\p r4 a-. a-. a-.
-        a4-. r8 a r4 a-.\< b-. a-. a16\f( c d8--) r a\p r4 a16\f( d e8--) r4 r
+        a4-. r8 a r4 a-.\< b-. a-. a16\f( c d8--) r a\p r4 a16\f( d e8--) r8 a,\p r4
       }
       \volta 2 {
-        f16\mp\<( g a b g a b c a16 b c d b c d e c16 d e f d e f g)
+        f'16\mp\<( g a b g a b c a16 b c d b c d e c16 d e f d e f g)
         a4.\mf e->~2. g4(-> f d) e(-> c b) a4.( d c b)
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default f16\mp\<( g a b g a b c a16 b c d b c d e c16 d e f d e f g)
@@ -1820,7 +1820,7 @@ scoreABassClarinet = \relative c'' {
   c4-.\f c-. c-. c-. af'8-.\mf\< g-. f-. ef-. f-. ef-. d-. df-.
   c4-.\f c-. c-. c-.
   ef8-.\mf\< df-. cf-. bf-. df-. cf-. bf-. a-.
-  af4-.\f af-. af-. af-. \mark\default R1*4 \mark\default
+  af?4-.\f af-. af-. af-. \mark\default R1*4 \mark\default
 
   c8-.\f \repeat unfold 23 {c8-.} \tuplet 3/2 {f,4-. f'-. f,-.} \tuplet 3/2 {f-. f'-. f,-.}
   \repeat unfold 16 {c'8-.} \tuplet 3/2 {gf4-. gf'-. gf,-.} \tuplet 3/2 {gf-. gf'-. gf,-.}
@@ -2158,7 +2158,7 @@ scoreAAltoSaxII = \relative c'' {
   c?8.-. c16-.~8 c-.~16 c8.-. c4-.
   \tuplet 6/4 {ef16( ff ef df ef df} \tuplet 6/4 {cf df cf bf cf bf}
   \tuplet 6/4 {df ef df cf df cf} \tuplet 6/4 {bf cf bf a bf a)}
-  af8.-. af16-.~8 af-.~16 af8.-. af4-. \mark\default R1*4 \mark\default
+  af?8.-. af16-.~8 af-.~16 af8.-. af4-. \mark\default R1*4 \mark\default
 
   g'8-.\f g-. g-. g-> r4 g-.-> af8-. af-. af-. af-> r4 af-.-> g8-. g-. g-. g-> r4 g-.->
   \tuplet 3/2 {f4-. f-. f-.} \tuplet 3/2 {f-. f-. f-.}
@@ -2212,10 +2212,10 @@ scoreATenorSax = \relative c'' {
         b4.(\mp\< e d b) cs4.( fs e ds) e2.\fp\<~2. \mark\default a4-.\fp r8 e r4 g4-. r4 c8( b) bf2.\<~2.\f\>
         a4-.\p r8 e r4 g4-. r4 c8( b) bf2.\<~2.\f\> \mark\default a4-.->\p r4 r R2.*5
         d8 c->( b) c->( b a) c->( b a) g->( f e) e4-. r8 a r4 a-.\< b-. a-. a16\f(b c8--) r a\p r4 a-. a-. a-.
-        a4-. r8 a r4 a-.\< b-. a-. a16\f( c d8--) r a\p r4 a16\f( d e8--) r4 r
+        a4-. r8 a r4 a-.\< b-. a-. a16\f( c d8--) r a\p r4 a16\f( d e8--) r8 a,\p r4
       }
       \volta 2 {
-        a,4-.-> r4 r R2.*2
+        a4-.-> r4 r R2.*2
         g'8-.->\mf f-. d-. e-. c-.-> b-. g'4(-> f d) e(-> c b) a4.( d c b)
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a4-.-> r4 r R2.*5 a4.(\mf\< d-> c b)-> b4.( e-> d b)->
@@ -2305,7 +2305,7 @@ scoreATenorSax = \relative c'' {
   c'4-.\f c-. c-. c-. af'8-.\mf\< g-. f-. ef-. f-. ef-. d-. df-.
   c4-.\f c-. c-. c-.
   ef8-.\mf\< df-. cf-. bf-. df-. cf-. bf-. a-.
-  af4-.\f af-. af-. af-. \mark\default R1*4 \mark\default
+  af?4-.\f af-. af-. af-. \mark\default R1*4 \mark\default
 
   e8-.\f e-. e-. e-> r4 e-.-> ef8-. ef-. ef-. ef-> r4 ef-.-> ef8-. ef-. ef-. ef-> r4 ef-.->
   \tuplet 3/2 {c4-. c-. c-.} \tuplet 3/2 {c-. c-. c-.}
@@ -2479,7 +2479,7 @@ scoreABaritoneSax = \relative c'' {
   c'4-.\f c-. c-. c-. af'8-.\mf\< g-. f-. ef-. f-. ef-. d-. df-.
   c4-.\f c-. c-. c-.
   ef8-.\mf\< df-. cf-. bf-. df-. cf-. bf-. a-.
-  af4-.\f af-. af-. af-. \mark\default R1*4 \mark\default
+  af?4-.\f af-. af-. af-. \mark\default R1*4 \mark\default
 
   c8-.\f \repeat unfold 23 {c8-.} \tuplet 3/2 {f,4-. f'-. f,-.} \tuplet 3/2 {f-. f'-. f,-.}
   \repeat unfold 16 {c'8-.} \tuplet 3/2 {gf4-. gf'-. gf,-.} \tuplet 3/2 {gf-. gf'-. gf,-.}
@@ -2935,7 +2935,7 @@ scoreAHornFI = \relative c' {
   g4-.\f g-. g-. g-. af'8-.\mf\< g-. f-. ef-. f-. ef-. d-. df-.
   c4-.\f c-. c-. c-.
   ef8-.\mf\< df-. cf-. bf-. df-. cf-. bf-. a-.
-  af4-.\f af-. af-. af-.
+  af?4-.\f af-. af-. af-.
 
   \mark\default
   af8-.\p\< g-. af-. bf-. bf-. af-. bf-. cf-. cf-. bf-. cf-. df-. df-. cf-. df-. d-.
@@ -2951,6 +2951,7 @@ scoreAHornFI = \relative c' {
   c4.\fff c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
   c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
 
+  \once \override Hairpin.bound-padding = #0.5
   r2 g'\fp\< g8-^\ff g-^ r g-^ g4-^ c8-^ c-^ c4-^ r r2 \fine
 }
 
@@ -3094,7 +3095,7 @@ scoreAHornFII = \relative c' {
   c4-.\f c-. c-. c-. af'8-.\mf\< g-. f-. ef-. f-. ef-. d-. df-.
   c4-.\f c-. c-. c-.
   ef8-.\mf\< df-. cf-. bf-. df-. cf-. bf-. a-.
-  af4-.\f af-. af-. af-.
+  af?4-.\f af-. af-. af-.
 
   \mark\default
   af8-.\p\< g-. af-. bf-. bf-. af-. bf-. cf-. cf-. bf-. cf-. df-. df-. cf-. df-. d-.
@@ -3249,7 +3250,7 @@ scoreATromboneI = \relative c {
   c'4-.\f c-. c-. c-. af'8-.\mf\< g-. f-. ef-. f-. ef-. d-. df-.
   c4-.\f c-. c-. c-.
   ef8-.\mf\< df-. cf-. bf-. df-. cf-. bf-. a-.
-  af4-.\f af-. af-. af-.
+  af?4-.\f af-. af-. af-.
 
   \mark\default
   af8-.\p\< g-. af-. bf-. bf-. af-. bf-. cf-. cf-. bf-. cf-. df-. df-. cf-. df-. d-.
@@ -3394,7 +3395,7 @@ scoreATromboneII = \relative c {
   g4-.\f g-. g-. g-. af8-.\mf\< g-. f-. ef-. f-. ef-. d-. df-.
   g4-.\f g-. g-. g-.
   ef'8-.\mf\< df-. cf-. bf-. df-. cf-. bf-. a-.
-  af4-.\f af-. af-. af-.
+  af?4-.\f af-. af-. af-.
 
   \mark\default
   af8-.\p\< g-. af-. bf-. bf-. af-. bf-. cf-. cf-. bf-. cf-. df-. df-. cf-. df-. d-.
@@ -3536,7 +3537,7 @@ scoreATromboneIII = \relative c {
   g4-.\f g-. g-. g-. af8-.\mf\< g-. f-. ef-. f-. ef-. d-. df-.
   g4-.\f g-. g-. g-.
   ef'8-.\mf\< df-. cf-. bf-. df-. cf-. bf-. a-.
-  af4-.\f af-. af-. af-.
+  af?4-.\f af-. af-. af-.
 
   \mark\default
   af8-.\p\< g-. af-. bf-. bf-. af-. bf-. cf-. cf-. bf-. cf-. df-. df-. cf-. df-. d-.
@@ -3897,10 +3898,10 @@ scoreATuba = \relative c {
   af4-. af-. af-. af-.
 
   \mark\default
-  af8-.\p\< g-. af-. bf-. bf-. af-. bf-. cf-. cf-. bf-. cf-. df-. df-. cf-. df-. d-.
+  af,8-.\p\< g-. af-. bf-. bf-. af-. bf-. cf-. cf-. bf-. cf-. df-. df-. cf-. df-. d-.
   ef-. df-. ef-. e-. e-. ef-. e-. fs-. fs-. e-. fs-. g-. g-. fs-. g-. g-.\fff \mark\default
 
-  c,8-.\f \repeat unfold 23 {c8-.} \tuplet 3/2 {f,4-. f'-. f,-.} \tuplet 3/2 {f-. f'-. f,-.}
+  c8-.\f \repeat unfold 23 {c8-.} \tuplet 3/2 {f,4-. f'-. f,-.} \tuplet 3/2 {f-. f'-. f,-.}
   \repeat unfold 16 {c'8-.} \tuplet 3/2 {gf4-. gf'-. gf,-.} \tuplet 3/2 {gf-. gf'-. gf,-.}
   \tuplet 3/2 {ef4-. ef'-. ef,-.} \tuplet 3/2 {ef-. ef'-. g,-.} \mark\default
 
@@ -3917,7 +3918,8 @@ scoreATimpani = \relative c {
   % Music goes here
   \section \sectionLabel "Dirtmouth" \tempo "Abandoned" 4 = 88 \time 4/4
 
-  \repeat percent 8 {e1:32(\fermata^"F A B C E"} e1^\markup{\italic "poco rit."}) \mark \default
+  e1:32(\fermata^"F A B C E"
+  \repeat percent 7 {e1:32} e1^\markup{\italic "poco rit."}) \mark \default
   \repeat percent 15 {e1:32(^\markup{\bold "a tempo"}} e1^\markup{\italic "poco rit."})
   \mark \default \repeat percent 12 {e1:32(^\markup{\bold "a tempo"}} e1)R1*2
 
@@ -4119,10 +4121,10 @@ scoreAGlockenspiel = \relative c'' {
         \mark\default R2.*2
         <bf e>4.\p\< q q2.\> <a e'>4-.\p r4 r R2. <bf e>4.\< q q\> q \mark\default <a e'>4-.\p r4 r R2.*7
         a4 r8 a r4 a-.\< b-. a-. a16\f(b c8--) r a\p r4 a-. a-. a-.
-        a4 r8 a r4 a-.\< b-. a-. a16\f( c d8--) r a\p r4 a16\f( d e8--) r4 r
+        a4 r8 a r4 a-.\< b-. a-. a16\f( c d8--) r a\p r4 a16\f( d e8--) r8 a,\p r4
       }
       \volta 2 {
-        a,4-.-> r4 r R2.*2
+        a4-.-> r4 r R2.*2
         g'8\mf f d e c b ef4-. r r R2. a,4. d c b
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default R2.*2
@@ -4698,7 +4700,11 @@ scoreARight = \relative c' {
   \repeat unfold 3 {\greenPathRightHand} \greenPathRightHandB
   \repeat unfold 3 {\greenPathRightHand} \greenPathRightHandB
 
-  \greenPathPatternB
+  \override TextSpanner.bound-details.left.text = "poco rit."
+  \mark\default <b b'>8-. q16-. q-. r q8-. q16-. r q-. q8-. q-. q16-. q-. r q8-. q16-. r q-. q8-.
+  q8-. q16-. q-. r q8-. q16-. r q-. q8-. q-. q16-. q-. r q8-. q16-. r q-. q8-.
+  q8-. q16-. q-. r q8-. q16-. r q-. q8-. q-. q16-. q-. r q8-. q16-. r q-. q8-.
+  q8-.\startTextSpan q16-. q-. r q8-. q16-. r q-. q8-. q-. q16-. q-. r q8-. q16-. r q-. q-. q-.\stopTextSpan
 
   \section \sectionLabel "Hornet" \tempo \markup{
     \concat {
@@ -4740,7 +4746,7 @@ scoreARight = \relative c' {
         \once \set Score.voltaSpannerDuration = #(ly:make-moment 1)
         \mark\default a4 r4 r R2.
         a4.\! d c b a4 r4 r R2.
-        a'4.\p\< d-> c\mf\> b-> b,\mp\< e-> d\f\> b-> \mark\default cs,\mf\< fs-> e\f\> ds'->
+        a4.\p\< d-> c\mf\> b-> b\mp\< e-> d\f\> b-> \mark\default cs,\mf\< fs-> e\f\> ds'->
         \override TextSpanner.bound-details.left.text = "rall."
         <a a'>8\fp\< \startTextSpan q q q q q <b b'> q q q q q
         <c c'> q q q q q <g' g'>\ff q q <gs gs'>-^ q-^ q-^ R2.\fermata\stopTextSpan
@@ -4816,11 +4822,11 @@ scoreARight = \relative c' {
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
 
-  c8-.\f^\markup {\italic "8vb e 8va ad lib"} \repeat unfold 7 {c8-.} \repeat unfold 8 {af8-.}
-  \repeat unfold 8 {g8-.} \tuplet 3/2 {f4-. f'-. f,-.} \tuplet 3/2 {f-. f'-. f,-.}
-  \repeat unfold 8 {c'8-.} \repeat unfold 8 {af8-.}
-  \tuplet 3/2 {gf4-. gf'-. gf,-.} \tuplet 3/2 {gf-. gf'-. gf,-.}
-  \tuplet 3/2 {ef4-. ef'-. ef,-.} \tuplet 3/2 {ef-. ef'-. g,-.} \mark\default
+  <c g e c>8-.\f \repeat unfold 7 {q8-.} \repeat unfold 8 {<af ef c af>8-.}
+  \repeat unfold 8 {<g ef c g>8-.} \tuplet 3/2 {<f f,>4-. q-. q-.} \tuplet 3/2 {q-. q-. q-.}
+  \repeat unfold 8 {<c' g e c>8-.} \repeat unfold 8 {<af ef c af>8-.}
+  \tuplet 3/2 {<gf gf,>4-. q-. q-.} \tuplet 3/2 {q-. q-. q-.}
+  \tuplet 3/2 {q-. q-. q-.} \tuplet 3/2 {q-. q-. <g g,>-.} \mark\default
 
   R1*8 \mark\default
 
@@ -4831,33 +4837,36 @@ scoreARight = \relative c' {
   c bf g bf c bf g bf c bf g bf c bf g bf
   c bf g bf c bf g bf c bf g bf c bf g bf
   c bf g bf c bf g bf c bf g bf c bf g bf
-  c bf g bf c bf g bf c bf g bf c bf g bf)
+  c bf g bf c bf g bf c bf g bf c bf g bf
   \mark\default
 
-  c4.\p c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
+  c4.\p) c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
   c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
   c4.\f c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
   c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
   \mark\default
 
-  ef8.-.\f ef16-.~8 ef-.~16 ef8.-. ef4-. af8-.\mf\< g-. f-. ef-. f-. ef-. d-. df-.
-  ef8.-.\f ef16-.~8 ef-.~16 ef8.-. ef4-. ef8-.\mf\< df-. cf-. bf-. df-. cf-. bf-. a-.
-  ef'8.-.\f ef16-.~8 ef-.~16 ef8.-. ef4-. \mark\default
+  \tuplet 4/3 {<ef g,>4-.\f q-. q-. q-.} q4-.
+  <af af,>8-.\mf\< <g g,>-. <f f,>-. <ef ef,>-. <f f,>-. <ef ef,>-. <d d,>-. <df df,>-.
+  \tuplet 4/3 {<ef g,>4-.\f q-. q-. q-.} q4-.
+  <ef ef,>8-.\mf\< <df df,>-. <cf cf,>-. <bf bf,>-. <df df,>-. <cf cf,>-. <bf bf,>-. <a a,>-.
+  \tuplet 4/3 {<ef af?>4-.\f q-. q-. q-.} q4-. \mark\default
 
-  af,,8-.\p\< g-. af-. bf-. bf-. af-. bf-. cf-. cf-. bf-. cf-. df-. df-. cf-. df-. d-.
-  ef-. df-. ef-. e-. e-. ef-. e-. fs-. fs-. e-. fs-. g-. g-. fs-. g-. g-.\fff \mark\default
-  \mark\default
+  <af af,>8-.\p\< <g g,>-. <af af,>-. <bf bf,>-. <bf bf,>-. <af af,>-. <bf bf,>-. <cf cf,>-.
+  <cf cf,>-. <bf bf,>-. <cf cf,>-. <df df,>-. <df df,>-. <cf cf,>-. <df df,>-. <d d,>-.
+  <ef ef,>-. <df df,>-. <ef ef,>-. <e e,>-. <e e,>-. <ef ef,>-. <e e,>-. <fs fs,>-.
+  <fs fs,>-. <e e,>-. <fs fs,>-. <g g,>-. <g g,>-. <fs fs,>-. <g g,>-. <g g,>-.\fff \mark\default
 
-  c8\f-> \repeat unfold 7 {c8-.} \repeat unfold 8 {af8-.}
-  \repeat unfold 8 {g8-.} \tuplet 3/2 {f4-. f'-. f,-.} \tuplet 3/2 {f-. f'-. f,-.}
-  \repeat unfold 8 {c'8-.} \repeat unfold 8 {af8-.}
-  \tuplet 3/2 {gf4-. gf'-. gf,-.} \tuplet 3/2 {gf-. gf'-. gf,-.}
-  \tuplet 3/2 {ef4-. ef'-. ef,-.} \tuplet 3/2 {ef-. ef'-. g,-.} \mark\default
+  <c, g e c>8-.\f \repeat unfold 7 {q8-.} \repeat unfold 8 {<af ef c af>8-.}
+  \repeat unfold 8 {<g ef c g>8-.} \tuplet 3/2 {<f f,>4-. q-. q-.} \tuplet 3/2 {q-. q-. q-.}
+  \repeat unfold 8 {<c' g e c>8-.} \repeat unfold 8 {<af ef c af>8-.}
+  \tuplet 3/2 {<gf gf,>4-. q-. q-.} \tuplet 3/2 {q-. q-. q-.}
+  \tuplet 3/2 {q-. q-. q-.} \tuplet 3/2 {q-. q-. <g g,>-.} \mark\default
 
   R1*4 \mark\default c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
   c4. c16( d) ef8-. d16( c d ef \tuplet 3/2 {d ef d)} c8-. c-. r c-. c4-. c8-. c-.
 
-  c4-. r8 c16\< c c8 c16 c c c c c g'8-^\ff g-^ r g-^ g4-^ c8-^ c-^ c4-^ r r2 \fine
+  c4-. r8 c16\< c c8 c16 c c c c c <g' c,>8-^\ff q-^ r q-^ q4-^ <c g ef c>8-^ q-^ q4-^ r r2 \fine
 }
 
 scoreALeft = \relative c, {
@@ -4971,7 +4980,7 @@ scoreALeft = \relative c, {
 
   \section \sectionLabel "Dung Defender" \tempo "Bouncy" 4 = 150
 
-  \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
+  \time 7/8 <d d,>4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
   \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.-> \mark\default
 
   \time 7/8 d4-.-> r d4.-.-> \time 9/8 d4-.-> r4 d4.-.-> d4-.->
@@ -5021,39 +5030,43 @@ scoreALeft = \relative c, {
 
   \section \sectionLabel "Hive Knight" \tempo "Military" 4 = 120 \key c \minor \time 4/4
 
-  c8-. c-. c-. c-> r4 c-.-> \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
-  \tuplet 3/2 {bf4-. bf-. bf-.} \tuplet 3/2 {a-. a-. a-.}
-  \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
-  \tuplet 3/2 {c4-. c-. c-.} \tuplet 3/2 {df-. df-. df-.}
-  \tuplet 3/2 {ef-. ef-. ef-.} \tuplet 3/2 {gf-. gf-. g-.} \mark\default
+  <c c,>8-. q-. q-. q-> r4 q-.-> \repeat unfold 2 {q8-. q-. q-. q-> r4 q-.->}
+  \tuplet 3/2 {<bf bf,>4-. q-. q-.} \tuplet 3/2 {<a a,>-. q-. q-.}
+  \repeat unfold 2 {<c c,>8-. q-. q-. q-> r4 q-.->}
+  \tuplet 3/2 {q4-. q-. q-.} \tuplet 3/2 {<df df,>-. q-. q-.}
+  \tuplet 3/2 {<ef ef,>-. q-. q-.} \tuplet 3/2 {<gf, gf,>-. q-. <g g,>-.} \mark\default
 
-  R1*4 \repeat unfold 2 {c,4-. c-. c-. c-. c8-. c-. r c-. c4-. c8-. c-.} \mark\default
+  R1*4 \repeat unfold 2 {<c c,>4-. q-. q-. q-. q8-. q-. r q-. q4-. q8-. q-.} \mark\default
 
-  c2 c4 d ef2 d4 c \tuplet 3/2 {d4 ef d} \tuplet 3/2 {d ef d} c1
-  c2 c4 d \tuplet 3/2 {f ef f} g2 \tuplet 3/2 {g4 f g} a f g1 \mark\default
+  q2 q4 <d d,> <ef ef,>2 <d d,>4 <c c,>
+  \tuplet 3/2 {<d d,>4 <ef ef,> <d d,>} \tuplet 3/2 {<d d,> <e ef,> <d d,>} <c c,>1
+  q2 q4 <d d,> \tuplet 3/2 {<f f,> <ef ef,> <f f,>} <g c,>2 \tuplet 3/2 {<g g,>4 <f f,> <g g,>}
+  <a a,> <f f,> <g g,>1 \mark\default
 
-  R1*4 c,4-. \repeat unfold 15 {c4-.} \mark\default
+  R1*4 <c, c,>4-. \repeat unfold 15 {q4-.} \mark\default
 
-  c4-. c-. c-. c-. R1
-  c4-. c-. c-. c-. R1
-  af4-. af-. af-. af-.
+  q4-. q-. q-. q-. R1
+  q4-. q-. q-. q-. R1
+  <af af,>4-. q-. q-. q-.
 
   \mark\default
-  af8-. g-. af-. bf-. bf-. af-. bf-. cf-. cf-. bf-. cf-. df-. df-. cf-. df-. d-.
-  ef-. df-. ef-. e-. e-. ef-. e-. fs-. fs-. e-. fs-. g-. g-. fs-. g-. g-. \mark\default
+  <af af,>8-.\p\< <g g,>-. <af af,>-. <bf bf,>-. <bf bf,>-. <af af,>-. <bf bf,>-. <cf cf,>-.
+  <cf cf,>-. <bf bf,>-. <cf cf,>-. <df df,>-. <df df,>-. <cf cf,>-. <df df,>-. <d d,>-.
+  <ef ef,>-. <df df,>-. <ef ef,>-. <e e,>-. <e e,>-. <ef ef,>-. <e e,>-. <fs fs,>-.
+  <fs fs,>-. <e e,>-. <fs fs,>-. <g g,>-. <g g,>-. <fs fs,>-. <g g,>-. <g g,>-.\fff \mark\default
 
-  c8-. c-. c-. c-> r4 c-.-> \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
-  \tuplet 3/2 {bf4-. bf-. bf-.} \tuplet 3/2 {a-. a-. a-.}
-  \repeat unfold 2 {c8-. c-. c-. c-> r4 c-.->}
-  \tuplet 3/2 {c4-. c-. c-.} \tuplet 3/2 {df-. df-. df-.}
-  \tuplet 3/2 {ef-. ef-. ef-.} \tuplet 3/2 {gf-. gf-. g-.} \mark\default
+  <c, c,>8-. q-. q-. q-> r4 q-.-> \repeat unfold 2 {q8-. q-. q-. q-> r4 q-.->}
+  \tuplet 3/2 {<bf bf,>4-. q-. q-.} \tuplet 3/2 {<a a,>-. q-. q-.}
+  \repeat unfold 2 {<c c,>8-. q-. q-. q-> r4 q-.->}
+  \tuplet 3/2 {q4-. q-. q-.} \tuplet 3/2 {<df df,>-. q-. q-.}
+  \tuplet 3/2 {<ef ef,>-. q-. q-.} \tuplet 3/2 {<gf, gf,>-. q-. <g g,>-.} \mark\default
 
-  c,4-.^\ff c-. c-. c-. c8-. c-. r c-. c4-. c8-. c-.
-  c4-. c-. c-. c-. af8-. af-. r f-. f4-. f8-. f-.
-  \mark\default c'4-.-^ c-.-^ c-.-^ c-.-^ c8-.-^ c-.-^ r c-.-^ c4-.-^ c8-.-^ c-.-^
-  c4-.-^ c-.-^ c-.-^ c-.-^ af8-.-^ af-.-^ r f-.-^ f4-.-^ f8-.-^ f-.-^
+  <c, c'>4-.^\ff q-. q-. q-. q8-. q-. r q-. q4-. q8-. q-.
+  q4-. q-. q-. q-. <af af'>8-. q-. r <f f'>-. q4-. q8-. q-.
+  \mark\default <c' c'>4-.-^ q-.-^ q-.-^ q-.-^ q8-.-^ q-.-^ r q-.-^ q4-.-^ q8-.-^ q-.-^
+  q4-.-^ q-.-^ q-.-^ q-.-^ <af af'>8-.-^ q-.-^ r <f f'>-.-^ q4-.-^ q8-.-^ q-.-^
 
-  c2 g' g8-^ g-^ r c,-^ c4-^ c8-^ c-^ c4-^ r r2 \fine
+  <c c'>2 <g' g'> q8-^ q-^ r <c, c'>-^ q4-^ <c g' c>8-^ q-^ q4-^ r r2 \fine
 }
 
 scoreAPiccoloPart = \new Staff \with {
@@ -5823,7 +5836,7 @@ scoreADrumsPart = \new DrumStaff \with {
     \compressMMRests {\scoreAPianoPart}
     \layout {
       \override MultiMeasureRest.expand-limit = 1
-      #(layout-set-staff-size 18)
+      #(layout-set-staff-size 16)
     }
   }
   \paper {
