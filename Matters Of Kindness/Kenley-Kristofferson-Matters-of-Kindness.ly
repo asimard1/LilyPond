@@ -52,8 +52,8 @@ right = \relative c' {
     } \\
     \relative c' {
       % MIDDLE VOICE
-      af8(^\markup{\italic "Good luck"}\p\< bf c4~4 ef ef2.\>) s4
-      af,8(\< bf c4 f g ef2.\>) s4
+      af8_(\p\< bf c4_~4 ef ef2.)\> s4
+      af,8_(\< bf c4 f g ef2.\>) s4
       \stemDown <f af>2._(\< <g_~ bf^~>4 <g bf>2\> af)
       f2_(\< g~2^\markup{\italic "slight rit."}
       <f af>2 \tempo "With motion" 4=82 g\mp\> <af_~ c^~> <af c>1)
@@ -70,7 +70,7 @@ right = \relative c' {
     \relative c'' {
       \stemNeutral b8\rest g,( ef'\< af, f' bf, ef g)
       \stemUp af-3 (\mp bf c4~8) af( bf c ef-4 f-5 ef4~8\noBeam) \stemUp bf-2( c ef
-      f4.) f8( g af <bf f> g) f4( ef2) c8( ef
+      f4.) f8( g af <bf f> g) f4( ef2) c8(-2 ef
       af4. af8 bf4 af c f, af) ef8( df c4 c8 df ef4 g, af1)
     } \\
     \relative c' {
@@ -78,20 +78,21 @@ right = \relative c' {
       \once \override PianoStaff.Arpeggio.stencil = #ly:arpeggio::brew-chord-bracket
       bf\arpeggio g'2~ g8 g ef
       \once \override PianoStaff.Arpeggio.stencil = #ly:arpeggio::brew-chord-bracket
-      d\arpeggio f1 bf4.) bf8( <c ef,>2) <f af,>8( c g af bf4 c)  df4( c <df bf>2)
+      d\arpeggio f1 bf4.) bf8-2( <c ef,>2-3-1) <f af,>8( c g-1 af-1 bf4-2 c-1)  df4(-2 c <df bf>2)
       df,4( af'2) ef4(~ 4. bf'8 af4 ef \stemNeutral af,4)
     } \\
     \relative c'' {s1 s1 s1 s1 s1 s1 s1 s1 s2 c}
   >>
   <<
     \relative c' {
+      \stemNeutral
       ef4(\mp\< f g)
-      <af c,>8(\mf <bf df,> <c ef,>4~8) <af c,>( <bf df,> <c ef,>
-      <ef g,> <f af,> <ef g,>4~8) <bf g>( <c af> <ef bf>
-      <f af,>4 <af c,> <g bf,> <f af,> <ef g,> <c ef, c>2)
+      <af c,>8(\mf <bf df,> <c^~ ef,_~>4 <c ef,>8) <af c,>( <bf df,> <c ef,>
+      <ef g,> <f af,> <ef^~ g,_~>4 <ef g,>8) <bf g>( <c af> <ef bf>
+      \stemUp <f af,>4 <af c,> <g bf,> <f af,> <ef g,> <c ef, c>2)
     } \\
     \relative c' {
-      s2. s1 s1 df'4 c8 bf af2 ef2(
+      s2. s1 s1 df'4 c8 bf af2 ef2_(
       \once \tweak Parentheses.font-size 0 \parenthesize <bf' g>4)
     }
   >>
@@ -108,7 +109,7 @@ right = \relative c' {
     } \\
     \relative c' {
       <af df>2( df <af df>4 bf c2) <f, bf>( <af df> f4 ef c'2)
-      af'2( c bf ef2_) af2( f, ef1)
+      af'2( c bf ef2_) af2( f ef1)
     } \\ \\
     \relative c' {s1 s1 s1 c1^-}
   >>
@@ -135,24 +136,28 @@ right = \relative c' {
   \relative c' {
 
   }
+  \relative c' {
+    <df f df'>8(\mp^\markup{\italic "a tempo"} <ef gf ef'> <f af f'>4 ~8)
+    <df f df'>8( <ef gf ef'> <f af f'>
+    <af c af'> <bf df bf'> <af_~ c_~ af'^~>4 <af c af'>8) <ef gf ef'>8( <f af f'> <af c af'>
+    <bf df bf'>4. q8 <c ef c'> <df f df'> <ef gf ef'> <c ef c'> <bf df bf'>4 <af f' af>2)
+  }
   <<
     \relative c' {
-      \stemNeutral <df f df'>8(\mp^\markup{\italic "a tempo"} <ef gf ef'> <f_~ af_~ f'^~>4 <f af f'>8)
-      <df f df'>8( <ef gf ef'> <f af f'>
-      <af c af'> <bf df bf'> <af_~ c_~ af'^~>4 <af c af'>8) <ef gf ef'>8( <f af f'> <af c af'>
-      <bf df bf'>4. q8 <c ef c'> <df f df'> <ef gf ef'> <c ef c'> <bf df bf'>4 <af f' af>2) <f af f'>8( <af c af'>
+      \stemNeutral <f af f'>8( <af c af'>
       <df f df'>4. q8 <ef gf ef'>4 <df f df'> <f af f'> <bf, df bf'> <df f df'>
-      \stemUp af'8 gf f2.\arpeggio) af8( gf f2.\arpeggio) af8( gf
-      \stemNeutral <f, af f'>4 q8 <gf bf gf'> <af df af'>4 <c, ef c'>)
-      <df f df'> <ef gf ef'> <f af f'>
+      \stemUp af'8 gf f2.\arpeggio) af8(\arpeggio gf f2.\arpeggio)
     } \\
     \relative c'' {
-      s1 s1 s1 s1 s1 s2.
-      <c af>8( <bf gf> <af gf df>4\arpeggio\cresc df2.)^>\! <bf gf ef>4(\arpeggio df2.)^>
+      s4 s1 s2.
+      <c af>8( <bf gf> <af gf df>4\arpeggio\cresc df2)^>\! <f df gf,>4\arpeggio(  <bf, gf ef>4\arpeggio df2)^>
     }
   >>
 
-  \relative c' {
+  \relative c''' {
+    <af df, af f>8(\arpeggio <gf bf, gf>
+    <f, af f'>4 q8 <gf bf gf'> <af df af'>4 <c, ef c'>)
+    <df f df'>4 <ef gf ef'> <f af f'>
     \tuplet 7/4 {ef16_(-2\< f-1 g af bf-4 c-1 d-4)}
     \key ef \major \bar "||"
     <ef, g ef'>8(\f <f af f'> <g_~ bf_~ g'^~>4 <g bf g'>8)
@@ -161,9 +166,9 @@ right = \relative c' {
     <c ef c'>4.) <c af' c>8( <d af' d> <ef af ef'> <f af f'> <d af' d>)
     <c ef af_~ c>4( <bf f' af bf>2) <g bf g'>8( <bf d bf'>
     <ef g ef'>4.\< <ef g ef'>8 <f af d f>4 <ef g bf ef> <g bf ef g> <c, ef af c>
-    <ef f c' ef>2\ff^\markup{\italic "rall."}~2.\fermata)
+    <ef f c' ef>2->\ff^\markup{\italic "rall."}~2.\fermata)
     <bf bf'>8(-> <af af'>-> <af c d g>4)-> <bf ef bf'>-> <bf d bf'>-> <d bf f d>->
-    ef1~\fermata\p\> <ef bf g ef g'>1\mf\fermata\arpeggio \fine
+    ef1---3~\fermata\p\> <ef bf g g'>1\mf\fermata\arpeggio \fine
   }
 }
 
@@ -239,15 +244,12 @@ left = \relative c {
 
   \key df \major
   \relative c {
-    df4.( af8 df4) af'-- f4.( c8) f(-1 ef df c-1 bf af gf bf) af4-4 c-3 af'8(-1 gf f ef df4.-5) c8(
-    bf4 df af) ef8( f gf-5 af bf c df2)
-    <<
-      {gf,8( af bf c df2)} \\
-      \relative c' {s2. <f df gf,>4}
-    >>
+    df4.( af8 df4) af'-- f4.( c8) f(-1 ef df c-1 bf af gf bf) af4-4 c-3 af'8(-1 gf f ef df4.-5) c8-2(
+    bf4 df af) ef8( f-1 gf-4 af bf c df2-2)
+    \relative c {gf8(-5 af bf c df2)}
     <<
       {ef,8( f gf af bf2)} \\
-      \relative c' {s2. <df af f>4}
+      \relative c' {s2. }
     >>
     <gf df' gf>2( <af ef' af>) <bf f' bf>4 <c af' c> <d f bf d> <bf d f bf>
   }
@@ -257,7 +259,7 @@ left = \relative c {
     ef8( bf' ef bf) <ef ef,>4 <bf bf,> g8( d' g d) <g g,>4 <bf bf,> <af, bf'>8( ef' af4) bf,8( f' bf f)
     <ef, bf' ef>4 <f c' f> <g d' g> <g ef' g>
     <c c'>8(\< <bf bf'> <af af'> <g g'>) <d' d'>( <c c'> <bf bf'> <af af'>) <ef' ef'>( <d d'> <c c'> <bf bf'>
-    <af c f af>4) <bf d f bf>-> <c ef af c>-> <d f bf d>-> <ef af c ef>2->\ff\fermata
+    <af af'>4) <bf d f bf>-> <c ef af c>-> <d f bf d>-> <ef af c ef>2->\ff\fermata
     <af ef af,>4 <c af c,> <bf f d> <bf f bf,> R1 <ef,, bf' ef g>1\fermata\arpeggio \fine
   }
 }
@@ -277,6 +279,9 @@ left = \relative c {
     } { \clef bass \left }
   >>
   \layout {
+    \override Score.StaffSymbol.layer = #4
+    \override Staff.TimeSignature.layer = #3
+    \once \override Staff.TimeSignature.whiteout = ##t
     \override Fingering.staff-padding = #'()
     \override Fingering.add-stem-support = ##f
     \override MultiMeasureRest.expand-limit = 1
