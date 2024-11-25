@@ -29,7 +29,7 @@ global = {
   \tempo "Vivace"
 }
 
-altoSax = \compressMMRests \relative c'' {
+altoSaxII = \compressMMRests \relative c'' {
   \global
   \transposition ef
   % Music follows here.
@@ -59,7 +59,7 @@ altoSax = \compressMMRests \relative c'' {
   e,\dim\(-- cs'\!-- \repeat unfold 3 {e,-- cs'--}
   e,-- c'!-- \repeat unfold 3 {e,-- c'--} e,--\> c'-- e,-- c'--\)
   \mark\default \time 6/8 R2.*6\!
-  e4^"solo"\p e( fs) e8\( d cs d e d\) cs4.( b) e4 e( fs) e8\( d cs d e d\) cs4\( a b\)
+  e4^"solo"\p e( fs) e8\( d cs d e d\) cs4.( b) e4 e( fs) e8\( d cs d e d\) cs4\( a b\) R2.*6
   \mark\default R2.*6 \time 2/4 \repeat unfold 4 {fs8-. as-.} \repeat unfold 2 {g8-. b-.}
   \repeat unfold 2 {as8-. cs-.} \repeat unfold 4 {b8-. d-.}
   \time 6/8 \mark\default
@@ -95,7 +95,7 @@ altoSax = \compressMMRests \relative c'' {
   \mark\default gs->\f r r r4 r8 R2.*14 r4 <fs' a>8-.\p q-. <gs b>-. <fs a>-. <es as>2.\>~2.~2. r4\!
   <d f>8\p-. q-. <e g>-. <d f>-.
   \mark\default
-  <e gs>2.\>~2.~2. R2.*4\! r4 cs8\mf-. cs-. d-. cs-.
+  <e gs>2.\>~2.~2. R2.*5\! r4 cs8\mf-. cs-. d-. cs-.
   \mark\default
   b2.\>->~4.\! r R2.*14
   \mark\default
@@ -112,12 +112,13 @@ altoSax = \compressMMRests \relative c'' {
 }
 
 \book {
+  \bookOutputName "Mercure Sax2"
   \score {
     \new Staff \with {
       instrumentName = "Alto Sax"
       shortInstrumentName = "ASx."
       midiInstrument = "alto sax"
-    } \altoSax
+    } \altoSaxII
     \layout {
       \override MultiMeasureRest.expand-limit = 1
       #(layout-set-staff-size 18)

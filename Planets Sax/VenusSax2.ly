@@ -73,6 +73,7 @@ altoSax = \compressMMRests \relative c'' {
 }
 
 \book {
+  \bookOutputName "Venus Sax2"
   \score {
     \new Staff \with {
       instrumentName = "Alto Sax"
