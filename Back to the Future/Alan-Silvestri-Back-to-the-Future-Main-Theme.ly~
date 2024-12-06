@@ -1,0 +1,96 @@
+\version "2.25.22"
+\language "english"
+
+\header {
+  title = "Back to the Future (Main Theme)"
+  composer = "Alan Silvestri"
+  % Remove default LilyPond tagline
+  tagline = ##f
+}
+
+\layout {
+  \context {
+    \Voice
+    \consists "Melody_engraver"
+    \override Stem.neutral-direction = #'()
+  }
+}
+
+global = {
+  \key c \major
+  \time 4/4
+  \tempo 4=76
+}
+
+right = \relative c'' {
+  \global
+  % Music follows here.
+  \relative c'''' {
+    <g g,>1 g16 d b f' df af r8 r2\fermata
+    e'16 b af d bf f r8 r2\fermata df'16 af f b g d r8 r2\fermata
+  }
+
+  \key df \major
+  \relative c' {
+    r4 df af'4. df8 cf4.. bf32 af \tuplet 3/2 {bf4 af gf}
+  }
+
+  <<
+    \relative c'' {af1} \\
+    \relative c' {df4.. af32 af af2^\fermata}
+  >>
+
+  \relative c' {
+    r4 df af'4. df8 <cf af ff>4.. bf32 af \tuplet 3/2 {<bf gf df>4 af gf} <af ef df>1
+  }
+
+  \tempo 4=155
+  \relative c'' {
+    <af f df>2 <df, af f> <g ef bf>2.. af16 bf
+    \tuplet 3/2 {<af f df>4 f df} <g ef bf>4. af16 bf
+    <af ef c>4 ef q ef' <ef bf f>2 <d bf f>4. c16 d <ef bf af>1
+    ef8 af ef af df bf ef af
+    <gf,, bf df>2 <gf df bf> <c af ef>2.. df16 ef
+    \tuplet 3/2 {<df bf gf>4 bf gf} <c af ef>4. df16 ef
+    <df af f>4 af q <af' f df> q2 <g ef bf>4. f16 g <af ef df>2
+    \change Staff = "left" af,,,8 ef' af ef' \change Staff = "right"
+    af ef' af ef' af r r4
+
+    <gf, df bf>4. f16 ef \tuplet 3/2 {<f df af>4 ef df}
+  }
+
+  <<
+    \relative c'' {<ef df af>2. <af af,>4} \\
+    \relative c' {r4. <ef df>16 q <ef c>2}
+  >>
+
+  \relative c''' {<gf ef cf>4. f16 ef \tuplet 3/2 {<f df af>4 ef df}}
+  <<
+    \relative c'' {<ef bf af>2~ \tuplet 3/2 {q4 bf, c}} \\
+    \relative c' {r4. <ef bf>16 q q2}
+  >>
+  \relative c' {
+    <df af gf>4. c16 bf \tuplet 3/2 {<c af ef>4 af ef'}
+    <ef cf af>4. df16 cf \tuplet 3/2 {<df bf gf>4 gf, gf'}
+  }
+
+  \key a \major
+}
+
+left = \relative c' {
+  \global
+  % Music follows here.
+}
+
+\score {
+  \new PianoStaff <<
+    \new Staff = "right" \with {
+      midiInstrument = "acoustic grand"
+    } \right
+    \new Staff = "left" \with {
+      midiInstrument = "acoustic grand"
+    } { \clef bass \left }
+  >>
+  \layout { }
+  \midi { }
+}
